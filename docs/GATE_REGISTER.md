@@ -71,12 +71,17 @@ scope, authority, engineering process, decisions, and gate sequencing.
 - `docs/ENGINEERING_GOVERNANCE.md`
 - `docs/decisions/DECISION_REGISTER.md`
 - `docs/GATE_REGISTER.md` (this document)
+- Product-specific `AGENTS.md` (present in this repository).
 - Recorded evidence that no implementation, dependency, database, deployment, or
-  Git-history change occurred.
+  **destructive Git-history operation** (history rewrite, reset, rebase, or force
+  push) occurred during Gate 0 governance work. This requirement does **not**
+  prohibit ordinary, separately authorized commits; it records only that no
+  destructive history operations were performed.
 
 ### Exit Criteria
 
-- All four deliverables exist and comply with the approved planning baseline.
+- All Gate 0 deliverables listed above exist and comply with the approved planning
+  baseline.
 - Open decisions are visibly unresolved and not marked approved.
 - CEAP production separation and independent-database requirements are explicit.
 - Product owner explicitly approves the Gate 0 deliverables.
@@ -87,9 +92,23 @@ Product Owner.
 
 ### Blockers / Dependencies
 
-- Product-owner approval outstanding (P-001, P-002, P-003, P-004, P-007, P-008).
-- Historical decisions D-001 – D-018 remain unrecoverable; **not** an automatic
-  blocker (Q-017).
+- Product-owner approval outstanding (P-001 — approval of the Gate 0 baseline
+  artifacts). P-001 remains a Gate 0 exit blocker until the baseline is explicitly
+  approved.
+- P-007 is **resolved**: the product owner confirmed D-033 (Gate 0 is documentation
+  and governance only), so P-007 does not block Gate 0.
+- P-002, P-003, and P-004 remain unresolved product-owner decisions. Per their
+  recorded definitions they block **Gate 1 entry**, not Gate 0 closure, so they are
+  not listed as Gate 0 blockers.
+- P-008 is **resolved as redundant** (product-owner confirmed): it requested
+  confirmation of the already APPROVED BASELINE decisions D-034, D-035, D-036, and
+  D-038 and introduces no additional decision, so it does not block Gate 0.
+- P-005 and P-006 remain unresolved (PROPOSED). Per their recorded definitions they
+  block Gate 2 / Gate 4 and Gate 2 / Gate 6 respectively, **not** Gate 0, so they
+  are not listed as Gate 0 blockers. If the product owner intends either to gate
+  Gate 0 closure, that requires an explicit decision.
+- Historical decisions D-001 – D-018 were not found in the inspected scope; their
+  provenance is unverified. This is **not** an automatic blocker (Q-017).
 
 ---
 
@@ -407,6 +426,15 @@ incidents, backups, and reviews continue under approved change control.
 |---|---|---|
 | 2026-10-15 | Register created. Gate 0 set IN PROGRESS; Gate 1 NOT STARTED; Gates 2–7 NOT STARTED/BLOCKED. | Gate 0 documentation task |
 | 2026-10-15 | Revision 0.2. Added purpose, inputs/prerequisites, deliverables/evidence, blockers/dependencies, and current status per gate; added cross-cutting notes (historical decisions, multi-tenancy change review, critical defects block release, CEAP/independent database); clarified Gate 7 as ongoing. | Gate 0 documentation revision |
+| 2026-10-15 | Gate 0 governance corrections. Added product-specific AGENTS.md to the Gate 0 artifact inventory; distinguished ordinary authorized commits from destructive Git-history operations; resolved P-008 as redundant; clarified P-005/P-006 are not Gate 0 blockers per their definitions; aligned historical-decision provenance wording. Gate statuses unchanged. | Gate 0 governance correction task |
+| 2026-10-15 | Owner-authorized corrections. Updated the Gate 0 deliverables list and blocker notes to reflect that `AGENTS.md` is present in the repository. P-008 recorded as resolved as redundant with product-owner confirmation. Gate statuses unchanged. | Gate 0 owner-authorized correction task |
+| 2026-10-15 | Owner-authorized correction. Corrected the Gate 0 blocker list: P-001 retained as a Gate 0 exit blocker; P-007 recorded as resolved (D-033 owner-confirmed); P-002/P-003/P-004 recorded as Gate 1-entry blockers, not Gate 0. Gate 0 kept IN PROGRESS; Gate 1 NOT STARTED; all other gate statuses unchanged. | Gate 0 owner-authorized correction task |
+
+> **Change-log note (superseding clarification).** The 2026-10-15 "Gate 0
+> governance corrections" entry recorded P-008 as resolved when it had only been
+> *proposed* as resolved at that time; the later owner-authorized entry records the
+> product-owner confirmation. The original entry is preserved as a historical
+> record and is not a statement of current status.
 
 ---
 

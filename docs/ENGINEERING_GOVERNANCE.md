@@ -94,7 +94,7 @@ entry/exit criteria, and evidence.
 | Gate 1 | Requirements Discovery | Analysis / documentation |
 | Gate 2 | Architecture & Design | Design |
 | Gate 3 | Security & Data Integrity Design Review | Review |
-| Gate 4 | Implementation | Build (authorized scope only) |
+| Gate 4 | Authorized Implementation | Build (authorized scope only) |
 | Gate 5 | Verification & Testing | Test |
 | Gate 6 | Release Readiness & Deployment Approval | Approval |
 | Gate 7 | Production Operations & Maintenance | Ongoing operations |
@@ -116,7 +116,7 @@ Rules:
 
 | Gate | Required artifacts / evidence |
 |---|---|
-| Gate 0 | Project Charter; Engineering Governance; Decision Register; Gate Register |
+| Gate 0 | Project Charter; Engineering Governance; Decision Register; Gate Register; product-specific AGENTS.md; recorded evidence that no implementation, dependency, database, deployment, or destructive Git-history operation (history rewrite, reset, rebase, or force push) occurred during Gate 0 governance work |
 | Gate 1 | Requirements specification; validated target customer; user journeys; business rules; confirmed user/authentication model; validated assumptions; risk register; measurable acceptance criteria |
 | Gate 2 | Architecture description; data model; interface/API design; configuration and per-installation strategy; traceability to requirements |
 | Gate 3 | Security review record; data-integrity design record; threat model; security exception register |
@@ -317,16 +317,20 @@ Gate-specific criteria are in `docs/GATE_REGISTER.md`.
 
 ## 20. Status of CEAP-Specific Instructions
 
-- The repository's existing `AGENTS.md` (and any other existing production
-  instructions) governs a **separate, already-deployed CEAP system**. It must
-  **not** be modified by this product's work.
+- This repository does **not** contain, and this document does **not** treat, any
+  `AGENTS.md` as governing the separate, already-deployed CEAP system. Any
+  instructions for that system belong to that system and are outside this
+  product's scope; they must **not** be modified by this product's work.
 - CEAP-specific implementation rules do **not** automatically define this
-  product's architecture, database, or standards. CEAP is a behavior reference
-  only.
+  product's architecture, database, or standards. CEAP is a historical behavior
+  reference only; its behavior, schema, data, and constraints are **not**
+  automatically commercial requirements.
+- **Only explicitly approved commercial requirements and decisions establish this
+  product's requirements.** Copied CEAP source, if any, is a reference or
+  experimental copy and is **not** authoritative for commercial requirements.
 - The commercial product needs its **own clearly scoped instructions and
-  standards**. These must be created only when a separate task authorizes it;
+  standards**. These must be created only when a separate task authorizes them;
   this governance is the placeholder until then.
-- No CEAP source copied into this project is authoritative for the product.
 
 ---
 
@@ -351,7 +355,9 @@ Work must stop and be escalated to the product owner when:
 - `docs/PROJECT_CHARTER.md` — product purpose, scope, authority.
 - `docs/decisions/DECISION_REGISTER.md` — decisions and status.
 - `docs/GATE_REGISTER.md` — gate status, criteria, and evidence.
-- Existing `AGENTS.md` — governs the separate CEAP system; not modified here.
+- Product-specific `AGENTS.md` — present in this repository; it is subordinate to
+  this document and the approved commercial baseline. No production CEAP
+  instructions are modified here.
 
 ---
 

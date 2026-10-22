@@ -97,8 +97,8 @@ measurable target agreed in Gate 1 before they can be verified.
 
 | ID | Criterion | Verification approach | Target |
 |---|---|---|---|
-| S-1 | A new client installation can be created and configured without editing core scheduling logic. | Installation/configuration walkthrough on a clean environment. | Verifiable now |
-| S-2 | Each installation uses its own database and cannot read or write another installation's or CEAP's data. | Architecture + configuration review; isolation tests. | Verifiable now |
+| S-1 | A new client installation can be created and configured without editing core scheduling logic. | Installation/configuration walkthrough on a clean environment. | Verifiable after implementation and testing in an isolated, authorized environment. |
+| S-2 | Each installation uses its own database and cannot read or write another installation's or CEAP's data. | Architecture + configuration review; isolation tests. | Verifiable after implementation and testing in an isolated, authorized environment. |
 | S-3 | Under concurrent booking attempts, capacity and duplicate-booking rules are never violated. | Automated concurrency tests. | *[target TBD]* |
 | S-4 | All state-changing operations are authenticated, authorized, and server-side validated. | Security test suite; review. | *[target TBD]* |
 | S-5 | No known high-severity security findings remain at release. | Security review record; defect log. | *[target TBD]* |
@@ -224,11 +224,13 @@ requirements discovery (see Q-002 – Q-004, Q-009, Q-018).
 - MariaDB
 - Git and GitHub
 - Automated testing
-- Docker **only if** its benefits justify the added complexity
+- Docker **only if** its benefits justify the added complexity, with a documented
+  purpose and justification and appropriate product-owner approval
 
 These are the **currently preferred** technologies, not permission to install
 dependencies or begin implementation. Additional frameworks, infrastructure,
-services, or technologies must have a **documented purpose and justification**.
+services, or technologies must have a **documented purpose and justification**
+and **appropriate product-owner approval**.
 Exact versions and final technical decisions are resolved before implementation
 and release respectively (see Q-007, Q-008; decisions D-022, D-031, D-032).
 
