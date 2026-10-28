@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 0.8 (2026-10-28 — P-002–P-004 dispositions recorded; Gate 1 blocked) |
+| Revision | 0.9 (2026-10-28 — Gate 1 entry authorized; requirements discovery in progress) |
 | Owner | Product Owner |
 
 This register tracks gate status and defines, for each gate: purpose, required
@@ -33,7 +33,7 @@ approval. No AI tool may set or imply a gate approval.
 | Gate | Name | Status |
 |---|---|---|
 | Gate 0 | Project Initiation & Governance | **COMPLETE (APPROVED)** — 2026-10-22 |
-| Gate 1 | Requirements Discovery | **BLOCKED** (entry authorization not granted) |
+| Gate 1 | Requirements Discovery | **IN PROGRESS** — entry authorized 2026-10-28 |
 | Gate 2 | Architecture & Design | **BLOCKED** (requires Gate 1 approval) |
 | Gate 3 | Security & Data Integrity Design Review | **BLOCKED** (requires Gate 2 approval) |
 | Gate 4 | Authorized Implementation | **BLOCKED** (requires Gate 3 approval and explicit authorization) |
@@ -44,8 +44,9 @@ approval. No AI tool may set or imply a gate approval.
 Notes:
 
 - Gate 0 is `COMPLETE (APPROVED)` as of 2026-10-22 (§3, §13).
-- Gate 1 is `BLOCKED` under the §1 definition: P-002 – P-004 were decided on
-  2026-10-28, but Gate 1 has not been authorized. Gate 0 approval alone does not open it.
+- Gate 1 is `IN PROGRESS`: the Product Owner authorized requirements discovery on
+  2026-10-28. This authorizes Gate 1 analysis and documentation only; implementation
+  remains unauthorized.
 - Gates 2–7 remain `BLOCKED` because their prerequisite gate approvals are unmet.
 - Gate 7 is an **ongoing responsibility**, not a state that permanently ends
   maintenance.
@@ -137,7 +138,14 @@ Product Owner.
 
 ## 4. Gate 1 — Requirements Discovery
 
-**Status: BLOCKED** (P-002 – P-004 decided; Gate 1 not authorized)
+**Status: IN PROGRESS — entry authorized 2026-10-28.** The Product Owner authorized
+Gate 1 requirements analysis and documentation, including stakeholder/customer
+validation, user journeys, business rules, authentication requirements, assumption
+validation, risks, measurable acceptance criteria, and functional requirements for
+mandatory QR-based appointment verification. This is entry authorization only: Gate
+1 is not complete or approved for exit, and implementation remains unauthorized.
+The authorization does not permit application, architecture, dependency, database,
+schema, migration, deployment, or production CEAP changes or access.
 
 ### Purpose
 
@@ -181,8 +189,8 @@ Product Owner.
 
 ### Blockers / Dependencies
 
-- Gate 0 approval.
-- Product-owner authorization to start Gate 1 has not been granted.
+- Gate 0 approval. (Met.)
+- Product-owner authorization to start Gate 1. (Granted 2026-10-28.)
 - Access to representative client/user stakeholders (DP-2).
 
 ---
@@ -467,6 +475,7 @@ incidents, backups, and reviews continue under approved change control.
 | 2026-10-22 | Revision 0.4, final Gate 0 correction pass. Gate 1 reclassified `BLOCKED` under the §1 definition (Gate 0 approval unmet). `AGENTS.md` recorded as a P-001 artifact whose acceptance is separate from adoption of its instructions; adoption is not a P-001 or Gate 0 prerequisite. Gate 0 IN PROGRESS; no gate approval recorded. | Gate 0 final correction pass |
 | 2026-10-23 | Revision 0.7, AGENTS.md adoption reconciliation. Updated the three live non-adoption statements (§3 deliverables, §3 P-001 blocker note, §3 `AGENTS.md` blocker note) to record adoption under D-039 while preserving the historical fact that its instructions were not adopted at Gate 0 closure. No gate status, approval, or exit criterion changed; Gates 0–7 statuses are unchanged; the proposed accessibility standard (P-009) is not approved by this pass. | AGENTS.md adoption proposal |
 | 2026-10-28 | Revision 0.8. Recorded the P-002 and P-003 approvals and P-004 conditional approval, removing them as Gate 1 entry blockers. Gate 1 remains `BLOCKED` because entry authorization has not been granted; no gate exit criterion or implementation authorization changed. | Pre-Gate 1 decision recording |
+| 2026-10-28 | Revision 0.9. Recorded the Product Owner's explicit Gate 1 entry authorization and set Gate 1 to `IN PROGRESS`. Authorization is limited to requirements analysis and documentation, including functional requirements for mandatory QR-based appointment verification. Gate 1 is not approved for exit; implementation and production CEAP access remain unauthorized. | Gate 1 entry authorization recording |
 
 > **Change-log note (superseding clarification).** The 2026-10-15 "Gate 0
 > governance corrections" entry recorded P-008 as resolved when it had only been
@@ -481,10 +490,12 @@ incidents, backups, and reviews continue under approved change control.
 This register was approved by the product owner as a Gate 0 baseline artifact
 under P-001 on 2026-10-22. The product owner signed off the Gate 0 evidence record
 and explicitly approved the Gate 0 transition on 2026-10-22, so Gate 0 is
-`COMPLETE (APPROVED)` (no approval time recorded). Gate 1 is not approved or
-authorized.
+`COMPLETE (APPROVED)` (no approval time recorded). The Product Owner authorized
+Gate 1 entry on 2026-10-28; Gate 1 is `IN PROGRESS`, not complete or approved for
+exit, and implementation remains unauthorized.
 
 | Approver | Role | Decision | Date |
 |---|---|---|---|
 | Product Owner | Product Owner | Approved as a Gate 0 baseline artifact (P-001) | 2026-10-22 |
 | Product Owner | Product Owner | Gate 0 evidence record signed off; Gate 0 transition approved — `COMPLETE (APPROVED)` | 2026-10-22 |
+| Product Owner | Product Owner | Gate 1 entry authorized for requirements analysis and documentation — `IN PROGRESS`; implementation not authorized | 2026-10-28 |
