@@ -4,11 +4,29 @@
 
 | Field | Value |
 |---|---|
-| Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
+| Document status | Revision 1.0 DRAFT — pending Product Owner review. The effective approved baseline is the P-001 Gate 0 artifact as recorded at Revision 0.5; later revisions are unapproved. P-002/P-003/P-004 retain separate recorded scope. |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 0.8 (2026-10-28 — P-002/P-003 approved; P-004 conditionally approved) |
+| Revision | 1.0 DRAFT (2026-10-28 — supersedes Revision 0.9 as the working draft; second bounded Gate 1 checkpoint correction) |
 | Owner | Product Owner |
+
+> **Revision 1.0 DRAFT (2026-10-28) — supersedes Revision 0.9 as the working
+> draft; pending Product Owner review.**
+> Clarifies that A-1 remains an assumption to validate although independent
+> installations are already the approved baseline (D-020). P-001 approved the
+> Gate 0 artifact as then recorded; P-002/P-003 and conditional P-004 retain their
+> separate recorded scope. Neither those approvals nor Gate 1 entry approval
+> approves this working revision or authorizes Gate 1 exit. Revision 0.9 is
+> retained as unapproved history and is not an alternative current draft.
+
+> **Revision 0.9 DRAFT (2026-10-28) — superseded by Revision 1.0; never approved.
+> Retained as history.** Proposed
+> corrections to
+> three live statements to reflect the Gate 1 entry authorization already
+> recorded in `docs/GATE_REGISTER.md` §4. Historical status records are
+> unchanged; Gate 1 is not approved for exit and implementation remains
+> unauthorized. Revision 0.9 was not approved by P-001 or by Gate 1 entry
+> authorization and is not a current submission.
 
 > **Revision 0.8 (2026-10-28) — P-002/P-003 approved; P-004 conditionally
 > approved for Gate 1 discovery.** The Product Owner approved P-002 and P-003
@@ -63,8 +81,9 @@ Every material statement is labelled with one of the following:
 | **Unresolved** | Not decided; to be resolved at a named gate. Must not be treated as settled. |
 
 Confirmed, approved, and conditionally approved statements are in force only to the extent
-their labels state. Proposals, assumptions, and unresolved items are not approved. Nothing in
-this charter authorizes Gate 1 or implementation.
+their labels state. Proposals, assumptions, and unresolved items are not approved. Gate 1
+entry is authorized only as recorded in `docs/GATE_REGISTER.md` §4; nothing in
+this charter authorizes implementation.
 
 ---
 
@@ -384,7 +403,7 @@ Register and Gate Register.
 
 | ID | Assumption | Validation point |
 |---|---|---|
-| A-1 | Each client organization runs its own isolated installation. | Gate 1 |
+| A-1 | Each client organization runs its own isolated installation. This is the approved product model (D-020); what remains to validate is its fit with representative client needs, not whether an unapproved shared multi-tenant model may replace it. A different model requires D-020's formal change review. | Gate 1 |
 | A-2 | A representative client segment and stakeholders can be accessed for discovery. | Gate 1 |
 | A-3 | Importing an eligibility population ("masterlist") is *not* automatically required. | Gate 1 |
 | A-4 | The Laravel/Blade/Tailwind/MariaDB stack is suitable; versions are unconfirmed. | Gate 2 |
@@ -508,8 +527,11 @@ Full identifiers and status are tracked in
 This charter was approved by the product owner as a Gate 0 baseline artifact under
 P-001 on 2026-10-22. That approval did not itself close Gate 0; Gate 0 was closed
 on 2026-10-22 once its remaining exit criteria were met (see
-`docs/GATE_REGISTER.md` §3). No Gate 1 approval and no implementation
-authorization is recorded.
+`docs/GATE_REGISTER.md` §3). Gate 1 entry was subsequently authorized on
+2026-10-28 for requirements analysis and documentation only; Gate 1 is not
+approved for exit, and no implementation authorization is recorded. Revision 1.0
+is a working draft pending Product Owner review; this historical P-001 approval
+does not approve Revision 1.0.
 
 | Approver | Role | Decision | Date |
 |---|---|---|---|
