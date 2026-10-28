@@ -5,8 +5,17 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 0.6 (Gate 0 closure recorded) |
+| Revision | 0.7 (2026-10-23 — AGENTS.md adopted; accessibility standard proposed) |
 | Owner | Product Owner |
+
+> **Revision 0.7 (2026-10-23) — AGENTS.md adopted; accessibility standard
+> proposed.** §6, §20, and §22 reconciled to record that `AGENTS.md` is adopted as
+> the project's agent entry point (D-039) and that its instructions were *not*
+> adopted **at the time of Gate 0 closure**. The code-quality and accessibility
+> guidance previously carried in the superseded `AGENTS.md` is preserved in
+> substance as §24, marked **PROPOSED (P-009) — NOT APPROVED — NOT IN FORCE**.
+> D-039 is not approval of P-009. No gate status changed, no other approval was
+> created, and Gate 1 remains unauthorized.
 
 > **Revision 0.6 (2026-10-22) — Gate 0 closure recorded.** §23 updated to record
 > that Gate 0 was closed on 2026-10-22. Neither the approval nor the closure
@@ -134,7 +143,7 @@ Rules:
 
 | Gate | Required artifacts / evidence |
 |---|---|
-| Gate 0 | Project Charter; Engineering Governance; Decision Register; Gate Register; `AGENTS.md` (present in this repository and part of the P-001 artifact set; its instructions are **not adopted** — see §20); and the separate Gate 0 evidence record at `docs/evidence/GATE-0-EVIDENCE.md`, which states what was inspected, the period covered, and what cannot be established. That evidence record is a Gate 0 exit requirement outside the five-artifact P-001 scope |
+| Gate 0 | Project Charter; Engineering Governance; Decision Register; Gate Register; `AGENTS.md` (present in this repository and part of the P-001 artifact set; at Gate 0 closure its instructions were **not adopted** — see §20; this file was subsequently replaced and adopted as the agent entry point under D-039, effective 2026-10-23); and the separate Gate 0 evidence record at `docs/evidence/GATE-0-EVIDENCE.md`, which states what was inspected, the period covered, and what cannot be established. That evidence record is a Gate 0 exit requirement outside the five-artifact P-001 scope |
 | Gate 1 | Requirements specification; validated target customer; user journeys; business rules; confirmed user/authentication model; validated assumptions; risk register; measurable acceptance criteria |
 | Gate 2 | Architecture description; data model; interface/API design; configuration and per-installation strategy; traceability to requirements |
 | Gate 3 | Security review record; data-integrity design record; threat model; security exception register |
@@ -342,11 +351,17 @@ Gate-specific criteria are in `docs/GATE_REGISTER.md`.
 - The separate, already-deployed CEAP system's own instructions are outside this
   repository and outside this product's scope; they must **not** be modified by
   this product's work. No such instructions are present here.
-- `AGENTS.md` exists in this repository and is part of the P-001 artifact set, but
-  its instructions are **not adopted**. Accepting it as an artifact is separate
-  from adopting its instructions, which this governance does not treat as in
-  force; adoption is a separate product-owner decision and is **not** a
-  prerequisite for P-001 approval.
+- `AGENTS.md` exists in this repository and is part of the P-001 artifact set. **At
+  the time of Gate 0 closure its instructions were not adopted**: accepting it as
+  an artifact was separate from adopting its instructions, and adoption was **not**
+  a prerequisite for P-001 approval. That historical position is preserved.
+- **Adoption subsequently occurred.** The Product Owner adopted `AGENTS.md` as the
+  project's agent entry point on 2026-10-23 (D-039). The adopted version is a concise
+  entry point that defers to the approved governance documents and does not restate
+  gate status or engineering rules. Adoption did not re-approve the content of the
+  superseded `AGENTS.md`, did not change any gate status, and did not approve the
+  accessibility standard proposed in §24 — §24 is created by the same revision and is
+  marked PROPOSED; creation is not approval.
 - CEAP-specific implementation rules do **not** automatically define this
   product's architecture, database, or standards. CEAP is a historical behavior
   reference only; its behavior, schema, data, and constraints are **not**
@@ -381,10 +396,10 @@ Work must stop and be escalated to the product owner when:
 - `docs/PROJECT_CHARTER.md` — product purpose, scope, authority.
 - `docs/decisions/DECISION_REGISTER.md` — decisions and status.
 - `docs/GATE_REGISTER.md` — gate status, criteria, and evidence.
-- `AGENTS.md` — present in this repository and part of the P-001 artifact set. Its
-  instructions are **not adopted** and are not treated as governing this product;
-  accepting the artifact is separate from adopting its instructions, and adoption
-  is a separate decision that is **not** a P-001 or Gate 0 prerequisite. No
+- `AGENTS.md` — the project's adopted agent entry point (D-039, effective
+  2026-10-23), replacing the superseded `AGENTS.md` that was accepted as a P-001
+  artifact without its instructions being adopted at Gate 0 closure. It defers to
+  the documents listed above and deliberately restates none of their content. No
   production CEAP instructions are modified here.
 
 ---
@@ -399,3 +414,44 @@ closure authorizes Gate 1 or any implementation.
 | Approver | Role | Decision | Date |
 |---|---|---|---|
 | Product Owner | Product Owner | Approved as a Gate 0 baseline artifact (P-001) | 2026-10-22 |
+
+---
+
+## 24. Code Quality, Accessibility, and Usability Standard
+
+**Status: PROPOSED (P-009) — NOT APPROVED — NOT IN FORCE.** This section was created
+by the same revision that recorded the `AGENTS.md` adoption (D-039). Its creation is
+not approval, and D-039 approved no standard. This section must not be cited as an
+approved requirement, standard, or acceptance criterion.
+
+**Provenance.** It preserves, in substance, the code-quality and accessibility
+guidance that the superseded `AGENTS.md` carried until that file was replaced by the
+concise entry point under D-039. It is relocated, not newly invented; nothing here was
+approved by being moved.
+
+**D-039 is not approval of this section.** Adoption of `AGENTS.md` approved an entry
+point. It did not approve, adopt, or bring into force any standard, and P-009 remains
+unresolved.
+
+**Accessibility does not stop being a product goal.** Approval of this section is not
+what makes accessibility a requirement. The product goal remains Charter G-6 and
+success criterion S-7; accessibility and localization remain an open discovery
+question (Q-011); and the product qualities in D-021 and D-029 continue to apply.
+What remains unapproved is only the specific set of implementation expectations
+below.
+
+Content submitted for approval:
+
+1. Prefer small, focused, reviewable changes over large rewrites.
+2. Follow the framework's conventions and the project's agreed standards.
+3. Keep code maintainable: clear naming, minimal duplication, and separation of
+   concerns.
+4. Build accessible and responsive interfaces that work across supported screen
+   sizes and devices, avoiding horizontal overflow and unusable touch targets.
+5. Consider accessibility (labels, keyboard use, semantics) and usability as
+   product requirements, not afterthoughts.
+6. Do not modify unrelated code while implementing a change.
+
+**Approval record.** To be completed here only on an explicit product-owner decision
+on P-009, with the date supplied by the Product Owner. No approval is implied by this
+section's presence, by D-039, or by any gate transition.

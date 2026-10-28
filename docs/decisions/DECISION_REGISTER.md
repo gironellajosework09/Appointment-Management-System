@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 0.6 (Gate 0 closure recorded) |
+| Revision | 0.8 (2026-10-28 — P-002/P-003 approved; P-004 conditionally approved) |
 | Owner | Product Owner |
 
 This register records decisions with unique IDs, status, date (where known),
@@ -25,6 +25,7 @@ a provisional decision is never silently promoted to approved.
 | NOT FOUND IN INSPECTED SCOPE — PROVENANCE UNVERIFIED | Referenced historically; not found in the inspected repository or its available Git history; the original source has not been inspected, so content and original status remain unverified. |
 | RESOLVED AS REDUNDANT | Requested confirmation of principles already recorded as APPROVED BASELINE; introduces no additional decision. |
 | RESOLVED (OWNER CONFIRMED) | Confirmed by the product owner; no longer outstanding. |
+| APPROVED (PO DECISION) | Explicitly approved by the product owner on the date recorded, after the Gate 0 baseline. Distinct from APPROVED BASELINE (baseline-provided) and from a confirmation of an existing proposal. |
 
 An unresolved decision must never be marked approved.
 
@@ -74,6 +75,7 @@ where it is stated explicitly; it is never inferred.
 | D-035 | The product must have its own independent database and schema. It must never connect to, import into, migrate, modify, or operate against the production CEAP database. | APPROVED BASELINE | 2026-10-15 | Absolute separation from production CEAP. | Its own database is created only when separately authorized. | Product Owner |
 | D-036 | Additional frameworks, infrastructure, services, or technologies require a documented purpose, justification, and appropriate approval before adoption. | APPROVED BASELINE | 2026-10-15 | Avoids unnecessary complexity and dependency sprawl. | Any addition must be justified and approved before adoption. | Product Owner |
 | D-038 | Critical unresolved security or data-integrity defects block release. A generic risk-acceptance statement must not bypass mandatory security, legal, or data-protection requirements. | APPROVED BASELINE | 2026-10-15 | Protects users and clients. | Release cannot proceed with unresolved critical defects; risk acceptance requires explicit product-owner approval with recorded justification and scope. | Product Owner |
+| D-039 | `AGENTS.md` is adopted as the project's concise agent entry point, replacing the superseded `AGENTS.md`; it defers to the approved governance documents and restates neither gate status nor engineering rules. Adoption does not re-approve the superseded content, does not retroactively adopt that content for the Gate 0 period, does not approve the proposed accessibility standard (P-009), and changes no gate status. | APPROVED (PO DECISION) | 2026-10-23 — supplied by the Product Owner; not inferred from any timestamp, file modification time, or Git history | A single authoritative entry point removes the duplicated-rules drift that produced contradictory gate statuses. | The entry point must be updated when governance changes; the lineage note lives in `docs/evidence/GATE-0-EVIDENCE.md` §7; accessibility expectations await P-009. | Product Owner |
 
 > Note: D-037 is intentionally unused to preserve numbering stability for future
 > insertions; no meaning is implied by the gap.
@@ -123,13 +125,23 @@ items record the disposition only; they confer no approval on anything else.
 | ID | Item | Status | Blocks |
 |---|---|---|---|
 | P-001 | Approval of the Gate 0 baseline artifacts (Charter, Engineering Governance, Decision Register, Gate Register, and `AGENTS.md`). Accepting `AGENTS.md` as an artifact is **not** adoption of its instructions. | RESOLVED (OWNER CONFIRMED) — approved 2026-10-22 | — |
-| P-002 | Approval or amendment of the proposed product vision (Charter §2). | PROPOSED (PO CONFIRMATION) | Gate 1 |
-| P-003 | Approval or amendment of the proposed product goals (Charter §3). | PROPOSED (PO CONFIRMATION) | Gate 1 |
-| P-004 | Approval or amendment of the proposed success criteria (Charter §4). | PROPOSED (PO CONFIRMATION) | Gate 1 |
+| P-002 | Approval or amendment of the proposed product vision (Charter §2). | RESOLVED (OWNER CONFIRMED) — approved 2026-10-28 with CEAP clarification | — |
+| P-003 | Approval or amendment of the proposed product goals (Charter §3). | RESOLVED (OWNER CONFIRMED) — G-1–G-12 approved 2026-10-28 with functional clarifications | — |
+| P-004 | Approval or amendment of the proposed success criteria (Charter §4). | RESOLVED (OWNER CONFIRMED) — conditionally approved 2026-10-28 as provisional Gate 1 baseline; final criteria unresolved | — |
 | P-005 | Confirmation of D-031 (version pinning). | PROPOSED (PO CONFIRMATION) | Gate 2 / Gate 4 |
 | P-006 | Confirmation or rejection of D-032 (Docker adoption criteria). | PROPOSED (PO CONFIRMATION) | Gate 2 / Gate 6 |
 | P-007 | Confirmation of D-033 (Gate 0 documentation-only). | RESOLVED (OWNER CONFIRMED) | — |
 | P-008 | Confirmation of the added baseline decisions D-034, D-035, D-036, D-038 recorded in this revision. | RESOLVED AS REDUNDANT | — |
+| P-009 | Approval of the Code Quality, Accessibility, and Usability Standard (`docs/ENGINEERING_GOVERNANCE.md` §24), relocated from the superseded `AGENTS.md`. | PROPOSED (PO CONFIRMATION) | Gate 2 / Gate 4 |
+
+> **P-002 – P-004 — current disposition (2026-10-28).** The Product Owner
+> approved P-002 and P-003 and conditionally approved P-004 in ChatGPT on
+> 2026-10-28. P-002 approves Charter §2 with the non-production CEAP
+> clarification; P-003 approves G-1 – G-12 with mandatory QR verification and
+> the exclusions and configuration direction recorded in Charter §3. P-004
+> conditionally approves S-1 – S-9 as a provisional Gate 1 discovery baseline,
+> not final targets, thresholds, standards, or release acceptance criteria.
+> These decisions authorize neither Gate 1 nor implementation.
 
 > **P-008 — RESOLVED AS REDUNDANT (product-owner confirmed).** The product owner
 > confirmed the four baseline decisions D-034, D-035, D-036, and D-038. P-008 only
@@ -147,6 +159,7 @@ items record the disposition only; they confer no approval on anything else.
 > requirements unmet. P-007 remains resolved (D-033). **P-002,
 > P-003, and P-004 remain unresolved product-owner decisions and block Gate 1
 > entry.**
+> This paragraph records the historical Gate 0 closure status; see the 2026-10-28 dispositions above.
 
 > **P-001 — `AGENTS.md` as an artifact, not as adopted instructions.** The recorded
 > P-001 artifact set consists of five artifacts and includes `AGENTS.md`; that
@@ -157,6 +170,23 @@ items record the disposition only; they confer no approval on anything else.
 > separate product-owner decision and is **not** a prerequisite for P-001 approval
 > or for Gate 0 closure. The Gate 0 evidence record is a separate Gate 0 exit
 > requirement and is **not** part of the five-artifact P-001 scope.
+
+> **P-009 — PROPOSED — NOT APPROVED — NOT IN FORCE.** The standard at
+> `ENGINEERING_GOVERNANCE.md` §24 must not be cited as an approved requirement. It
+> was relocated, not newly invented: its content is the code-quality and
+> accessibility guidance that the superseded `AGENTS.md` carried until that file was
+> replaced under D-039. **D-039 is not approval of P-009.** Accessibility remains a
+> product goal (Charter G-6, S-7) and an open discovery question (Q-011) regardless
+> of P-009's status; only the specific implementation expectations are unapproved.
+
+> **P-001 — content superseded; the record above is unchanged.** The two notes above
+> describe the P-001 approval as it stood on 2026-10-22 and are deliberately not
+> rewritten. The Product Owner later adopted a replacement `AGENTS.md` (D-039); the
+> effective date is the one recorded in D-039 and is not restated here. P-001's
+> meaning is preserved exactly: it approved five artifacts, including `AGENTS.md`
+> **as that content then stood**, without adopting its instructions. D-039 is a
+> separate later decision; it neither re-approves the superseded content nor
+> retroactively adopts it for the Gate 0 period, and it approves no other document.
 
 ---
 
@@ -265,6 +295,8 @@ Rules:
 | 2026-10-22 | P-001 approval recorded. Product owner approved all five Gate 0 baseline artifacts on 2026-10-22, accepting `AGENTS.md` as an artifact without adopting its instructions. P-001 set to RESOLVED (OWNER CONFIRMED); Gate 0 remains IN PROGRESS; the Gate 0 evidence record is not approved. | P-001 approval recording |
 | 2026-10-22 | Gate 0 closure recorded. Gate 0 evidence record signed off by the product owner and Gate 0 transition approved on 2026-10-22 (no time recorded); Gate 0 is `COMPLETE (APPROVED)` in the Gate Register. Gate 1 not authorized; no implementation authorization. | Gate 0 finalization |
 | 2026-10-22 | Revision 0.4, final Gate 0 correction pass. P-001 scope preserved at five artifacts including `AGENTS.md`; clarified that acceptance of the artifact is separate from adoption of its instructions, and that adoption is not a P-001 prerequisite. No decision status changed; P-001 remains pending. | Gate 0 final correction pass |
+| 2026-10-23 | Revision 0.7, AGENTS.md adoption recorded. Added D-039 (adoption as agent entry point) and P-009 (accessibility standard proposed); added the `APPROVED (PO DECISION)` status definition; appended a superseding note to P-001 preserving its original 2026-10-22 meaning. No existing decision status, gate status, or P-001 entry was rewritten. | AGENTS.md adoption proposal |
+| 2026-10-28 | Revision 0.8. Recorded P-002 approval with the non-production CEAP clarification; P-003 approval of G-1 – G-12 with mandatory QR-based appointment verification, configurable scheduling/capacity direction, and CEAP-specific exclusions; and P-004 conditional approval of S-1 – S-9 as the provisional Gate 1 discovery baseline. Final targets and QR acceptance criteria remain Gate 1 work. Neither Gate 1 nor implementation was authorized. | Pre-Gate 1 decision recording |
 
 > **Change-log note (superseding clarification).** The initial 2026-10-15 entry
 > was later supplemented: the D-001–D-018 provenance label was revised to the
@@ -288,8 +320,10 @@ Rules:
 ## 10. Approval
 
 This register was approved by the product owner as a Gate 0 baseline artifact
-under P-001 on 2026-10-22. That approval accepts `AGENTS.md` as an artifact without
-adopting its instructions. It did not itself close Gate 0 or approve the Gate 0
+under P-001 on 2026-10-22. That approval accepts `AGENTS.md` as an artifact — as that
+content then stood — without adopting its instructions. The later adoption of a
+replacement `AGENTS.md` (D-039) is recorded separately in §3 and does not alter this
+register's P-001 approval. It did not itself close Gate 0 or approve the Gate 0
 evidence record; the product owner signed off the evidence record and approved the
 Gate 0 transition separately on 2026-10-22, and Gate 0 is `COMPLETE (APPROVED)`
 (Gate Register §3, §13). Neither approval authorizes Gate 1 or any implementation.

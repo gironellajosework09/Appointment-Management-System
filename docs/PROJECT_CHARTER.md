@@ -7,8 +7,23 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 0.6 (Gate 0 closure recorded) |
+| Revision | 0.8 (2026-10-28 — P-002/P-003 approved; P-004 conditionally approved) |
 | Owner | Product Owner |
+
+> **Revision 0.8 (2026-10-28) — P-002/P-003 approved; P-004 conditionally
+> approved for Gate 1 discovery.** The Product Owner approved P-002 and P-003
+> and conditionally approved P-004 in ChatGPT on 2026-10-28. Unresolved targets
+> and functional details remain for Gate 1; neither Gate 1 nor implementation is authorized.
+
+> **Revision 0.7 (2026-10-22) — DRAFT revised product vision and goals, submitted
+> for product-owner review.** §2 and §3 replaced with revised draft wording for
+> P-002 (vision) and P-003 (goals); the new §3.1 records how existing goals G-1 –
+> G-7 were preserved, extended, or split, and which goals are new. This revision is
+> a **draft submitted for review**: it is not approved, P-002, P-003, and P-004
+> remain unresolved product-owner decisions, no decision or gate status changed,
+> and no implementation is authorized. The P-001 artifact approval recorded on
+> 2026-10-22 is unaffected by this revision, and this revision is not itself
+> approved by it.
 
 > **Revision 0.6 (2026-10-22) — Gate 0 closure recorded.** §17 updated to record
 > that Gate 0 was closed on 2026-10-22 once the remaining exit criteria were met. No
@@ -41,12 +56,15 @@ Every material statement is labelled with one of the following:
 | Label | Meaning |
 |---|---|
 | **Confirmed** | Explicitly provided in the product-owner-provided planning baseline. Treated as in force for planning purposes; approval of this charter as an artifact is tracked separately (P-001). |
+| **Approved** | Explicitly approved by the Product Owner and in force within the stated scope. Approval does not authorize a gate or implementation. |
+| **Conditionally approved** | Approved only for the stated purpose and conditions; unresolved details remain unapproved. |
 | **Proposal** | Suggested wording or direction; requires product-owner approval before it is in force. |
 | **Assumption** | Believed true but not yet validated; must be tested or falsified. |
 | **Unresolved** | Not decided; to be resolved at a named gate. Must not be treated as settled. |
 
-Nothing here constitutes a committed business policy, customer segment, service
-workflow, technical specification, or commercial commitment.
+Confirmed, approved, and conditionally approved statements are in force only to the extent
+their labels state. Proposals, assumptions, and unresolved items are not approved. Nothing in
+this charter authorizes Gate 1 or implementation.
 
 ---
 
@@ -70,48 +88,136 @@ baseline (see §12 and decision D-020).
 
 ## 2. Product Vision
 
-**Proposal — requires product-owner approval.**
+**Approved by the Product Owner on 2026-10-28 (P-002), with the clarification below.**
 
-Build a reusable, configuration-driven appointment management product that any
-suitable client organization can deploy as its own independent installation,
-without depending on the design, data, or constraints of any single existing
-system. The product should make scheduling and administrative appointment
-workflows correct, secure, auditable, and straightforward for public users and
-staff alike.
+To build a professionally engineered, secure, efficient, and configurable
+Appointment Management System that delivers a smooth and reliable experience for
+users and administrators. The system should be designed to support growth to
+thousands of users while maintaining responsive performance, data integrity,
+usability, and maintainability.
 
-The vision deliberately avoids anchoring the product to CEAP's existing workflow.
-CEAP is a **behavior reference**, not the product's design target.
+The product will follow sound software engineering principles, with a
+well-structured architecture, deliberate technical decisions, comprehensive
+testing, and clear documentation. It will be designed to accommodate different
+organizational needs through configuration and extensible architecture rather
+than requiring extensive redevelopment for every client.
 
-This vision is a proposal for the product owner to approve, amend, or replace. It
-must not be treated as settled.
+The long-term vision is to develop a dependable, adaptable, and commercially
+viable software product that can evolve as requirements grow, technologies
+change, and real-world usage provides new insights.
+
+**Approved boundaries this vision retains.** The product remains a separate,
+independent commercial product, installed independently for each client
+organization, with its own application, database, schema, configuration, and
+deployment environment (D-019, D-020, D-035; §1, §8, §12). It must never
+depend on, connect to, or affect the production CEAP system (D-024, D-025;
+§7). CEAP is only an optional, non-production historical reference for lessons
+learned and candidate workflows, not this product's design target.
+Configuration and extensibility — not per-client redevelopment — are the
+intended means of adapting to different organizations.
+
+**P-002 clarification (approved).** CEAP's architecture, implementation, database
+schema, defects, and organization-specific rules are not authoritative product
+requirements. CEAP-like workflows may be supported when independently specified
+and validated, without requiring CEAP's implementation or production environment.
+
+**Aspiration, not requirement.** "Support growth to thousands of users" states an
+intention, not a validated capacity target. No concurrency, throughput,
+response-time, or availability figure is committed by this vision; those remain
+unresolved open questions (Q-016, Q-022; §4, §10). The vision asserts no
+zero-defect, perfect-reliability, guaranteed-scalability, or market-validation
+claim, and selects no target customer segment (Q-001).
+
+The Product Owner approved this vision with the clarification above on
+2026-10-28 (P-002).
 
 ---
 
 ## 3. Product Goals
 
-**Proposal — requires product-owner approval.**
+**Approved by the Product Owner on 2026-10-28 (P-003), with the clarifications below.**
 
-- G-1: Support appointment scheduling and related administrative workflows for
-  multiple independent client installations from one maintained codebase.
-- G-2: Guarantee data integrity under normal and concurrent use (no duplicate or
-  over-capacity bookings, no orphaned or inconsistent records).
+- G-1: Support appointment scheduling and mandatory QR-based appointment
+  verification as core capabilities, with related administrative workflows for
+  multiple independent client installations from one maintained codebase, each
+  deployed and operated independently.
+- G-2: Enforce data integrity under normal and concurrent use — no duplicate or
+  over-capacity bookings, and no orphaned or inconsistent records — and handle
+  failures safely.
 - G-3: Provide strong authentication, authorization, privacy, and auditability
-  appropriate to handling personal data.
-- G-4: Be configurable per client organization without forking core logic.
-- G-5: Be maintainable and testable, with automated tests and documented
-  decisions.
-- G-6: Provide a usable, accessible, responsive experience across devices.
+  appropriate to handling personal data, including protection against common
+  application vulnerabilities.
+- G-4: Be configurable per client organization without forking core logic, and
+  extensible so differing organizational requirements are met through
+  configuration and extension rather than through redevelopment, including
+  scheduling and capacity policies based on validated organizational needs.
+- G-5: Be maintainable and testable — clear, modular, understandable code
+  following appropriate design principles and framework conventions — supported
+  by automated tests (G-10) and documented decisions (G-9).
+- G-6: Provide a usable, accessible, consistent, and responsive experience across
+  desktop, tablet, and mobile devices.
 - G-7: Never depend on, connect to, or affect the production CEAP system.
+- G-8: **Scalability and performance** — design for increasing users, appointments,
+  and records while maintaining acceptable response times and efficient resource
+  usage, and validate capacity through performance testing.
+- G-9: **Professional engineering practices** — deliberate technical decisions,
+  version control, appropriate review, automated testing, debugging, and
+  documentation.
+- G-10: **Testing and defect prevention** — test critical business rules and
+  workflows, detect regressions, investigate root causes, and reduce recurring
+  defects.
+- G-11: **Deployment and operational reliability** — make installation,
+  configuration, updates, backups, restoration, and troubleshooting manageable,
+  keeping separate client installations and their data appropriately isolated.
+- G-12: **Long-term adaptability and commercial viability** — build a practical
+  foundation that can evolve into a product for different organizations,
+  prioritizing features by validated requirements, feasibility, feedback, and
+  business value.
+
+**P-003 clarification (approved).** CEAP-specific grantee records are not a
+generic product requirement, and the historic fixed 80-appointment daily limit
+must not be hardcoded. Specific scheduling and capacity rules remain for Gate 1
+discovery (Q-019).
+
+G-1 – G-7 are carried forward from the previous draft with their identifiers and
+commitments intact; G-8 – G-12 are new. §3.1 records the mapping to the ten
+reviewed themes. No goal was retired or deleted in this revision.
 
 Goal targets (numbers, coverage thresholds, service levels) are **unresolved** and
-must be agreed during Gate 1 (see §10).
+must be agreed during Gate 1 (see §4, §10; Q-016, Q-022). No goal is a claim of
+zero defects, perfect reliability, guaranteed scalability, validated market demand,
+or a committed technology version (D-031, Q-007).
+
+### 3.1 Traceability of the approved goal set
+
+| Proposed theme | Existing goal(s) | Disposition | Current ID |
+|---|---|---|---|
+| Scalability and performance | — | New goal | G-8 |
+| Reliability and data integrity | G-2 | Preserved. "Guarantee" reworded to "Enforce" so the goal states an enforcement commitment without a zero-defect claim; explicit failure handling added. The absolutes (no duplicate, no over-capacity, no orphaned records) are retained. | G-2 |
+| Security and privacy | G-3 | Preserved and extended: auditability retained, protection against common application vulnerabilities added. | G-3 |
+| Usability and responsive design | G-6 | Preserved and clarified: consistency and the desktop/tablet/mobile range made explicit. | G-6 |
+| Configurability and extensibility | G-4 | Preserved and extended with extensibility; the no-forking-core-logic constraint is retained. | G-4 |
+| Maintainability and code quality | G-5 | Preserved. The automated-testing and documented-decisions commitments are expanded in G-10 and G-9 and cross-referenced from G-5; they are relocated, not removed. | G-5 |
+| Professional engineering practices | G-5 (partly — documented decisions) | Split out as a new goal covering end-to-end engineering practice. | G-9 |
+| Testing and defect prevention | G-5 (partly — automated tests) | Split out and expanded into regression detection, root-cause investigation, and defect reduction. | G-10 |
+| Deployment and operational reliability | — | New goal. Deployment, hosting, and backup models remain unresolved (Q-008); this states a goal, not a chosen model. | G-11 |
+| Long-term adaptability and commercial viability | — | New goal. States direction only; no target market (Q-001), commercial model (Q-010), or market validation is asserted. | G-12 |
+
+Two existing goals have no counterpart among the ten reviewed themes and are
+retained deliberately, not dropped:
+
+| Existing goal | Disposition | Current ID |
+|---|---|---|
+| Support multiple independent client installations from one maintained codebase | Preserved, with independent deployment and operation made explicit; mandatory QR-based appointment verification added under P-003. | G-1 |
+| Never depend on, connect to, or affect the production CEAP system | Preserved verbatim. | G-7 |
 
 ---
 
 ## 4. Measurable Success Criteria
 
-**Proposal — requires product-owner approval.** Items marked *[target TBD]* need a
-measurable target agreed in Gate 1 before they can be verified.
+**Conditionally approved (P-004) as the provisional Gate 1 discovery baseline.**
+Final targets, testing thresholds, accessibility standards, and release acceptance
+criteria are not approved; unresolved targets must be agreed in Gate 1.
 
 | ID | Criterion | Verification approach | Target |
 |---|---|---|---|
@@ -125,9 +231,11 @@ measurable target agreed in Gate 1 before they can be verified.
 | S-8 | Architecture, decisions, and changes are documented. | Artifact review. | Verifiable now |
 | S-9 | The production CEAP application, database, and deployment are never affected. | Scope/isolation review across all gates. | Verifiable now |
 
-Criteria whose target reads *[target TBD]* are **provisional** until a target is
-agreed. S-1, S-2, S-6, and S-7 currently carry no measurable target; S-8 and S-9
-are verifiable without a numeric target. Further criteria may be added in Gate 1.
+S-1 – S-7 still need measurable targets, coverage thresholds, or an agreed
+accessibility standard during Gate 1; S-8 and S-9 are verifiable without
+numeric targets. The Gate 1 requirements specification must define functional
+acceptance criteria for mandatory QR-based appointment verification (G-1).
+Further criteria may be added in Gate 1.
 
 ---
 
@@ -196,17 +304,18 @@ environment, established only when separately authorized.
 
 ### 7.3 Permitted use of CEAP
 
-- CEAP may be consulted as a **reference** for understanding existing appointment
-  workflows, user experience, operational practices, and lessons learned.
+- Only non-production historical CEAP materials may be consulted as an optional
+  reference for lessons learned and candidate workflows; production CEAP systems
+  remain off-limits (§7.2).
 - Any CEAP source copied into this project is a **separate reference or
   experimental copy**, not the authoritative foundation of the commercial
   product.
 - Instructions belonging to the separate production CEAP system are outside this
   repository and must not be modified.
 - This repository's `AGENTS.md` is **not** production CEAP instructions. Its
-  instructions are **not adopted**. It remains part of the P-001 artifact set:
-  accepting it as an artifact is separate from adopting its instructions, and
-  adoption is **not** a prerequisite for P-001 approval.
+  version accepted for P-001 was not adopted at Gate 0 closure; accepting it as
+  an artifact did not adopt its instructions and was not contingent on adoption.
+  The replacement `AGENTS.md` was adopted under D-039 (2026-10-23).
 
 ### 7.4 Stop rule
 

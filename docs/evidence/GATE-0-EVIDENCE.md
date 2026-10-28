@@ -219,3 +219,32 @@ command, and with what result; earlier entries are not to be rewritten.
 |---|---|
 | 2026-10-22 | Record created. Based on the observations in §3, taken before the 2026-10-22 documentation correction pass. |
 | 2026-10-22 | Product-owner sign-off recorded. The Product Owner approved this evidence record as written on 2026-10-22 (no time recorded). No new evidence was collected; the findings and limitations in §3–§5 are unchanged. |
+| 2026-10-23 | Amendment for D-039. Lineage note appended as §7 (product-owner supplied; not evidence). Re-inspection at amendment time: `git ls-tree -r HEAD --name-only` returned 6 paths; `git status --porcelain=v1` returned 5 modified paths (four authorized edits plus the pre-existing `docs/PROJECT_CHARTER.md` draft); SHA-256 of those five files, recorded after the final formatting corrections were applied and re-verified as the final post-edit values: AGENTS.md `98c0b204122697341694f4704fe9cd24d14a1533e8d0be393f5caf3c5f356b94`; ENGINEERING_GOVERNANCE.md `44b36302d6f8698b0833007cedc30ac6a5010bfb822f1f8df446a987e5a8ddeb`; GATE_REGISTER.md `7dd04487ed1a040a538e58d21ee88687be894ef958b6f96bbd43a9768a317bf8`; DECISION_REGISTER.md `f5f628953f3eba5e2bc644545b50b59fb9df5f054b59fc18581e5705c8189be0`; PROJECT_CHARTER.md `6b32787d92c87512ce6799c8280c7eb8a781f79139a8e92cf0edd4df4be11b51`. This record's own pre-amendment SHA-256 was `fe1af0436c88977a003c124fee5cac9b52528598b41b3ffca4de84c4f9ca5ec9`; its hash necessarily changes when this row is appended, so no post-amendment self-hash is claimed. No earlier entry rewritten; §3–§5 findings and limitations unchanged. |
+| 2026-10-23 | Correction following audit finding D-1. §7 Provenance wording changed from "carried **verbatim**" to "preserved **in substance**"; no other text in §7 or elsewhere in this record was altered, and no other file was modified. Re-verification before this entry was written: `git status --porcelain=v1` returned 6 modified paths (the five authorized governance files plus the pre-existing `docs/PROJECT_CHARTER.md` draft); SHA-256 of the five other in-scope files, unchanged by this correction: AGENTS.md `98c0b204122697341694f4704fe9cd24d14a1533e8d0be393f5caf3c5f356b94`; ENGINEERING_GOVERNANCE.md `44b36302d6f8698b0833007cedc30ac6a5010bfb822f1f8df446a987e5a8ddeb`; GATE_REGISTER.md `7dd04487ed1a040a538e58d21ee88687be894ef958b6f96bbd43a9768a317bf8`; DECISION_REGISTER.md `f5f628953f3eba5e2bc644545b50b59fb9df5f054b59fc18581e5705c8189be0`; PROJECT_CHARTER.md `6b32787d92c87512ce6799c8280c7eb8a781f79139a8e92cf0edd4df4be11b51`. This record's own pre-correction SHA-256 was `101d26f973a21629b75167b533b7ac8a0425efab15486d323e9f9a07a2d698f4`; its hash necessarily changes when this entry is appended, so no post-amendment self-hash is claimed. Earlier entries are not rewritten. |
+
+---
+
+## 7. Lineage note (product-owner supplied — not evidence)
+
+**Provenance:** this note was supplied by the Product Owner and was preserved in substance in
+`AGENTS.md` until that file was replaced under D-039. It is recorded here so the statement
+is not lost. It is **not** an observation made by this record.
+
+> This repository is the fresh commercial Appointment Management System project. It
+> is distinct from the former commercial project from which the product owner has
+> stated it was derived. That former project was itself derived from a copy of the
+> separate production CEAP appointment system, including application code, assets,
+> database schema and seed data, tests, and CEAP-specific documentation. Neither the
+> former project nor the production CEAP system is part of this repository, and the
+> production CEAP system is **not** modified.
+>
+> Only this repository and its available Git history have been inspected. Nothing
+> inspected indicates that the former project's files, a CEAP `AGENTS.md`, or any
+> other historical copy is present here. This note states only what the available
+> evidence supports and does not claim that the original source repository, every
+> historical copy, or every prior file has been independently inspected.
+
+**Scope limitation.** This section adds no inspection. Consistent with §4(1) and
+§4(6), it establishes nothing about other clones, the original source repository, or
+the accuracy of the derivation described above. It records a product-owner statement
+and the limits that statement itself declares.

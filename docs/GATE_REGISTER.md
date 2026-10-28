@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 0.6 (Gate 0 closure recorded) |
+| Revision | 0.8 (2026-10-28 — P-002–P-004 dispositions recorded; Gate 1 blocked) |
 | Owner | Product Owner |
 
 This register tracks gate status and defines, for each gate: purpose, required
@@ -33,7 +33,7 @@ approval. No AI tool may set or imply a gate approval.
 | Gate | Name | Status |
 |---|---|---|
 | Gate 0 | Project Initiation & Governance | **COMPLETE (APPROVED)** — 2026-10-22 |
-| Gate 1 | Requirements Discovery | **BLOCKED** (P-002 – P-004 unresolved; not authorized) |
+| Gate 1 | Requirements Discovery | **BLOCKED** (entry authorization not granted) |
 | Gate 2 | Architecture & Design | **BLOCKED** (requires Gate 1 approval) |
 | Gate 3 | Security & Data Integrity Design Review | **BLOCKED** (requires Gate 2 approval) |
 | Gate 4 | Authorized Implementation | **BLOCKED** (requires Gate 3 approval and explicit authorization) |
@@ -44,8 +44,8 @@ approval. No AI tool may set or imply a gate approval.
 Notes:
 
 - Gate 0 is `COMPLETE (APPROVED)` as of 2026-10-22 (§3, §13).
-- Gate 1 is `BLOCKED` under the §1 definition: P-002 – P-004 are unresolved and
-  Gate 1 has not been authorized. Gate 0 approval alone does not open Gate 1.
+- Gate 1 is `BLOCKED` under the §1 definition: P-002 – P-004 were decided on
+  2026-10-28, but Gate 1 has not been authorized. Gate 0 approval alone does not open it.
 - Gates 2–7 remain `BLOCKED` because their prerequisite gate approvals are unmet.
 - Gate 7 is an **ongoing responsibility**, not a state that permanently ends
   maintenance.
@@ -75,8 +75,10 @@ scope, authority, engineering process, decisions, and gate sequencing.
 - `docs/ENGINEERING_GOVERNANCE.md`
 - `docs/decisions/DECISION_REGISTER.md`
 - `docs/GATE_REGISTER.md` (this document)
-- `AGENTS.md` (present in this repository; listed in the P-001 artifact set. Its
-  instructions are **not adopted** — see Blockers).
+- `AGENTS.md` (present in this repository; listed in the P-001 artifact set. At the
+  time of Gate 0 closure its instructions were **not adopted** — see Blockers. It
+  was subsequently replaced and adopted as the agent entry point under D-039,
+  effective 2026-10-23).
 - A separate Gate 0 evidence record at `docs/evidence/GATE-0-EVIDENCE.md`, stating
   what was inspected, the period covered, and what cannot be established regarding
   implementation, dependency, database, deployment, and **destructive Git-history
@@ -104,14 +106,15 @@ Product Owner.
 
 - P-001 is **resolved**: the product owner approved all five Gate 0 baseline
   artifacts on 2026-10-22 (approval date recorded; no time recorded), accepting
-  `AGENTS.md` as an artifact without adopting its instructions. Gate 0 was closed on
+  `AGENTS.md` as an artifact without adopting the instructions *of the version then in the
+  repository*. Gate 0 was closed on
   2026-10-22 after the evidence record was signed off and the transition was
   approved (§13).
 - P-007 is **resolved**: the product owner confirmed D-033 (Gate 0 is documentation
   and governance only), so P-007 does not block Gate 0.
-- P-002, P-003, and P-004 remain unresolved product-owner decisions. Per their
-  recorded definitions they block **Gate 1 entry**, not Gate 0 closure, so they are
-  not listed as Gate 0 blockers.
+- At Gate 0 closure, P-002, P-003, and P-004 were unresolved product-owner
+  decisions blocking **Gate 1 entry**, not Gate 0 closure. They were subsequently
+  decided on 2026-10-28; Gate 0 status is unchanged.
 - P-008 is **resolved as redundant** (product-owner confirmed): it requested
   confirmation of the already APPROVED BASELINE decisions D-034, D-035, D-036, and
   D-038 and introduces no additional decision, so it does not block Gate 0.
@@ -119,12 +122,14 @@ Product Owner.
   block Gate 2 / Gate 4 and Gate 2 / Gate 6 respectively, **not** Gate 0, so they
   are not listed as Gate 0 blockers. If the product owner intends either to gate
   Gate 0 closure, that requires an explicit decision.
-- **`AGENTS.md` — artifact acceptance is not instruction adoption.** `AGENTS.md`
-  is present in this repository and sits in the recorded P-001 artifact set.
-  Accepting it as a P-001 artifact is separate from adopting its instructions,
-  which are **not adopted**. Adoption is a separate product-owner decision and is
-  **not** a prerequisite for P-001 approval or Gate 0 closure, so it is not a Gate
-  0 blocker.
+- **`AGENTS.md` — artifact acceptance was not instruction adoption (historical).**
+  `AGENTS.md` is present in this repository and sits in the recorded P-001 artifact
+  set. Accepting it as a P-001 artifact was separate from adopting its instructions,
+  which were **not adopted at the time of Gate 0 closure**. Adoption was **not** a
+  prerequisite for P-001 approval or Gate 0 closure, so it was never a Gate 0
+  blocker. **Subsequently:** the Product Owner adopted `AGENTS.md` as the project's
+  agent entry point on 2026-10-23 (D-039, Decision Register §3). This does not
+  reopen or alter Gate 0.
 - Historical decisions D-001 – D-018 were not found in the inspected scope; their
   provenance is unverified. This is **not** an automatic blocker (Q-017).
 
@@ -132,7 +137,7 @@ Product Owner.
 
 ## 4. Gate 1 — Requirements Discovery
 
-**Status: BLOCKED** (P-002 – P-004 unresolved; Gate 1 not authorized)
+**Status: BLOCKED** (P-002 – P-004 decided; Gate 1 not authorized)
 
 ### Purpose
 
@@ -144,8 +149,7 @@ journeys, business rules, assumptions, risks, and measurable acceptance criteria
 - Gate 0 approved.
 - Product owner authorizes Gate 1.
 - Charter §2 (product vision), §3 (product goals), and §4 (success criteria)
-  approved or explicitly deferred by the product owner (P-002 – P-004). The
-  Decision Register records these as blocking Gate 1 entry.
+  approved or explicitly deferred by the product owner (P-002 – P-004).
 
 ### Required Deliverables and Evidence
 
@@ -178,7 +182,7 @@ Product Owner.
 ### Blockers / Dependencies
 
 - Gate 0 approval.
-- P-002, P-003, and P-004 (Charter vision, goals, success criteria) unresolved.
+- Product-owner authorization to start Gate 1 has not been granted.
 - Access to representative client/user stakeholders (DP-2).
 
 ---
@@ -461,6 +465,8 @@ incidents, backups, and reviews continue under approved change control.
 | 2026-10-22 | P-001 approval recorded. Product owner approved all five Gate 0 baseline artifacts (Charter, Engineering Governance, Decision Register, Gate Register, `AGENTS.md`) on 2026-10-22; `AGENTS.md` accepted as an artifact only, its instructions not adopted. Gate 0 remains IN PROGRESS (evidence record not signed off); Gate 1 BLOCKED. | P-001 approval recording |
 | 2026-10-22 | Gate 0 closure recorded. Product owner signed off the Gate 0 evidence record (`docs/evidence/GATE-0-EVIDENCE.md`) and explicitly approved the Gate 0 transition on 2026-10-22 (no time recorded). Gate 0 set `COMPLETE (APPROVED)`. Gate 1 remains `BLOCKED` (P-002 – P-004 unresolved; not authorized). No Gate 1 approval and no implementation authorization recorded. | Gate 0 finalization |
 | 2026-10-22 | Revision 0.4, final Gate 0 correction pass. Gate 1 reclassified `BLOCKED` under the §1 definition (Gate 0 approval unmet). `AGENTS.md` recorded as a P-001 artifact whose acceptance is separate from adoption of its instructions; adoption is not a P-001 or Gate 0 prerequisite. Gate 0 IN PROGRESS; no gate approval recorded. | Gate 0 final correction pass |
+| 2026-10-23 | Revision 0.7, AGENTS.md adoption reconciliation. Updated the three live non-adoption statements (§3 deliverables, §3 P-001 blocker note, §3 `AGENTS.md` blocker note) to record adoption under D-039 while preserving the historical fact that its instructions were not adopted at Gate 0 closure. No gate status, approval, or exit criterion changed; Gates 0–7 statuses are unchanged; the proposed accessibility standard (P-009) is not approved by this pass. | AGENTS.md adoption proposal |
+| 2026-10-28 | Revision 0.8. Recorded the P-002 and P-003 approvals and P-004 conditional approval, removing them as Gate 1 entry blockers. Gate 1 remains `BLOCKED` because entry authorization has not been granted; no gate exit criterion or implementation authorization changed. | Pre-Gate 1 decision recording |
 
 > **Change-log note (superseding clarification).** The 2026-10-15 "Gate 0
 > governance corrections" entry recorded P-008 as resolved when it had only been
