@@ -82,7 +82,9 @@ flowchart LR
     LOOK --> ID[Separate identity / entitlement procedure if required]
     LOOK -->|if no check required| ACTION[Explicit authorized staff attendance action]
     ID --> ACTION
-    ACTION --> AT[Attendance state transition]
+    ACTION --> VALIDATE[Authorize action and validate applicable appointment state]
+    VALIDATE -->|valid and authorized| AT[Valid attendance state transition]
+    VALIDATE -->|invalid or unauthorized| REJECT[Safe rejection / no state change]
     P[Paper observations after outage] --> REC[Attributable reconciliation: compare with current state]
     REC -->|eligible proposed change| CHECK
     REC --> CONFLICT[Explicit conflicted / unresolved outcome]
