@@ -2,10 +2,10 @@
 
 | Field | Value |
 |---|---|
-| Document status | APPROVED DEVELOPMENT-STAGE BASELINE — D-081, 2026-10-29; not representative validation |
+| Document status | Revision 1.0 APPROVED DEVELOPMENT-STAGE BASELINE — D-081, 2026-10-29; revision 1.1 administrative status reconciliation, not separately approved; not representative validation |
 | Gate | Gate 1 (Requirements Discovery) — COMPLETE (APPROVED); Gate 2 documentation authorized |
 | Document date | 2026-10-28 |
-| Revision | 1.0 (2026-10-29 — D-067–D-075 directions and v0.7 baseline traced; exact baseline approved under D-081) |
+| Revision | 1.1 (2026-10-29 — post-approval administrative Gate 1/2 status reconciliation; D-081 approved revision 1.0 only) |
 | Owner | Product Owner |
 
 This matrix keeps traceability relationships distinct. A citation does not imply
@@ -25,6 +25,11 @@ remain in the Charter, Decision Register, and Gate Register.
 | Approver | Product Owner |
 | Classification | Development-stage assumption baseline; not `VALIDATED` evidence |
 | Deferred records | FR-009 and FR-011 remain `DEFERRED` under D-042 |
+
+**Administrative revision 1.1 (2026-10-29).** D-081 approved revision 1.0 with
+Requirements Specification v0.7. This post-approval correction updates only later
+Gate 1/Gate 2 status commentary under D-082; it does not amend or reapprove the
+D-081 baseline, requirement links, evidence classifications, or validation results.
 
 ## 1. Requirement traceability matrix
 
@@ -102,7 +107,7 @@ release evidence. Later approved profiles and verification remain required.
 
 | Gate Register §4 item | Current draft coverage | Missing evidence or decision |
 |---|---|---|
-| Functional and non-functional specification | FR-001–FR-018; NFR-001–NFR-011 | Formal review, validation, and exact-version Product Owner approval |
+| Functional and non-functional specification | FR-001–FR-018; NFR-001–NFR-011 | Exact-version development-stage approval recorded under D-081; representative stakeholder validation and later release evidence remain outstanding |
 | Validated target customer | D-041; Q-001; VAL-001; EVD-001–EVD-007 | Selection and follow-up discovery support exist; representative/formal primary-segment validation remains |
 | Public, administrator/staff, and operator journeys | UJ-001–UJ-005 | Partial discovery support exists; formal walkthrough evidence remains |
 | Scheduling/booking/cancellation/rescheduling/duplicate rules | BR-001–BR-002; BR-005–BR-009; D-043–D-051 | Universal direction exists; configurable client values and formal walkthrough remain |
@@ -113,7 +118,7 @@ release evidence. Later approved profiles and verification remain required.
 | Decision Register updated | D-041–D-075; question dispositions | D-055 records the Q-010 deferral; D-056–D-075 record the boundary, workflow, quality, monitoring, roster, and operator directions |
 | Requirements reviewed | D-040 checkpoint, D-077/D-081, and exact v0.7 review | Development-stage baseline approved; representative stakeholder walkthrough remains outstanding |
 | Blocking questions resolved/deferred | D-041–D-081; Q-010 deferred to Gate 6 by D-055; Q-014 resolved by D-073; D-079 milestones recorded | Exact client policies and genuine validation remain later-gate obligations |
-| Product Owner approves Gate 1 | No coverage possible in a draft | Explicit Gate 1 exit approval absent |
+| Product Owner approves Gate 1 | Separate exit approval recorded under D-082 on 2026-10-29 | Gate 2 entry is authorized for architecture/design documentation only; genuine validation remains outstanding |
 
 ## 6. Approval and evidence view
 
@@ -170,5 +175,6 @@ release evidence. Later approved profiles and verification remain required.
 - Legal/privacy expertise, jurisdiction, exact retention/deletion rules, formal
   review records, and approved evidence ownership remain unresolved.
 - Historical D-001–D-018 remain unavailable under Q-017 and are not guessed.
-- Gate 1 is in progress, not approved for exit; implementation remains
-  unauthorized.
+- Gate 1 is `COMPLETE (APPROVED)` under D-082; Gate 2 is `IN PROGRESS` for
+  architecture/design documentation only. Gates 3–7 remain `BLOCKED`;
+  implementation remains unauthorized.

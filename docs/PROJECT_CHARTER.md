@@ -4,11 +4,16 @@
 
 | Field | Value |
 |---|---|
-| Document status | Revision 1.3 DRAFT — Gate 1 decisions incorporated; exact revision pending Product Owner review. The effective approved baseline remains the P-001 Gate 0 artifact as recorded at Revision 0.5; P-002/P-003/P-004 and D-041–D-075 retain their separate recorded scope. |
+| Document status | Revision 1.4 DRAFT — Gate 1 decisions and D-082 status reconciliation incorporated; exact revision pending Product Owner review. The effective approved baseline remains the P-001 Gate 0 artifact as recorded at Revision 0.5; P-002/P-003/P-004 and D-041–D-075 retain their separate recorded scope. |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.3 DRAFT (2026-10-29 — D-067–D-075 Gate 1 directions incorporated) |
+| Revision | 1.4 DRAFT (2026-10-29 — current Gate 1/2 status references reconciled to D-082) |
 | Owner | Product Owner |
+
+> **Revision 1.4 DRAFT (2026-10-29) — administrative status reconciliation.**
+> Current gate-status references reflect D-082 and Gate Register revision 1.10.
+> This revision remains a draft; D-082 does not approve its wording or change
+> historical approvals, goals, scope, or implementation authorization.
 
 > **Revision 1.0 DRAFT (2026-10-28) — superseded by later drafts; never approved.**
 > Clarifies that A-1 remains an assumption to validate although independent
@@ -87,8 +92,9 @@ Every material statement is labelled with one of the following:
 
 Confirmed, approved, and conditionally approved statements are in force only to the extent
 their labels state. Proposals, assumptions, and unresolved items are not approved. Gate 1
-entry is authorized only as recorded in `docs/GATE_REGISTER.md` §4; nothing in
-this charter authorizes implementation.
+exit and Gate 2 documentation/design entry are authorized separately under D-082,
+as recorded in `docs/GATE_REGISTER.md` §§4–5; nothing in this charter authorizes
+implementation.
 
 ---
 
@@ -275,8 +281,10 @@ and S-9 remain verifiable without numeric targets.
 
 ## 5. Gate 1 MVP Direction
 
-**Approved product direction (D-042–D-075); exact requirement versions remain
-DRAFT.** The MVP direction covers configurable availability/capacity, guest and
+**Approved product direction (D-042–D-075).** Requirements Specification v0.7 and
+Requirements Traceability revision 1.0 were approved under D-081 as the development-stage
+assumption baseline, not representative stakeholder validation. The Project Charter
+remains a working draft. The MVP direction covers configurable availability/capacity, guest and
 staff-assisted/proxy/walk-in booking, alternative availability when a preferred
 date or slot is unavailable, cancellation/rescheduling, duplicate and capacity
 integrity, QR lookup rather than identity proof, attendance status, least-privilege
@@ -288,7 +296,8 @@ integrity violations, reconciliation failures, and other important operational
 failures requiring administrative attention.
 
 Exact client policy values are configuration decisions, not universal defaults.
-Architecture and implementation remain unauthorized.
+D-082 separately authorizes Gate 2 architecture/design documentation only;
+implementation remains unauthorized.
 
 ---
 
@@ -546,11 +555,12 @@ This charter was approved by the product owner as a Gate 0 baseline artifact und
 P-001 on 2026-10-22. That approval did not itself close Gate 0; Gate 0 was closed
 on 2026-10-22 once its remaining exit criteria were met (see
 `docs/GATE_REGISTER.md` §3). Gate 1 entry was subsequently authorized on
-2026-10-28 for requirements analysis and documentation only; Gate 1 is not
-approved for exit, and no implementation authorization is recorded. Revision 1.3
-is a working draft pending Product Owner review; this historical P-001 approval
-and the separately scoped D-041–D-075 decisions do not approve the exact Revision
-1.3 wording.
+2026-10-28 for requirements analysis and documentation only. D-082 separately
+approved Gate 1 exit and authorized Gate 2 architecture/design documentation on
+2026-10-29; implementation remains unauthorized. Revision 1.4 is a working draft
+pending Product Owner review; this historical P-001 approval, the separately
+scoped D-041–D-075 decisions, and D-082 do not approve the exact Revision 1.4
+wording.
 
 | Approver | Role | Decision | Date |
 |---|---|---|---|
