@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.9 (2026-10-29 — D-082 approved; Gate 1 closed and Gate 2 authorized) |
+| Revision | 1.10 (2026-10-29 — present-tense Gate 1/2 status statements reconciled to D-082) |
 | Owner | Product Owner |
 
 This register tracks gate status and defines, for each gate: purpose, required
@@ -44,10 +44,11 @@ approval. No AI tool may set or imply a gate approval.
 Notes:
 
 - Gate 0 is `COMPLETE (APPROVED)` as of 2026-10-22 (§3, §13).
-- Gate 1 is `IN PROGRESS`: the Product Owner authorized requirements discovery on
-  2026-10-28. This authorizes Gate 1 analysis and documentation only; implementation
+- Gate 1 is `COMPLETE (APPROVED)` under D-082 (2026-10-29); its earlier entry
+  authorization on 2026-10-28 was limited to requirements analysis and documentation.
+- Gate 2 is `IN PROGRESS` for architecture/design documentation only under D-082;
+  Gates 3–7 remain `BLOCKED` pending their respective prerequisites. Implementation
   remains unauthorized.
-- Gates 2–7 remain `BLOCKED` because their prerequisite gate approvals are unmet.
 - Gate 7 is an **ongoing responsibility**, not a state that permanently ends
   maintenance.
 
@@ -138,14 +139,16 @@ Product Owner.
 
 ## 4. Gate 1 — Requirements Discovery
 
-**Status: COMPLETE (APPROVED) — 2026-10-29.** The Product Owner authorized
+**Status: COMPLETE (APPROVED) — 2026-10-29 under D-082.** The Product Owner had authorized
 Gate 1 requirements analysis and documentation, including stakeholder/customer
 validation, user journeys, business rules, authentication requirements, assumption
 validation, risks, measurable acceptance criteria, and functional requirements for
-mandatory QR-based appointment verification. This is entry authorization only: Gate
-1 is not complete or approved for exit, and implementation remains unauthorized.
-The authorization does not permit application, architecture, dependency, database,
-schema, migration, deployment, or production CEAP changes or access.
+mandatory QR-based appointment verification. That entry authorization was limited
+to Gate 1 analysis and documentation; it did not permit application, architecture,
+dependency, database, schema, migration, or deployment changes or production CEAP
+access. D-082 separately approved Gate 1 exit and authorized Gate 2 architecture/design
+documentation only; implementation, database changes, deployment, production access,
+and CEAP access remain unauthorized.
 
 ### Purpose
 
@@ -564,6 +567,7 @@ incidents, backups, and reviews continue under approved change control.
 | 2026-10-29 | Revision 1.7. Reconciled the submitted VAL-001–VAL-006 record as incomplete EVD-008–EVD-013; preserved the v0.7 draft, unresolved policy proposals, missing qualified review, and separate approval requirements. Gate 1 remains `IN PROGRESS`; Gate 2 remains `BLOCKED`; no implementation authorization. | Authorized Gate 1 reconciliation task |
 | 2026-10-29 | Revision 1.8. Activated D-077–D-081, recorded the v0.7 / traceability 1.0 development-stage baseline, retained simulated and genuine evidence classifications, and added D-079 milestone obligations. D-082 remains pending; Gate 1 stays `IN PROGRESS` and Gate 2 `BLOCKED`. | Product Owner decision recording |
 | 2026-10-29 | Revision 1.9. Recorded D-082 approval, closed Gate 1 as `COMPLETE (APPROVED)`, and authorized Gate 2 as `IN PROGRESS` for architecture/design documentation only. | Product Owner gate-transition decision |
+| 2026-10-29 | Revision 1.10. Reconciled stale present-tense Gate 1/2 status statements in §§2 and 4 with D-082 and Gate 1 closure evidence; historical transitions, gate criteria, and authorization boundaries unchanged. This is a documentation correction, not a new gate approval. | Authorized Gate 2 status reconciliation |
 
 > **Change-log note (superseding clarification).** The 2026-10-15 "Gate 0
 > governance corrections" entry recorded P-008 as resolved when it had only been
