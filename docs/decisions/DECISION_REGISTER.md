@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.8 (2026-10-29 — D-082 approved; Gate 1 closed and Gate 2 authorized) |
+| Revision | 1.9 (2026-10-29 — D-083–D-084 Gate 2 design constraints recorded; Q-008 partially disposed) |
 | Owner | Product Owner |
 
 This register records decisions with unique IDs, status, date (where known),
@@ -287,7 +287,7 @@ imply priority or approval.
 | ID | Question | Needed by | Status |
 |---|---|---|---|
 | Q-007 | What exact dependency and runtime versions are used, and how are dependencies managed? | Gate 2 / Gate 4 | OPEN / DISCOVERY |
-| Q-008 | What deployment, hosting, backup, restoration, maintenance, and support model applies? | Gate 2 / Gate 6 | OPEN / DISCOVERY |
+| Q-008 | What deployment, hosting, backup, restoration, maintenance, and support model applies? | Gate 2 / Gate 6 | PARTIALLY DISPOSED by D-083–D-084: client-managed and provider-managed hosting are both Gate 2 design constraints, and one standardized supported deployment profile is a design principle. Detailed deployment, operational responsibilities, backup/restoration, maintenance, and support remain open; no technology or production arrangement is approved. |
 
 ### 6.7 Product Model and Historical
 
@@ -349,6 +349,7 @@ Rules:
 | 2026-10-29 | Revision 1.6. Reserved D-077–D-082 as proposed, undated decisions for the development-stage Gate 1 closure route in the Final Validation Package §16. No proposed decision is in force; gate status and historical evidence remain unchanged. | Gate 1 closure proposal preparation |
 | 2026-10-29 | Revision 1.7. Recorded Product Owner approval of D-077–D-081 with D-079 milestone obligations. D-082 remains separate and pending; no Gate 1 exit or Gate 2 authorization was recorded. | Product Owner decision recording |
 | 2026-10-29 | Revision 1.8. Recorded the separate Product Owner approval of D-082, closed Gate 1, and authorized Gate 2 Architecture & Technical Design documentation only. | Product Owner gate-transition decision |
+| 2026-10-29 | Revision 1.9. Recorded D-083–D-084, approved by the Product Owner on 2026-10-29 in the Gate 2 Phase 2.2C ChatGPT conversation, for the dual hosting-ownership constraint and the one-profile design principle. Q-008 remains partially open. Recording date is 2026-10-29; no technology adoption, operational responsibility assignment, Gate 2 exit, or implementation authorization was recorded. | Authorized Gate 2 decision recording |
 
 > **Change-log note (superseding clarification).** The initial 2026-10-15 entry
 > was later supplemented: the D-001–D-018 provenance label was revised to the
@@ -383,6 +384,20 @@ authorizes Gate 2 within the stated documentation-only scope.
 | D-080 | Adopt the relevant-skill/context-efficiency guidance in Final Validation Package §16.4 as an addition to Engineering Governance §2; `AGENTS.md` continues to refer to §2 rather than duplicating it. | Apply D-054 consistently to agent work. | Efficiency cannot waive necessary source reading, evidence, security, or approval controls. | APPROVED (PO DECISION) | 2026-10-29 | Product Owner |
 | D-081 | Approve Requirements Specification **v0.7** and Requirements Traceability **revision 1.0** as the development-stage requirements baseline under D-077, after exact-version verification; FR-009 and FR-011 remain deferred and all other baseline records retain the approved assumption-based development disposition. | Use the existing bounded 18 FR / 11 NFR baseline; no v0.8 buffer duplicate is needed. | This is not `VALIDATED` stakeholder evidence or release approval. Open design and review obligations remain. | APPROVED (PO DECISION) | 2026-10-29 | Product Owner |
 | D-082 | Separately approve Gate 1 exit and authorize Gate 2 Architecture & Technical Design after D-077–D-081 were incorporated, the assumption/risk ownership and milestone obligations were checked, and the Gate 1 evidence/register were reconciled. Authorization is limited to architecture/design documentation. | Maintain the separate gate-transition decision required by Engineering Governance §§5, 18–19 while preserving implementation and production boundaries. | No implementation, database changes, deployment, production access, or CEAP access is authorized. Gate 3, Gate 5, and Gate 6 obligations remain mandatory. | APPROVED (PO DECISION) | 2026-10-29 | Product Owner |
+
+---
+
+## 9.2 Gate 2 design-constraint decisions
+
+The Product Owner explicitly approved the following constraints in the Gate 2 Phase
+2.2C ChatGPT conversation on 2026-10-29. They are inputs to Gate 2 design, not
+approval of a specific deployment technology, operational responsibility assignment,
+implementation, or Gate 2 exit.
+
+| ID | Decision and approved scope | Rationale | Consequences, existing constraints, and unresolved obligations | Status | Approval date | Approver |
+|---|---|---|---|---|---|---|
+| D-083 | Both client-managed and provider-managed hosting must be accommodated as Gate 2 design constraints, subject to independent installation and operational responsibility design. | Accommodates both approved hosting-ownership arrangements without changing the independent per-client product model or client-data access boundary. | Under either arrangement, each client retains an independent installation and database, CEAP remains isolated, and the operator has no default access to client data (D-019, D-020, D-025, D-034, D-035, D-075; NFR-001, NFR-002, NFR-005; FR-012; AC-007). Gate 2 must define and review client/provider responsibilities and trust boundaries for installation, credentials, updates, monitoring, backups/restores, incidents, and exceptional support access (Q-008). No hosting-specific responsibility assignment, paid hosting, support commitment, or deployment is approved. | APPROVED (PO DECISION) | 2026-10-29 — explicit Product Owner decision in the Gate 2 Phase 2.2C ChatGPT conversation | Product Owner |
+| D-084 | One standardized supported deployment profile is approved as a Gate 2 design principle for independent client installations across the approved hosting-ownership arrangements. No specific profile is selected. | Provides a common support and later-verification design boundary while allowing separate client installations and client-specific configuration. | Standardization does not imply shared tenancy, shared client data, identical business policies, or default operator access (D-020, D-034, D-062, D-075; NFR-001, NFR-002, NFR-004, NFR-005). The profile's concrete boundaries, compatibility constraints, operating system, infrastructure technologies, and technical specifications remain Gate 2 design questions under Q-007/Q-008. Exact runtime/dependency versions remain for Gate 4 under D-031/P-005. Docker and Docker Compose are not adopted: D-023/D-036 still require documented justification and Product Owner approval; D-032 remains provisional and P-006 remains proposed. No Linux, paid hosting, implementation, deployment, or Gate 2 exit is approved. | APPROVED (PO DECISION) | 2026-10-29 — explicit Product Owner decision in the Gate 2 Phase 2.2C ChatGPT conversation | Product Owner |
 
 ---
 
