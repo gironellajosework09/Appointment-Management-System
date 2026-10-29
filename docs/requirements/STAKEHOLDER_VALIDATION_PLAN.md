@@ -2,15 +2,16 @@
 
 | Field | Value |
 |---|---|
-| Document status | DRAFT — Gate 1 Checkpoint 1; pending Product Owner review |
-| Gate | Gate 1 (Requirements Discovery) — IN PROGRESS |
+| Document status | APPROVED DEVELOPMENT-STAGE PLAN — D-077/D-078; genuine validation remains outstanding |
+| Gate | Gate 1 (Requirements Discovery) — COMPLETE (APPROVED); Gate 2 documentation authorized |
 | Document date | 2026-10-28 |
-| Revision | 0.3 (2026-10-28 — second bounded remediation; DRAFT) |
+| Revision | 1.0 (2026-10-29 — development-stage assumption route activated) |
 | Owner | Product Owner |
 
-This plan describes proposed validation. It records no completed validation and
-does not authorize stakeholder contact, incentives, personal-data collection,
-architecture, implementation, or Gate 1 exit.
+This plan assesses EVD-001–EVD-004 as discovery evidence and defines the minimum
+remaining validation. It does not claim representative sampling, a completed
+formal walkthrough, legal review, requirement approval, architecture,
+implementation, or Gate 1 exit.
 
 ## 1. Objectives
 
@@ -31,26 +32,30 @@ architecture, implementation, or Gate 1 exit.
 | Group | Minimum purpose | Related records |
 |---|---|---|
 | Product Owner | Scope, priority, disposition, approval, and unresolved-question decisions | All Gate 1 records |
-| Prospective client decision-maker | Validate organization problem, value, operating constraints, target segment, and commercial context | Q-001; Q-010; A-2 |
+| Prospective client decision-maker | Validate organization problem, value, operating constraints, and target segment (Q-010 deferred to Gate 6) | Q-001; A-2 |
 | Appointment administrator/staff | Validate scheduling, capacity, exceptions, permissions, QR verification, reporting, and operations | Q-005; Q-009; Q-014; Q-018–Q-021 |
 | Public user/applicant | Validate discovery, booking, account model, QR presentation, cancellation, accessibility, recovery, and privacy expectations | Q-002–Q-005; Q-011; Q-015; Q-020 |
 | System operator/support role | Validate installation boundaries, support workflow, access authorization, backup/restoration, monitoring, and maintenance without default client-data access | D-034; FR-012; UJ-004; AC-007; Q-008; Q-014; Q-015 |
 | Privacy/security/data-integrity reviewer | Review personal-data minimization, audit, authorization, QR abuse cases, concurrent scans, and failure atomicity | NFR-003; NFR-005; NFR-006; NFR-009; BR-003; BR-004 |
 
-Participant count, recruitment criteria, jurisdiction, and reviewer availability
-remain open until Q-001 and DP-2 are addressed. Participants must not provide
-production credentials or unnecessary personal data.
+Participant count and selection for the registered research are not recorded.
+D-041 selects the target segment but does not prove representativeness. The
+minimum additional primary-segment review is one business decision-maker and one
+front-desk staff member with relevant appointment operations, plus one public
+user/appointment booker for the public journey. A qualified privacy/security
+reviewer remains required for VAL-004. Participants must not provide production
+credentials or unnecessary personal data.
 
 ## 3. Validation activities
 
-| ID | Activity | Inputs | Intended output | Status |
-|---|---|---|---|---|
-| VAL-001 | Product and client discovery interviews | Vision, goals, Q-001, Q-010, candidate scope | Candidate segment, jobs, constraints, priorities, optional-feature and commercial-context evidence | DRAFT |
-| VAL-002 | Public journey walkthrough | UJ-001; UJ-003; AC-001; AC-002 | Evidence about account model, booking/cancellation, QR presentation, recovery, terminology, and failure cases | DRAFT |
-| VAL-003 | Administrator/staff workflow walkthrough | UJ-002; UJ-003; AC-003; AC-004 | Evidence about roles, scheduling, verification outcomes, repeated scans, exceptions, audit, and reporting | DRAFT |
-| VAL-004 | Privacy, security, and data-handling review | NFR-003; NFR-005; NFR-009; BR-003; BR-004; QR-L01–QR-L12 | Data purposes, minimization, access, retention, deletion, audit, misuse, revocation, outage, and legal questions | DRAFT |
-| VAL-005 | Measurability workshop | S-1–S-7; AC-001–AC-008; NFR-010 | Draft measurable targets, test conditions, accessibility standard, core-workflow test coverage, concurrency/atomicity conditions, and evidence owners | DRAFT |
-| VAL-006 | Operator journey and access-boundary walkthrough | FR-012; NFR-005; UJ-004; BR-004; AC-007 | Evidence about whether support tasks require a product capability, no-data paths, exceptional-access authority, scope, audit, and possible duration/closure procedures | DRAFT |
+| ID | Completed / evidence | Still unverified | Formal review required? | Minimum compliant next action | Status |
+|---|---|---|---|---|---|
+| VAL-001 | EVD-001–EVD-006 provide discovery/follow-up support; submitted EVD-008 claims PASS for one business owner. | Required separate front-desk participant, sampling basis, representativeness, independent review, and explicit v0.7 fit remain unproven; Q-010 is deferred to Gate 6 | Yes | Complete the required joint review with a primary-segment business decision-maker and front-desk staff member, or record an explicit Product Owner disposition of the evidence limitation | SUBMITTED RECORD — INCOMPLETE |
+| VAL-002 | EVD-004/EVD-007 provide discovery support; submitted EVD-009 claims PASS. | Session date, method, facilitator, selection basis, and exact v0.7 walkthrough provenance are not recorded; accessibility and representative validation remain unproven | Yes | Complete and register a provenance-complete public-user walkthrough of UJ-001/UJ-003, including recovery, rejection, alternatives, privacy, and accessibility | SUBMITTED RECORD — INCOMPLETE |
+| VAL-003 | EVD-001–EVD-006 provide discovery/follow-up support; submitted EVD-010 claims PASS WITH CHANGES. | Required participant set and session metadata are incomplete; one-hour cutoff is not an approved universal policy; queue implications require scope control | Yes | Complete the business/front-desk review and disposition the proposed cutoff and queue behavior without weakening D-042/D-058/D-076 | SUBMITTED RECORD — INCOMPLETE |
+| VAL-004 | EVD-003/EVD-004/EVD-007 provide privacy expectations; submitted EVD-011 claims PASS. | Reviewer qualification, independence, method, jurisdiction, and completed S1–S11 findings are not recorded; retention, disposal, four-hour access, and break-glass proposals remain unresolved | Yes | Obtain and register a qualified independent privacy/security review; escalate legal questions and do not adopt fixed retention or emergency-access policy without approval | SUBMITTED RECORD — INCOMPLETE |
+| VAL-005 | D-052 and D-067–D-071 establish approved direction; submitted EVD-012 claims PASS. | Reviewer metadata, evidence ownership, measured results, and disposition of proposed response-time targets/idempotency design are not recorded | Yes, documentation review now; technical verification occurs in later gates | Complete the v0.7 baseline review and explicitly assign or defer proposed numeric/design details without treating them as current requirements | SUBMITTED RECORD — INCOMPLETE |
+| VAL-006 | D-034/D-047/D-050/D-075 and AC-007 define the no-default-access boundary; submitted EVD-013 claims PASS. | Operator walkthrough provenance and disposition of four-hour duration and break-glass access are not recorded | Yes | Complete the Product Owner/operator review and record the minimum procedure or explicit deferral; do not infer a duration or emergency exception | SUBMITTED RECORD — INCOMPLETE |
 
 ## 4. QR question protocol
 
@@ -97,10 +102,11 @@ storage, cryptography, or an approval decision.
 
 ## 6. Evidence standard
 
-Each `EVD-###` record must include date, activity ID, participant role (not
-unnecessary identity), facilitator, method, records reviewed, findings,
-contradictions, limitations, affected IDs, and approved storage location. Raw
-notes must exclude secrets and unnecessary personal data.
+Each `EVD-###` record must include the known date or `Not recorded`, activity ID,
+participant role (not unnecessary identity), facilitator or `Not recorded`,
+method, records reviewed, findings, contradictions, limitations, affected IDs,
+and storage location. Missing historical metadata is a recorded limitation, not
+reconstructed. Raw notes must exclude secrets and unnecessary personal data.
 
 Activities `VAL-###` are plans; only completed `EVD-###` records are evidence.
 Evidence supports `VALIDATED` only when relevant, representative, cited, and
@@ -118,30 +124,88 @@ scope, priority, disposition, or approval.
   `EVD-###` evidence and a documented review record.
 - Only the Product Owner may set `APPROVED`, `DEFERRED`, or `WITHDRAWN`, with the
   required approval or disposition reference, date, and rationale.
+- Under D-077, the Product Owner may approve an exact development-stage requirement
+  or criterion without `VALIDATED` status when its assumption label, limitation,
+  owner, and later-gate obligation are recorded. This does not convert simulated
+  material into EVD evidence.
 - Material changes preserve the effective approved version and start a separate
   working `DRAFT` version, with author/role, date, reason, links, impact, review
   status and approval reference/date recorded independently.
 - Resolved `Q-###` items and new `D-###` decisions must be updated in the Decision
   Register. `P-###` approval/confirmation items remain distinct from decisions.
 
-## 8. Checkpoint 1 review condition
+## 7.1 Evidence accountability
 
-Checkpoint 1 may be submitted for Product Owner review when the four Gate 1 draft
-files are internally consistent; provenance, status, priority, evidence, approval,
-and version metadata are explicit; operator and QR gaps are visible; and no draft
-claims stakeholder validation or Gate 1 approval. This condition is not Gate 1
-exit and is not approval of the drafts.
+The accountable role must be recorded for each activity before it is treated as
+complete. Evidence records distinguish the preparer, reviewer, approver, and
+independent reviewer where independence is required (D-072). No person, signature,
+qualification, or completed assessment is inferred from a role label.
+
+| Evidence area | Accountable role to assign | Required review distinction |
+|---|---|---|
+| Requirements validation | Product Owner / requirements reviewer | Preparer, stakeholder reviewer, and Product Owner approver are distinct where applicable |
+| Privacy/security | Qualified privacy/security reviewer | Independent review and Product Owner disposition; legal questions escalated |
+| Performance/integrity | Performance/data-integrity reviewer | Preparer, reviewer, and later-gate approver |
+| Accessibility | Accessibility reviewer | Independent review where required; no conformance claim before evidence |
+| Functional acceptance | Product Owner / acceptance reviewer | Test/evidence preparer separate from acceptance approver |
+| Operational readiness | Operations reviewer | Preparer, reviewer, and Product Owner approval |
+
+## 8. Mandatory review checklist
+
+The operational agenda, questions, and record templates are in
+`GATE-1-FINAL-VALIDATION-PACKAGE.md`; this checklist remains the control list.
+
+- [ ] Primary-segment business decision-maker and front-desk staff review the MVP
+  scope, UJ-002/UJ-005, configurable policies, role boundaries, exceptions,
+  roster, and reconciliation; disagreements and dispositions are recorded.
+- [ ] Public user/appointment booker reviews UJ-001/UJ-003 and the guest, proxy,
+  confirmation, QR, cancellation/rescheduling, privacy, and recovery outcomes.
+- [ ] Qualified privacy/security reviewer records findings for minimization,
+  authorization, QR disclosure, audit, roster custody, retention/deletion, and
+  exceptional operator access; legal questions remain explicitly escalated.
+- [ ] Product Owner/operator reviews UJ-004 and AC-007 and records the minimum
+  exceptional-access procedure or explicitly defers client-data support access.
+- [x] Product Owner resolves or explicitly defers Q-010's commercial model,
+  pricing, and support commitment for Gate 1 purposes. Deferred to Gate 6 by
+  D-055; no Gate 1 commercial decision remains.
+- [x] Product Owner reviews and approves the exact v0.7 FR/NFR/BR/UJ/AC development-stage baseline under D-081; records remain assumptions, not `VALIDATED` evidence.
+- [x] Product Owner reviews the exact v0.7 FR/NFR/BR/UJ/AC wording, provisional
+  S-1–S-7 targets, open parameters, risk treatments, and each validation result.
+- [ ] Every completed session creates or amends an EVD record with role, known
+  date, method, findings, contradictions, limitations, affected IDs, and storage.
+- [ ] Requirements advance only through the lifecycle; no discovery record is
+  treated as representative validation without a documented basis.
+- [ ] Gate 1 exit is considered only after blockers are resolved or explicitly
+  deferred and the Product Owner separately approves the gate transition.
 
 ## 9. Current gaps and dependencies
 
-- No target customer segment or representative participant set is validated.
-- DP-2 stakeholder access is unresolved.
-- No validation session or `EVD-###` record has been completed.
+- D-041 selects the target segment and EVD-001–EVD-004 provide discovery support;
+  representativeness and formal target-segment validation remain incomplete.
+- DP-2 is partially addressed by real stakeholder access, but sampling and access
+  to the minimum review participants above are not documented.
+- EVD-008–EVD-013 are now registered as submitted records, but their provenance
+  and review gaps prevent them from completing VAL-001–VAL-006. No complete formal
+  v0.7 walkthrough, qualified privacy/security review, or representative-validation
+  record exists.
 - The operator journey is drafted but unvalidated and preserves D-034's
   no-default-client-data-access boundary; exceptional access conditions and any
   time limit remain discovery hypotheses.
 - Legal/privacy expertise and applicable jurisdiction are not identified.
-- Measurable targets, participant counts, recruitment, scheduling, evidence
-  storage, and review dates require Product Owner direction.
-- Gate 1 remains in progress and is not approved for exit; implementation remains
+- Provisional targets are recorded; participant counts for historical research,
+  recruitment/sampling, review dates, named evidence owners, and exact policy
+  parameters remain unresolved.
+- A consolidated final validation package
+  (`GATE-1-FINAL-VALIDATION-PACKAGE.md`) prepares the remaining sessions; no
+  provenance-complete formal session or qualified review is recorded; submitted
+  findings remain incomplete and do not establish validation.
+- EVD-005–EVD-007 are registered from the supplied follow-up source. They are
+  summarized v0.4 reviews with acceptable-with-changes assessments, not explicit
+  approval of v0.7; VAL-001–VAL-003 remain partially supported and no activity is
+  complete.
+- Specification §9 records the final v0.7 quality assessment. It distinguishes
+  approved direction, client-configurable values, Gate 2 architecture matters,
+  deferred features, and unresolved Gate 1 items; it records no approval.
+- The exact v0.7 development-stage baseline is approved under D-081, but Gate 1
+  remains in progress and is not approved for exit; implementation remains
   unauthorized.

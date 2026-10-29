@@ -4,14 +4,13 @@
 
 | Field | Value |
 |---|---|
-| Document status | Revision 1.0 DRAFT — pending Product Owner review. The effective approved baseline is the P-001 Gate 0 artifact as recorded at Revision 0.5; later revisions are unapproved. P-002/P-003/P-004 retain separate recorded scope. |
+| Document status | Revision 1.3 DRAFT — Gate 1 decisions incorporated; exact revision pending Product Owner review. The effective approved baseline remains the P-001 Gate 0 artifact as recorded at Revision 0.5; P-002/P-003/P-004 and D-041–D-075 retain their separate recorded scope. |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.0 DRAFT (2026-10-28 — supersedes Revision 0.9 as the working draft; second bounded Gate 1 checkpoint correction) |
+| Revision | 1.3 DRAFT (2026-10-29 — D-067–D-075 Gate 1 directions incorporated) |
 | Owner | Product Owner |
 
-> **Revision 1.0 DRAFT (2026-10-28) — supersedes Revision 0.9 as the working
-> draft; pending Product Owner review.**
+> **Revision 1.0 DRAFT (2026-10-28) — superseded by later drafts; never approved.**
 > Clarifies that A-1 remains an assumption to validate although independent
 > installations are already the approved baseline (D-020). P-001 approved the
 > Gate 0 artifact as then recorded; P-002/P-003 and conditional P-004 retain their
@@ -64,6 +63,12 @@
 This charter describes the initiation baseline for a **new, independent
 commercial Appointment Management System**. It is a planning artifact only and
 **authorizes no implementation of any kind**.
+
+> **Revision 1.3 DRAFT (2026-10-29).** Incorporates the approved market, MVP,
+> policy, quality-target, evidence, efficiency, and workflow-refinement directions
+> in D-041–D-075. The exact revised charter text remains a draft; no requirement
+> version, Gate 1 exit, Gate 2 entry, architecture, or implementation is approved
+> by this revision.
 
 ---
 
@@ -149,6 +154,14 @@ claim, and selects no target customer segment (Q-001).
 
 The Product Owner approved this vision with the clarification above on
 2026-10-28 (P-002).
+
+### 2.1 Initial target market
+
+**Approved direction (D-041).** The initial target market is small-to-medium
+appointment-driven service businesses with staffed front desks. Government and
+public-sector organizations are secondary future targets; enterprise capabilities
+are deferred. This is a Product Owner market selection supported by discovery
+evidence, not a claim of representative market validation.
 
 ---
 
@@ -240,46 +253,42 @@ criteria are not approved; unresolved targets must be agreed in Gate 1.
 
 | ID | Criterion | Verification approach | Target |
 |---|---|---|---|
-| S-1 | A new client installation can be created and configured without editing core scheduling logic. | Installation/configuration walkthrough on a clean environment, after implementation and testing in an isolated, authorized environment. | *[target TBD]* |
-| S-2 | Each installation uses its own database and cannot read or write another installation's or CEAP's data. | Architecture + configuration review; isolation tests, after implementation in an isolated, authorized environment. | *[target TBD]* |
-| S-3 | Under concurrent booking attempts, capacity and duplicate-booking rules are never violated. | Automated concurrency tests. | *[target TBD]* |
-| S-4 | All state-changing operations are authenticated, authorized, and server-side validated. | Security test suite; review. | *[target TBD]* |
-| S-5 | No known high-severity security findings remain at release. | Security review record; defect log. | *[target TBD]* |
-| S-6 | Core workflows are covered by automated tests that pass. | Test report. | *[coverage TBD]* |
-| S-7 | Public and administrative experiences meet an agreed accessibility standard. | Accessibility review. | *[standard TBD]* |
+| S-1 | A new client installation can be created and configured without editing core scheduling logic. | Installation/configuration walkthrough on a clean environment, after implementation and testing in an isolated, authorized environment. | Provisional: one clean installation configured for its approved services/policies with no core scheduling-code edit |
+| S-2 | Each installation uses its own database and cannot read or write another installation's or CEAP's data. | Architecture + configuration review; isolation tests, after implementation in an isolated, authorized environment. | Provisional: all approved isolation checks pass |
+| S-3 | Under concurrent booking attempts, capacity and duplicate-booking rules are never violated. | Automated concurrency tests using the approved normal, peak, and contention profiles. | Provisional: zero violations; for 50 simultaneous valid requests competing for one remaining capacity unit, exactly one reservation succeeds and all other requests fail safely without partial or orphaned state |
+| S-4 | All state-changing operations use approved authentication, including any scoped guest-authentication mechanism, and are authorized and server-side validated. | Security test suite; review. | Provisional: 100% of the approved state-changing operation inventory covered |
+| S-5 | No known high- or critical-severity security findings remain at release. | Security review record; defect log. | Provisional: zero known high- or critical-severity findings |
+| S-6 | Core workflows are covered by automated tests that pass. | Test report. | Provisional: 100% of approved core workflows have required success/rejection/authorization/failure tests and all required tests pass; no code-coverage percentage set |
+| S-7 | Core public and administrative experiences meet the approved accessibility standard. | Accessibility review. | Provisional: WCAG 2.2 AA across the D-068 core workflows and D-069 supported browser families on applicable desktop/mobile experiences |
 | S-8 | Architecture, decisions, and changes are documented. | Artifact review. | Verifiable now |
 | S-9 | The production CEAP application, database, and deployment are never affected. | Scope/isolation review across all gates. | Verifiable now |
 
-S-1 – S-7 still need measurable targets, coverage thresholds, or an agreed
-accessibility standard during Gate 1; S-8 and S-9 are verifiable without
-numeric targets. The Gate 1 requirements specification must define functional
-acceptance criteria for mandatory QR-based appointment verification (G-1).
-Further criteria may be added in Gate 1.
+S-1–S-7 targets are provisionally approved under D-052 and refined by D-067–D-072.
+They are not current test or conformance results. The initial operating profile is
+20–100 appointments per day per client installation, not a hard booking limit or a
+concurrency target. S-3 verification includes the 50-request/one-capacity-unit
+contention case; normal and peak results, browser coverage, severity application,
+workflow ownership, and evidence ownership still require later verification. S-8
+and S-9 remain verifiable without numeric targets.
 
 ---
 
-## 5. Provisional Scope
+## 5. Gate 1 MVP Direction
 
-**Provisional — to be finalized in Gate 1.**
+**Approved product direction (D-042–D-075); exact requirement versions remain
+DRAFT.** The MVP direction covers configurable availability/capacity, guest and
+staff-assisted/proxy/walk-in booking, alternative availability when a preferred
+date or slot is unavailable, cancellation/rescheduling, duplicate and capacity
+integrity, QR lookup rather than identity proof, attendance status, least-privilege
+roles, auditable supervisor exceptions, accessible screenshot-friendly
+confirmation, privacy minimization, printable daily rosters, and structured batch
+post-outage reconciliation, and essential privacy-conscious operational monitoring
+for booking failures, unexpected errors, security-relevant events, capacity or
+integrity violations, reconciliation failures, and other important operational
+failures requiring administrative attention.
 
-Potential concerns to investigate (these are discovery topics, **not** committed
-features):
-
-- Appointment types, schedules, dates, time slots, and capacity.
-- Booking, cancellation, rescheduling, and duplicate-booking prevention.
-- Public-facing user journeys and administrative workflows.
-- Administrator and staff permissions.
-- Client-specific configuration.
-- Data integrity, transaction safety, and concurrent booking attempts.
-- Authentication, authorization, privacy, and auditability.
-- Reporting, exports, and operational monitoring.
-- Data import and eligibility validation, if required.
-- Notifications, if required.
-- Accessibility, usability, and localization.
-- Deployment, backups, restoration, maintenance, and support.
-
-No item above becomes committed scope without requirements evidence and
-product-owner approval.
+Exact client policy values are configuration decisions, not universal defaults.
+Architecture and implementation remain unauthorized.
 
 ---
 
@@ -295,8 +304,11 @@ product-owner approval.
   deployment, or repository-setting change during Gate 0.
 - No invented customer segment, business policy, service workflow, or commercial
   commitment.
-- Automated notifications, reporting, masterlist import, and eligibility
-  validation are **not** assumed mandatory; each requires requirements evidence.
+- Automated external notifications/reminders, automated waitlists, payments and
+  deposits, public accounts, advanced queue displays, advanced reporting and
+  analytics, generic masterlist/eligibility validation, broad integrations,
+  government-specific workflows, full offline booking/synchronization, and
+  enterprise capabilities are deferred unless separately approved (D-042).
 
 ---
 
@@ -399,16 +411,17 @@ Register and Gate Register.
 
 ## 10. Assumptions
 
-**Assumptions — not yet validated.**
+**Assumptions — development-stage acceptance recorded under D-077/D-081; not
+validated by representative evidence.**
 
 | ID | Assumption | Validation point |
 |---|---|---|
-| A-1 | Each client organization runs its own isolated installation. This is the approved product model (D-020); what remains to validate is its fit with representative client needs, not whether an unapproved shared multi-tenant model may replace it. A different model requires D-020's formal change review. | Gate 1 |
-| A-2 | A representative client segment and stakeholders can be accessed for discovery. | Gate 1 |
-| A-3 | Importing an eligibility population ("masterlist") is *not* automatically required. | Gate 1 |
+| A-1 | Each client organization runs its own isolated installation. This is the approved product model (D-020); what remains to validate is its fit with representative client needs, not whether an unapproved shared multi-tenant model may replace it. A different model requires D-020's formal change review. | Development-stage accepted under D-081; real product-fit review before final release scope acceptance |
+| A-2 | A representative client segment and stakeholders can be accessed for discovery. | Development-stage accepted under D-081; genuine product-fit review before final release scope acceptance |
+| A-3 | Importing an eligibility population ("masterlist") is *not* automatically required. | Development-stage accepted under D-081; genuine target-segment review before final release scope acceptance |
 | A-4 | The Laravel/Blade/Tailwind/MariaDB stack is suitable; versions are unconfirmed. | Gate 2 |
 | A-5 | Automated testing is feasible across the chosen stack. | Gate 2 |
-| A-6 | At least one administrator/staff account exists per installation before public use. | Gate 1 |
+| A-6 | At least one administrator/staff account exists per installation before public use. | Development-stage accepted under D-081; authentication/provisioning validation in Gate 2 and later verification |
 | A-7 | Internet-facing deployment is anticipated for public use; hosting model unresolved. | Gate 2 |
 
 Assumptions must be validated or falsified before being relied upon in a later
@@ -463,16 +476,18 @@ implicit requirement and not authorized by any discovery question alone.
 
 | ID | Risk | Potential impact | Status |
 |---|---|---|---|
-| R-1 | Customer segment and functional scope undefined | Rework; mis-scoped product | Open |
-| R-2 | Registration/login/guest-booking model undecided | Authentication and abuse-control design blocked | Open |
+| R-1 | Primary segment selected but not formally shown representative; exact v0.7 requirement wording unvalidated | Rework; mis-scoped product | Reduced by D-041/D-042 and EVD-001–EVD-004; open pending minimum primary-segment walkthrough |
+| R-2 | Guest booking approved and public accounts deferred; internal authentication/provisioning design remains open | Authentication and abuse-control design blocked | Reduced by D-046/D-047; open for formal review and Gate 2 design |
 | R-3 | Mixing CEAP-specific behavior with product requirements | Inappropriate coupling | Open |
 | R-4 | Stack versions unpinned | Reproducibility and security-update risk | Open |
-| R-5 | Data integrity under concurrency | Double bookings, inconsistency | Open |
-| R-6 | Security/privacy exposure of public endpoints | Data loss/exposure, abuse | Open |
-| R-7 | Deployment/hosting/backup model undefined | Operational risk | Open |
+| R-5 | Duplicate/capacity invariants approved but identity window, atomic design, exception handling, and test profile remain open | Double bookings, over-capacity, inconsistency | Open; D-043/D-044/D-048 reduce policy uncertainty but later design/review/testing remain mandatory |
+| R-6 | Public/QR/roster/operator data exposure and exact privacy/retention rules remain under review | Data loss/exposure, abuse, unlawful retention | Open; D-045/D-047/D-050 establish minimization and access boundaries; qualified review required |
+| R-7 | Deployment/hosting/backup model undefined; paper fallback/reconciliation scope approved | Operational risk, lost or conflicting outage records | Open; D-051 reduces continuity scope uncertainty but architecture/operations remain later-gate work |
 | R-8 | Commercial model undefined | No client commitment can be made | Open |
-| R-9 | Assumptions treated as facts | Decisions on unvalidated ground | Open |
+| R-9 | Discovery evidence or approved direction may be overstated as representative validation or exact requirement approval | Decisions on unvalidated ground | Open; evidence classes and lifecycle boundaries documented in EVD register and requirements governance |
 | R-10 | Accidental coupling to or impact on production CEAP | Damage to a live system | Open |
+| R-11 | Client-specific policy values may be mistaken for universal defaults | Incorrect cancellations, duplicate decisions, capacity, or exception behavior | Open; D-043/D-044/D-048/BR-005 keep values configurable and unresolved |
+| R-12 | Composite or AI-assisted research may be misattributed or treated as verbatim | False provenance and invalid validation claims | Reduced by D-053 and corrected evidence register; open for future evidence handling |
 
 Detailed risk management belongs to Gate 1 and later artifacts, not to this
 charter.
@@ -495,14 +510,17 @@ recorded in the gate-specific evidence (Gate 3 exception register).
 
 The following are explicitly **not** decided and must not be assumed:
 
-- Target customer segment and detailed requirements.
-- Public self-registration, public login, guest booking, and administrative
-  authentication/authorization.
-- Functional appointment workflow and business rules.
+- Representative/formal validation of the selected target segment and exact v0.7
+  requirement wording.
+- Internal authentication/provisioning mechanisms and the detailed permission
+  matrix; public accounts are deferred and guest booking is approved for MVP.
+- Exact client-configurable scheduling, duplicate, cancellation/rescheduling,
+  grace-period, exception, proxy, roster, and reconciliation values/procedures.
 - Technical versions, dependency management, and deployment requirements.
-- Data model and whether an eligibility "masterlist" import is required.
-- Notifications and reporting capabilities (only if justified by requirements).
-- Privacy, retention, auditability, performance, and concurrency expectations.
+- Data model; generic eligibility/masterlist capability is deferred from MVP.
+- External notification/reminder channels and advanced reporting are deferred.
+- Exact legal basis, notices, retention/deletion periods, representative load and
+  availability profiles, supported accessibility environments, and evidence owners.
 - Commercial model, pricing, and support commitments.
 - The content of historical decisions D-001 – D-018.
 
@@ -529,9 +547,10 @@ P-001 on 2026-10-22. That approval did not itself close Gate 0; Gate 0 was close
 on 2026-10-22 once its remaining exit criteria were met (see
 `docs/GATE_REGISTER.md` §3). Gate 1 entry was subsequently authorized on
 2026-10-28 for requirements analysis and documentation only; Gate 1 is not
-approved for exit, and no implementation authorization is recorded. Revision 1.0
+approved for exit, and no implementation authorization is recorded. Revision 1.3
 is a working draft pending Product Owner review; this historical P-001 approval
-does not approve Revision 1.0.
+and the separately scoped D-041–D-075 decisions do not approve the exact Revision
+1.3 wording.
 
 | Approver | Role | Decision | Date |
 |---|---|---|---|

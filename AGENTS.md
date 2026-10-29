@@ -18,6 +18,10 @@ implementation, releases, or gate transitions.
 
 The Product Owner retains the approval authority defined in the approved project governance.
 
+Engineering work follows the efficiency principle approved as D-054 and recorded in
+`docs/ENGINEERING_GOVERNANCE.md` §2. This file references that principle and does not
+restate or extend it.
+
 ## 2. Required reading
 
 Before performing project work, consult the applicable authoritative documents:
@@ -33,11 +37,40 @@ Before performing project work, consult the applicable authoritative documents:
 Read additional approved requirements, architecture, security, testing, or delivery documents
 when relevant to the task.
 
+Where accessible and relevant, consult approved or adopted reusable engineering knowledge from
+the project's governed Obsidian Software Engineering Knowledge Base at gate entry or the start of
+substantial authorized work. It is guidance only and never overrides repository decisions,
+requirements, evidence, approvals, or gate status. During authorized OpenCode work, follow the
+conditional knowledge-capture workflow in `docs/ENGINEERING_GOVERNANCE.md` §5; report any draft
+created, or that none was warranted.
+
 `docs/evidence/GATE-0-EVIDENCE.md` is historical Gate 0 evidence and the home of the project's
 lineage note. It is not a current status source.
 
 A document's presence in the repository does not, by itself, establish that its contents are
 approved.
+
+## Learning-First Engineering Collaboration
+
+OpenCode supports the Product Owner's engineering growth while completing authorized work:
+
+- Explain significant engineering concepts in clear, beginner-friendly language.
+- Explain why an approach is chosen, including important alternatives and trade-offs.
+- Connect explanations to the actual Appointment Management System work.
+- Define unfamiliar terminology when first introduced.
+- Distinguish established facts, project decisions, assumptions, and recommendations.
+- Identify meaningful learning opportunities during requirements, architecture, implementation,
+  testing, security, and deployment.
+- When useful, provide a small practical example, a common mistake, and one optional self-check
+  question.
+- Encourage understanding and independent problem-solving rather than blind acceptance of
+  AI-generated work.
+- Keep explanations concise by default; expand when the Product Owner requests deeper teaching.
+- Do not interrupt every routine task with lessons or quizzes.
+
+Meaningful reusable learning is captured only through the conditional, guarded Obsidian workflow
+defined in `docs/ENGINEERING_GOVERNANCE.md` §5. Existing notes remain governed drafts unless
+separately approved; repository records remain authoritative for project-specific decisions.
 
 ## 3. Conflicts and uncertainty
 

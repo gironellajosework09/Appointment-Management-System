@@ -2,10 +2,10 @@
 
 | Field | Value |
 |---|---|
-| Document status | DRAFT — Gate 1 Checkpoint 1; pending Product Owner review |
-| Gate | Gate 1 (Requirements Discovery) — IN PROGRESS |
+| Document status | APPROVED DEVELOPMENT-STAGE GOVERNANCE — D-077, 2026-10-29 |
+| Gate | Gate 1 (Requirements Discovery) — COMPLETE (APPROVED); Gate 2 documentation authorized |
 | Document date | 2026-10-28 |
-| Revision | 0.3 (2026-10-28 — second bounded remediation; DRAFT) |
+| Revision | 0.6 (2026-10-29 — D-077 development-assumption transition activated) |
 | Owner | Product Owner |
 
 This draft proposes a requirements-recording and traceability method for Product
@@ -79,7 +79,12 @@ Traceability keeps provenance, goals/success criteria, decisions, Product Owner
 items, questions, risks/assumptions/dependencies, journeys/rules, acceptance
 criteria, planned validation activities, completed evidence, and approval references
 in separate fields. A blank evidence field is recorded as `None yet`; evidence is
-never inferred from a discussion, timestamp, planned activity, or draft.
+never inferred from a discussion, timestamp, planned activity, or draft. Evidence
+classification is explicit: discovery evidence may support a direction while
+remaining insufficient for representative validation. AI-assisted summaries,
+researcher interpretations, illustrative practitioner discussions, and product
+strategy recommendations are not silently treated as equivalent to primary
+stakeholder evidence.
 
 ## 4. Exact six-status lifecycle
 
@@ -88,7 +93,7 @@ never inferred from a discussion, timestamp, planned activity, or draft.
 | `DRAFT` | Captured for analysis; not submitted for formal review. |
 | `UNDER_REVIEW` | Submitted for documented stakeholder and Product Owner review; not approved. |
 | `VALIDATED` | Supported by cited representative-stakeholder evidence; not approved unless separately advanced. |
-| `APPROVED` | Explicitly approved by the Product Owner with reference and date recorded. |
+| `APPROVED` | Explicitly approved by the Product Owner with reference and date recorded. Under D-077, approval may be recorded as a bounded `development-stage assumption`; this does not mean `VALIDATED` stakeholder evidence or release acceptance. |
 | `DEFERRED` | Explicitly postponed by the Product Owner with rationale; not current scope. |
 | `WITHDRAWN` | Removed from consideration by explicit Product Owner disposition with rationale; retained for history. |
 
@@ -103,7 +108,7 @@ approval does not silently approve draft criteria.
 | From | Permitted next status | Minimum record |
 |---|---|---|
 | New | `DRAFT` | Provenance, owner, and initial version entry |
-| `DRAFT` | `UNDER_REVIEW`, `DEFERRED`, `WITHDRAWN` | Review submission, or explicit Product Owner disposition and rationale |
+| `DRAFT` | `UNDER_REVIEW`, `APPROVED`, `DEFERRED`, `WITHDRAWN` | Review submission, or explicit Product Owner approval/disposition and rationale. The D-077 `APPROVED` route requires exact text, limitations, owner, and later-gate obligation. |
 | `UNDER_REVIEW` | `DRAFT`, `VALIDATED`, `DEFERRED`, `WITHDRAWN` | Review outcome; evidence references are mandatory for `VALIDATED` |
 | `VALIDATED` | `UNDER_REVIEW`, `APPROVED`, `DEFERRED`, `WITHDRAWN` | Evidence and review record; explicit Product Owner reference/date for `APPROVED` or a disposition |
 | `APPROVED` | `DEFERRED`, `WITHDRAWN` | Explicit Product Owner change decision, rationale, impact review, and preserved approved version |
@@ -133,8 +138,9 @@ version as though already approved.
 
 Editorial corrections that do not alter meaning still receive a version-history
 entry. They do not change approval status or erase prior text.
-This method is proposed, not an approval of any version; no requirement in this
-checkpoint has an effective approved version.
+Under D-077, this method is active for the development-stage route. The exact
+v0.7 baseline is effective under D-081 as a bounded assumption baseline; it is not
+`VALIDATED` evidence or release approval.
 
 ## 7. Baseline, candidate scope, and criteria
 
@@ -157,12 +163,16 @@ are explicitly labeled unverified hypotheses.
 ## 8. Checkpoint and Gate 1 controls
 
 Checkpoint reviews compare every record against its provenance, status, priority,
-evidence, approval metadata, version history, unresolved questions, and affected
-traceability. Material changes update the specification and traceability matrix
-together. Resolved questions and new decisions are recorded in the authoritative
-Decision Register, not only in these working documents.
+evidence classification, approval metadata, version history, unresolved questions,
+and affected traceability. Material changes update the specification and
+traceability matrix together. Resolved questions and new decisions are recorded in
+the authoritative Decision Register, not only in these working documents. Product
+Owner approval of a product direction does not automatically advance the exact
+working requirement wording to `VALIDATED` or `APPROVED`.
 
-Gate 1 exit still requires all deliverables and exit criteria in Gate Register §4,
-including representative evidence, resolved or explicitly deferred blockers,
-measurable criteria, review, and explicit Product Owner approval. These drafts
-provide none of those approvals.
+Under D-077, Gate 1 may use the development-stage route when the exact baseline,
+traceability, assumption ownership, milestone obligations, limitations, and explicit
+Product Owner gate decision are recorded. `VALIDATED` remains reserved for relevant
+representative reviewed EVD evidence; simulated findings remain design assumptions.
+Gate 3 design review, genuine product-fit review, qualified independent privacy/
+security review, testing, and release evidence remain required at their named gates.
