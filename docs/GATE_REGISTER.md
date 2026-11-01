@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.12 (2026-11-01 — D-087 Checkpoint 6 provisional acceptance recorded; gate statuses unchanged) |
+| Revision | 1.13 (2026-11-01 — D-088 Checkpoint 7 provisional acceptance and D-089 MVP penalty exclusion recorded; gate statuses unchanged) |
 | Owner | Product Owner |
 
 This register tracks gate status and defines, for each gate: purpose, required
@@ -49,6 +49,9 @@ Notes:
 - Gate 2 is `IN PROGRESS` for architecture/design documentation only under D-082;
   Gates 3–7 remain `BLOCKED` pending their respective prerequisites. Implementation
   remains unauthorized.
+- D-088 provisionally accepts the fingerprinted Checkpoint 7 logical data design
+  solely for continued Gate 2 work; D-089 separately excludes cancellation and
+  no-show penalties from MVP. Neither approves final architecture or closes Gate 2.
 - Gate 7 is an **ongoing responsibility**, not a state that permanently ends
   maintenance.
 
@@ -308,6 +311,26 @@ Product Owner.
 - Gate 1 approval. (Met under D-082 on 2026-10-29.)
 - Provisional compatibility constraints, and deployment/hosting decisions
   (Q-007, Q-008; D-031).
+
+### Checkpoint 7 working-design disposition
+
+- D-088 provisionally accepts `docs/architecture/DATA_ARCHITECTURE_MODEL_DESIGN.md`
+  v0.1, SHA-256 `38C9DB532B988C150B3D80A1DA3C356EF66C6D3D26A82B356A3AD980183AC652`,
+  solely as logical working design. The artifact is unchanged; later interface/API,
+  configuration/deployment checkpoints and final Gate 2 review remain outstanding.
+- D-089 excludes cancellation and no-show penalties from MVP while ordinary
+  cancellation/no-show operational records remain in scope. Q-020's cutoff,
+  windows and eligibility remain open. Requirements Specification v0.7 fee-open
+  references require a separately approved versioned amendment and traceability
+  impact review under Requirements Governance §§6/8; D-081's effective approved
+  baseline is not silently rewritten. Unrelated service fees are not disposed of.
+- D-079 still requires cutoff and remaining measurable quality-target dispositions
+  (including Q-016/Q-022) before final Gate 2 architecture approval; retention,
+  exceptional operator-access duration and break-glass policy before Gate 3
+  security/privacy review approval; and printed-roster handling/disposal before
+  Gate 6 release approval. No 24-hour cutoff, response-time or availability target,
+  capacity/duplicate policy, attendance graph, recovery/retry mechanism or physical
+  database schema is approved by this disposition.
 
 ---
 
@@ -570,6 +593,7 @@ incidents, backups, and reviews continue under approved change control.
 | 2026-10-29 | Revision 1.10. Reconciled stale present-tense Gate 1/2 status statements in §§2 and 4 with D-082 and Gate 1 closure evidence; historical transitions, gate criteria, and authorization boundaries unchanged. This is a documentation correction, not a new gate approval. | Authorized Gate 2 status reconciliation |
 | 2026-10-30 | Recorded D-086: the Product Owner provisionally accepted Component & Module Design v0.1 for continued Gate 2 design work only. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`. Final architecture approval, Gate 2 exit and implementation remain unauthorized; detailed limitations are in the Decision Register §9.4. | Product Owner Checkpoint 5 closure recording |
 | 2026-11-01 | Revision 1.12. Recorded D-087: the Product Owner provisionally accepted Detailed System Workflow Design v0.1 for continued Gate 2 design only. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`. Final architecture approval, Gate 2 exit and implementation remain unauthorized; detailed limitations are in the Decision Register §9.5. | Product Owner Checkpoint 6 closure recording |
+| 2026-11-01 | Revision 1.13. Cross-referenced D-088 and D-089 and the fingerprinted Checkpoint 7 artifact; noted the outstanding versioned Requirements Specification fee-reference reconciliation and unchanged D-079 milestones. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`; no final architecture or implementation approval. | Product Owner Checkpoint 7 decision recording |
 
 > **Change-log note (superseding clarification).** The 2026-10-15 "Gate 0
 > governance corrections" entry recorded P-008 as resolved when it had only been
