@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.13 (2026-11-01 — D-088 Checkpoint 7 provisional acceptance and D-089 MVP penalty exclusion recorded; gate statuses unchanged) |
+| Revision | 1.14 (2026-11-01 — D-090 Checkpoint 8 provisional working-design acceptance recorded; gate statuses unchanged) |
 | Owner | Product Owner |
 
 This register tracks gate status and defines, for each gate: purpose, required
@@ -52,6 +52,9 @@ Notes:
 - D-088 provisionally accepts the fingerprinted Checkpoint 7 logical data design
   solely for continued Gate 2 work; D-089 separately excludes cancellation and
   no-show penalties from MVP. Neither approves final architecture or closes Gate 2.
+- D-090 provisionally accepts the fingerprinted Checkpoint 8 logical interface/API
+  design solely for continued Gate 2 work. Checkpoint 9 — Configuration & Deployment
+  Design is the next internal design activity, not a new gate or authorization.
 - Gate 7 is an **ongoing responsibility**, not a state that permanently ends
   maintenance.
 
@@ -332,6 +335,39 @@ Product Owner.
   capacity/duplicate policy, attendance graph, recovery/retry mechanism or physical
   database schema is approved by this disposition.
 
+### Checkpoint 8 working-design disposition
+
+- D-090 provisionally accepts `docs/architecture/INTERFACE_API_DESIGN.md` version
+  0.1, **DRAFT — AWAITING PRODUCT OWNER REVIEW**, verified SHA-256
+  `AAEDE649F366CE1608CEA1E9C7F112192FD0BA8CB1AEB250A94320B6998A4F96`,
+  solely as a working logical interface/API design. The accepted artifact is
+  unchanged. It proposes 31 interfaces and five conceptual Mermaid diagrams,
+  not final endpoints, protocols, authentication mechanisms or tested behavior.
+- **Guest limitation:** Scoped authentication for guest state changes does not
+  require public registration. Account-free booking and authorized management
+  remain required; claimant proof, recovery channel/expiry and scoped authority
+  are unresolved. QR/reference possession alone does not authorize changes.
+- **D-070 limitation:** 50 valid concurrent requests for one remaining capacity
+  unit must produce exactly one successful booking and no overcapacity. A known
+  rejection is distinct from a temporarily unknown result after a lost response;
+  do not count uncertainty as a confirmed failure or blindly retry into a second
+  booking. Establish the authoritative result and same intent before safe follow-up.
+- D-079 deadlines remain: cutoff and remaining quality targets (Q-016/Q-022)
+  before final Gate 2 architecture approval; retention/deletion, exceptional
+  operator-access duration and break-glass policy before Gate 3 security/privacy
+  review approval; printed-roster handling/disposal before Gate 6 release
+  approval. Capacity/duplicate policies, attendance transitions, QR lifecycle,
+  staff/guest authority, safe retries, paper conflicts, configuration impact and
+  both hosting models' effective-access responsibilities are not finalized.
+  D-089 excludes MVP cancellation/no-show penalties but not normal records;
+  unrelated service fees remain undecided. Requirements Specification v0.7's fee
+  references still require separate versioned reconciliation and traceability
+  impact review under Requirements Governance §§6/8 (D-081 remains effective).
+- Checkpoint 9 — Configuration & Deployment Design is the next **internal Gate 2
+  design activity**. Gate 2 stays `IN PROGRESS`; Gates 3–7 stay `BLOCKED`. No
+  final architecture, Gate 3 entry, implementation, database or deployment
+  authorization is implied by D-090 or this register entry.
+
 ---
 
 ## 6. Gate 3 — Security & Data Integrity Design Review
@@ -594,6 +630,7 @@ incidents, backups, and reviews continue under approved change control.
 | 2026-10-30 | Recorded D-086: the Product Owner provisionally accepted Component & Module Design v0.1 for continued Gate 2 design work only. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`. Final architecture approval, Gate 2 exit and implementation remain unauthorized; detailed limitations are in the Decision Register §9.4. | Product Owner Checkpoint 5 closure recording |
 | 2026-11-01 | Revision 1.12. Recorded D-087: the Product Owner provisionally accepted Detailed System Workflow Design v0.1 for continued Gate 2 design only. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`. Final architecture approval, Gate 2 exit and implementation remain unauthorized; detailed limitations are in the Decision Register §9.5. | Product Owner Checkpoint 6 closure recording |
 | 2026-11-01 | Revision 1.13. Cross-referenced D-088 and D-089 and the fingerprinted Checkpoint 7 artifact; noted the outstanding versioned Requirements Specification fee-reference reconciliation and unchanged D-079 milestones. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`; no final architecture or implementation approval. | Product Owner Checkpoint 7 decision recording |
+| 2026-11-01 | Revision 1.14. Cross-referenced D-090's fingerprinted Checkpoint 8 provisional working-design acceptance, its guest-authentication and D-070 unknown-outcome limitations, D-079/D-089 and pending v0.7 fee-reference reconciliation. Checkpoint 9 Configuration & Deployment Design is next internal Gate 2 activity. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`; no final architecture, implementation or deployment approval. Recording date is not an inferred Product Owner approval date. | Product Owner Checkpoint 8 decision recording |
 
 > **Change-log note (superseding clarification).** The 2026-10-15 "Gate 0
 > governance corrections" entry recorded P-008 as resolved when it had only been
