@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.11 (2026-10-30 — D-086 Checkpoint 5 provisional acceptance recorded; gate statuses unchanged) |
+| Revision | 1.12 (2026-11-01 — D-087 Checkpoint 6 provisional acceptance recorded; gate statuses unchanged) |
 | Owner | Product Owner |
 
 This register tracks gate status and defines, for each gate: purpose, required
@@ -569,6 +569,7 @@ incidents, backups, and reviews continue under approved change control.
 | 2026-10-29 | Revision 1.9. Recorded D-082 approval, closed Gate 1 as `COMPLETE (APPROVED)`, and authorized Gate 2 as `IN PROGRESS` for architecture/design documentation only. | Product Owner gate-transition decision |
 | 2026-10-29 | Revision 1.10. Reconciled stale present-tense Gate 1/2 status statements in §§2 and 4 with D-082 and Gate 1 closure evidence; historical transitions, gate criteria, and authorization boundaries unchanged. This is a documentation correction, not a new gate approval. | Authorized Gate 2 status reconciliation |
 | 2026-10-30 | Recorded D-086: the Product Owner provisionally accepted Component & Module Design v0.1 for continued Gate 2 design work only. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`. Final architecture approval, Gate 2 exit and implementation remain unauthorized; detailed limitations are in the Decision Register §9.4. | Product Owner Checkpoint 5 closure recording |
+| 2026-11-01 | Revision 1.12. Recorded D-087: the Product Owner provisionally accepted Detailed System Workflow Design v0.1 for continued Gate 2 design only. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`. Final architecture approval, Gate 2 exit and implementation remain unauthorized; detailed limitations are in the Decision Register §9.5. | Product Owner Checkpoint 6 closure recording |
 
 > **Change-log note (superseding clarification).** The 2026-10-15 "Gate 0
 > governance corrections" entry recorded P-008 as resolved when it had only been
