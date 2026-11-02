@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.15 (2026-11-01 — D-091 Checkpoint 9 provisional working-design acceptance recorded; gate statuses unchanged) |
+| Revision | 1.16 (2026-11-01 — D-092 Checkpoint 10 provisional working-design acceptance recorded; gate statuses unchanged) |
 | Owner | Product Owner |
 
 This register tracks gate status and defines, for each gate: purpose, required
@@ -55,8 +55,10 @@ Notes:
 - D-090 provisionally accepts the fingerprinted Checkpoint 8 logical interface/API
   design solely for continued Gate 2 work. D-091 provisionally accepts the
   fingerprinted Checkpoint 9 Configuration & Deployment Design as working design
-  only. Checkpoint 10 — Compatibility & Dependency Design is the next internal
-  Gate 2 activity, not a new gate or authorization.
+  only. D-092 provisionally accepts Checkpoint 10 Compatibility & Dependency
+  Design as the Q-007 Gate 2 working approach, with final Q-007 disposition open.
+  Integration & Traceability Review is the next internal Gate 2 activity, not
+  a new gate or authorization.
 - Gate 7 is an **ongoing responsibility**, not a state that permanently ends
   maintenance.
 
@@ -407,10 +409,60 @@ Product Owner.
   traceability review (Requirements Governance §§6/8; D-081). D-090's account-free
   and lost-response limitations remain unchanged.
 - Checkpoint 10 — Compatibility & Dependency Design is the **next internal Gate 2
-  activity**. Gate 0/1 stay `COMPLETE (APPROVED)`, Gate 2 `IN PROGRESS`, and Gates
-  3–7 `BLOCKED`. D-091 authorizes no final architecture approval, Gate 2 exit,
-  Gate 3 entry, implementation, database operation, dependency installation,
-  deployment or production activity.
+  activity** as recorded at Checkpoint 9; its provisional acceptance is recorded
+  separately below. Gate 0/1 stay `COMPLETE (APPROVED)`, Gate 2 `IN PROGRESS`,
+  and Gates 3–7 `BLOCKED`. D-091 authorizes no final architecture approval, Gate
+  2 exit, Gate 3 entry, implementation, database operation, dependency
+  installation, deployment or production activity.
+
+### Checkpoint 10 working-design disposition
+
+- D-092 provisionally accepts `docs/architecture/COMPATIBILITY_DEPENDENCY_DESIGN.md`
+  **version 0.1**, artifact status **DRAFT — AWAITING PRODUCT OWNER REVIEW**,
+  artifact approval **NOT GRANTED**, verified SHA-256
+  `55F1CB268A29F378541EDABC1038CFDA2E8A0A79475CE06C4D3D60C1192E75CA`,
+  solely for continued Gate 2 working-design use. Its Q-007 compatibility/
+  dependency approach is provisional; an explicit final Gate 2 Q-007
+  disposition is still required. One capability-based profile across independent
+  installations and both hosting models, a proposed compatibility matrix,
+  direct/transitive dependency review, later reproducible resolution and
+  per-installation upgrade/drift controls are **not** a selected or tested stack.
+- Laravel, Blade, Tailwind CSS and MariaDB remain D-022 preferred candidates;
+  D-085's modular monolith remains provisional; Docker is conditional under
+  D-023/D-036. No final runtime, framework, database/driver, package, OS, web
+  server, vendor, external service or exact version is approved. D-031 reserves
+  exact dependency/runtime versions for Gate 4 after prerequisite review and
+  explicit task authorization. D-036 approval is needed for added technology.
+- Q-008 allocation of hosting responsibilities, credentials, security updates,
+  backup custody, restores, incidents and support remains open for both hosting
+  models; sufficiently concrete allocation is needed before final Gate 2
+  architecture approval where feasibility depends on it (D-091). Host/database/
+  backup access is not authorization to use client records (D-034/D-075).
+  Synthetic restore rehearsal does not verify any particular real client backup;
+  D-091 requires a separately approved privacy-safe real-backup verification
+  approach before operational reliance. Backup cadence/retention, RPO/RTO,
+  restore authority and completeness remain open.
+- D-091's discussed daily-full/more-frequent recovery points, 1-hour RPO,
+  4-hour RTO, 2-hour operator session, 2-second 95th-percentile ordinary
+  response under defined load, and 99.5% monthly availability remain **evaluation
+  candidates only**, not approved SLAs, requirements, defaults or commitments.
+  D-070's exactly-one-of-50 integrity obligation and D-090's distinction between
+  known rejection and unknown lost response remain unchanged; account-free guest
+  changes require separate scoped proof, QR is lookup-only, attendance is explicit.
+- D-079 remains binding: cutoff/Q-020 and remaining quality-target dispositions
+  (Q-016/Q-022) **before final Gate 2 architecture approval**; retention/deletion,
+  exceptional operator duration and break-glass policy **before Gate 3
+  security/privacy design-review approval**; printed-roster handling/disposal
+  **before Gate 6 release approval**. D-089 excludes MVP cancellation/no-show
+  penalties, retains ordinary records and does not decide unrelated service
+  fees. Requirements Specification v0.7 fee references still need separately
+  approved versioned reconciliation under Requirements Governance §§6/8; D-081
+  remains a development-stage-assumption baseline and FR-009/FR-011 deferred.
+- **Integration & Traceability Review** is the next internal Gate 2 activity.
+  Gate 0/1 stay `COMPLETE (APPROVED)`, Gate 2 `IN PROGRESS`, and Gates 3–7
+  `BLOCKED`. D-092 approves no final architecture, Gate 2 exit, Gate 3 entry,
+  implementation, dependency installation, database action, deployment or
+  production access.
 
 ---
 
@@ -676,6 +728,7 @@ incidents, backups, and reviews continue under approved change control.
 | 2026-11-01 | Revision 1.13. Cross-referenced D-088 and D-089 and the fingerprinted Checkpoint 7 artifact; noted the outstanding versioned Requirements Specification fee-reference reconciliation and unchanged D-079 milestones. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`; no final architecture or implementation approval. | Product Owner Checkpoint 7 decision recording |
 | 2026-11-01 | Revision 1.14. Cross-referenced D-090's fingerprinted Checkpoint 8 provisional working-design acceptance, its guest-authentication and D-070 unknown-outcome limitations, D-079/D-089 and pending v0.7 fee-reference reconciliation. Checkpoint 9 Configuration & Deployment Design is next internal Gate 2 activity. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`; no final architecture, implementation or deployment approval. Recording date is not an inferred Product Owner approval date. | Product Owner Checkpoint 8 decision recording |
 | 2026-11-01 | Revision 1.15. Recorded D-091's fingerprinted Checkpoint 9 provisional working-design acceptance, Q-008 and real-backup verification limitations, and evaluation-only recovery/performance numbers. D-079/D-089/D-090 and pending versioned v0.7 fee reconciliation remain. Checkpoint 10 Compatibility & Dependency Design is the next internal Gate 2 activity. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`; no final architecture, Gate 3, implementation or deployment approval. The recording date is not an inferred Product Owner approval date. | Product Owner Checkpoint 9 decision recording |
+| 2026-11-01 | Revision 1.16. Cross-referenced D-092's fingerprinted Checkpoint 10 provisional Q-007 working approach; final Q-007, Q-008, D-079/D-089–D-091, and v0.7 fee-reference reconciliation remain outstanding. Integration & Traceability Review is the next internal Gate 2 activity. Gate 2 stays `IN PROGRESS`, Gates 3–7 `BLOCKED`; no final technology, architecture, implementation or deployment approval. Recording date is not an inferred Product Owner approval date. | Product Owner Checkpoint 10 decision recording |
 
 > **Change-log note (superseding clarification).** The 2026-10-15 "Gate 0
 > governance corrections" entry recorded P-008 as resolved when it had only been
