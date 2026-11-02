@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.0 (2026-10-29 — lightweight governed SDLC knowledge checkpoint added; no gate status changed) |
+| Revision | 1.1 (2026-11-02 — D-093 Gate 2 UI/UX design evidence added; SDLC gate order/status unchanged) |
 | Owner | Product Owner |
 
 > **Revision 0.7 (2026-10-23) — AGENTS.md adopted; accessibility standard
@@ -182,7 +182,7 @@ requirements, decisions, evidence, approvals, or gate status.
 |---|---|
 | Gate 0 | Project Charter; Engineering Governance; Decision Register; Gate Register; `AGENTS.md` (present in this repository and part of the P-001 artifact set; at Gate 0 closure its instructions were **not adopted** — see §20; this file was subsequently replaced and adopted as the agent entry point under D-039, effective 2026-10-23); and the separate Gate 0 evidence record at `docs/evidence/GATE-0-EVIDENCE.md`, which states what was inspected, the period covered, and what cannot be established. That evidence record is a Gate 0 exit requirement outside the five-artifact P-001 scope |
 | Gate 1 | Requirements specification; validated target customer or an explicitly labeled development-stage assumption; user journeys; business rules; confirmed user/authentication model; assumption ownership; risk register; measurable acceptance criteria. Under D-077, simulated material may inform the development-stage baseline but is not actual validation evidence. |
-| Gate 2 | Architecture description; data model; interface/API design; configuration and per-installation strategy; traceability to requirements |
+| Gate 2 | Architecture description; data model; interface/API design; configuration and per-installation strategy; Checkpoint 11 UI/UX design package (complete annotated MVP screen/state coverage, responsive/accessibility design, representative connected high-fidelity prototype and recorded Product Owner/usability/design-review findings) required for final Gate 2 architecture review under D-093; traceability to requirements |
 | Gate 3 | Security review record; data-integrity design record; threat model; security exception register |
 | Gate 4 | Authorized change set; reviewed migrations (if authorized); tests for each change; implementation notes |
 | Gate 5 | Automated test results; manual verification evidence; defect log with dispositions; regression results |

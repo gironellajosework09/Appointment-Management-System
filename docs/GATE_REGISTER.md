@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.16 (2026-11-01 — D-092 Checkpoint 10 provisional working-design acceptance recorded; gate statuses unchanged) |
+| Revision | 1.17 (2026-11-02 — D-093 Gate 2 UI/UX checkpoint sequence amendment recorded; gate statuses unchanged) |
 | Owner | Product Owner |
 
 This register tracks gate status and defines, for each gate: purpose, required
@@ -57,8 +57,9 @@ Notes:
   fingerprinted Checkpoint 9 Configuration & Deployment Design as working design
   only. D-092 provisionally accepts Checkpoint 10 Compatibility & Dependency
   Design as the Q-007 Gate 2 working approach, with final Q-007 disposition open.
-  Integration & Traceability Review is the next internal Gate 2 activity, not
-  a new gate or authorization.
+  Under D-093, Checkpoint 11 UI/UX Design & Prototyping is the next authorized
+  internal activity but is NOT STARTED. Checkpoint 12 Integration & Traceability
+  Review and unnumbered Final Gate 2 Review & Closure remain pending.
 - Gate 7 is an **ongoing responsibility**, not a state that permanently ends
   maintenance.
 
@@ -300,12 +301,19 @@ per-installation configuration strategy, and interface design.
 - Configuration and per-installation deployment strategy.
 - Provisional compatibility constraints and the dependency-management approach
   (Q-007). Exact dependency/runtime versions are finalized at Gate 4 (D-031).
+- Checkpoint 11 UI/UX design package: screen/navigation inventory, annotated
+  screen and interaction-state specifications for required MVP workflows,
+  reusable visual design system, responsive/accessibility design, connected
+  representative critical-journey high-fidelity prototype and recorded Product
+  Owner/usability and accessibility design-review findings (D-093; details below).
 - Traceability from design to requirements.
 
 ### Exit Criteria
 
 - Design reviewed against requirements, product goals, and engineering priorities
   (D-029).
+- Checkpoint 11 design package reviewed and included in the final Gate 2
+  architecture review; its unresolved dependencies and findings remain visible.
 - Traceability established.
 - Product owner approves Gate 2.
 
@@ -458,11 +466,87 @@ Product Owner.
   fees. Requirements Specification v0.7 fee references still need separately
   approved versioned reconciliation under Requirements Governance §§6/8; D-081
   remains a development-stage-assumption baseline and FR-009/FR-011 deferred.
-- **Integration & Traceability Review** is the next internal Gate 2 activity.
+- At the time of D-092, **Integration & Traceability Review** was the next
+  internal Gate 2 activity; D-093 subsequently inserted Checkpoint 11 before
+  it and assigned the previously unnumbered review the label Checkpoint 12.
   Gate 0/1 stay `COMPLETE (APPROVED)`, Gate 2 `IN PROGRESS`, and Gates 3–7
   `BLOCKED`. D-092 approves no final architecture, Gate 2 exit, Gate 3 entry,
   implementation, dependency installation, database action, deployment or
   production access.
+
+### D-093 internal Gate 2 progression and Checkpoint 11 design evidence
+
+| Activity | Current disposition |
+|---|---|
+| Checkpoint 10 — Compatibility & Dependency Design | Provisionally accepted as working design under D-092; final Q-007 disposition open |
+| Checkpoint 11 — UI/UX Design & Prototyping | **Authorized, NOT STARTED**; next internal Gate 2 activity after this governance amendment |
+| Checkpoint 12 — Integration & Traceability Review | **Pending**; newly assigned label for the previously unnumbered review, not a renumbering of an approved checkpoint |
+| Final Gate 2 Review & Closure | **Pending**; no checkpoint number assigned; requires separate Product Owner approval |
+
+**Required Checkpoint 11 package for final Gate 2 architecture review (D-093):**
+
+1. **Screen inventory and navigation map:** map each applicable required MVP
+   experience to existing FR/NFR, UJ/BR/AC, `WF-*` workflow and `IF-*` logical
+   interface references. Cover public discovery/booking; calendar/date/slot
+   selection and actual alternatives; guest, proxy and staff-assisted booking;
+   confirmation and eligible QR presentation; account-free guest management,
+   cancellation and rescheduling; staff lookup, explicit attendance and appointment
+   management; supervisor exceptions; client configuration; roster generation and
+   printing; and paper reconciliation/conflict handling. No deferred capability is
+   added by this map.
+2. **Complete annotated wireframes and screen specifications:** for each required
+   screen and applicable interaction state, specify purpose and authorized actor,
+   navigation/information hierarchy, fields and validation guidance, primary and
+   secondary actions, calendar/date/slot behavior, availability/alternatives,
+   confirmation/print presentation, role-specific actions, server-authoritative
+   outcomes and the relevant `WF-*`/`IF-*` contracts. These are user-facing design
+   descriptions, not new backend contracts or client-policy values.
+3. **Interaction states:** document initial/loading, empty/no-availability,
+   invalid-input, permission-denied, stale-availability, duplicate/conflict,
+   successful, recoverable-error and unknown-command outcomes, plus paper
+   reconciliation conflicts where applicable. Under D-090, an unknown outcome
+   after a lost response is neither confirmed success nor confirmed rejection;
+   no blind retry or false success confirmation is designed.
+4. **Minimal reusable visual design system:** document typography, color/contrast
+   intent, spacing/layout, navigation, buttons/actions, forms/field feedback,
+   calendar/slot controls, appointment status indicators, tables/lists,
+   confirmation/QR presentation, and loading/error/success/warning messages.
+   Design tokens and component specifications may be documentation; no frontend
+   package or implementation is selected or installed.
+5. **Responsive and accessibility-oriented design specifications:** include
+   representative desktop/mobile layouts, keyboard navigation and visible focus,
+   accessible form labels/errors and status feedback, non-pointer-only calendar
+   interactions, readable confirmation/QR information, and print-friendly
+   appointment/roster views. Preserve NFR-007/AC-006, D-052/D-069's WCAG 2.2 AA
+   target and current/previous stable Chrome, Edge, Firefox and Safari policy;
+   no conformance or executed accessibility test is claimed.
+6. **Connected high-fidelity prototype:** demonstrate representative critical
+   journeys for public booking, confirmation, account-free guest management,
+   staff QR lookup followed by a separate explicit attendance action,
+   administrative appointment handling, and at least one material error,
+   conflict or unknown-outcome scenario. Full high-fidelity reproduction of every
+   screen is not required; annotated screen/state coverage is. Prototype format
+   and tool remain governed design-work choices; no paid platform is mandated.
+7. **Review evidence:** record Product Owner review, usability findings,
+   accessibility design-review findings, inconsistencies and proposed
+   resolutions, requirement/workflow/interface traceability, unresolved policy
+   dependencies, and explicit provisional acceptance or requested revisions.
+   Review is not representative stakeholder validation, executed accessibility
+   testing, final architecture approval or checkpoint completion by itself.
+
+**Open boundaries:** where a screen depends on guest claimant proof/recovery,
+QR issuance/lifecycle/authority, attendance correction, cancellation/rescheduling
+cutoff, capacity/duplicate policy, paper-conflict rules, Q-007 final disposition,
+Q-008 hosting allocation, D-079 quality targets or retention/deletion and
+exceptional operator-access policy, label the interaction provisional and record
+the dependency. D-089's penalty exclusion and separately governed v0.7 fee-reference
+reconciliation remain intact; a prototype assumption is not an approved
+requirement. D-079's deadlines remain unchanged. Checkpoint 12 reviews the
+resulting cross-design integration and traceability **after** Checkpoint 11; the
+unnumbered final review remains separate. Gate 3 retains the dedicated Security,
+Privacy & Data Integrity review, Gate 4 retains implementation under its own
+prerequisites, and this amendment does not begin design artifacts or authorize
+application, database, dependency, deployment or production work.
 
 ---
 
@@ -729,6 +813,7 @@ incidents, backups, and reviews continue under approved change control.
 | 2026-11-01 | Revision 1.14. Cross-referenced D-090's fingerprinted Checkpoint 8 provisional working-design acceptance, its guest-authentication and D-070 unknown-outcome limitations, D-079/D-089 and pending v0.7 fee-reference reconciliation. Checkpoint 9 Configuration & Deployment Design is next internal Gate 2 activity. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`; no final architecture, implementation or deployment approval. Recording date is not an inferred Product Owner approval date. | Product Owner Checkpoint 8 decision recording |
 | 2026-11-01 | Revision 1.15. Recorded D-091's fingerprinted Checkpoint 9 provisional working-design acceptance, Q-008 and real-backup verification limitations, and evaluation-only recovery/performance numbers. D-079/D-089/D-090 and pending versioned v0.7 fee reconciliation remain. Checkpoint 10 Compatibility & Dependency Design is the next internal Gate 2 activity. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`; no final architecture, Gate 3, implementation or deployment approval. The recording date is not an inferred Product Owner approval date. | Product Owner Checkpoint 9 decision recording |
 | 2026-11-01 | Revision 1.16. Cross-referenced D-092's fingerprinted Checkpoint 10 provisional Q-007 working approach; final Q-007, Q-008, D-079/D-089–D-091, and v0.7 fee-reference reconciliation remain outstanding. Integration & Traceability Review is the next internal Gate 2 activity. Gate 2 stays `IN PROGRESS`, Gates 3–7 `BLOCKED`; no final technology, architecture, implementation or deployment approval. Recording date is not an inferred Product Owner approval date. | Product Owner Checkpoint 10 decision recording |
+| 2026-11-02 | Revision 1.17. Recorded D-093's Checkpoint 11 UI/UX Design & Prototyping insertion and bounded required design package before the newly labeled Checkpoint 12 Integration & Traceability Review. Checkpoint 11 authorized but NOT STARTED; Checkpoint 12 and unnumbered Final Gate 2 Review & Closure pending. Historical checkpoint identifiers and D-079 deadlines preserved. Gate 2 remains IN PROGRESS, Gates 3–7 BLOCKED; no implementation or Gate 3 entry authorized. Recording date is not an inferred Product Owner approval date. | Product Owner Gate 2 sequence amendment recording |
 
 > **Change-log note (superseding clarification).** The 2026-10-15 "Gate 0
 > governance corrections" entry recorded P-008 as resolved when it had only been
