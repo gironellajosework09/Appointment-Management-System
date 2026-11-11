@@ -1,0 +1,1053 @@
+{
+  "samples": [
+    {
+      "lcp": 1856,
+      "element": "<img src=\"references/booking-illustration.svg\" alt=\"Illustration of choosing an appointment time on a calendar\" class=\"motion-visible\">",
+      "cls": 0.000011272665895061729,
+      "tasks": [
+        {
+          "start": 717.7999999523163,
+          "duration": 199
+        },
+        {
+          "start": 1534.3999998569489,
+          "duration": 115
+        }
+      ],
+      "longFrames": [
+        {
+          "start": 118.89999985694885,
+          "duration": 1312.6000001430511,
+          "scripts": []
+        },
+        {
+          "start": 1523.5,
+          "duration": 139.5,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/baseline/journey-prep.js",
+              "duration": 8.400000095367432,
+              "invoker": "http://127.0.0.1:52182/baseline/journey-prep.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/baseline/app.js",
+              "duration": 114,
+              "invoker": "http://127.0.0.1:52182/baseline/app.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/baseline/app.js",
+              "duration": 11.800000190734863,
+              "invoker": "FrameRequestCallback"
+            }
+          ]
+        },
+        {
+          "start": 1670.8999998569489,
+          "duration": 171.5,
+          "scripts": []
+        }
+      ],
+      "now": 2963.2999999523163,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:52182/baseline/style.css",
+          "bytes": 46823,
+          "duration": 1059.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/role-workspaces.css",
+          "bytes": 13308,
+          "duration": 404.5
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/journey.css",
+          "bytes": 14407,
+          "duration": 449.59999990463257
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/dashboard-metrics.css",
+          "bytes": 4404,
+          "duration": 223.19999980926514
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/mobile-shell.css",
+          "bytes": 1792,
+          "duration": 155
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/login-mobile.css",
+          "bytes": 418,
+          "duration": 155.5
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/sidebar-shell.css",
+          "bytes": 2764,
+          "duration": 270.39999985694885
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/journey-prep.js",
+          "bytes": 6921,
+          "duration": 533.0999999046326
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/app.js",
+          "bytes": 45221,
+          "duration": 1165
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/role-workspaces.js",
+          "bytes": 46225,
+          "duration": 1180.3000001907349
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/sidebar-shell.js",
+          "bytes": 1944,
+          "duration": 569.6000001430511
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/dashboard-metrics.js",
+          "bytes": 7260,
+          "duration": 751.9000000953674
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/motion-effects.js",
+          "bytes": 1695,
+          "duration": 685.5
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/references/iTakda-Icon.svg",
+          "bytes": 3083,
+          "duration": 303
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/references/booking-illustration.svg",
+          "bytes": 13230,
+          "duration": 615.5999999046326
+        },
+        {
+          "name": "http://127.0.0.1:52182/favicon.ico",
+          "bytes": 0,
+          "duration": 1.2999999523162842
+        }
+      ],
+      "frames": {
+        "fps": 59.12619606427153,
+        "p95": 16.800000000000182,
+        "max": 33.399999999999636,
+        "over33": 2
+      },
+      "baseline": true
+    },
+    {
+      "lcp": 1632,
+      "element": "<span>Booked your way,</span>",
+      "cls": 0.000011272665895061729,
+      "tasks": [
+        {
+          "start": 1588,
+          "duration": 86
+        },
+        {
+          "start": 13666.5,
+          "duration": 65
+        },
+        {
+          "start": 13732.100000143051,
+          "duration": 382
+        },
+        {
+          "start": 14128.5,
+          "duration": 277
+        }
+      ],
+      "longFrames": [
+        {
+          "start": 139.90000009536743,
+          "duration": 1386.7999999523163,
+          "scripts": []
+        },
+        {
+          "start": 1560.2999999523163,
+          "duration": 121.70000004768372,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/journey-prep.js",
+              "duration": 20,
+              "invoker": "http://127.0.0.1:52182/journey-prep.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/app.js",
+              "duration": 81.60000014305115,
+              "invoker": "http://127.0.0.1:52182/app.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/app.js",
+              "duration": 6.5,
+              "invoker": "FrameRequestCallback"
+            }
+          ]
+        },
+        {
+          "start": 1700.4000000953674,
+          "duration": 50.59999990463257,
+          "scripts": []
+        },
+        {
+          "start": 13666.5,
+          "duration": 65.7,
+          "scripts": []
+        },
+        {
+          "start": 13732.100000143051,
+          "duration": 382.1,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/node_modules/three/build/three.module.js",
+              "duration": 7.700000047683716,
+              "invoker": "http://127.0.0.1:52182/node_modules/three/build/three.module.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/hologram.js",
+              "duration": 361.09999990463257,
+              "invoker": "import.then"
+            }
+          ]
+        },
+        {
+          "start": 14128.5,
+          "duration": 311.7000000476837,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/node_modules/three/build/three.module.js",
+              "duration": 276.60000014305115,
+              "invoker": "TimerHandler:setTimeout"
+            },
+            {
+              "url": "http://127.0.0.1:52182/hologram.js",
+              "duration": 20.59999990463257,
+              "invoker": "FrameRequestCallback"
+            }
+          ]
+        }
+      ],
+      "now": 15904.900000095367,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:52182/style.css",
+          "bytes": 46823,
+          "duration": 1171.6000001430511
+        },
+        {
+          "name": "http://127.0.0.1:52182/role-workspaces.css",
+          "bytes": 13308,
+          "duration": 417.30000019073486
+        },
+        {
+          "name": "http://127.0.0.1:52182/journey.css",
+          "bytes": 14407,
+          "duration": 482.7000000476837
+        },
+        {
+          "name": "http://127.0.0.1:52182/dashboard-metrics.css",
+          "bytes": 4404,
+          "duration": 233
+        },
+        {
+          "name": "http://127.0.0.1:52182/mobile-shell.css",
+          "bytes": 1792,
+          "duration": 181.29999995231628
+        },
+        {
+          "name": "http://127.0.0.1:52182/login-mobile.css",
+          "bytes": 418,
+          "duration": 145.19999980926514
+        },
+        {
+          "name": "http://127.0.0.1:52182/sidebar-shell.css",
+          "bytes": 2764,
+          "duration": 279.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/hologram.css",
+          "bytes": 3624,
+          "duration": 343.59999990463257
+        },
+        {
+          "name": "http://127.0.0.1:52182/journey-prep.js",
+          "bytes": 6921,
+          "duration": 643.7000000476837
+        },
+        {
+          "name": "http://127.0.0.1:52182/app.js",
+          "bytes": 45616,
+          "duration": 1374.5999999046326
+        },
+        {
+          "name": "http://127.0.0.1:52182/role-workspaces.js",
+          "bytes": 46225,
+          "duration": 1374.9000000953674
+        },
+        {
+          "name": "http://127.0.0.1:52182/sidebar-shell.js",
+          "bytes": 1944,
+          "duration": 777.2000000476837
+        },
+        {
+          "name": "http://127.0.0.1:52182/dashboard-metrics.js",
+          "bytes": 7260,
+          "duration": 940.5999999046326
+        },
+        {
+          "name": "http://127.0.0.1:52182/motion-effects.js",
+          "bytes": 1695,
+          "duration": 907.9000000953674
+        },
+        {
+          "name": "http://127.0.0.1:52182/hologram.js",
+          "bytes": 13315,
+          "duration": 675.2000000476837
+        },
+        {
+          "name": "http://127.0.0.1:52182/references/iTakda-Icon.svg",
+          "bytes": 3083,
+          "duration": 440.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/references/hologram-poster.webp",
+          "bytes": 31578,
+          "duration": 1189.4000000953674
+        },
+        {
+          "name": "http://127.0.0.1:52182/favicon.ico",
+          "bytes": 0,
+          "duration": 2.0999999046325684
+        },
+        {
+          "name": "http://127.0.0.1:52182/node_modules/three/build/three.module.js",
+          "bytes": 658900,
+          "duration": 3397.2000000476837
+        },
+        {
+          "name": "http://127.0.0.1:52182/node_modules/three/build/three.core.js",
+          "bytes": 1474799,
+          "duration": 7559.899999856949
+        }
+      ],
+      "frames": {
+        "fps": 59.12886481606861,
+        "p95": 16.899999999997817,
+        "max": 33.5,
+        "over33": 2
+      },
+      "baseline": false
+    },
+    {
+      "lcp": 1580,
+      "element": "<img src=\"references/booking-illustration.svg\" alt=\"Illustration of choosing an appointment time on a calendar\" class=\"motion-visible\">",
+      "cls": 0.000011272665895061729,
+      "tasks": [
+        {
+          "start": 733.5,
+          "duration": 130
+        },
+        {
+          "start": 1516,
+          "duration": 134
+        }
+      ],
+      "longFrames": [
+        {
+          "start": 112.90000009536743,
+          "duration": 1291.8999998569489,
+          "scripts": []
+        },
+        {
+          "start": 1486.0999999046326,
+          "duration": 177,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/baseline/journey-prep.js",
+              "duration": 17.700000047683716,
+              "invoker": "http://127.0.0.1:52182/baseline/journey-prep.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/baseline/app.js",
+              "duration": 125.09999990463257,
+              "invoker": "http://127.0.0.1:52182/baseline/app.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/baseline/app.js",
+              "duration": 10.400000095367432,
+              "invoker": "FrameRequestCallback"
+            }
+          ]
+        }
+      ],
+      "now": 2960.7000000476837,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:52182/baseline/style.css",
+          "bytes": 46823,
+          "duration": 1073.2000000476837
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/role-workspaces.css",
+          "bytes": 13308,
+          "duration": 421.89999985694885
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/journey.css",
+          "bytes": 14407,
+          "duration": 453.90000009536743
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/dashboard-metrics.css",
+          "bytes": 4404,
+          "duration": 234.40000009536743
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/mobile-shell.css",
+          "bytes": 1792,
+          "duration": 170.20000004768372
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/login-mobile.css",
+          "bytes": 418,
+          "duration": 171.09999990463257
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/sidebar-shell.css",
+          "bytes": 2764,
+          "duration": 274.09999990463257
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/journey-prep.js",
+          "bytes": 6921,
+          "duration": 508
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/app.js",
+          "bytes": 45221,
+          "duration": 1183.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/role-workspaces.js",
+          "bytes": 46225,
+          "duration": 1199.6000001430511
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/sidebar-shell.js",
+          "bytes": 1944,
+          "duration": 571.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/dashboard-metrics.js",
+          "bytes": 7260,
+          "duration": 740
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/motion-effects.js",
+          "bytes": 1695,
+          "duration": 700.9000000953674
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/references/iTakda-Icon.svg",
+          "bytes": 3083,
+          "duration": 335.5
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/references/booking-illustration.svg",
+          "bytes": 13230,
+          "duration": 638.6000001430511
+        },
+        {
+          "name": "http://127.0.0.1:52182/favicon.ico",
+          "bytes": 0,
+          "duration": 4.200000047683716
+        }
+      ],
+      "frames": {
+        "fps": 56.872037914691944,
+        "p95": 33.20000000000027,
+        "max": 33.5,
+        "over33": 7
+      },
+      "baseline": true
+    },
+    {
+      "lcp": 1688,
+      "element": "<img class=\"hologram-fallback motion-visible\" src=\"references/hologram-poster.webp\" width=\"712\" height=\"671\" alt=\"Holographic hand choosing a fictional appointment on a floating ca",
+      "cls": 0.000011272665895061729,
+      "tasks": [
+        {
+          "start": 1650.7999999523163,
+          "duration": 102
+        },
+        {
+          "start": 13891.299999952316,
+          "duration": 563
+        },
+        {
+          "start": 14483.799999952316,
+          "duration": 267
+        }
+      ],
+      "longFrames": [
+        {
+          "start": 123.89999985694885,
+          "duration": 1478.2000000476837,
+          "scripts": []
+        },
+        {
+          "start": 1650.7999999523163,
+          "duration": 118.59999990463257,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/app.js",
+              "duration": 99.80000019073486,
+              "invoker": "http://127.0.0.1:52182/app.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/app.js",
+              "duration": 13.699999809265137,
+              "invoker": "FrameRequestCallback"
+            }
+          ]
+        },
+        {
+          "start": 1842.3999998569489,
+          "duration": 119.79999995231628,
+          "scripts": []
+        },
+        {
+          "start": 13891.299999952316,
+          "duration": 563.1,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/node_modules/three/build/three.module.js",
+              "duration": 12.200000047683716,
+              "invoker": "http://127.0.0.1:52182/node_modules/three/build/three.module.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/hologram.js",
+              "duration": 547.8000001907349,
+              "invoker": "import.then"
+            }
+          ]
+        },
+        {
+          "start": 14483.799999952316,
+          "duration": 287.2999999523163,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/node_modules/three/build/three.module.js",
+              "duration": 267.5,
+              "invoker": "TimerHandler:setTimeout"
+            },
+            {
+              "url": "http://127.0.0.1:52182/hologram.js",
+              "duration": 13.299999952316284,
+              "invoker": "FrameRequestCallback"
+            }
+          ]
+        }
+      ],
+      "now": 16293.899999856949,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:52182/style.css",
+          "bytes": 46823,
+          "duration": 1193.8000001907349
+        },
+        {
+          "name": "http://127.0.0.1:52182/role-workspaces.css",
+          "bytes": 13308,
+          "duration": 408.7000000476837
+        },
+        {
+          "name": "http://127.0.0.1:52182/journey.css",
+          "bytes": 14407,
+          "duration": 458.19999980926514
+        },
+        {
+          "name": "http://127.0.0.1:52182/dashboard-metrics.css",
+          "bytes": 4404,
+          "duration": 257
+        },
+        {
+          "name": "http://127.0.0.1:52182/mobile-shell.css",
+          "bytes": 1792,
+          "duration": 157.5
+        },
+        {
+          "name": "http://127.0.0.1:52182/login-mobile.css",
+          "bytes": 418,
+          "duration": 158.89999985694885
+        },
+        {
+          "name": "http://127.0.0.1:52182/sidebar-shell.css",
+          "bytes": 2764,
+          "duration": 274.59999990463257
+        },
+        {
+          "name": "http://127.0.0.1:52182/hologram.css",
+          "bytes": 3624,
+          "duration": 316.09999990463257
+        },
+        {
+          "name": "http://127.0.0.1:52182/journey-prep.js",
+          "bytes": 6921,
+          "duration": 672.2999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/app.js",
+          "bytes": 45616,
+          "duration": 1372.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/role-workspaces.js",
+          "bytes": 46225,
+          "duration": 1389.1999998092651
+        },
+        {
+          "name": "http://127.0.0.1:52182/sidebar-shell.js",
+          "bytes": 1944,
+          "duration": 805.1000001430511
+        },
+        {
+          "name": "http://127.0.0.1:52182/dashboard-metrics.js",
+          "bytes": 7260,
+          "duration": 968.6000001430511
+        },
+        {
+          "name": "http://127.0.0.1:52182/motion-effects.js",
+          "bytes": 1695,
+          "duration": 936.9000000953674
+        },
+        {
+          "name": "http://127.0.0.1:52182/hologram.js",
+          "bytes": 13315,
+          "duration": 706.5
+        },
+        {
+          "name": "http://127.0.0.1:52182/references/iTakda-Icon.svg",
+          "bytes": 3083,
+          "duration": 437.5
+        },
+        {
+          "name": "http://127.0.0.1:52182/references/hologram-poster.webp",
+          "bytes": 31578,
+          "duration": 1170.9000000953674
+        },
+        {
+          "name": "http://127.0.0.1:52182/favicon.ico",
+          "bytes": 0,
+          "duration": 14
+        },
+        {
+          "name": "http://127.0.0.1:52182/node_modules/three/build/three.module.js",
+          "bytes": 658900,
+          "duration": 3420.7000000476837
+        },
+        {
+          "name": "http://127.0.0.1:52182/node_modules/three/build/three.core.js",
+          "bytes": 1474799,
+          "duration": 7524.700000047684
+        }
+      ],
+      "frames": {
+        "fps": 55.969307154141326,
+        "p95": 33.29999999999927,
+        "max": 50,
+        "over33": 8
+      },
+      "baseline": false
+    },
+    {
+      "lcp": 1696,
+      "element": "<img src=\"references/booking-illustration.svg\" alt=\"Illustration of choosing an appointment time on a calendar\" class=\"motion-visible\">",
+      "cls": 0.000011272665895061729,
+      "tasks": [
+        {
+          "start": 783.1000001430511,
+          "duration": 176
+        },
+        {
+          "start": 1630.1000001430511,
+          "duration": 173
+        }
+      ],
+      "longFrames": [
+        {
+          "start": 167.5,
+          "duration": 1331,
+          "scripts": []
+        },
+        {
+          "start": 1601.5,
+          "duration": 215.10000014305115,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/baseline/journey-prep.js",
+              "duration": 19.300000190734863,
+              "invoker": "http://127.0.0.1:52182/baseline/journey-prep.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/baseline/app.js",
+              "duration": 167.29999995231628,
+              "invoker": "http://127.0.0.1:52182/baseline/app.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/baseline/app.js",
+              "duration": 10.699999809265137,
+              "invoker": "FrameRequestCallback"
+            }
+          ]
+        },
+        {
+          "start": 1827.1000001430511,
+          "duration": 86.79999995231628,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/baseline/sidebar-shell.js",
+              "duration": 6.1000001430511475,
+              "invoker": "http://127.0.0.1:52182/baseline/sidebar-shell.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/baseline/motion-effects.js",
+              "duration": 4.900000095367432,
+              "invoker": "http://127.0.0.1:52182/baseline/motion-effects.js"
+            }
+          ]
+        }
+      ],
+      "now": 3124.100000143051,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:52182/baseline/style.css",
+          "bytes": 46823,
+          "duration": 1093.9000000953674
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/role-workspaces.css",
+          "bytes": 13308,
+          "duration": 424.59999990463257
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/journey.css",
+          "bytes": 14407,
+          "duration": 491
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/dashboard-metrics.css",
+          "bytes": 4404,
+          "duration": 272.90000009536743
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/mobile-shell.css",
+          "bytes": 1792,
+          "duration": 191.60000014305115
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/login-mobile.css",
+          "bytes": 418,
+          "duration": 153.70000004768372
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/sidebar-shell.css",
+          "bytes": 2764,
+          "duration": 276.59999990463257
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/journey-prep.js",
+          "bytes": 6921,
+          "duration": 507.40000009536743
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/app.js",
+          "bytes": 45221,
+          "duration": 1195.5
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/role-workspaces.js",
+          "bytes": 46225,
+          "duration": 1214.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/sidebar-shell.js",
+          "bytes": 1944,
+          "duration": 596.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/dashboard-metrics.js",
+          "bytes": 7260,
+          "duration": 746.3999998569489
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/motion-effects.js",
+          "bytes": 1695,
+          "duration": 711.9000000953674
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/references/iTakda-Icon.svg",
+          "bytes": 3083,
+          "duration": 343.69999980926514
+        },
+        {
+          "name": "http://127.0.0.1:52182/baseline/references/booking-illustration.svg",
+          "bytes": 13230,
+          "duration": 642.2999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/favicon.ico",
+          "bytes": 0,
+          "duration": 1.7000000476837158
+        }
+      ],
+      "frames": {
+        "fps": 59.57485219118111,
+        "p95": 16.800000000000182,
+        "max": 33.399999999999636,
+        "over33": 1
+      },
+      "baseline": true
+    },
+    {
+      "lcp": 1688,
+      "element": "<img class=\"hologram-fallback motion-visible\" src=\"references/hologram-poster.webp\" width=\"712\" height=\"671\" alt=\"Holographic hand choosing a fictional appointment on a floating ca",
+      "cls": 0.000011272665895061729,
+      "tasks": [
+        {
+          "start": 1660.7999999523163,
+          "duration": 234
+        },
+        {
+          "start": 13909.200000047684,
+          "duration": 661
+        },
+        {
+          "start": 14585.400000095367,
+          "duration": 220
+        },
+        {
+          "start": 14806,
+          "duration": 69
+        }
+      ],
+      "longFrames": [
+        {
+          "start": 119.70000004768372,
+          "duration": 1466.9000000953674,
+          "scripts": []
+        },
+        {
+          "start": 1660.7999999523163,
+          "duration": 243.5,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/app.js",
+              "duration": 227.60000014305115,
+              "invoker": "http://127.0.0.1:52182/app.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/app.js",
+              "duration": 7.400000095367432,
+              "invoker": "FrameRequestCallback"
+            }
+          ]
+        },
+        {
+          "start": 1962.2000000476837,
+          "duration": 90.40000009536743,
+          "scripts": []
+        },
+        {
+          "start": 13909.200000047684,
+          "duration": 661.5,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/node_modules/three/build/three.module.js",
+              "duration": 33,
+              "invoker": "http://127.0.0.1:52182/node_modules/three/build/three.module.js"
+            },
+            {
+              "url": "http://127.0.0.1:52182/hologram.js",
+              "duration": 623.7000000476837,
+              "invoker": "import.then"
+            }
+          ]
+        },
+        {
+          "start": 14585.400000095367,
+          "duration": 280.59999990463257,
+          "scripts": [
+            {
+              "url": "http://127.0.0.1:52182/node_modules/three/build/three.module.js",
+              "duration": 220.59999990463257,
+              "invoker": "TimerHandler:setTimeout"
+            },
+            {
+              "url": "http://127.0.0.1:52182/hologram.js",
+              "duration": 29.399999856948853,
+              "invoker": "FrameRequestCallback"
+            }
+          ]
+        }
+      ],
+      "now": 16370.200000047684,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:52182/style.css",
+          "bytes": 46823,
+          "duration": 1232.3000001907349
+        },
+        {
+          "name": "http://127.0.0.1:52182/role-workspaces.css",
+          "bytes": 13308,
+          "duration": 394.10000014305115
+        },
+        {
+          "name": "http://127.0.0.1:52182/journey.css",
+          "bytes": 14407,
+          "duration": 459.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/dashboard-metrics.css",
+          "bytes": 4404,
+          "duration": 225.29999995231628
+        },
+        {
+          "name": "http://127.0.0.1:52182/mobile-shell.css",
+          "bytes": 1792,
+          "duration": 158.5
+        },
+        {
+          "name": "http://127.0.0.1:52182/login-mobile.css",
+          "bytes": 418,
+          "duration": 194.19999980926514
+        },
+        {
+          "name": "http://127.0.0.1:52182/sidebar-shell.css",
+          "bytes": 2764,
+          "duration": 276.60000014305115
+        },
+        {
+          "name": "http://127.0.0.1:52182/hologram.css",
+          "bytes": 3624,
+          "duration": 360.09999990463257
+        },
+        {
+          "name": "http://127.0.0.1:52182/journey-prep.js",
+          "bytes": 6921,
+          "duration": 627
+        },
+        {
+          "name": "http://127.0.0.1:52182/app.js",
+          "bytes": 45616,
+          "duration": 1383.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/role-workspaces.js",
+          "bytes": 46225,
+          "duration": 1399
+        },
+        {
+          "name": "http://127.0.0.1:52182/sidebar-shell.js",
+          "bytes": 1944,
+          "duration": 758.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/dashboard-metrics.js",
+          "bytes": 7260,
+          "duration": 922.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/motion-effects.js",
+          "bytes": 1695,
+          "duration": 889.7000000476837
+        },
+        {
+          "name": "http://127.0.0.1:52182/hologram.js",
+          "bytes": 13315,
+          "duration": 657.0999999046326
+        },
+        {
+          "name": "http://127.0.0.1:52182/references/iTakda-Icon.svg",
+          "bytes": 3083,
+          "duration": 424.2999999523163
+        },
+        {
+          "name": "http://127.0.0.1:52182/references/hologram-poster.webp",
+          "bytes": 31578,
+          "duration": 1205.6000001430511
+        },
+        {
+          "name": "http://127.0.0.1:52182/favicon.ico",
+          "bytes": 0,
+          "duration": 6.799999952316284
+        },
+        {
+          "name": "http://127.0.0.1:52182/node_modules/three/build/three.module.js",
+          "bytes": 658900,
+          "duration": 3405.4000000953674
+        },
+        {
+          "name": "http://127.0.0.1:52182/node_modules/three/build/three.core.js",
+          "bytes": 1474799,
+          "duration": 7518
+        }
+      ],
+      "frames": {
+        "fps": 58.22613405551794,
+        "p95": 16.80000000000291,
+        "max": 33.400000000001455,
+        "over33": 4
+      },
+      "baseline": false
+    }
+  ],
+  "browser": "157.0.8103.39",
+  "bytes": {
+    "baselineCSSJS": 49931,
+    "currentCSSJS": 476346,
+    "added": [
+      {
+        "name": "hologram.js",
+        "raw": 13315,
+        "gzip": 4889
+      },
+      {
+        "name": "hologram.css",
+        "raw": 3624,
+        "gzip": 1258
+      },
+      {
+        "name": "node_modules/three/build/three.module.js",
+        "raw": 658900,
+        "gzip": 129714
+      },
+      {
+        "name": "node_modules/three/build/three.core.js",
+        "raw": 1474799,
+        "gzip": 290444
+      }
+    ],
+    "poster": 271245
+  },
+  "finalPreservationAndSizes": {
+    "changedBaselineFiles": [
+      "app.js",
+      "index.html"
+    ],
+    "missingBaselineFiles": [],
+    "unchangedBaselineFileCount": 37,
+    "gzipIncrementCSSJS": 426580,
+    "servedPosterBytes": 31578,
+    "contrast": {
+      "bodyOnNavy": 12.766020830176036,
+      "headingOnNavy": 17.99228343001607,
+      "buttonLabel": 6.20796697071792
+    }
+  },
+  "note": "Cold contexts, alternating pre-task/current, 1440x900, 4x CPU, 40ms latency, 200000 B/s download, 93750 B/s upload; local uncompressed HTTP. Final later edits only lifecycle cleanup, recent-window guard, and input-focus initialization guard. No new LCP claim beyond these samples. Earlier bytes.poster is the PNG source capture; final served WebP is listed separately."
+}

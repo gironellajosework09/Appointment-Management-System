@@ -1,0 +1,127 @@
+{
+  "checks": [
+    "live WebGL rendering",
+    "scene changes during pointer interaction (includes idle motion)",
+    "pause button stops WebGL draw calls",
+    "offscreen scene stops WebGL draw calls",
+    "live reduced motion stops WebGL draw calls",
+    "reduced-motion poster visible",
+    "one canvas reused on sign-in",
+    "form entry stops illustration rendering",
+    "login validation remains immediate",
+    "skip preserves route/history and visibly focuses heading: home",
+    "skip preserves route/history and visibly focuses heading: login",
+    "skip preserves route/history and visibly focuses heading: register",
+    "skip preserves route/history and visibly focuses heading: recovery",
+    "skip preserves route/history and visibly focuses heading: booking",
+    "skip preserves route/history and visibly focuses heading: manage",
+    "skip preserves route/history and visibly focuses heading: review",
+    "skip preserves route/history and visibly focuses heading: confirmation",
+    "skip preserves route/history and visibly focuses heading: how",
+    "skip preserves route/history and visibly focuses heading: services",
+    "skip preserves route/history and visibly focuses heading: dashboard",
+    "skip preserves route/history and visibly focuses heading: appointments",
+    "skip preserves route/history and visibly focuses heading: calendar",
+    "skip preserves route/history and visibly focuses heading: link",
+    "skip preserves route/history and visibly focuses heading: profile",
+    "skip preserves route/history and visibly focuses heading: staff-today",
+    "skip preserves route/history and visibly focuses heading: admin-overview",
+    "skip link reachable with reverse keyboard traversal",
+    "Tab after skip reaches primary content action",
+    "pointer changes scene with idle time held constant",
+    "no document overflow: home 1440",
+    "no document overflow: login 1440",
+    "no document overflow: home 768",
+    "no document overflow: login 768",
+    "no document overflow: home 390",
+    "no document overflow: login 390",
+    "no Three.js requests on 390px mobile",
+    "no document overflow: home 320",
+    "no document overflow: login 320",
+    "no Three.js requests on 320px mobile",
+    "poster fallback: reduced",
+    "sign-in independent of graphics: reduced",
+    "poster fallback: nojs",
+    "poster fallback: no-webgl",
+    "sign-in independent of graphics: no-webgl",
+    "poster fallback: blocked-module",
+    "sign-in independent of graphics: blocked-module",
+    "poster fallback: blocked-three",
+    "sign-in independent of graphics: blocked-three",
+    "poster fallback: no-observer",
+    "sign-in independent of graphics: no-observer",
+    "poster fallback: save-data",
+    "sign-in independent of graphics: save-data",
+    "context loss disposes renderer and restores poster",
+    "smooth-frame window stays rendered",
+    "recent slow frames restore poster after a smooth window (synthetic timestamps)",
+    "no external requests"
+  ],
+  "consoleErrors": [],
+  "failedResponses": [],
+  "externalRequests": [],
+  "viewports": [
+    {
+      "view": "home",
+      "width": 1440,
+      "height": 900,
+      "scroll": 1440
+    },
+    {
+      "view": "login",
+      "width": 1440,
+      "height": 900,
+      "scroll": 1440
+    },
+    {
+      "view": "home",
+      "width": 768,
+      "height": 1024,
+      "scroll": 768
+    },
+    {
+      "view": "login",
+      "width": 768,
+      "height": 1024,
+      "scroll": 768
+    },
+    {
+      "view": "home",
+      "width": 390,
+      "height": 844,
+      "scroll": 390
+    },
+    {
+      "view": "login",
+      "width": 390,
+      "height": 844,
+      "scroll": 390
+    },
+    {
+      "view": "home",
+      "width": 320,
+      "height": 640,
+      "scroll": 320
+    },
+    {
+      "view": "login",
+      "width": 320,
+      "height": 640,
+      "scroll": 320
+    }
+  ],
+  "browser": "157.0.8103.39",
+  "validationLiveRegion": "polite",
+  "backgroundHidden": false,
+  "browserZoomAttempt": {
+    "before": {
+      "width": 1440,
+      "dpr": 1
+    },
+    "after": {
+      "width": 1440,
+      "dpr": 1
+    },
+    "verified200": false
+  }
+}

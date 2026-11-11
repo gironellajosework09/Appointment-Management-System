@@ -1,0 +1,11 @@
+{
+  "name": "itakda-checkpoint-11-animation-experiment",
+  "private": true,
+  "dependencies": {
+    "@rive-app/canvas": "2.50.0",
+    "gsap": "3.15.1",
+    "lenis": "1.3.27",
+    "motion": "14.11.1",
+    "three": "0.187.0"
+  }
+}

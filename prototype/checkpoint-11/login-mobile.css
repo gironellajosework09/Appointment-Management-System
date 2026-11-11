@@ -1,0 +1,7 @@
+/* Keep the organization identity visible while bringing sign-in forward on phones. */
+@media (max-width:700px){
+  .login-view .auth-art{display:flex;min-height:0;height:auto;margin:0;padding:12px clamp(20px,6vw,40px)}
+  .login-view .auth-art .auth-art-brand{max-width:none;align-self:auto}
+  .login-view .auth-art .auth-illustration,.login-view .auth-art h2{display:none}
+  .login-view .auth-form{padding-top:18px}
+}

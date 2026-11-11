@@ -1,0 +1,40 @@
+/* Separate, decorative layers retain a complete static illustration without JavaScript. */
+.hologram-stage .layered-scene{position:absolute;inset:0;overflow:hidden;--pointer-x:0px;--pointer-y:0px;transform:translate(var(--pointer-x),var(--pointer-y));transition:transform 500ms ease-out}
+.hologram-stage .layered-calendar{position:absolute;left:20%;top:9%;width:64%;height:57%;padding:4% 5%;box-sizing:border-box;border:1px solid rgba(105,214,236,.6);border-radius:3%;background:linear-gradient(145deg,rgba(29,79,106,.75),rgba(12,28,65,.92));box-shadow:0 12px 28px rgba(4,9,34,.28);color:#d9f3fa;transform:perspective(900px) rotateY(7deg) rotateZ(3deg)}
+.hologram-stage .calendar-eyebrow{font-size:clamp(5px,.65vw,10px);letter-spacing:.09em;color:#a9d6e4}
+.hologram-stage .layered-month{display:block;margin:1% 0 4%;font-size:clamp(10px,1.7vw,25px);line-height:1.1;color:#eafaff}
+.hologram-stage .layered-weekdays,.hologram-stage .layered-dates{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));text-align:center}
+.hologram-stage .layered-weekdays{padding-top:3%;border-top:1px solid rgba(155,215,232,.23);font-size:clamp(5px,.65vw,10px);color:#92becd}
+.hologram-stage .layered-dates{height:47%;align-items:center;font-size:clamp(6px,.77vw,12px);font-weight:700}
+.hologram-stage .layered-dates span{display:grid;place-items:center;justify-self:center;width:clamp(10px,2vw,29px);aspect-ratio:1;border-radius:30%}
+.hologram-stage .layered-dates .layer-date-selected{background:#f48a39;color:#11113b;box-shadow:0 0 12px rgba(255,152,76,.65)}
+.hologram-stage .calendar-footer{display:flex;justify-content:space-between;padding:3% 4%;background:rgba(100,195,219,.1);font-size:clamp(5px,.66vw,10px);color:#bfe3eb}
+.hologram-stage .layered-card{position:absolute;top:17%;right:0;width:29%;padding:3% 3.5%;border:1px solid rgba(105,214,236,.55);border-radius:6px;background:rgba(15,39,72,.94);box-shadow:0 12px 25px rgba(4,9,34,.22);color:#dbf5fc;transform:rotate(-5deg);z-index:2}
+.hologram-stage .layered-card span,.hologram-stage .layered-card small{display:block;font-size:clamp(5px,.6vw,9px);color:#a4d8e7}
+.hologram-stage .layered-card strong{display:block;margin:5% 0;font-size:clamp(7px,1vw,15px);line-height:1.1}
+.hologram-stage .layered-hand{position:absolute;left:15.3%;top:29%;width:84%;aspect-ratio:3 / 2;z-index:3;pointer-events:none;animation:layered-float 10s ease-in-out infinite;animation-play-state:paused}
+.home-view .hero-art .layered-scene img.layer-hand,.login-view .auth-art .layered-scene img.layer-hand{display:block;position:static;width:100%;height:100%;max-height:none;object-fit:contain;filter:none;animation:none!important}
+.hologram-stage.is-animating .layered-hand{animation-play-state:running}
+.hologram-stage .hologram-pause{display:flex;align-items:center;justify-content:center;width:40px;height:40px;min-height:40px;padding:0;font-size:0;line-height:0}
+.hologram-stage .hologram-pause::before{content:"";width:5px;height:14px;border-left:3px solid currentColor;border-right:3px solid currentColor}
+.hologram-stage .hologram-pause[aria-pressed="true"]::before{width:0;height:0;border-left:11px solid currentColor;border-right:0;border-top:7px solid transparent;border-bottom:7px solid transparent}
+.hologram-stage .hologram-pause::after{content:attr(data-tooltip);position:absolute;right:0;bottom:100%;padding:7px 10px;border:1px solid #7296b8;border-radius:6px;background:#11113b;color:#f0f8ff;font-size:12px;font-weight:600;line-height:1.25;white-space:nowrap;opacity:0;visibility:hidden;transition:opacity 120ms ease-out}
+.hologram-stage .hologram-pause:hover::after,.hologram-stage .hologram-pause:focus-visible::after{opacity:1;visibility:visible}
+.password-toggle{--password-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E");display:flex;align-items:center;justify-content:center;font-size:0;line-height:0}
+.password-toggle[aria-pressed="true"]{--password-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 3l18 18M10.6 5.1A10.8 10.8 0 0 1 12 5c6.5 0 10 7 10 7a15 15 0 0 1-3 4M6.1 6.1A16 16 0 0 0 2 12s3.5 7 10 7a10 10 0 0 0 4.1-.9M10 10a3 3 0 0 0 4 4'/%3E%3C/svg%3E")}
+.password-toggle::before{content:"";display:block;flex:none;width:20px;height:20px;background:currentColor;-webkit-mask:var(--password-icon) center / contain no-repeat;mask:var(--password-icon) center / contain no-repeat}
+@keyframes layered-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media(max-width:900px){@keyframes layered-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}}
+@media(max-width:900px){.public-header .menu-toggle{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0}.public-header .menu-toggle svg{width:22px;height:22px;flex:none}}
+/* Keep the login artwork proportional when the panel is narrower or shorter than the viewport. */
+.login-view .auth-art>.hologram-stage{width:min(100%,53vh);height:auto;max-height:none;aspect-ratio:1.06;justify-self:center;container-type:inline-size}
+.login-view .hologram-stage .calendar-eyebrow{font-size:1.6cqw}
+.login-view .hologram-stage .layered-month{font-size:4cqw}
+.login-view .hologram-stage .layered-weekdays{font-size:1.5cqw}
+.login-view .hologram-stage .layered-dates{font-size:1.8cqw}
+.login-view .hologram-stage .layered-dates span{width:4cqw}
+.login-view .hologram-stage .calendar-footer{font-size:1.4cqw}
+.login-view .hologram-stage .layered-card span,.login-view .hologram-stage .layered-card small{font-size:1.35cqw}
+.login-view .hologram-stage .layered-card strong{font-size:2.1cqw}
+@media(max-width:700px){.hologram-stage .layered-scene{transform:none!important;transition:none}.hologram-stage .layered-hand{animation:none}.login-view .auth-art>.hologram-stage{display:none}.hologram-stage .calendar-eyebrow,.hologram-stage .layered-card small{display:none}}
+@media(prefers-reduced-motion:reduce){.hologram-stage .layered-scene{transform:none!important;transition:none}.hologram-stage .layered-hand{animation:none}.hologram-stage .hologram-pause{display:none}}
