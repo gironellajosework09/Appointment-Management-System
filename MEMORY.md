@@ -1,5 +1,7 @@
 # Project memory
 
+**SDD-001 handoff — recorded 2026-11-17:** The Product Owner accepted the AI-assisted local foundation based on the reported verification evidence; the earlier scratch compatibility evaluation remains incomplete. This is not production or release acceptance. See [TASKS.md](TASKS.md) for the acceptance record and its limits.
+
 On 2026-11-13 [D-114](docs/decisions/DECISION_REGISTER.md#933-sdd-001-technical-direction-and-phpunit-choice) superseded D-113's PHPUnit 13 selection only: the Product Owner selected the latest appropriate supported PHPUnit 12.x patch and approved FND-Q02/Q04 directions subject to final engineering/security review. PHPUnit 12.5.43 is the documented current candidate; actual graph/runtime verification remains pending. See the [current prerequisite review](docs/technical/FND-PREREQUISITE-REVIEW.md#current-decision-and-remaining-prerequisites-2026-11-13). No implementation authority was granted.
 
 On 2026-11-13 the Product Owner conditionally approved the SDD-001 local toolchain direction under [D-113](docs/decisions/DECISION_REGISTER.md#932-conditional-sdd-001-local-toolchain-direction). The upstream skeleton's PHPUnit 12 constraint conflicts with the proposed PHPUnit 13; the compatibility check and final dependency baseline remain pending. See the [prerequisite review](docs/technical/FND-PREREQUISITE-REVIEW.md). No implementation or runtime installation was authorized.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit cacheResult="false">
+    <testsuites>
+        <testsuite name="Foundation">
+            <file>tests/Unit/FoundationContextTest.php</file>
+            <file>tests/Feature/FoundationHttpTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>
