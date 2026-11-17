@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.36 (2026-11-17 — D-119 SDD-001 local review and database-free testing amendments recorded; approval date not separately supplied) |
+| Revision | 1.38 (D-121 Gate 2 closure and CP11 baseline clarification recorded 2026-11-17; approval date not separately supplied) |
 | Owner | Product Owner |
 
 This register records decisions with unique IDs, status, date (where known),
@@ -772,6 +772,8 @@ Approval provenance: The twelve Operations, Reliability, UX and Engineering choi
 
 Approval provenance: The Product Owner accepted the proposed operating-contract rule in the referenced “Gate 2 — Architecture & Technical Design” conversation (conversation ID `6ae2fbef-1a88-83ec-9d89-1dd9c9a32f1b`) and requested this bounded, compatibility-first documentation amendment. The Product Owner then accepted the exact Engineering Governance revision 1.4 amendment presented in the preceding report, limited to D-110 wording. Both were recorded 2026-11-13; approval dates were not separately supplied. D-110 authorizes no application code, dependency, database, CEAP, Git, deployment or release action; it does not complete Gate 2 or Checkpoint 11, approve another artifact by its existence, or relax an existing stop condition.
 
+**Subsequent limited amendment:** D-120 adds the expressly defined Product Owner low-risk self-review and ordinary design-review arrangements; D-110's self-approval prohibition remains effective outside the scopes expressly permitted by D-119 and D-120. All other D-110 controls and its historical approval remain intact.
+
 ## 9.30 Targeted technical investigation priorities
 
 | ID | Decision | Status | Approval date | Approver |
@@ -829,6 +831,24 @@ Provenance: Product Owner decision "Gate 2 Closure Remediation" in the current c
 | D-119 | Approve the exact amendments presented in Section A of the consolidated "One-Pass Development Unblocking and Workflow Optimization" report: Governance §§3, 5 and 19 specify the bounded SDD-001 local-development review and self-review arrangement, and §14 adopts the database-free testing clarification. D-110's prohibition on contributor self-approval and D-114's final engineering/security-review timing are superseded only to the extent expressly stated for that local SDD-001 scope. The prerequisite review's proposed independent acceptance-reviewer assignment may be deferred for that local scope under the approved arrangement. D-114's toolchain conditions, exclusions and need for actual compatibility evidence remain. Human specialist review before expansion into an affected excluded capability or release, qualified independent privacy/security assessment before release, applicable safety/privacy controls, and separate release approval remain mandatory. | APPROVED (PO DECISION) — bounded governance amendment only | Not separately supplied; recorded 2026-11-17 | Product Owner |
 
 Provenance: Product Owner instruction "iTakda SDD-001 Workflow Unblocking" in the current conversation. The date above is the recording date, not an inferred approval date. The approved wording is incorporated in [Engineering Governance](../ENGINEERING_GOVERNANCE.md) revision 1.5. D-119 does not authorize dependency downloads or installation, compatibility execution, application implementation, database operations, Git operations, deployment or CEAP access. SE-001 remains unapproved; prior decisions and other scopes remain preserved.
+
+## 9.37 Solo-developer risk-based review amendment
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-120 | Adopt the exact four-paragraph solo-developer risk-based review amendment in [Engineering Governance §5](../ENGINEERING_GOVERNANCE.md#solo-developer-risk-based-review-d-120), with corresponding §§3, 5 and 19 and D-110 consistency updates. The Product Owner may personally review ordinary design evidence with AI support, self-review the expressly defined low-risk implementation scope, and personally review the alternative CP12/architecture evidence for historical Gate 2 disposition subject to its stated limitations. Applicable specialist review and independent privacy/security pre-release assessment remain mandatory. | APPROVED (PO DECISION) — governance amendment only | Not separately supplied; recorded 2026-11-17 | Product Owner |
+
+Provenance: The Product Owner explicitly approved the exact amendment proposed in the immediately preceding report, in the instruction “Product Owner Decision — Governance Amendment Approval.” The recording date is not an inferred approval date. D-119's historical scope remains intact. This decision does not accept CP12, approve final architecture, close Gate 2, or authorize implementation, deployment or release.
+
+## 9.38 Gate 2 closure and prototype baseline clarification
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-121 | Following personal review of the [Gate 2 closure evidence](../evidence/GATE-2-CLOSURE-EVIDENCE-PACKAGE.md), CP12 alternative evidence, final architecture review, accepted CP11 evidence and documented limitations, accept the alternative CP12 evidence solely for Gate 2 design traceability; accept the final architecture review, including CP11 and CP12 treatment and limitations; clarify that the accepted prototype is an incomplete UI/UX design baseline, not an exhaustive or pixel-perfect implementation specification; and approve formal Gate 2 closure after verification of its exit criteria. | APPROVED (PO DECISION) — limited alternative evidence, review, baseline clarification and Gate 2 closure | Not separately supplied; recorded 2026-11-17 | Product Owner |
+
+The original F1–F17 report remains unavailable; fourteen historical findings remain unassessed and are not claimed resolved. Recovery and evidence limitations remain residual risks. F8 and F10 remain unapproved proposals. The accepted prototype establishes initial visual direction, layout patterns, interaction concepts and design language; omissions do not require omitting approved functionality. Additional features, workflows, components, interaction states and transitions, validation, error handling, loading/empty/success/failure states, responsive and accessible behavior, and other implementation details may be required. Approved requirements, SDDs, architecture decisions and applicable accessibility/security requirements remain authoritative; material deviations from approved design decisions follow applicable change control. D-112's historical CP11 scope and evidence remain preserved; no missing prototype functionality is represented as reviewed or accepted.
+
+Provenance: explicit Product Owner instruction “Gate 2 Final Closure and Prototype Baseline Clarification” in the current conversation; approval date not separately supplied, recorded 2026-11-17. The Product Owner personally reviewed the stated evidence under D-120 and acknowledged the stated residual risks. Gate 1 approval, design review, CP11 inclusion and accepted alternative design traceability are recorded in the [closure package](../evidence/GATE-2-CLOSURE-EVIDENCE-PACKAGE.md); no known additional mandatory Gate 2 exit criterion is outstanding. This decision neither waives future verification and applicable specialist reviews nor approves implementation, release, deployment or production readiness. SDD-001's local acceptance and incomplete prior scratch evaluation remain unchanged.
 
 ## 10. Approval
 

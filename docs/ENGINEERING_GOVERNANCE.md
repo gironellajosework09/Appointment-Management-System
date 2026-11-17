@@ -5,14 +5,14 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.5 (D-119 SDD-001 local review and database-free testing amendments accepted by the Product Owner; recorded 2026-11-17, approval date not separately supplied) |
+| Revision | 1.6 (D-120 solo-developer risk-based review amendment approved; recorded 2026-11-17, approval date not separately supplied) |
 | Owner | Product Owner |
 
 > **CP11 acceptance status note (2026-11-13).** D-112 records the Product Owner's
 > acceptance of Checkpoint 11 within its documented design and prototype scope.
 > This is a status recording under the existing approval; it does not amend the §5
 > lifecycle or create implementation, Gate 2 closure, CP12 or release authority.
-> Revision 1.4 was the policy revision at the time of this note; revision 1.5 is current.
+> Revision 1.4 was the policy revision at the time of this note; revision 1.6 is current.
 
 > **Revision 0.7 (2026-10-23) — AGENTS.md adopted; accessibility standard
 > proposed.** §6, §20, and §22 reconciled to record that `AGENTS.md` is adopted as
@@ -62,6 +62,8 @@ It is a governance artifact. It does **not** authorize implementation.
 review and database-free testing amendments recorded in D-119. Recording date:
 2026-11-17; approval date not separately supplied. The amendments do not
 authorize compatibility execution, installation, implementation or deployment.
+
+**Revision 1.6 status:** The Product Owner approved the exact solo-developer risk-based review amendment recorded in D-120. Recording date: 2026-11-17; approval date not separately supplied. This does not accept CP12, approve final architecture, close Gate 2, or authorize implementation or deployment.
 
 ---
 
@@ -119,6 +121,8 @@ required evidence, or approval controls.
 | AI coding tools | Assistive only; perform only explicitly authorized work; no independent architecture, security, database, deployment, or scope decisions |
 
 AI agents may perform authorized implementation, testing, exploration and technical review as supporting engineering work. Their findings and test results are evidence, not human specialist qualifications, independent assessment or Product Owner approval. The Product Owner assigns applicable human responsibilities and records any permitted combination of roles under §5.
+
+The Product Owner may personally perform the ordinary design review and bounded historical Gate 2 review specified in §5, using AI-assisted analysis as supporting evidence. This does not represent AI assistance as human or specialist review.
 
 **Access boundary (confirmed):** the product owner / system operator is **not**
 automatically an administrator of every client installation and must **not** have
@@ -186,11 +190,21 @@ Each acceptance identifies the spec/change, reviewer, verification performed, ou
 remaining limitation. High-risk review findings must be resolved or explicitly dispositioned by
 the Product Owner before acceptance; release/deployment remains a separate approval.
 
+### Solo-developer risk-based review (D-120)
+
+For an ordinary design decision, the Product Owner may personally review the relevant design evidence and record a decision with AI-assisted analysis as supporting evidence. The record must identify the reviewer’s role, evidence considered, findings, limitations, and any combined contributor/reviewer role.
+
+For low-risk implementation, the Product Owner may review and accept work to which the Product Owner contributed, provided the record explicitly identifies self-review and includes the applicable automated and manual verification, traceability, findings, limitations, and residual risk. This changes the contributor self-approval restriction only for this defined low-risk scope.
+
+Security-critical, privacy-critical, data-integrity, and other high-risk changes retain explicit authorization and applicable specialist review before acceptance. AI assistance is not independent human or qualified specialist review. The qualified independent privacy/security assessment and other applicable verification and approvals remain mandatory before release or deployment. No mandatory legal, safety, or data-protection obligation is waived.
+
+For the historical Gate 2 disposition only, the Product Owner may personally review the documented alternative CP12 and architecture evidence, with AI assistance, while explicitly recording the unavailable F1–F17 source and unassessed findings. This does not establish specialist review, implementation verification, or release readiness.
+
 ### Bounded SDD-001 local development arrangement (D-119)
 
 For the local SDD-001 foundation only, the Product Owner may authorize connection-free compatibility evaluation and implementation using AI-assisted technical review, automated checks, manual inspection and a recorded Product Owner decision. The scope is limited to fictional local/test configuration, framework initialization and a neutral non-business response. It excludes application identity, personal or client data, database operations, migrations, business mutations, external dispatch and deployment.
 
-Within this scope, additional human specialist review and independent feature acceptance may be deferred. The Product Owner may personally review and accept the local result, including work to which that person contributed, provided the record identifies the combined roles, evidence, limitations and residual risk and describes it as self-review. This is the sole exception to §5’s contributor self-approval restriction; AI agents retain no approval authority.
+Within this scope, additional human specialist review and independent feature acceptance may be deferred. The Product Owner may personally review and accept the local result, including work to which that person contributed, provided the record identifies the combined roles, evidence, limitations and residual risk and describes it as self-review. D-119 originally established this scope as the sole exception to the contributor self-approval restriction; D-120 subsequently adds the separate low-risk arrangement above. AI agents retain no approval authority.
 
 Before execution, review the exact dependency footprint, scripts and plugins, configuration and failure contracts, environment controls, and permitted file and network effects. Stop the affected action if those controls cannot be established, a material unresolved security, privacy or integrity issue arises, or work expands beyond this scope. Any required security exception follows §13.
 
@@ -241,11 +255,12 @@ section.
 
 ### Historical gate and retained controls
 
-Gate 0 and Gate 1 remain historically complete as recorded. Gate 2 remains historically
-**IN PROGRESS and unfinished**; its remaining routine gate/checkpoint obligations are
-prospectively superseded, not completed or accepted. Checkpoint 11 was accepted by the Product Owner
+Gate 0 and Gate 1 remain historically complete as recorded. Gate 2 was unfinished at the D-098
+transition and its routine gate/checkpoint progression was prospectively superseded. The Product
+Owner subsequently accepted the alternative CP12 evidence and final architecture review and closed
+Gate 2 under D-121, subject to its recorded residual risks. Checkpoint 11 was accepted by the Product Owner
 on 2026-11-13 within its documented design/prototype scope (D-112); that acceptance is design evidence
-only and does not complete Gate 2. Former Gates 3–7 remain historical planned stages, not routine
+only. Former Gates 3–7 remain historical planned stages, not routine
 sequential prerequisites. Their mandatory security/data-integrity reviews, isolated verification,
 release/deployment approvals, and continuing operational controls remain enforceable independently
 of gate numbering. D-096/D-097 remain bounded fictional-prototype authorizations only.
@@ -264,7 +279,7 @@ write ownership for each file or other shared artifact, preserve existing work, 
 name an integrator to reconcile dependent contracts before final review. Agents
 and contributors may draft, evaluate, integrate, and verify within their assigned
 scope; they cannot approve their own work or expand another contributor's scope,
-except for the bounded SDD-001 Product Owner self-review arrangement above.
+except for the Product Owner self-review arrangements expressly stated above under D-119 and D-120.
 
 Classify unresolved items in the package record as **blocking**, **deferred**, or
 **installation-specific**. Blocking items include missing authority, a material
@@ -517,7 +532,7 @@ implemented, applicable verification is recorded, required reviews are complete,
 has confirmed the result against its acceptance criteria. Product Owner approval remains required
 as defined in §5; review or acceptance never changes approved requirements by implication.
 
-The bounded local SDD-001 provision in §5 governs only that scope’s permitted review and acceptance arrangement. All other feature-review requirements and the independent pre-release assessment remain applicable.
+The bounded local SDD-001 provision in §5 governs only that scope’s permitted review and acceptance arrangement. D-120 separately provides the risk-based review arrangement in §5; other applicable feature-review requirements and the independent pre-release assessment remain applicable.
 
 Security and data-integrity review remains mandatory before accepting affected high-risk work.
 A qualified independent privacy/security assessment, genuine product-fit review, required testing,
@@ -608,6 +623,7 @@ closure authorizes Gate 1 or any implementation.
 |---|---|---|---|
 | Product Owner | Product Owner | Approved as a Gate 0 baseline artifact (P-001) | 2026-10-22 |
 | Product Owner | Product Owner | Accepted exact revision 1.4 D-110 execution operating contract amendment only | Not separately supplied; recorded 2026-11-13 |
+| Product Owner | Product Owner | Approved exact revision 1.6 D-120 solo-developer risk-based review amendment only | Not separately supplied; recorded 2026-11-17 |
 
 ---
 

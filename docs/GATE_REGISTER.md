@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.26 (2026-11-13 — D-112 Checkpoint 11 acceptance recorded) |
+| Revision | 1.27 (D-121 Gate 2 closure recorded 2026-11-17; approval date not separately supplied) |
 | Owner | Product Owner |
 
 This register tracks gate status and defines, for each gate: purpose, required
@@ -34,7 +34,7 @@ approval. No AI tool may set or imply a gate approval.
 |---|---|---|
 | Gate 0 | Project Initiation & Governance | **COMPLETE (APPROVED)** — 2026-10-22 |
 | Gate 1 | Requirements Discovery | **COMPLETE (APPROVED)** — 2026-10-29 |
-| Gate 2 | Architecture & Design | **Historical: IN PROGRESS, unfinished** — routine progression prospectively superseded by D-098; not completed or accepted |
+| Gate 2 | Architecture & Design | **COMPLETE (APPROVED)** — D-121; recorded 2026-11-17, approval date not separately supplied |
 | Gate 3 | Security & Data Integrity Design Review | **Historical planned stage** — review control retained independently where applicable |
 | Gate 4 | Authorized Implementation | **Historical planned stage** — implementation authorization remains feature/risk-scoped under D-098 |
 | Gate 5 | Verification & Testing | **Historical planned stage** — verification remains required for feature acceptance |
@@ -43,6 +43,7 @@ approval. No AI tool may set or imply a gate approval.
 
 Notes:
 
+- **Current Gate 2 disposition (D-121):** The Product Owner personally reviewed the closure evidence under D-120, accepted CP12 alternative evidence and the final architecture review within their recorded limitations, and approved Gate 2 closure. Fourteen missing-source historical findings remain unassessed; the accepted prototype is an incomplete UI/UX baseline, not an exhaustive implementation specification. The older dated status notes below describe their historical points in time. No implementation, release, deployment, specialist sign-off or production readiness follows.
 - Gate 0 is `COMPLETE (APPROVED)` as of 2026-10-22 (§3, §13).
 - Gate 1 is `COMPLETE (APPROVED)` under D-082 (2026-10-29); its earlier entry
   authorization on 2026-10-28 was limited to requirements analysis and documentation.
@@ -327,7 +328,9 @@ Product Owner.
 
 ## 5. Gate 2 — Architecture & Design
 
-**Status: IN PROGRESS — entry authorized 2026-10-29; architecture/design documentation only.**
+**Status: COMPLETE (APPROVED) — D-121; recorded 2026-11-17, approval date not separately supplied.** Entry was authorized 2026-10-29 for architecture/design documentation only.
+
+**Exit evidence:** Gate 1 was approved under D-082. The Product Owner personally reviewed and accepted the final architecture review against the documented requirements and design evidence, including the accepted D-112 CP11 package, and accepted the CP12 alternative crosswalk for Gate 2 design traceability. The Product Owner explicitly approved closure under D-121. The original F1–F17 source remains unavailable and fourteen findings remain unassessed; recovery limitations and all applicable specialist, implementation and release obligations remain visible in the [closure evidence](evidence/GATE-2-CLOSURE-EVIDENCE-PACKAGE.md). No missing finding is claimed resolved.
 
 > **Historical status at D-098 transition:** Gate 2 was unfinished and not accepted. Its remaining
 > routine gate/checkpoint progression obligations are prospectively superseded; this section
@@ -370,7 +373,7 @@ per-installation configuration strategy, and interface design.
 
 ### Subsequent Gate 2 dispositions (2026-11-15)
 
-D-107 records Q-020's cutoff-policy disposition: separate cancellation/rescheduling eligibility and cutoffs relative to appointment start, inclusive boundary, installation business time zone and no penalties. Exact per-service values, exception authority, detailed states and enforcement remain open for affected implementation. D-079's Q-020 cutoff-policy milestone is recorded. D-116 records Q-007's Gate 2 disposition as D-092's capability-based approach; no exact platform, package graph, lockfile, compatibility range or tested matrix is accepted, and exact versions remain later work. D-117 records Q-008's minimum responsibility allocation: independent client installations/databases; hosting, infrastructure, credentials, backups, monitoring and support belong to the client or contracted provider unless otherwise agreed; no default operator access to client data. Detailed arrangements and runbooks remain open. D-118 records D-109's measurable-target evaluation approach as satisfying the Q-016/Q-022 Gate 2 disposition milestone; measurement definitions, feasibility evidence and numeric targets remain open. These decisions update the current disposition of those questions; historical checkpoint narratives below are preserved as recorded. Gate 2 remains IN PROGRESS; CP12 and final architecture review are not accepted or recorded complete.
+D-107 records Q-020's cutoff-policy disposition: separate cancellation/rescheduling eligibility and cutoffs relative to appointment start, inclusive boundary, installation business time zone and no penalties. Exact per-service values, exception authority, detailed states and enforcement remain open for affected implementation. D-079's Q-020 cutoff-policy milestone is recorded. D-116 records Q-007's Gate 2 disposition as D-092's capability-based approach; no exact platform, package graph, lockfile, compatibility range or tested matrix is accepted, and exact versions remain later work. D-117 records Q-008's minimum responsibility allocation: independent client installations/databases; hosting, infrastructure, credentials, backups, monitoring and support belong to the client or contracted provider unless otherwise agreed; no default operator access to client data. Detailed arrangements and runbooks remain open. D-118 records D-109's measurable-target evaluation approach as satisfying the Q-016/Q-022 Gate 2 disposition milestone; measurement definitions, feasibility evidence and numeric targets remain open. These decisions update the disposition of those questions; historical checkpoint narratives below are preserved as recorded. At that time Gate 2 remained IN PROGRESS; D-121 subsequently accepted the alternative CP12 evidence and final review and closed Gate 2.
 
 ### Approval Authority
 

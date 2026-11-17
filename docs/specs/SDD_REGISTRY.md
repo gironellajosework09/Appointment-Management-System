@@ -1,5 +1,7 @@
 # iTakda Master SDD Specification Registry
 
+> **Gate 2 status update — D-121, recorded 2026-11-17:** Gate 2 is COMPLETE (APPROVED) after Product Owner acceptance of the final review and limited alternative CP12 evidence. The original F1–F17 source remains unavailable and fourteen findings remain unassessed. Earlier gate-status statements in this registry are historical; this decision does not change the individually approved SDD scopes or authorize implementation.
+
 > **Status: planning baseline 0.1 and Registry v0.5 navigation/status overlay APPROVED within their recorded scopes.** See §§13–14 for individual approval records; §§10–12 preserve earlier review and approval history. Registry acceptance does not authorize implementation or technical mechanisms.
 
 | Field | Record |
