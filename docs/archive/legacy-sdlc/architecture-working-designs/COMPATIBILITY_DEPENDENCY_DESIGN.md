@@ -12,6 +12,11 @@
 
 > Design for review only. No package, exact version, vendor, operating system, runtime, installation command, deployment service, migration, or security mechanism is selected. Gates 3–7 remain BLOCKED; nothing here authorizes implementation or a gate transition.
 
+> **D-098 prospective process note (2026-11-10):** Gate 2 and Gates 3–7 status statements in this
+> draft are historical and do not govern future feature implementation. Routine future changes use
+> the SDD workflow in `docs/ENGINEERING_GOVERNANCE.md` §5. This notice does not approve this draft,
+> change its design decisions or open questions, or authorize implementation.
+
 ## 1. Purpose and scope
 
 This design asks which product components must work together, which combinations the maintained product should later support, and how changes can be checked across **independent client installations**. *Compatibility* means a verified combination of application release, dependencies, runtime, data representation, configuration and client experience works without weakening approved integrity or access boundaries. A dependency is *direct* when selected for the product and *transitive* when introduced by another dependency. These definitions do not imply any package is installed. This document proposes a Gate 2 approach to Q-007; it does **not** itself close Q-007 or choose a final stack, supported version list, external service or operational commitment.

@@ -3,16 +3,16 @@
 | Field | Value |
 |---|---|
 | Document status | APPROVED DEVELOPMENT-STAGE GOVERNANCE — D-077, 2026-10-29 |
-| Gate | Gate 1 (Requirements Discovery) — COMPLETE (APPROVED); Gate 2 documentation authorized |
+| Process context | D-077 requirements baseline; current change workflow is SDD under D-098 |
 | Document date | 2026-10-28 |
-| Revision | 0.6 (2026-10-29 — D-077 development-assumption transition activated) |
+| Revision | 0.8 (2026-11-12 — records approved v0.9 / Traceability 1.3 amendment under D-105) |
 | Owner | Product Owner |
 
-This draft proposes a requirements-recording and traceability method for Product
-Owner review. It has no independent authority and does not approve a requirement,
-authorize Gate 1 exit, select architecture, or authorize implementation. Until it
-is approved, the Project Charter, Engineering Governance, Gate Register, and
-Decision Register remain the authoritative records.
+This document defines the requirements-recording and traceability method for the
+D-077 development-stage baseline. It has no independent authority to approve a
+requirement, select architecture, or authorize implementation. Requirements and
+decisions remain subject to the authorities and approval controls in Engineering
+Governance, the Gate Register, Decision Register, and Project Charter.
 
 ## 1. Authority and source boundaries
 
@@ -138,9 +138,23 @@ version as though already approved.
 
 Editorial corrections that do not alter meaning still receive a version-history
 entry. They do not change approval status or erase prior text.
-Under D-077, this method is active for the development-stage route. The exact
-v0.7 baseline is effective under D-081 as a bounded assumption baseline; it is not
-`VALIDATED` evidence or release approval.
+Under D-077, this method is active for the development-stage route. Requirements
+Specification v0.7 / Traceability revision 1.0 remain preserved as the historical D-081
+baseline. The Product Owner approved Requirements Specification v0.8 and Traceability
+revision 1.2, together with D-094/D-095, for development-stage design; Decision Register
+revision 1.19 records that approval, with approval date not supplied. The v0.8 baseline is
+not `VALIDATED` evidence or release approval. Any later material change must preserve the
+approved text, version, reference, and date (or explicitly record that the approval date was
+not supplied) before a new proposal is created.
+
+**2026-11-12 exact-version approval:** The Product Owner approved Requirements Specification
+v0.9 and Traceability revision 1.3 for development-stage design. Their approval dates were
+not separately supplied; the approval recording date is 2026-11-12. These versions are the
+effective requirements and traceability baseline for their stated amendment: v0.9 replaces
+only NFR-003 and adds AC-027–AC-029 to the preserved v0.8/v0.7 baseline; revision 1.3 adds
+the corresponding traceability while preserving revision 1.2 and carried-forward revision
+1.0. The earlier v0.8/revision 1.2 approval remains historical and intact. This approval is
+not validation, implementation, release or Gate 2 authorization.
 
 ## 7. Baseline, candidate scope, and criteria
 
@@ -162,6 +176,15 @@ are explicitly labeled unverified hypotheses.
 
 ## 8. Checkpoint and Gate 1 controls
 
+**Historical scope after D-098:** This section records the requirements baseline and Gate 1
+process that produced the approved requirements history. The gate/checkpoint workflow is not a
+routine prerequisite for future changes; use the SDD lifecycle in Engineering Governance §5.
+Requirements Governance §§2–7 remain applicable: identifiers, approved text, evidence status,
+traceability, and versioned material-change control are unchanged. A feature spec does not amend
+an approved requirement; changes to approved behavior must follow §6 and receive the applicable
+Product Owner approval. D-098 changes process only and does not alter D-081, D-094/D-095, or any
+approved requirement/traceability baseline.
+
 Checkpoint reviews compare every record against its provenance, status, priority,
 evidence classification, approval metadata, version history, unresolved questions,
 and affected traceability. Material changes update the specification and
@@ -170,7 +193,8 @@ the authoritative Decision Register, not only in these working documents. Produc
 Owner approval of a product direction does not automatically advance the exact
 working requirement wording to `VALIDATED` or `APPROVED`.
 
-Under D-077, Gate 1 may use the development-stage route when the exact baseline,
+The following paragraph preserves the historical D-077 Gate 1 route; it does not establish
+routine gate progression under D-098. Under D-077, Gate 1 may use the development-stage route when the exact baseline,
 traceability, assumption ownership, milestone obligations, limitations, and explicit
 Product Owner gate decision are recorded. `VALIDATED` remains reserved for relevant
 representative reviewed EVD evidence; simulated findings remain design assumptions.

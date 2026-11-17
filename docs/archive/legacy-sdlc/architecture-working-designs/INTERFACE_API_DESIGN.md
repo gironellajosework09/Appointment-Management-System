@@ -11,6 +11,11 @@
 
 > This is a logical contract proposal, not an approved API specification, final architecture, implemented control, or authority to advance a gate. No route, endpoint URL, HTTP method/status code, message format, credential, persistence mechanism, or technology is selected. Gates 3–7 remain BLOCKED.
 
+> **D-098 prospective process note (2026-11-10):** Gate 2 and Gates 3–7 status statements in this
+> draft are historical and do not govern future feature implementation. Routine future changes use
+> the SDD workflow in `docs/ENGINEERING_GOVERNANCE.md` §5. This notice does not approve this draft,
+> change its design decisions or open questions, or authorize implementation.
+
 ## 1. Authority, purpose, and interface boundaries
 
 **Baseline.** Requirements Specification v0.7 and Requirements Traceability revision 1.0 are the D-081 **development-stage assumption** baseline, not representative stakeholder validation. The present traceability revision 1.1 only reconciles administrative gate-status wording. The current Project Charter revision is a draft; separately approved decisions govern their own scopes. D-082 authorizes Gate 2 documentation only. D-083/D-084 require design for client-managed and provider-managed hosting with one standardized supported profile *as a principle*, not a selected deployment. D-085's modular-monolith-per-independent-installation direction is provisional. The conceptual architecture and Checkpoints 5–7 are working designs, not final architecture; D-086/D-087/D-088 provisionally accept the latter three for continued design only. Checkpoint 7's accepted SHA-256 is `38C9DB532B988C150B3D80A1DA3C356EF66C6D3D26A82B356A3AD980183AC652` (Decision Register §9.6).

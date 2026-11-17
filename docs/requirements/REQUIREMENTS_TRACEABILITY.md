@@ -2,13 +2,15 @@
 
 | Field | Value |
 |---|---|
-| Document status | Revision 1.0 APPROVED DEVELOPMENT-STAGE BASELINE — D-081, 2026-10-29; revision 1.1 administrative status reconciliation, not separately approved; not representative validation |
+| Document status | HISTORICAL APPROVED DEVELOPMENT-STAGE BASELINE — D-081, 2026-10-29; revision 1.1 administrative status reconciliation; superseded for current design by revision 1.2 under D-094/D-095 |
 | Gate | Gate 1 (Requirements Discovery) — COMPLETE (APPROVED); Gate 2 documentation authorized |
 | Document date | 2026-10-28 |
 | Revision | 1.1 (2026-10-29 — post-approval administrative Gate 1/2 status reconciliation; D-081 approved revision 1.0 only) |
 | Owner | Product Owner |
 
-This matrix keeps traceability relationships distinct. A citation does not imply
+This matrix is preserved as the D-081 historical baseline. Its current effective
+successor for development-stage design is Traceability revision 1.2 in
+`REQUIREMENTS-TRACEABILITY-v1.2.md`, read with this unchanged matrix. This matrix keeps traceability relationships distinct. A citation does not imply
 validation or approval. The exact v0.7 baseline is approved for development-stage
 design under D-081; records are not `VALIDATED` unless separately supported by real,
 representative reviewed EVD evidence. Decisions (`D-###`), Product Owner items

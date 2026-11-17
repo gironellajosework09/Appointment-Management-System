@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.17 (2026-11-02 — D-093 Gate 2 UI/UX checkpoint sequence amendment recorded; gate status unchanged) |
+| Revision | 1.36 (2026-11-17 — D-119 SDD-001 local review and database-free testing amendments recorded; approval date not separately supplied) |
 | Owner | Product Owner |
 
 This register records decisions with unique IDs, status, date (where known),
@@ -249,8 +249,8 @@ imply priority or approval.
 
 | ID | Question | Needed by | Status |
 |---|---|---|---|
-| Q-002 | Is public self-registration supported? | Gate 1 | RESOLVED for MVP by D-046: deferred |
-| Q-003 | Is public login supported, and by what mechanism? | Gate 1 / Gate 2 | RESOLVED for MVP by D-046: deferred; no mechanism selected |
+| Q-002 | Is public self-registration supported? | Gate 1 | RESOLVED for MVP by D-094: optional customer registration where enabled; enablement policy open under ACCT-L01 |
+| Q-003 | Is public login supported, and by what mechanism? | Gate 1 / Gate 2 | RESOLVED for MVP by D-094: supported where enabled; authentication mechanism open under ACCT-L02 |
 | Q-004 | Is guest booking (no account) supported? | Gate 1 | RESOLVED by D-046 and reaffirmed by D-061: yes for MVP; no mandatory public account |
 | Q-009 | How are administrator/staff accounts authenticated and provisioned? | Gate 1 / Gate 2 | DIRECTION APPROVED by D-047; authentication/provisioning mechanism remains Gate 2 work |
 | Q-018 | What administrator/staff permission and role model is required? | Gate 1 / Gate 2 | MVP BOUNDARIES APPROVED by D-047–D-048; detailed permission matrix remains under review |
@@ -261,7 +261,7 @@ imply priority or approval.
 |---|---|---|---|
 | Q-005 | What is the appointment booking workflow and its business rules? | Gate 1 | MVP DIRECTION APPROVED by D-042–D-049; configurable values remain open |
 | Q-019 | What appointment types, schedules, dates, time slots, and capacity rules apply? | Gate 1 | INVARIANTS APPROVED by D-043 and refined by D-060 (staff availability, physical resources, durations, buffers); client policy values remain open |
-| Q-020 | What cancellation and rescheduling rules apply? | Gate 1 | PARTIALLY RESOLVED: MVP cancellation/rescheduling approved by D-042/D-049/D-061; cancellation and no-show penalties excluded from MVP by D-089. Cutoff/windows and eligibility remain open; D-079 requires cutoff disposition before final Gate 2 architecture approval. The fee-open wording in Requirements Specification v0.7 remains preserved pending a separate versioned amendment under Requirements Governance §6; D-089 does not decide unrelated service fees. |
+| Q-020 | What cancellation and rescheduling rules apply? | Gate 1 | POLICY DIRECTION APPROVED by D-107: cancellation and rescheduling eligibility are separate; cutoffs use scheduled appointment start in the installation business time zone with an inclusive boundary; no penalties. Exact per-service values, exception authority, detailed states and enforcement remain open. D-079's Product Owner cutoff-policy disposition is recorded; D-079's other milestones remain. The fee-open wording in Requirements Specification v0.7 remains preserved pending a separate versioned amendment under Requirements Governance §6; D-089 does not decide unrelated service fees. |
 | Q-021 | How must duplicate-booking and concurrency be prevented? | Gate 1 / Gate 2 | INVARIANTS APPROVED by D-044 and refined by D-059 (configurable warning/blocking, proxy/multiple-attendee); identity key, window, test profile, and design remain open |
 
 ### 6.4 Data, Privacy, and Integration
@@ -278,16 +278,16 @@ imply priority or approval.
 
 | ID | Question | Needed by | Status |
 |---|---|---|---|
-| Q-016 | What are the performance, capacity, and concurrency expectations? | Gate 1 / Gate 2 | PROVISIONAL integrity target approved by D-052; load profile and numeric performance targets remain open |
-| Q-022 | What reliability and availability targets apply? | Gate 1 / Gate 2 | Continuity direction approved by D-051; numeric availability target remains open |
+| Q-016 | What are the performance, capacity, and concurrency expectations? | Gate 1 / Gate 2 | D-070 integrity scenario remains approved; Product Owner-approved measurable-target evaluation approach recorded by D-109. D-118 records that the D-109 approach satisfies D-079's Gate 2 disposition milestone; measurement definitions, feasibility evidence and numeric response-time/performance targets remain open for later-gate evaluation; no latency promise follows from D-070. |
+| Q-022 | What reliability and availability targets apply? | Gate 1 / Gate 2 | Continuity direction approved by D-051; Product Owner-approved measurable-target evaluation approach recorded by D-109. D-118 records that the D-109 approach satisfies D-079's Gate 2 disposition milestone; supported operating profiles, responsibility assumptions, feasibility evidence and numeric availability/recovery targets remain open for later-gate evaluation; no service commitment is made. |
 | Q-011 | What accessibility and localization requirements apply? | Gate 1 / Gate 2 | WCAG 2.2 AA approved for core workflows by D-052; localization remains open |
 
 ### 6.6 Platform and Delivery
 
 | ID | Question | Needed by | Status |
 |---|---|---|---|
-| Q-007 | What exact dependency and runtime versions are used, and how are dependencies managed? | Gate 2 / Gate 4 | PROVISIONAL Gate 2 working approach accepted under D-092 for compatibility/dependency design only; explicit final Gate 2 disposition remains OPEN. No supported platform, resolved package graph or tested matrix exists. Exact dependency/runtime versions remain Gate 4 under D-031, with prerequisite review and bounded authorization. |
-| Q-008 | What deployment, hosting, backup, restoration, maintenance, and support model applies? | Gate 2 / Gate 6 | PARTIALLY DISPOSED by D-083–D-084: client-managed and provider-managed hosting are both Gate 2 design constraints, and one standardized supported deployment profile is a design principle. Detailed deployment, operational responsibilities, backup/restoration, maintenance, and support remain open; no technology or production arrangement is approved. |
+| Q-007 | What exact dependency and runtime versions are used, and how are dependencies managed? | Gate 2 / Gate 4 | DISPOSED FOR GATE 2 by D-116: D-092's capability-based approach is the Gate 2 design disposition; no supported platform, resolved package graph, lockfile or tested matrix is accepted, and external scratch lockfile evidence is not adopted. Exact dependency/runtime versions remain Gate 4 under D-031, with prerequisite review and bounded authorization. |
+| Q-008 | What deployment, hosting, backup, restoration, maintenance, and support model applies? | Gate 2 / Gate 6 | DISPOSED FOR GATE 2 by D-117: independent client installations and databases; hosting, infrastructure, credentials, backups, monitoring and support allocated to the client or its contracted provider unless otherwise agreed; no default operator access to client data; one standardized supported deployment profile remains a design principle. Detailed deployment arrangements, provider terms and runbooks remain subject to later approval. |
 
 ### 6.7 Product Model and Historical
 
@@ -307,7 +307,7 @@ condition, and closure.
 
 | ID | Exception | Authorisation and rationale | Owner | Expiry / review | Status | Gate evidence |
 |---|---|---|---|---|---|---|
-| — | No security exception has been requested, authorized, or recorded. | — | — | — | — | — |
+| — | No security exception is authorized or recorded. A draft proposal for SE-001 is under qualified security review and Product Owner consideration; it is not an authorized SE record. | — | — | — | — | [SDD-001 Option A SE-001 proposal](../evidence/SDD001-OPTION-A-SE-001-PROPOSAL.md) |
 
 Rules:
 
@@ -358,6 +358,20 @@ Rules:
 | 2026-11-01 | Revision 1.15. Recorded D-091, the Product Owner's provisional acceptance of fingerprinted Checkpoint 9 Configuration & Deployment Design v0.1 as a working design only. Preserved Q-008 allocations, real-backup verification, D-079 milestones and evaluation-only numeric candidates. Approval date was not supplied; this is the recording date, not an inferred approval date. Gate 2 remains IN PROGRESS; Gates 3–7 BLOCKED; no implementation or deployment authorization. | Product Owner Checkpoint 9 decision recording |
 | 2026-11-01 | Revision 1.16. Recorded D-092's fingerprinted Checkpoint 10 provisional acceptance as the Q-007 Gate 2 working approach, with final Q-007 disposition and Gate 4 exact versions outstanding. Preserved Q-008, D-079/D-089–D-091 and D-091's evaluation-only numeric candidates. No approval date supplied; this is the recording date only. Gate 2 remains IN PROGRESS, Gates 3–7 BLOCKED, and implementation/deployment unauthorized. | Product Owner Checkpoint 10 decision recording |
 | 2026-11-02 | Revision 1.17. Recorded D-093's approved insertion of Gate 2 Checkpoint 11 UI/UX Design & Prototyping before the previously unnumbered Integration & Traceability Review, now labeled Checkpoint 12. The bounded design package is required for final Gate 2 architecture review; Checkpoint 11 is NOT STARTED, Checkpoint 12 and unnumbered final review pending. Gate statuses, earlier checkpoint decisions, D-079 deadlines and implementation boundaries unchanged. Recording date is not an inferred Product Owner approval date. | Product Owner Gate 2 sequence amendment recording |
+| 2026-11-04 | Revision 1.18. Added proposed successor decision D-094 and its linked requirements amendment package for Product Owner review. The supplied scope directions are captured, but exact successor-decision wording and v0.8/revision 1.2 requirement text remain pending approval and are not effective. D-046, D-042, D-061, Q-002/Q-003 effective dispositions, D-081, Gate 1 history, Gate 2 status and Checkpoint 11 status remain unchanged. | Authorized proposal preparation under Product Owner scope direction |
+| 2026-11-04 | Revision 1.19. Recorded explicit Product Owner approval of exact D-094/D-095 wording and Requirements Specification v0.8 / Traceability revision 1.2. Approval date was not supplied. D-094 supersedes only D-046's public-account deferral and updates Q-002/Q-003; D-095 amends only the specified D-057/D-049 email scope. The v0.7/revision 1.0 baseline is preserved historically; v0.8/revision 1.2 are effective development-stage assumptions, not validation. Gate 2 and Checkpoint 11 remain unchanged; implementation is unauthorized. | Product Owner approval recording |
+| 2026-11-04 | Revision 1.20. Recorded D-096, the Product Owner's bounded authorization to modify, extend and locally verify the fictional-data Checkpoint 11 UI/UX prototype, expressly superseding only the prior no-prototype-modification restriction for the stated scope. Recorded a landing/login-only design exception for restrained illustration gradients/glow, slow nonessential illustration motion, subtle view transitions and split-stage/distinct compositions, under the specified brand, accessibility and reduced-motion safeguards. Gate 2 remains IN PROGRESS; Checkpoint 11 work is authorized/in progress but remains NOT ACCEPTED and NOT COMPLETED. No production application implementation, backend, database, CEAP, gate-exit or release authority is granted; no implementation outside the bounded fictional prototype scope is authorized. Approval date was not separately supplied. | Product Owner bounded Checkpoint 11 authorization and design exception |
+| 2026-11-05 | Revision 1.21. Recorded D-097, the Product Owner's explicit expansion of Checkpoint 11 fictional-data prototype authorization to Staff and Administrator workspaces, dashboards, appointment workflows and role-specific profiles. Gate 2 and Checkpoint 11 remain IN PROGRESS; unresolved permissions are not approved. D-096's other boundaries and visual exception are unchanged. | Product Owner scope-expansion instruction in this chat |
+| 2026-11-10 | Revision 1.24. Recorded D-100's bounded prototype motion authorization. The approval date was not separately supplied; this is the recording date. Gate 2 and Checkpoint 11 remain unfinished and unaccepted. | Product Owner authorization recording |
+| 2026-11-12 | Revision 1.25. Recorded D-102 and the bounded Engineering Governance §15 amendment for risk-proportionate technology due diligence before implementation approval. Approval date not separately supplied; no technology, implementation, deployment, gate or session acceptance is recorded. | Explicit Product Owner principle approval and two-file recording authorization in the current conversation |
+| 2026-11-12 | Revision 1.26. Recorded D-103 identity/permission design directions and D-104 initial Philippine jurisdiction/privacy planning directions, with D-102 assessments and qualified-review dependencies in Security. Approval date not separately supplied; no requirements amendment, mechanism, legal compliance, Session 07 acceptance, implementation or gate transition approved. | Explicit Product Owner bounded SEC-Q03 / PRIV-Q01 recording instruction in the current conversation |
+| 2026-11-13 | Revision 1.27. Recorded D-106–D-109 from the Product Owner's current-conversation approval evidence: six policy directions and three clarifications, eight booking-integrity choices, ten security/access choices, and twelve operations/reliability/UX/engineering choices. Approval dates were not separately supplied. Q-020 is updated to reflect its approved cutoff-policy direction while retaining values/details and the unrelated fee-text amendment; Q-016/Q-022 record the approved evaluation approach while numeric targets remain open. No technical mechanism, effective requirements amendment, SDD approval, implementation or gate transition is recorded. | Explicit Product Owner Approval Evidence supplied in the current conversation |
+| 2026-11-13 | Draft revision 1.29. Recorded D-110's approved execution direction and prepared a compatibility-first Engineering Governance amendment. The decision's approval date was not separately supplied; this is the recording date. Exact amendment text awaits Product Owner review. No earlier approval, gate status, feature specification, implementation or release authority changes. | Product Owner operating-contract adoption in the Gate 2 conversation and bounded documentation instruction |
+| 2026-11-13 | Revision 1.29 acceptance recorded. The Product Owner accepted the exact Engineering Governance revision 1.4 D-110 amendment presented in the preceding report. Approval date was not separately supplied; this is the recording date. Acceptance is limited to that wording and preserves prior approvals, D-098/D-101, and separate implementation/release authorities. | Product Owner exact-amendment acceptance in the current conversation |
+| 2026-11-13 | Revision 1.30. Recorded D-111's five endorsed investigation priorities. Approval date not separately supplied; this is the recording date. No technical selection, SDD approval, implementation or gate transition is recorded. | Explicit Product Owner authorization in the current conversation |
+| 2026-11-13 | Revision 1.31. Recorded D-112, the Product Owner's acceptance of Checkpoint 11 within its documented design and prototype scope as D-093 representative design evidence, including the administrator appointment-review, permission-denial and unchanged-appointment journey. The prototype remains illustrative; all applicable approved SDD requirements remain mandatory for implementation, verification and release. Acceptance does not establish real authentication, MFA, authorization enforcement, persistence, full accessibility conformance, specialist approval or production readiness. Historical Gate 2 remains IN PROGRESS and unfinished; CP12 and final review are not recorded complete. No implementation, SDD modification, Git write, Gate 2 closure or CP12 initiation is authorized. Approval date not separately supplied; recorded 2026-11-13. | Product Owner CP11 acceptance instruction in the current conversation |
+| 2026-11-15 | Revision 1.34. Recorded D-115 as **PROPOSED (PO CONFIRMATION)** only. The entry captures the Product Owner's requested bounded authorization to verify approval evidence, correct demonstrably editorial status/provenance and trace-reference contradictions, repair verified broken links without changing meaning, initiate and execute CP12 as a review activity, and prepare the final architecture review and closure package. It confirms that the exact SDD revisions in Registry §13/§14 and the CURRENT STATUS banners are the approved text. It is not in force, authorizes nothing, and changes no gate, requirement, design or implementation status. Approval date not supplied; recorded 2026-11-15. Revision-history rows 1.32–1.33 were not added when D-113/D-114 were recorded. | Product Owner "Gate 2 Closure Remediation" instruction in the current conversation, recorded as a proposal |
+| 2026-11-15 | Revision 1.35. Recorded the Product Owner's exact approval of D-115 and the Gate 2 dispositions D-116 (Q-007), D-117 (Q-008) and D-118 (Q-016/Q-022). D-115 authorizes the bounded remediation only. D-116 adopts D-092 as the Q-007 Gate 2 disposition and does not adopt external scratch lockfile evidence. D-117 adopts the minimum hosting-responsibility allocation. D-118 accepts the D-109 evaluation approach as the D-079 Gate 2 disposition milestone without setting numeric targets. No CP12 acceptance, final architecture approval, Gate 2 closure, implementation, installation or release is recorded. | Product Owner approval in the current instruction; approval date 2026-11-15 |
 
 > **Change-log note (superseding clarification).** The initial 2026-10-15 entry
 > was later supplemented: the D-001–D-018 provenance label was revised to the
@@ -507,6 +521,314 @@ The Product Owner approved the sequence and bounded design-evidence requirement 
 | D-093 | Insert **Gate 2 Checkpoint 11 — UI/UX Design & Prototyping** after provisionally accepted Checkpoint 10 and before **Gate 2 Checkpoint 12 — Integration & Traceability Review**. Checkpoint 12 is a new label for the previously unnumbered review, not renumbering an approved checkpoint. Require the bounded UI/UX design package in Gate Register §5 as an input to final Gate 2 architecture review: complete annotated screen/interaction-state coverage for required MVP workflows; screen/navigation mapping to requirements, `WF-*` workflows and `IF-*` logical contracts; minimal visual system and responsive/accessibility specifications; a connected high-fidelity prototype for representative critical journeys, not every screen; and recorded Product Owner/usability and accessibility design-review findings, inconsistencies, dependencies and provisional acceptance or revision request. | Complete the user-facing design and review its coverage before the cross-design integration review without duplicating existing behavioral and logical architecture work. | Checkpoint 11 is the next authorized internal Gate 2 activity but **NOT STARTED** by this governance amendment; Checkpoint 12 and unnumbered Final Gate 2 Review & Closure are pending. The package does not amend D-081's requirement baseline, approve a new policy, establish representative stakeholder validation or accessibility conformance, or accept final architecture. Unresolved guest proof/recovery, QR lifecycle, attendance corrections, cutoff, capacity/duplicate and paper-conflict rules remain provisional dependencies; Q-007 final disposition, Q-008, D-079 milestones and D-089 fee-reference reconciliation remain open. Gate 3 retains the dedicated Security, Privacy & Data Integrity review; Gate 2 remains IN PROGRESS, Gates 3–7 BLOCKED. This decision authorizes no UI implementation, design artifact work in the governance-amendment task, frontend package, database action, deployment, production access, Gate 2 exit or Gate 3 entry. | APPROVED (PO DECISION) — Gate 2 sequence and required design evidence only | Not recorded — Product Owner approval supplied without an approval date | Product Owner |
 
 ---
+
+## 9.12 Successor to D-046 — optional registered-customer MVP path
+
+**Status: APPROVED (PO DECISION) — exact wording approved; approval date not supplied.**
+The Product Owner explicitly approved this exact decision wording and the linked exact
+Requirements Specification v0.8 and Traceability revision 1.2. This decision is effective
+for development-stage design only and does not transition a gate or authorize implementation.
+
+**Approved effect:** D-094 supersedes D-046 only as to its deferral of public
+self-registration/login and replaces only D-042's public-accounts deferral. All other D-042
+deferred features remain deferred. D-061 remains in force: guest booking and authorized
+account-free guest changes remain supported without mandatory public accounts. The
+corresponding proposed Q dispositions are Q-002: optional customer registration is supported
+in MVP, with installation enablement open under ACCT-L01; Q-003: public sign-in is supported
+where enabled, with authentication mechanism open under ACCT-L02. These dispositions do not
+close the remaining installation-policy or mechanism questions.
+
+| ID | Proposed decision wording | Rationale | Proposed consequences and required follow-up | Status | Approval date | Approver |
+|---|---|---|---|---|---|---|
+| D-094 | **PROPOSED:** The MVP offers optional verified email/password customer accounts where client registration is enabled; disabling registration prevents new signups only. Existing verified accounts retain sign-in, dashboard and authorized management, while account-free guest booking and scoped guest management remain available in either setting. Guest and account bookings use the same service, eligibility, capacity, duplicate and integrity policies; account status grants no priority or internal authority. The dashboard shows authorized upcoming and retained past appointments. A guest appointment may be linked individually only to its independently verified original booker after explicit confirmation; matching personal information, account sign-in, reference or QR alone is insufficient. Booker, attendee and acting staff remain distinct; proxy booking and scheduling authority follow approved service restrictions. A contested claim restricts affected self-service actions pending authorized review without automatically cancelling the appointment. Deactivation removes account access but preserves appointments and required records; later management requires independently verified scoped guest access or authorized staff assistance. The public journey remains landing → optional guest/account entry → selection/live summary → details → final review → explicit submission → established outcome. | Incorporates the Product Owner's account, linking, proxy and lifecycle preferences while preserving guest parity and least privilege. | If approved, replaces only D-046/D-042's public-account deferral; D-061 and every other deferral remain. D-046 history stays intact. D-095 separately proposes the narrow exception to D-057/D-049. Proof procedures, sensitive-service restrictions, dispute review, retention and policy values remain dependencies in proposed v0.8 and Gate 2/3 review. Q-002/Q-003 dispositions require a separate recorded update. Exact v0.8/rev 1.2 approval is separate. Gate 1 history, Gate 2 IN PROGRESS and Checkpoint 11 authorized/NOT STARTED remain unchanged. No implementation or gate transition. | PROPOSED — NOT EFFECTIVE; PENDING OWNER APPROVAL | None | Product Owner |
+
+## 9.13 Approved narrow email amendment to D-057 and D-049
+
+The identifier D-095 is assigned to this approved narrow amendment. It changes only the
+automated outbound email deferral in D-057/D-049; their immediate on-screen/printable
+confirmation obligation and all other historical decisions remain intact.
+
+| ID | Proposed decision wording | Rationale | Proposed consequences and required follow-up | Status | Approval date | Approver |
+|---|---|---|---|---|---|---|
+| D-095 | Permit purpose-limited email for account verification, password recovery, appointment-scoped guest access, and established booking, cancellation and rescheduling transactions. Send only to approved recipients with content limited by their authority; a booker email must not expose restricted attendee details. An email address, delivered link, reference or QR does not alone prove attendee identity, guardianship or authority over another appointment. A committed appointment transaction remains committed if email is delayed or fails; provide the established on-screen/printable outcome and a safe recovery path. Email failure must not cause a duplicate command or false success claim. SMS, phone OTP, reminders, marketing and unrelated automated messaging remain outside MVP. | Supports the Product Owner's essential security and transaction email preference without expanding message purposes or appointment authority. | Amends D-057 and D-049 only for these six email purposes; D-057/D-049 history is preserved. Recipient, consent/notice, verification, token/session, abuse, delivery/failure and provider details require Gate 2 design and Gate 3 security/privacy review. No external service, technology, numeric expiry, retry count or legal conclusion is approved. FR-010 and related requirements/traceability are included in approved v0.8/revision 1.2. | APPROVED (PO DECISION) — exact wording approved; approval date not supplied | Not supplied | Product Owner |
+
+### Approval recording — D-094, D-095 and requirements amendment
+
+The Product Owner explicitly approved the exact proposed wording of D-094 in §9.12 and
+D-095 in §9.13, Requirements Specification v0.8, and Requirements Traceability revision
+1.2. This approval supersedes the pending/proposed status statements written when the
+package was prepared. The approval date was not supplied and is recorded as **not supplied**;
+the 2026-11-04 document recording date is not represented as the approval date.
+
+D-094 supersedes D-046 only for public account registration/login deferral and replaces
+D-042's public-accounts deferral only. D-061 and all other D-042 exclusions remain in force.
+D-095 amends D-057/D-049 only for the six stated email purposes; all other messaging remains
+deferred. Requirements v0.8 and Traceability revision 1.2 are the effective development-stage
+assumption baseline, not `VALIDATED` evidence or release approval. The exact v0.7/revision 1.0
+baseline remains preserved in its historical records.
+
+**Subsequent baseline update (2026-11-12):** The Product Owner approved Requirements
+Specification v0.9 and Traceability revision 1.3 as the current effective baseline for their
+stated amendment. The 2026-11-04 approval of v0.8/revision 1.2 remains a valid historical
+approval; those versions and v0.7/revision 1.0 remain preserved predecessors. No other D-094,
+D-095 or D-105 scope is changed by this update.
+
+**Current effective state:** D-094 replaces the public-account deferral only; D-061 continues
+to require account-free guest booking and eligible guest changes. Q-002 is RESOLVED for MVP:
+optional customer registration is supported, with installation enablement open under ACCT-L01.
+Q-003 is RESOLVED for MVP: public sign-in is supported where enabled, with authentication
+mechanism open under ACCT-L02. Draft-local ACCT-L01–ACCT-L08 in
+`docs/requirements/REQUIREMENTS-SPECIFICATION-v0.8.md` enumerate unresolved policy questions;
+they are not Decision Register question IDs.
+
+**Gate 1 amendment route:** Requirements Governance §§6/8 provide a versioned material-change
+route and do not require automatic Gate 1 reopening for every such amendment. The Product
+Owner's direction was recorded as a targeted Gate 1 amendment, preserving D-082's historical
+Gate 1 approval and current gate status. No Gate 1 reopening or closure transition was made.
+
+**Checkpoint 11 status/evidence reconciliation:** D-093 records Checkpoint 11 as authorized,
+NOT STARTED. The current working tree contains Checkpoint 11 design documents and prototype
+artifacts, but their presence alone does not establish when or under what authority they were
+produced, nor establish Product Owner review, acceptance or completion. The Product Owner
+confirms that Checkpoint 11 is **not accepted or completed**. Retain the recorded NOT STARTED
+status pending a separately evidenced status decision; do not claim the artifacts prove a
+checkpoint transition. Gate 2 remains IN PROGRESS.
+
+## 9.14 Bounded Checkpoint 11 prototype authorization and landing/login design exception
+
+**Status: APPROVED (PO DECISION) — exact scope authorized; approval date not supplied.**
+This decision records the Product Owner's explicit authorization supplied on 2026-11-04.
+The recording date is not represented as a separately supplied approval date.
+
+| ID | Approved decision | Rationale | Consequences and boundaries | Status | Approval date | Approver |
+|---|---|---|---|---|---|---|
+| D-096 | Modify, extend and locally browser-verify the fictional-data-only Checkpoint 11 prototype for public landing/login, optional registration/account recovery, guest booking/confirmation/management, registered-customer dashboard, individual guest-to-account appointment linking, and relevant success, failure, denied-access, email-delivery and unknown-outcome states. Reuse the existing Checkpoint 11 prototype and `prototype/landing-login-preview/` where practical. For public landing and login only, permit restrained gradients and localized glow inside a dedicated holographic illustration/visual stage, slow nonessential illustration motion, subtle view transitions, split-stage composition and distinct landing/login layouts. | Resolves the earlier prototype-modification restriction for the bounded Checkpoint 11 work and permits the narrowly scoped public entry presentation requested by the Product Owner while retaining iTakda's established identity. | Fictional data and simulated interactions only. No production authentication, appointment processing, email delivery, database operation, migration, production application code, CEAP access, dependency installation, global configuration, commit, push, merge or deployment. Preserve the exact iTakda brand colors and soft-neumorphic system. Keep text, forms, controls and task-focused surfaces readable and free of decorative glow; preserve visible keyboard focus, contrast, responsive behavior, reduced-motion support and full usability without visual effects. Exception does not cover booking, calendar, dashboard, staff or other application screens. This authorization supersedes only the prior statement that the prototype may not be modified; historical D-093 and the previous reconciliation are retained. Checkpoint 11 is authorized/in progress, **not accepted and not completed**. Gate 2 remains IN PROGRESS; no gate transition, final architecture approval or release approval. | APPROVED (PO DECISION) — bounded work authorization and visual exception only | Not separately supplied; recorded 2026-11-04 | Product Owner |
+
+The local prototype must clearly identify its simulated nature and must not imply that
+browser-side account checks, guest proof, linking, email, booking or appointment changes
+establish real identity, authority, delivery or persisted outcomes. Unresolved proof, session,
+installation enablement, recipient, retention, service-policy and abuse-control decisions stay
+open under Requirements Specification v0.8 §6 and Gate 3 review. This decision does not amend
+approved requirements or relax any non-landing/login design restriction.
+
+### Current status after D-096
+
+Checkpoint 11 has explicit Product Owner authorization to start the bounded prototype work.
+The work is in progress; no Product Owner usability/accessibility review has yet been recorded,
+and no Checkpoint 11 acceptance or completion is implied. The earlier NOT STARTED/no-modification
+statements remain preserved as historical records and are superseded only as to authorization
+and start status by D-096. Gate 2 remains IN PROGRESS; Checkpoint 12 and final Gate 2 review
+remain pending; Gates 3–7 remain blocked.
+
+## 9.15 Fictional Staff and Administrator prototype scope expansion
+
+**Status: APPROVED (PO DECISION) — bounded prototype work only.** The Product Owner explicitly confirmed this expansion in this chat on 2026-11-05.
+
+| ID | Approved decision | Rationale | Consequences and boundaries | Status | Approval date | Approver |
+|---|---|---|---|---|---|---|
+| D-097 | Expand Checkpoint 11 authorization to design, modify and locally verify fictional-data Staff and Administrator workspaces, including dashboards, appointment workflows and role-specific profiles. Use an explicit demo-role preview control. | Allow connected role-aware UI/UX evaluation in the existing prototype. | Supersedes D-096's scope limit only for these additional fictional prototype screens. No production implementation, database change, real authentication, external data, CEAP access, dependency installation, commit, push or deployment. No final approval of unresolved permissions, policy values or role escalation. Preserve public/customer journeys and the landing/login-only visual exception. Gate 2 and Checkpoint 11 remain IN PROGRESS, not accepted or completed; Gates 3–7 remain blocked. | APPROVED (PO DECISION) — prototype scope only | 2026-11-05 | Product Owner |
+
+## 9.16 Lightweight Spec-Driven Development transition
+
+The Product Owner approved this transition on 2026-11-10. It changes the development process only;
+approved product requirements, traceability, scope, deployment model, and prior decisions remain
+unchanged.
+
+| ID | Approved decision | Rationale | Consequences and boundaries | Status | Effective date | Approver |
+|---|---|---|---|---|---|---|
+| D-098 | Adopt **Specify → Plan → Implement → Verify → Accept** as the routine lifecycle for future product changes, with low-risk cosmetic, ordinary, and high-risk change classes and approvals as defined in Engineering Governance §5. Ordinary implementation requires prior Product Owner approval of its feature spec and bounded scope; high-risk work requires explicit Product Owner authorization and applicable specialist review. Grant standing authorization only for presentation-only changes within an already approved design scope, subject to review and verification. Prospectively supersede unfinished routine Gate 2 progression; preserve its historical IN PROGRESS status, evidence, and approved working-design dispositions. Retain Checkpoint 11 as an unfinished, unaccepted design baseline; future improvements use authorized feature-level SDD work. Retain security/data-integrity review and separate release/deployment approvals independently of gate numbering. Preserve CEAP isolation and all existing product decisions. | Replace routine sequential gate progression with a small, spec-centered change flow while retaining risk-appropriate authorization and essential safety/release controls. | No specification self-authorizes implementation. Cosmetic standing authorization excludes new features/interactions, workflow/business-rule changes, authentication, authorization, permissions or identity-verification changes, personal-data collection/processing/disclosure, database/API changes, dependencies/external services, deployment/production configuration, approved-requirement changes, and unresolved policy. It does not broaden D-096/D-097 or authorize production implementation, application behavior, database operations, deployment, CEAP access, or work outside these exact boundaries. Former Gates 3–7 are not routine sequential prerequisites; applicable security, verification, release and operational controls remain. Gate 2 is not completed or accepted. Checkpoint 11 is not accepted or completed. | APPROVED (PO DECISION) | 2026-11-10 | Product Owner |
+
+## 9.17 Checkpoint 11 animation dependency experiment
+
+| ID | Approved decision | Rationale | Status | Approval date | Approver |
+|---|---|---|---|---|---|
+| D-099 | Amend D-096 and D-097 only to permit a five-package, isolated dependency experiment in `prototype/checkpoint-11/`. Authorize creation of an npm manifest and lockfile there and installation of exact pinned compatible versions of GSAP (`gsap`), Motion (`motion`), Three.js (`three`), Rive's web canvas runtime (`@rive-app/canvas`, or a documented appropriate current web runtime), and Lenis (`lenis`). Authorize local dependency-resolution, package-size/security review, and bounded browser smoke checks. Installing a package does not authorize loading it into the prototype page, changing prototype behavior, adding it to the Laravel application, or selecting it for production. D-096/D-097's other restrictions remain effective; Checkpoint 11 remains unfinished and unaccepted. No gate transition, production application implementation, database, CEAP, deployment, commit, push, or merge is approved. | Evaluate the five packages in isolation before any decision on integration. | APPROVED (PO DECISION) | 2026-11-10 | Product Owner |
+
+The Product Owner approved the exact wording, scope and acceptance criteria in
+[`CHECKPOINT-11-ANIMATION-DEPENDENCY-EXPERIMENT.md`](../archive/legacy-sdlc/checkpoint-records/checkpoint-11/CHECKPOINT-11-ANIMATION-DEPENDENCY-EXPERIMENT.md)
+in the D-099 approval message on 2026-11-10. Gate 2 and Checkpoint 11 retain their recorded statuses.
+Experiment verification and the Product Owner's subsequent acceptance are recorded below.
+
+**D-099 experiment acceptance (2026-11-10):** The Product Owner accepted the bounded
+dependency experiment as **PASS WITH MINOR ISSUES**, assisted by Codex, without claiming
+an independent human technical review. The accepted evidence and limitations are recorded
+in the experiment specification's approval and acceptance section. Offline installation
+was not reproduced because a `tslib` tarball was absent from the local cache; browser
+smoke-test evidence is in the conversation rather than a separate artifact. All 33 original
+prototype files matched immediately after the experiment; three CSS files now differ from
+the pre-experiment baseline, with timing and cause unconfirmed and no attribution to D-099.
+This accepts the dependency experiment only. Checkpoint 11 remains unfinished and
+unaccepted; no gate transition or application implementation is authorized.
+
+## 9.18 Checkpoint 11 first-increment motion authorization
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-100 | Approve the exact final first-increment section of `docs/specs/CHECKPOINT-11-MOTION-DESIGN-PROPOSAL.md` and its bounded fictional prototype implementation scope, including once-only informational-section reveals. Use CSS and scoped browser APIs. Preserve immediate navigation and focus, reduced-motion behavior, the existing SVG, package manifests, and the three previously identified CSS files. Do not load the five D-099 experiment libraries or add dependencies or assets. Verify against the approved plan and report performance failures and unverified checks. D-096/D-097 history and all other boundaries remain; Gate 2 and Checkpoint 11 remain unfinished and unaccepted. No application implementation, deployment, commit, push or merge is authorized. | APPROVED (PO DECISION) — prototype first increment only | Not separately supplied | Product Owner |
+
+The Product Owner's authorization was supplied in this conversation without a separately stated approval date. Acceptance of the implementation and Checkpoint 11 require separate Product Owner review.
+
+## 9.19 Checkpoint 11 prototype skip-link correction authorization
+
+The Product Owner explicitly authorized a separate bounded fictional-prototype correction for
+the skip-link routing defect and supplied the expected behavior and restrictions in the current
+request. The approval date was not separately supplied. This authorization does not change D-100's
+scope or accept D-100 or Checkpoint 11. The recorded feature specification is
+[`CHECKPOINT-11-SKIP-LINK-CORRECTION.md`](../archive/legacy-sdlc/checkpoint-records/checkpoint-11/CHECKPOINT-11-SKIP-LINK-CORRECTION.md);
+Product Owner approval of that specification is not separately evidenced and remains pending
+under Engineering Governance §5. Do not treat this entry as approval of the new artifact.
+
+**Prospective D-101 disposition:** The preceding specification-approval prerequisite is retained
+as history. Under the Prototype Exploration Exception, the authorized skip-link correction is a
+qualifying routine prototype accessibility/navigation refinement, and approval of the separate
+specification is no longer a prerequisite. This does not claim implementation or acceptance.
+
+## 9.20 Prototype Exploration Exception
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-101 | Establish the Prototype Exploration Exception in Engineering Governance §5 for isolated, fictional, non-production UI/UX prototypes. Grant standing authorization for qualifying routine visual, animation, responsive, interaction, navigation, and accessibility refinements with concise change summaries and appropriate browser verification, without a separate feature specification or approval cycle for each refinement. Routine qualifying prototype refinements may be grouped into a concise change summary; individual decision-register entries, feature specifications, and Product Owner approval cycles are not required. Prospectively supersede D-098’s feature-level specification and approval requirement only for those qualifying prototype refinements, and supersede D-096/D-097’s landing/login-only visual restriction only as stated in the exception. Preserve the remaining boundaries and historical records of D-096–D-100. New dependencies, major scope expansion, real application behavior, security-sensitive changes, and deployment continue to require explicit authorization and applicable review. CEAP and production isolation remain mandatory. This decision does not change approved product requirements or implementation-stage governance and does not accept D-100 or Checkpoint 11. The Product Owner’s prior skip-link correction authorization remains recorded; its pending specification is retained as historical context and is no longer a prerequisite for that qualifying prototype correction. | APPROVED (PO DECISION) | Not separately supplied | Product Owner |
+
+The Product Owner approved the proposed D-101 exception and four-document recording scope in the
+current conversation, including the narrow prospective relaxation and the grouped-summary
+clarification. The approval date was not separately supplied. No prototype correction, D-100
+acceptance, Checkpoint 11 acceptance, gate transition, or production implementation is implied.
+
+## 9.21 Significant technology decision due diligence
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-102 | Every significant technology decision must document benefits, trade-offs, credible failure scenarios, prevention/mitigation/recovery strategy, verification criteria and remaining risks before implementation approval. Significant includes high-impact, security-sensitive, operationally important, expensive-to-reverse or difficult-to-recover choices. Depth is proportional to risk and complexity; document alternatives and selection rationale where relevant. Define verification criteria before implementation approval and produce actual evidence when applicable testing is authorized and executed. Residual risks must be visible to the Product Owner; unresolved risks are not silently accepted. Record this principle in Engineering Governance §15, preserving existing approval and security-exception controls. | APPROVED (PO DECISION) — evaluation principle only | Not separately supplied | Product Owner |
+
+The Product Owner explicitly approved the principle and its bounded Governance/Decision Register
+recording in the current combined planning instruction. Recorded 2026-11-12; this is the
+recording date, not an inferred approval date. D-102 selects no technology, dependency, version,
+provider or mechanism, authorizes no implementation or deployment, and accepts neither Session
+07 nor Gate 2. Existing decisions and historical approvals retain their recorded scopes.
+
+## 9.22 Bounded identity and permission design directions (SEC-Q03)
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-103 | Support SEC-Q03-A–E as bounded design-policy directions within existing requirements: design account-free, appointment-scoped online guest management with independent original-booker authority and authorized assisted recovery; prefer customer-initiated individual linking with authenticated account control, independent proof, explicit confirmation and audit, with equally constrained assisted fallback. Preserve distinct booker/attendee/proxy/guardian contexts, minimal common information and service-specific permitted actions/visibility before affected workflows; refer uncertain, disputed or sensitive representative claims for authorized assistance. Restrict case review to explicitly assigned trained staff/supervisors with the approved case-review permission; hold only the affected contested link/action, preserving appointment and permitted attendance, with no claimant self-release, automatic cancellation or broad reversal privilege. Default to non-data technical support; exceptional client-data access retains explicit client authorization, least privilege, scope/duration, attribution, review and closure under both approved hosting models. | APPROVED (PO DECISION) — bounded design directions only | Not separately supplied | Product Owner |
+
+Approval provenance: the Product Owner's current Session 07 SEC-Q03 / PRIV-Q01 master instruction explicitly authorizes these directions and their bounded recording. Recorded 2026-11-12; this is not an inferred approval date. References, QR, personal-data matching, account or email possession alone remain insufficient original-booker proof. Training is a design criterion for later assignment, not an approved training program or new role. Exact proof/recovery mechanisms, representative evidence, staffing, procedures and escalation remain open; no managed support entitlement is created. D-094/v0.8, D-075 and existing permission/hold restrictions remain authoritative and unchanged. No new FR/AC text or physical/technical mechanism is approved. See [Security's recorded directions and D-102 assessment](../security/SECURITY.md#recorded-sec-q03-and-priv-q01-directions) for benefits, alternatives, failure/recovery, future verification, residual risks and decision dependencies.
+
+## 9.23 Initial jurisdiction and bounded privacy planning directions (PRIV-Q01)
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-104 | Record the Philippines as the initial intended operating jurisdiction and general-purpose appointment management for small-to-medium appointment-driven businesses as the initial service context, preserving D-041's staffed-front-desk segment and future-market dispositions. The product remains reusable independent client installations, not shared SaaS; no permanent Philippine-only architecture or claim that only Philippine law applies. Support PRIV-Q01-B–E: prefer a minimal common booking-data catalog with justified service extensions subject to purpose, necessity, visibility, validation and qualified privacy review; category-and-purpose-based retention assessment covering appointment/account/proof/audit/diagnostic/email/paper/backup/restored data; explicit actual installation/provider responsibility allocation in both hosting models and review of provider processing before adoption; client-led privacy-request handling as an initial operational planning assumption with separately authorized technical assistance. Managed privacy support requires a distinct decision. | APPROVED (PO DECISION) — jurisdiction and bounded planning directions only | Not separately supplied | Product Owner |
+
+Approval provenance: explicit Product Owner confirmation of the initial Philippines context and bounded PRIV-Q01-A–E directions in the current Session 07 instruction. Recorded 2026-11-12, not an inferred approval date. Other-jurisdiction or sensitive-service expansion requires applicable review without changing approved future-market status. No new data field/schema, default identity-document collection, universal guardian rule, retention period, deletion guarantee, legal basis, provider, controller/processor assignment or contractual duty is selected. Deactivation continues to preserve appointments. Verified intake, escalation, incident ownership, evidence preservation and applicable reporting need qualified review and actual allocation. No legal compliance, certification, PIA completion or assessment sign-off is claimed. See [Security's directions and D-102 assessment](../security/SECURITY.md#recorded-sec-q03-and-priv-q01-directions) and its [qualified review register](../security/SECURITY.md#qualified-philippine-privacy-and-security-review-register).
+
+## 9.24 Internal MFA coverage policy (SEC-Q02)
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-105 | Require MFA before protected internal application access for every authenticated internal user, including staff, supervisors, administrators and installation-local super-admins. Technical operators are covered only when separately authorized for protected internal application access. Public guests and customer-facing accounts are outside this policy. Secure, accessible and individually attributable MFA pathways must be available to authorized internal users without personal devices. Shared factors, shared credentials and undocumented bypasses are prohibited; failed or uncertain verification does not grant protected access. Sensitive actions require reviewed risk-based fresh verification; routine interactions do not automatically require repeated MFA. Enrollment, factor replacement, revocation, recovery and deactivation require controlled, attributable processes. Single-super-admin recovery must be independently authorized without standing developer/operator access. This decision establishes policy coverage only; it selects no factor, package, vendor, session interval, reauthentication trigger value, recovery protocol or implementation mechanism. | APPROVED (PO DECISION) — MFA coverage policy only | Not separately supplied | Product Owner |
+
+Approval provenance: The Product Owner explicitly adopted this bounded MFA coverage policy in the Gate 2 Batch 1 review instruction. Approval date was not separately supplied. Recorded 2026-11-12; this is not represented as the approval date. Benefits, alternatives, failure scenarios, mitigation/recovery, verification criteria and residual risks are documented in [Security's SEC-Q02 disposition and D-102 assessment](../security/SECURITY.md#sec-q02-disposition-mfa-coverage-policy). **Subsequent exact-version approval:** Requirements Specification v0.9 and Traceability revision 1.3 were explicitly approved by the Product Owner in the current Gate 2 formal-approval instruction; approval date not separately supplied; recorded 2026-11-12. This records the normative wording without changing D-105's policy scope. Factor selection, accessible-method evaluation, session policy, recovery mechanisms, operational custody and implementation remain open. This decision does not approve an SDD, implementation, deployment, legal compliance, release or Gate 2 closure.
+
+D-103/D-104 record approved directions only, not acceptance of the expanded Security document, its remaining proposed safeguards, Session 07, Gate 2 or Checkpoint 11. Significant selections and material requirements changes retain their existing approval/versioning controls. Implementation and deployment remain unauthorized.
+
+## 9.25 Product and scheduling policy directions
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-106 | For iTakda's independently installed client product: require minimum common booking information; distinguish booker from attendee; permit service-specific additions only after purpose, necessity, visibility, validation and qualified privacy review. Support configurable recurring availability and explicitly dated exceptions; ambiguous/conflicting exceptions do not silently create availability, the system remains accessible while affected availability is restricted, and existing appointments are not automatically cancelled. Use one configured duration per service in initial scope, with preparation/cleanup buffers reserving applicable staff/resource availability separately from customer-visible duration. Enforce applicable capacity and resource constraints together. Use configurable duplicate warning/blocking policies based on approved attendee/eligibility criteria and comparison windows, never booker contact alone or as a bypass of core checks; permitted warning continuation requires accessible explicit acknowledgement and ordinary users cannot bypass blocking. Use separate cancellation/rescheduling eligibility, cutoffs relative to scheduled appointment start in the installation business time zone, an inclusive boundary, and no penalties. | APPROVED (PO DECISION) — policy directions and clarifications only | Not separately supplied | Product Owner |
+
+Approval provenance: Exact SERVICE, SCHEDULE, DUPLICATE and CUTOFF directions and the three related clarifications were supplied in the Product Owner Approval Evidence in the current Gate 2 conversation. Recorded 2026-11-13; this is not an inferred approval date. Client-specific fields/values, resource categories, capacity units, duplicate matching/window details, detailed exception rules and technical mechanisms remain open. Existing D-043/D-044/D-048/D-059/D-060/D-066/D-070/D-079/D-085/D-089/D-098/D-102 constraints remain. No requirements baseline amendment or implementation authorization is implied.
+
+## 9.26 Booking-integrity policy choices
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-107 | At final booking, enforce both applicable capacity and required resource constraints. Prevent overlapping exclusive-resource reservations; shared-resource limits must be explicitly configured. Apply duplicate checks using approved attendee identity, service and policy window rather than booker contact alone; configure comparison windows per service. Exceptions require permission-specific authority, a recorded reason and attributable audit evidence; no blanket bypass is permitted. Deny post-cutoff self-service actions; separately authorized staff handling follows defined policy. Preserve accepted appointments and require SDD-022 impact review before affected configuration changes. Use an explicit installation business time zone and reject ambiguous local times. | APPROVED (PO DECISION) — booking-integrity policy choices only | Not separately supplied | Product Owner |
+
+Approval provenance: The eight Booking Integrity choices were supplied as Batch 1 in the Product Owner Approval Evidence in the current Gate 2 conversation. Recorded 2026-11-13, not an inferred approval date. Final transaction, atomicity, same-intent reconciliation and concurrency contract belongs to SDD-006; accepted-appointment impact handling belongs to SDD-022. No numeric limits, matching algorithm, database/locking mechanism or implementation is selected. D-070 remains a future verification obligation, not a passing result.
+
+## 9.27 Identity, security and access policy choices
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-108 | Apply default-deny authorization by actor, service and action; no self-elevation; separately authorize sensitive actions. Additional super-admin appointment requires independent approval and fresh verification with no self-approval; sole-super-admin recovery requires an independent documented authorization path and no unrestricted bypass. Preserve accessible MFA with controlled recovery and no ordinary bypass under D-105. Preserve account-free guest booking and require independent appointment-scoped proof for existing appointment access. Distinguish booker, attendee and representative permissions; uncertain claims are denied or referred for authorized assistance. Contested claims restrict affected management actions while preserving the appointment and otherwise permitted attendance, without automatic cancellation. Operators have no standing access to client business data; exceptional access requires client authorization. Separate audit viewing from export permission and attribute access. Retain minimum necessary diagnostic evidence and neutral public-facing security failures. | APPROVED (PO DECISION) — security/access policy choices only | Not separately supplied | Product Owner |
+
+Approval provenance: The ten Security and Access choices were supplied as Batch 2 in the Product Owner Approval Evidence in the current Gate 2 conversation. Recorded 2026-11-13, not an inferred approval date. D-103/D-105 remain in force within their existing scopes. MFA/proof factors, role assignments, independent authorization/recovery procedure, reader/export matrices, evidence retention and implementation mechanisms remain open. No legal conclusion or implementation authorization is implied.
+
+## 9.28 Operations, reliability, UX and engineering policy choices
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-109 | Preserve confirmed bookings when email delivery fails and recover notification processing independently; report truthful delivery states without guaranteeing inbox receipt. Require protected backups and tested restoration before operational reliance. Define measurable recovery objectives for supported operating profiles after feasibility evaluation. Define supported deployment profiles and allocate actual responsibilities per installation. Document maintenance ownership, rollback and incident response before operation. Minimize personal data, require qualified review and make retention installation-specific. Verify accessibility with automated and human keyboard, screen-reader, zoom and touch review against the approved target. Distinguish uncertain booking outcomes and reconcile safely rather than blindly retrying. Evaluate realistic measurable performance/availability targets before approval; D-070 concurrency tests are not latency promises. Evaluate minimal compatible technical choices under D-102 before adoption. Define bounded configurable client-branding direction and evaluate localization separately. | APPROVED (PO DECISION) — operations/reliability/UX/engineering directions only | Not separately supplied | Product Owner |
+
+Approval provenance: The twelve Operations, Reliability, UX and Engineering choices were supplied as Batch 3 in the Product Owner Approval Evidence in the current Gate 2 conversation. Recorded 2026-11-13, not an inferred approval date. Exact targets, supported profiles, allocations, providers, tools, branding fields/mechanism, retention periods, recovery mechanisms and specialist findings remain open. Q-016/Q-022 evaluation approach is approved, not numeric values. No SDD acceptance, technical selection, implementation, operational reliance, legal compliance or Gate 2 closure is implied.
+
+## 9.29 Execution operating contract direction
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-110 | Adopt a compatibility-first execution operating direction for authorized iTakda work: use bounded packages with explicit deliverables and exit criteria; reuse approved decisions; record approvals promptly with provenance; parallelize independent tasks under exclusive write ownership and lead integration; classify blockers, deferred matters and installation-specific choices with owners and milestones; validate changed work and dependent contracts proportionately to risk; and seek Product Owner review at meaningful checkpoints without self-approval. Preserve Engineering Governance §§5, 7, 9, 18 and 21, D-098/D-101, specialist reviews, and separate implementation, acceptance and release authorities. | APPROVED (PO DECISION) — operating direction; exact Engineering Governance revision 1.4 amendment separately accepted | Not separately supplied | Product Owner |
+
+Approval provenance: The Product Owner accepted the proposed operating-contract rule in the referenced “Gate 2 — Architecture & Technical Design” conversation (conversation ID `6ae2fbef-1a88-83ec-9d89-1dd9c9a32f1b`) and requested this bounded, compatibility-first documentation amendment. The Product Owner then accepted the exact Engineering Governance revision 1.4 amendment presented in the preceding report, limited to D-110 wording. Both were recorded 2026-11-13; approval dates were not separately supplied. D-110 authorizes no application code, dependency, database, CEAP, Git, deployment or release action; it does not complete Gate 2 or Checkpoint 11, approve another artifact by its existence, or relax an existing stop condition.
+
+## 9.30 Targeted technical investigation priorities
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-111 | Endorse five TECH-WP-02 investigation priorities: (1) explicit InnoDB transactional conflict protection and comparison against optimistic alternatives; (2) organization-provided cryptographic authentication keys and accessible alternative/recovery approaches; (3) transaction-coordinated required evidence and durable notification intent; (4) evaluate a minimally composed native Laravel/PHP/MariaDB installation first, comparing containerized and recovery alternatives against actual operational needs; and (5) prepare parallel qualified privacy, security, accessibility, data-integrity and applicable legal review handoffs. | APPROVED (PO DECISION) — investigation priorities only | Not separately supplied | Product Owner |
+
+Approval provenance: The Product Owner explicitly endorsed these five priorities in the current conversation's “Product Owner Decision Recording and Targeted Architecture Evidence” instruction. Recorded 2026-11-13; this recording date is not an inferred approval date. The endorsement selects no binding technical mechanism, framework/database version, provider, MFA factor, guest-proof mechanism, deployment profile, recovery target or residual risk. It approves no SDD revision, implementation, release, qualified-review finding or Gate 2/Checkpoint 11 closure. D-106–D-110 and existing requirements, specialist review and authorization controls retain their recorded scopes. Rationale: focus limited evidence development on the candidates identified in [TECH-WP-02](../technical/TECH-WP-02-DECISION-PACKAGE.md); alternatives remain relevant where needed to establish feasibility and trade-offs.
+
+## 9.31 Checkpoint 11 design and prototype acceptance
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-112 | Accept Checkpoint 11 (UI/UX Design & Prototyping) within its documented design and prototype scope as representative design evidence under D-093. The accepted scope includes the current CP11 reconciliation and review package and the connected representative journeys recorded there, including the administrator appointment-review → permission-denial → unchanged-appointment journey. The prototype is illustrative and is not required to implement every approved SDD workflow. All applicable approved SDD requirements remain mandatory for implementation, verification and release unless formally changed or deferred through the approved governance process. Acceptance is subject to the documented limitations and does not establish real authentication, MFA, authorization enforcement, persistence, full accessibility conformance, qualified specialist approval or production readiness. Preserve historical evidence and existing worktree changes. Do not close historical Gate 2, initiate CP12, modify approved SDDs, perform Git writes or access CEAP. | Records the Product Owner's explicit checkpoint-level acceptance without promoting the prototype to production, final architecture or an implemented feature. | APPROVED (PO DECISION) - CP11 design/prototype acceptance only | 2026-11-13 - supplied by the Product Owner in the current instruction; no separate approval date stated | Product Owner |
+
+Approval provenance: The Product Owner supplied the CP11 acceptance and its limitations in the current instruction after reviewing the focused administrator appointment journey and the CP11 reconciliation package. Recorded 2026-11-13. This acceptance is limited to CP11 design and prototype evidence under D-093; it does not approve implementation, a technical mechanism, a production permission matrix, specialist findings or release. Historical Gate 2 remains IN PROGRESS and unfinished; CP12 and the final Gate 2 review remain not recorded complete; Q-007 and other applicable historical dispositions remain open. D-096/D-097/D-100/D-101 and all prior approvals retain their recorded scopes.
+
+## 9.32 Conditional SDD-001 local toolchain direction
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-113 | Conditionally approve Laravel Framework 13.40.0, PHP 8.5.12-1 x64 NTS isolated from XAMPP, Composer 2.11.2 invoked with that PHP, and PHPUnit 13.4.1 subject to successful compatibility verification against the actual Laravel 13 application skeleton. Prioritize stable supported versions, reproducibility, compatibility and preservation of existing local projects. Before finalizing, verify integration, required extensions, dependency constraints, installation scripts and isolated runtime behavior; report incompatible components with a supported alternative for Product Owner approval. | CONDITIONALLY APPROVED — local SDD-001 direction only; verification and final baseline pending | Not separately supplied; recorded 2026-11-13 | Product Owner |
+
+Provenance: Product Owner instruction “iTakda — FND-Q01 Conditional Approval” in this conversation. No downloads, installations, application implementation, Git writes, database operations, deployment or CEAP access are authorized. Do not modify XAMPP, Apache configuration, global PATH or existing PHP installations. The approved SDD-001 remains unchanged. [FND prerequisite review](../technical/FND-PREREQUISITE-REVIEW.md) records the upstream skeleton's PHPUnit constraint and prohibited default scripts; these findings are not an integration test or a final toolchain approval.
+
+## 9.33 SDD-001 technical direction and PHPUnit choice
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-114 | Retain Laravel Framework 13.40.0, isolated PHP 8.5.12-1 x64 NTS and Composer 2.11.2 as proposed; select Option B, the latest appropriate supported PHPUnit 12.x patch compatible with the official Laravel 13 application skeleton and PHP 8.5. This supersedes only D-113's provisional PHPUnit 13.4.1 selection. Preserve XAMPP, Apache, global PATH, existing PHP and other projects; exclude SQLite creation, migrations, database connections and external dispatch from SDD-001. Approve the general FND-Q02 and FND-Q04 direction subject to final engineering/security review of exact configuration, diagnostics, initialization and verification contracts. | APPROVED — technical direction only; exact patch, full dependency/runtime verification and applicable specialist review remain subject to documented conditions | Not separately supplied; recorded 2026-11-13 | Product Owner |
+
+Provenance: Product Owner instruction “iTakda — Product Owner Approval of SDD-001 Technical Direction” in this conversation; recording date is not an independently supplied approval date. Approval covers decision recording and prerequisite preparation only. It does not authorize dependency downloads, software installation, application implementation, branch/worktree creation, staging, commits, pushes, merges, database operations, deployment or CEAP access. SDD-001 v0.3 and unrelated D-113 boundaries remain unchanged. See the current [prerequisite review](../technical/FND-PREREQUISITE-REVIEW.md#current-decision-and-remaining-prerequisites-2026-11-13).
+
+## 9.34 Proposed bounded Gate 2 remediation authorization
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-115 | Authorize a bounded Gate 2 closure-remediation package limited to: (a) verifying and reconciling existing approval evidence; (b) correcting demonstrably editorial status, provenance and trace-reference contradictions in approved SDD files and active documentation where a primary record establishes the intended status, without changing approved requirements, design substance, policy values or selected mechanisms; (c) repairing verified broken internal documentation links without changing meaning; (d) initiating and executing the CP12 design-to-requirements integration review as a review activity, including bidirectional coverage matrices, findings and proposed dispositions; (e) preparing the final Gate 2 architecture review and closure package; and (f) preparing recommended dispositions for Q-007, Q-008, Q-016 and Q-022. The Product Owner confirms that the exact revisions identified in SDD Registry §13/§14 and each SDD's CURRENT STATUS banner are the approved specification text, and that retained body statements describing those same revisions as drafts or pending review are pre-approval history or stale status text, not a second approval record or a withdrawal. This supersedes D-112's prohibition on initiating CP12 and modifying approved SDDs only to the extent necessary for (b)–(d). It does not authorize changing approved functional requirements or architectural substance, inventing or granting Product Owner approvals, marking CP12 or the final architecture review accepted, closing Gate 2, installing or executing Laravel/PHP/PHPUnit, dependency downloads, database operations, deployment, CEAP access, or changes to Engineering Governance §14 or SE-001. Substantive findings and all four decision dispositions require separate Product Owner action. Gate 2 remains IN PROGRESS. | APPROVED (PO DECISION) — bounded remediation only | 2026-11-15 — supplied in the current instruction | Product Owner |
+
+Provenance: The Product Owner approved D-115 exactly as recorded in §9.34 on 2026-11-15, confirming that the exact revisions in SDD Registry §13/§14 and each SDD's CURRENT STATUS banner are the approved specification text. The approval is limited to items (a)–(f). It does not authorize requirements or design-substance changes, CP12 acceptance, the final architecture review, Gate 2 closure, installation, dependency downloads, database operations, deployment or CEAP access. Substantive findings and all decision dispositions remain separate Product Owner actions.
+
+## 9.35 Gate 2 decision dispositions
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-116 | Record the final Gate 2 disposition of Q-007: adopt D-092's capability-based compatibility and dependency approach as the Gate 2 design-level disposition. No supported platform, package graph, lockfile, compatibility range or tested matrix is accepted. External scratch lockfile evidence is not adopted as Gate 2 acceptance evidence. D-114's bounded evaluation approvals are unchanged; exact dependency and runtime versions remain Gate 4 under D-031 with prerequisite review and bounded authorization. | APPROVED (PO DECISION) — Q-007 Gate 2 disposition only | 2026-11-15 | Product Owner |
+| D-117 | Record the Gate 2 disposition of Q-008: adopt the minimum responsibility allocation of independent client installations and databases; hosting, infrastructure, credentials, backups, monitoring and support are allocated to the client or its contracted provider unless otherwise agreed; the system operator has no default access to client data; one standardized supported deployment profile remains a design principle. Detailed deployment arrangements, provider terms and runbooks remain subject to later approval. | APPROVED (PO DECISION) — Q-008 Gate 2 disposition only | 2026-11-15 | Product Owner |
+| D-118 | Record that D-109's approved measurable-target evaluation approach satisfies D-079's Gate 2 disposition milestone for Q-016 and Q-022. No numeric performance, availability or recovery target is set or promised. Measurement definitions, feasibility evidence and numeric targets remain subject to their designated later-gate evaluation and approval. | APPROVED (PO DECISION) — Q-016/Q-022 Gate 2 disposition only | 2026-11-15 | Product Owner |
+
+Provenance: Product Owner decision "Gate 2 Closure Remediation" in the current conversation, recorded 2026-11-15. These dispositions do not select technology, approve a deployment arrangement, set numeric targets, authorize implementation or release, accept CP12 or close Gate 2.
+
+## 9.36 SDD-001 local review and database-free testing
+
+| ID | Decision | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-119 | Approve the exact amendments presented in Section A of the consolidated "One-Pass Development Unblocking and Workflow Optimization" report: Governance §§3, 5 and 19 specify the bounded SDD-001 local-development review and self-review arrangement, and §14 adopts the database-free testing clarification. D-110's prohibition on contributor self-approval and D-114's final engineering/security-review timing are superseded only to the extent expressly stated for that local SDD-001 scope. The prerequisite review's proposed independent acceptance-reviewer assignment may be deferred for that local scope under the approved arrangement. D-114's toolchain conditions, exclusions and need for actual compatibility evidence remain. Human specialist review before expansion into an affected excluded capability or release, qualified independent privacy/security assessment before release, applicable safety/privacy controls, and separate release approval remain mandatory. | APPROVED (PO DECISION) — bounded governance amendment only | Not separately supplied; recorded 2026-11-17 | Product Owner |
+
+Provenance: Product Owner instruction "iTakda SDD-001 Workflow Unblocking" in the current conversation. The date above is the recording date, not an inferred approval date. The approved wording is incorporated in [Engineering Governance](../ENGINEERING_GOVERNANCE.md) revision 1.5. D-119 does not authorize dependency downloads or installation, compatibility execution, application implementation, database operations, Git operations, deployment or CEAP access. SE-001 remains unapproved; prior decisions and other scopes remain preserved.
 
 ## 10. Approval
 

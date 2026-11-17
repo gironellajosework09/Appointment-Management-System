@@ -452,6 +452,11 @@
   $('#show-delivery').addEventListener('click', () => { const delivery=$('#booking-delivery').value; feedback('#delivery-feedback',`Confirmation email ${delivery} in this simulation. The accepted booking result does not change; no email was sent.`,delivery==='delivered'?'good':'bad'); });
   $('#booking-outcome').addEventListener('change', () => { if (!state.unknown) $('#confirm-booking').disabled=false; });
   let managedVisit=null;
+  // Fictional tab-session illustration, not a production reconciliation mechanism.
+  const unresolvedKey = 'itakda-cp11-unresolved-reschedules';
+  let rememberedReschedules = [];
+  try { const stored=JSON.parse(sessionStorage.getItem(unresolvedKey) || '[]'); if (Array.isArray(stored)) rememberedReschedules=stored; } catch { /* Keep the in-memory demonstration available. */ }
+  const unresolvedReschedules = new Set(rememberedReschedules);
   const manageActions=$('#manage-actions');
   const reschedulePanel=document.createElement('div'); reschedulePanel.className='reschedule-preview';
   const rescheduleLabel=document.createElement('label'); rescheduleLabel.htmlFor='reschedule-date'; rescheduleLabel.textContent='Example alternative date';
@@ -467,6 +472,11 @@
   $('#manage-form').addEventListener('submit', e => { e.preventDefault(); if (!validateForm(e.target)) return; managedVisit=$('#proof').value==='granted' ? state.appointments.find(item=>item.reference.toLowerCase()===$('#reference').value.trim().toLowerCase()) : null; manageActions.hidden=!managedVisit; if (managedVisit) { manageActions.querySelector('h2').textContent=managedVisit.service; manageActions.querySelector('p').textContent=`${managedVisit.date} · ${managedVisit.time} · ${managedVisit.status}`; } feedback('#manage-feedback',managedVisit?'Illustrative appointment-scoped access established. No real proof or identity was verified.':'Access not established. A reference or matching personal details alone cannot authorize a booking. This response reveals no appointment details.',managedVisit?'good':'bad'); });
   function applyChange(kind) {
     if (!managedVisit) return;
+    const intent = kind==='reschedule' ? JSON.stringify([managedVisit.reference,rescheduleDate.value,rescheduleTime.value]) : null;
+    if (intent && unresolvedReschedules.has(intent)) {
+      feedback('#change-feedback','This reschedule remains unresolved. Check an authoritative result before retrying the same request. This preview cannot establish that result.', 'bad');
+      return;
+    }
     const outcome=$('#change-outcome').value;
     if (outcome==='accepted') {
       if (kind==='cancel') managedVisit.status='Cancelled';
@@ -475,7 +485,10 @@
       if (state.booking?.reference===managedVisit.reference) state.booking={...managedVisit};
       manageActions.querySelector('p').textContent=`${managedVisit.date} · ${managedVisit.time} · ${managedVisit.status}`;
       feedback('#change-feedback',`${kind==='cancel'?'Cancellation':'Reschedule'} accepted in this fictional session. The appointment list and calendar now show that state; no real capacity was changed. The former demo QR is no longer offered while lifecycle rules remain open.`, 'good');
-    } else feedback('#change-feedback',outcome==='rejected'?'Known rejection. The original appointment remains unchanged.':'Result unknown. The original state is shown provisionally; check an authoritative result before retry.', 'bad');
+    } else if (outcome==='unknown') {
+      if (intent) { unresolvedReschedules.add(intent); try { sessionStorage.setItem(unresolvedKey,JSON.stringify([...unresolvedReschedules])); } catch { /* In-memory guard remains active until reload. */ } }
+      feedback('#change-feedback','Result unknown. The original state is shown provisionally; check an authoritative result before retry. This preview cannot establish that result.', 'bad');
+    } else feedback('#change-feedback','Known rejection. The original appointment remains unchanged.', 'bad');
   }
   $('#change-button').addEventListener('click',()=>applyChange('cancel'));
   rescheduleButton.addEventListener('click',()=>applyChange('reschedule'));

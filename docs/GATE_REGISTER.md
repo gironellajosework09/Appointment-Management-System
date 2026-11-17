@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.17 (2026-11-02 — D-093 Gate 2 UI/UX checkpoint sequence amendment recorded; gate statuses unchanged) |
+| Revision | 1.26 (2026-11-13 — D-112 Checkpoint 11 acceptance recorded) |
 | Owner | Product Owner |
 
 This register tracks gate status and defines, for each gate: purpose, required
@@ -34,32 +34,77 @@ approval. No AI tool may set or imply a gate approval.
 |---|---|---|
 | Gate 0 | Project Initiation & Governance | **COMPLETE (APPROVED)** — 2026-10-22 |
 | Gate 1 | Requirements Discovery | **COMPLETE (APPROVED)** — 2026-10-29 |
-| Gate 2 | Architecture & Design | **IN PROGRESS** — entry authorized 2026-10-29; documentation only |
-| Gate 3 | Security & Data Integrity Design Review | **BLOCKED** (requires Gate 2 approval) |
-| Gate 4 | Authorized Implementation | **BLOCKED** (requires Gate 3 approval and explicit authorization) |
-| Gate 5 | Verification & Testing | **BLOCKED** (Gate 4 not approved) |
-| Gate 6 | Release Readiness & Deployment Approval | **BLOCKED** (Gate 5 not approved) |
-| Gate 7 | Production Operations & Maintenance | **BLOCKED** (Gate 6 not approved; ongoing once reached) |
+| Gate 2 | Architecture & Design | **Historical: IN PROGRESS, unfinished** — routine progression prospectively superseded by D-098; not completed or accepted |
+| Gate 3 | Security & Data Integrity Design Review | **Historical planned stage** — review control retained independently where applicable |
+| Gate 4 | Authorized Implementation | **Historical planned stage** — implementation authorization remains feature/risk-scoped under D-098 |
+| Gate 5 | Verification & Testing | **Historical planned stage** — verification remains required for feature acceptance |
+| Gate 6 | Release Readiness & Deployment Approval | **Historical planned stage** — separate release/deployment approval retained |
+| Gate 7 | Production Operations & Maintenance | **Historical planned stage** — ongoing operational controls retained |
 
 Notes:
 
 - Gate 0 is `COMPLETE (APPROVED)` as of 2026-10-22 (§3, §13).
 - Gate 1 is `COMPLETE (APPROVED)` under D-082 (2026-10-29); its earlier entry
   authorization on 2026-10-28 was limited to requirements analysis and documentation.
-- Gate 2 is `IN PROGRESS` for architecture/design documentation only under D-082;
-  Gates 3–7 remain `BLOCKED` pending their respective prerequisites. Implementation
-  remains unauthorized.
+- **D-098 transition:** Routine future product changes use SDD, not sequential gate progression.
+  Gate 2 remains historically `IN PROGRESS` and unfinished; it was not completed or accepted.
+  Its unfinished routine progression obligations are superseded prospectively. Former Gates 3–7
+  are historical planned stages, not routine prerequisites; applicable security/data-integrity,
+  verification, release/deployment, and operational controls remain independent requirements.
+- **2026-11-12 documentation approvals:** Requirements Specification v0.9 and Traceability revision
+  1.3 are effective for their stated amendment; v0.8/revision 1.2 and earlier versions remain
+  preserved. SDD-001 v0.3, SDD-023 v0.2, SDD-002 v0.4 and SDD-003 v0.4 are individually
+  approved as provisional feature specifications within their documented scopes. Gate 2 remains
+  historically IN PROGRESS; Checkpoint 11 was unaccepted at the time of those approvals and was
+  separately accepted on 2026-11-13 (D-112). No implementation is authorized.
+- **2026-11-13 Batch 2 W2 approvals:** SDD-004 v0.1, SDD-007 v0.2, SDD-008 v0.1, SDD-025 v0.1
+  and SDD-026 v0.1 are individually approved as provisional specifications within their documented
+  scopes. Earlier separate approval provenance for SDD-007 v0.1 and SDD-025 v0.1 is preserved;
+  SDD-007 v0.2 is current without backdating. Approval dates were not separately supplied. Gate 2
+  remains historically IN PROGRESS; Checkpoint 11 was unaccepted at the time of those approvals and
+  was separately accepted on 2026-11-13 (D-112). No implementation is authorized.
+  This process transition grants no feature or production implementation authorization.
+  Unresolved policy items previously tied to Gate 2, Gate 3, or Gate 6 remain open; their former
+  gate-based deadlines are historical. Under SDD, resolve each before implementing a feature it
+  materially affects, or before an applicable security/data-integrity or release review. D-079's
+  policy questions and existing decisions are not answered or rewritten by this transition.
+- **2026-11-13 SDD-005 approval:** The Product Owner provisionally approved SDD-005 v0.2 as a
+  specification within its documented scope, retaining SCH-Q01–SCH-Q08 as detailed open questions.
+  This is not implementation authorization, technical mechanism selection, implementation
+  acceptance, Gate 2 closure, or Checkpoint 11 acceptance. Gate 2 remains historically
+  `IN PROGRESS`; no other session or checkpoint status changes.
+- **2026-11-13 CP11 acceptance:** The Product Owner accepted Checkpoint 11 within its documented
+  design and prototype scope as representative design evidence under D-093 (D-112), including the
+  administrator appointment-review → permission-denial → unchanged-appointment journey. The
+  prototype is illustrative and is not required to implement every approved SDD workflow; all
+  applicable approved SDD requirements remain mandatory for implementation, verification and
+  release unless formally changed or deferred through approved governance. Acceptance does not
+  establish real authentication, MFA, authorization enforcement, persistence, full accessibility
+  conformance, qualified specialist approval or production readiness. Historical Gate 2 remains
+  IN PROGRESS and unfinished; CP12 and final review are not recorded complete. No implementation,
+  deployment, Git write, Gate 2 closure or CP12 initiation is authorized.
 - D-088 provisionally accepts the fingerprinted Checkpoint 7 logical data design
   solely for continued Gate 2 work; D-089 separately excludes cancellation and
   no-show penalties from MVP. Neither approves final architecture or closes Gate 2.
+- D-094/D-095 and the exact Requirements Specification v0.8 / Traceability revision 1.2
+  are approved as a development-stage assumption baseline under Decision Register revision
+  1.19. The D-089 fee-reference amendment is recorded in v0.8/AC-009; unrelated service
+  fees remain undecided. D-081/v0.7 and Traceability revision 1.0 remain preserved as
+  historical baseline records; this changes no product requirement or traceability status.
+- At the time of D-096, the Product Owner authorized bounded fictional-data Checkpoint 11
+  prototype modification and local browser verification, including its listed guest/account
+  journeys. The decision permits the specified public landing/login visual effects under its
+  safeguards. Checkpoint 11 was not accepted or completed; D-097 later expanded prototype-only
+  scope. D-096/D-097 boundaries remain in force under D-098.
 - D-090 provisionally accepts the fingerprinted Checkpoint 8 logical interface/API
   design solely for continued Gate 2 work. D-091 provisionally accepts the
   fingerprinted Checkpoint 9 Configuration & Deployment Design as working design
   only. D-092 provisionally accepts Checkpoint 10 Compatibility & Dependency
   Design as the Q-007 Gate 2 working approach, with final Q-007 disposition open.
-  Under D-093, Checkpoint 11 UI/UX Design & Prototyping is the next authorized
-  internal activity but is NOT STARTED. Checkpoint 12 Integration & Traceability
-  Review and unnumbered Final Gate 2 Review & Closure remain pending.
+  D-098 preserves Gate 2 and checkpoint records as history. Checkpoint 11 was separately accepted on
+  2026-11-13 under D-112 within its documented design/prototype scope; future design changes proceed
+  through authorized feature-level SDD work. Historical Gate 2 remains IN PROGRESS; Checkpoint 12 and
+  final Gate 2 review are not recorded as completed.
 - Gate 7 is an **ongoing responsibility**, not a state that permanently ends
   maintenance.
 
@@ -284,6 +329,12 @@ Product Owner.
 
 **Status: IN PROGRESS — entry authorized 2026-10-29; architecture/design documentation only.**
 
+> **Historical status at D-098 transition:** Gate 2 was unfinished and not accepted. Its remaining
+> routine gate/checkpoint progression obligations are prospectively superseded; this section
+> preserves the original scope, working-design dispositions, evidence, and unresolved architecture
+> questions. It does not require completing Gate 2 to begin future changes under SDD, and it does
+> not mark Gate 2 complete.
+
 ### Purpose
 
 Produce the product architecture and design, including the data model,
@@ -317,6 +368,10 @@ per-installation configuration strategy, and interface design.
 - Traceability established.
 - Product owner approves Gate 2.
 
+### Subsequent Gate 2 dispositions (2026-11-15)
+
+D-107 records Q-020's cutoff-policy disposition: separate cancellation/rescheduling eligibility and cutoffs relative to appointment start, inclusive boundary, installation business time zone and no penalties. Exact per-service values, exception authority, detailed states and enforcement remain open for affected implementation. D-079's Q-020 cutoff-policy milestone is recorded. D-116 records Q-007's Gate 2 disposition as D-092's capability-based approach; no exact platform, package graph, lockfile, compatibility range or tested matrix is accepted, and exact versions remain later work. D-117 records Q-008's minimum responsibility allocation: independent client installations/databases; hosting, infrastructure, credentials, backups, monitoring and support belong to the client or contracted provider unless otherwise agreed; no default operator access to client data. Detailed arrangements and runbooks remain open. D-118 records D-109's measurable-target evaluation approach as satisfying the Q-016/Q-022 Gate 2 disposition milestone; measurement definitions, feasibility evidence and numeric targets remain open. These decisions update the current disposition of those questions; historical checkpoint narratives below are preserved as recorded. Gate 2 remains IN PROGRESS; CP12 and final architecture review are not accepted or recorded complete.
+
 ### Approval Authority
 
 Product Owner.
@@ -324,8 +379,9 @@ Product Owner.
 ### Blockers / Dependencies
 
 - Gate 1 approval. (Met under D-082 on 2026-10-29.)
-- Provisional compatibility constraints, and deployment/hosting decisions
-  (Q-007, Q-008; D-031).
+- Q-007 and Q-008 Gate 2 dispositions are recorded under D-116 and D-117.
+  Residual platform/version, feasibility and detailed hosting/operational
+  arrangements remain open; see the subsequent dispositions above.
 
 ### Checkpoint 7 working-design disposition
 
@@ -476,12 +532,12 @@ Product Owner.
 
 ### D-093 internal Gate 2 progression and Checkpoint 11 design evidence
 
-| Activity | Current disposition |
+| Activity | Historical disposition at D-098 transition |
 |---|---|
 | Checkpoint 10 — Compatibility & Dependency Design | Provisionally accepted as working design under D-092; final Q-007 disposition open |
-| Checkpoint 11 — UI/UX Design & Prototyping | **Authorized, NOT STARTED**; next internal Gate 2 activity after this governance amendment |
-| Checkpoint 12 — Integration & Traceability Review | **Pending**; newly assigned label for the previously unnumbered review, not a renumbering of an approved checkpoint |
-| Final Gate 2 Review & Closure | **Pending**; no checkpoint number assigned; requires separate Product Owner approval |
+| Checkpoint 11 — UI/UX Design & Prototyping | **Authorized and IN PROGRESS under D-096/D-097; not accepted or completed** |
+| Checkpoint 12 — Integration & Traceability Review | **Historically pending**; its routine progression role is superseded by D-098; label history retained |
+| Final Gate 2 Review & Closure | **Historically pending**; not completed or accepted; no routine approval prerequisite under D-098 |
 
 **Required Checkpoint 11 package for final Gate 2 architecture review (D-093):**
 
@@ -549,6 +605,59 @@ prerequisites, and this amendment does not begin design artifacts or authorize
 application, database, dependency, deployment or production work.
 
 ---
+
+### Checkpoint 11 status/evidence reconciliation (Product Owner instruction; date not separately recorded)
+
+> **Status remains unchanged:** this note records the Product Owner's explicit statement
+> that Checkpoint 11 is **not accepted or completed**. It does not close, accept, or advance
+> the checkpoint.
+
+D-093 records Checkpoint 11 as authorized but **NOT STARTED**. The repository contains
+`docs/design/CHECKPOINT-11-SCREENS-AND-INTERACTIONS.md`,
+`docs/design/CHECKPOINT-11-DESIGN-SYSTEM-AND-ACCESSIBILITY.md`, and
+`prototype/checkpoint-11/` source, tests and design artifacts. Their presence establishes
+that materials exist; it does not establish when they were created, whether their creation
+was performed as authorized Checkpoint 11 work, or that required review/acceptance occurred.
+D-093 is the recorded authorization to start Checkpoint 11, but no evidence was identified
+that resolves the mismatch between its recorded NOT STARTED status and the existing artifacts,
+and no Product Owner/usability/accessibility acceptance evidence was identified. Therefore
+the recorded disposition remains
+**authorized, NOT STARTED; not accepted; not completed**, pending a separate evidence-backed
+Product Owner status decision. Do not backdate or infer a transition. Gate 2 remains
+**IN PROGRESS**; Checkpoint 12 and final Gate 2 review remain pending; Gates 3–7 remain
+blocked. This note authorizes no prototype modification or implementation.
+
+**D-096 superseding authorization (recorded 2026-11-04):** The Product Owner explicitly
+authorized the bounded fictional-data prototype work and local browser verification specified
+in Decision Register §9.14, resolving the prior no-prototype-modification restriction for that
+scope only. The authorized work is in progress. This does not accept or complete Checkpoint 11,
+change Gate 2's IN PROGRESS status, authorize production or backend behavior, or apply the
+landing/login visual exception to any task-focused application screen. The preceding
+reconciliation is retained as history; its no-modification/NOT STARTED disposition is
+superseded only to the extent stated in D-096.
+
+**D-097 scope expansion (2026-11-05):** The Product Owner explicitly authorized fictional-data
+Staff and Administrator workspaces, dashboards, appointment workflows and role-specific profiles
+within the Checkpoint 11 prototype. This extends only the prototype scope in D-096. It does not
+approve unresolved role permissions or policy values, production implementation, Checkpoint 11
+acceptance or completion, Gate 2 exit, or a later gate transition.
+
+**D-098 prospective process disposition (2026-11-10):** Gate 2's historical disposition remains
+IN PROGRESS and unfinished; no completion, acceptance, or evidence is inferred. Its unfinished
+routine gate progression and pending Checkpoint 12/final Gate 2 review obligations are
+prospectively superseded as routine process requirements. Checkpoint 11 remains an unfinished,
+unaccepted design baseline, with existing authorization bounded by D-096/D-097; future design
+improvements use authorized feature-level SDD work. The historical NOT STARTED reconciliation,
+subsequent authorized/in-progress status, existing evidence, and prior checkpoint decisions remain
+preserved. Applicable security/data-integrity reviews and separate release/deployment approval
+remain required independently of gate labels. No production implementation authorization is
+created. CP11 was subsequently accepted on 2026-11-13 under D-112 within its documented
+design/prototype scope; this does not change Gate 2's historical disposition.
+
+> **Historical Gates 3–7:** The sections below preserve the former stage definitions, status and
+> evidence. They are not routine sequential prerequisites under D-098. Applicable security/data-
+> integrity reviews, feature verification, separate release/deployment approval, and operational
+> controls remain mandatory independently of these gate labels.
 
 ## 6. Gate 3 — Security & Data Integrity Design Review
 
@@ -814,6 +923,15 @@ incidents, backups, and reviews continue under approved change control.
 | 2026-11-01 | Revision 1.15. Recorded D-091's fingerprinted Checkpoint 9 provisional working-design acceptance, Q-008 and real-backup verification limitations, and evaluation-only recovery/performance numbers. D-079/D-089/D-090 and pending versioned v0.7 fee reconciliation remain. Checkpoint 10 Compatibility & Dependency Design is the next internal Gate 2 activity. Gate 2 remains `IN PROGRESS`; Gates 3–7 remain `BLOCKED`; no final architecture, Gate 3, implementation or deployment approval. The recording date is not an inferred Product Owner approval date. | Product Owner Checkpoint 9 decision recording |
 | 2026-11-01 | Revision 1.16. Cross-referenced D-092's fingerprinted Checkpoint 10 provisional Q-007 working approach; final Q-007, Q-008, D-079/D-089–D-091, and v0.7 fee-reference reconciliation remain outstanding. Integration & Traceability Review is the next internal Gate 2 activity. Gate 2 stays `IN PROGRESS`, Gates 3–7 `BLOCKED`; no final technology, architecture, implementation or deployment approval. Recording date is not an inferred Product Owner approval date. | Product Owner Checkpoint 10 decision recording |
 | 2026-11-02 | Revision 1.17. Recorded D-093's Checkpoint 11 UI/UX Design & Prototyping insertion and bounded required design package before the newly labeled Checkpoint 12 Integration & Traceability Review. Checkpoint 11 authorized but NOT STARTED; Checkpoint 12 and unnumbered Final Gate 2 Review & Closure pending. Historical checkpoint identifiers and D-079 deadlines preserved. Gate 2 remains IN PROGRESS, Gates 3–7 BLOCKED; no implementation or Gate 3 entry authorized. Recording date is not an inferred Product Owner approval date. | Product Owner Gate 2 sequence amendment recording |
+| 2026-11-04 | Revision 1.18. Cross-referenced proposed D-094 and recorded the Product Owner's explicit Checkpoint 11 not-accepted/not-completed direction alongside the existing NOT STARTED disposition. Existing design/prototype artifacts are noted without inferring when or under what authority they were produced; no checkpoint or gate transition is recorded. Gate 2 remains IN PROGRESS; Gates 3–7 remain BLOCKED. | Authorized documentation reconciliation under Product Owner direction |
+| 2026-11-04 | Revision 1.19. Cross-referenced the approved D-094/D-095 requirements amendment and effective v0.8/revision 1.2 development-stage baseline. Gate 2 remains IN PROGRESS; Checkpoint 11 remains authorized, NOT STARTED, not accepted and not completed; Gates 3–7 remain BLOCKED. No gate transition or implementation authorization is recorded. Approval date for the requirements package was not supplied. | Product Owner approval recording |
+| 2026-11-04 | Revision 1.20. Recorded D-096's bounded authorization to modify and locally verify the fictional-data Checkpoint 11 prototype and its landing/login-only visual exception. Checkpoint 11 work is authorized/in progress but not accepted or completed; Gate 2 remains IN PROGRESS and Gates 3–7 remain BLOCKED. The earlier no-prototype-modification statement is superseded only within D-096's exact scope; no production/backend, gate-exit or release authority is granted. Approval date was not separately supplied. | Product Owner bounded Checkpoint 11 authorization |
+| 2026-11-05 | Revision 1.21. Recorded D-097's explicit fictional-data Staff and Administrator prototype scope expansion. Gate 2 and Checkpoint 11 remain IN PROGRESS, not accepted or completed; Gates 3–7 remain BLOCKED. No production implementation or unresolved permission approval. | Product Owner scope-expansion instruction in this chat |
+| 2026-11-10 | Revision 1.22. Recorded D-098: routine future change progression transitions to SDD; Gate 2 remains historically unfinished and unaccepted, Checkpoint 11 remains an unfinished unaccepted design baseline, and applicable security/data-integrity and release/deployment controls remain independent. No application or production implementation authority is granted. | Product Owner SDD transition approval |
+| 2026-11-12 | Revision 1.23. Recorded Product Owner approval of Requirements Specification v0.9 and Traceability revision 1.3 as the effective development-stage baseline for their stated amendment, and individual provisional specification approval of SDD-001 v0.3, SDD-023 v0.2, SDD-002 v0.4 and SDD-003 v0.4. Approval dates were not separately supplied. Gate 2 remains historically IN PROGRESS; Checkpoint 11 remains unaccepted; no implementation or Gate 2 closure is authorized. | Product Owner formal approval instruction in this conversation |
+| 2026-11-13 | Revision 1.24. Recorded exact-version provisional approval of SDD-004 v0.1, SDD-007 v0.2, SDD-008 v0.1, SDD-025 v0.1 and SDD-026 v0.1. SDD-025 v0.1's separate earlier approval provenance and SDD-007 v0.1's earlier approval history are preserved; v0.2 is the current SDD-007 scope and is not backdated. Approval dates were not separately supplied. Open questions remain open; Gate 2 remains historically IN PROGRESS, Checkpoint 11 remains unaccepted, and no implementation, deployment or Gate 2 closure is authorized. | Product Owner exact-version approval instruction in this conversation; SDD-025 earlier separate Product Owner decision |
+| 2026-11-13 | Revision 1.25. Recorded the Product Owner's exact-version provisional approval of SDD-005 v0.2 within its documented scope, retaining SCH-Q01–SCH-Q08 as detailed open questions. Gate 2 remains historically IN PROGRESS; Checkpoint 11 remains unaccepted; no implementation, technical mechanism, verification acceptance or Gate 2 closure is authorized. | Product Owner explicit approval statement supplied in this task |
+| 2026-11-13 | Revision 1.26. Recorded D-112, the Product Owner's acceptance of Checkpoint 11 within its documented design and prototype scope as D-093 representative design evidence, including the administrator appointment-review, permission-denial and unchanged-appointment journey. The prototype is illustrative; all applicable approved SDD requirements remain mandatory for implementation, verification and release. Acceptance does not establish real authentication, MFA, authorization enforcement, persistence, full accessibility conformance, specialist approval or production readiness. Historical Gate 2 remains IN PROGRESS and unfinished; CP12 and final review are not recorded complete. No implementation, SDD modification, Git write, Gate 2 closure or CP12 initiation is authorized. Approval date not separately supplied; recorded 2026-11-13. | Product Owner CP11 acceptance instruction in the current conversation |
 
 > **Change-log note (superseding clarification).** The 2026-10-15 "Gate 0
 > governance corrections" entry recorded P-008 as resolved when it had only been
@@ -839,3 +957,20 @@ documentation only; implementation remains unauthorized.
 | Product Owner | Product Owner | Gate 0 evidence record signed off; Gate 0 transition approved — `COMPLETE (APPROVED)` | 2026-10-22 |
 | Product Owner | Product Owner | Gate 1 entry authorized for requirements analysis and documentation — `IN PROGRESS`; implementation not authorized | 2026-10-28 |
 | Product Owner | Product Owner | D-082 separately approved; Gate 1 exit approved — `COMPLETE (APPROVED)`; Gate 2 entry authorized for architecture/design documentation only | 2026-10-29 |
+
+**Current transition record (D-098, 2026-11-10):** Gate 0 and Gate 1 retain their historical
+approved status. Gate 2 remains historically unfinished and not accepted; Checkpoint 11 was accepted
+on 2026-11-13 under D-112 within its documented design/prototype scope. Former Gates 3–7 are not routine sequential prerequisites.
+The D-098 SDD workflow and independent retained controls govern future changes. Nothing in this
+transition grants production implementation, database, dependency, deployment, or CEAP access.
+
+**Prospective prototype exception (D-101):** Qualifying isolated, fictional, non-production
+prototype refinements follow the Prototype Exploration Exception in Engineering Governance §5.
+The D-101 exception made no gate transition; Checkpoint 11 was separately accepted on 2026-11-13
+under D-112 within its documented design/prototype scope. It grants no product implementation
+authorization. Existing D-098 product implementation and retained security, data-integrity, release,
+and operational controls remain in force.
+
+**Product Owner historical disposition instruction, recorded 2026-11-13:** The Product Owner explicitly retains Gate 2 as historically IN PROGRESS under D-098. Approval date was not separately supplied. CP11 remained unaccepted at the time of that instruction; CP12 and final Gate 2 review are not recorded complete; Q-007 and other applicable historical dispositions remain open. This instruction grants no waiver, Gate 2 closure or implementation authorization. Individual SDD and Registry decisions are recorded in `docs/specs/SDD_REGISTRY.md` §13 and do not change gate status.
+
+**CP11 acceptance, recorded 2026-11-13 (D-112):** The Product Owner separately accepted Checkpoint 11 within its documented design and prototype scope as representative design evidence under D-093, including the administrator appointment-review → permission-denial → unchanged-appointment journey. The prototype is illustrative and is not required to implement every approved SDD workflow; all applicable approved SDD requirements remain mandatory for implementation, verification and release unless formally changed or deferred through approved governance. Acceptance does not establish real authentication, MFA, authorization enforcement, persistence, full accessibility conformance, qualified specialist approval or production readiness. This supersedes the CP11-unaccepted portion of the preceding historical instruction while preserving its Gate 2 IN PROGRESS disposition. CP12 and final Gate 2 review remain not recorded complete; no implementation, Gate 2 closure, CP12 initiation, Git write or CEAP access is authorized.

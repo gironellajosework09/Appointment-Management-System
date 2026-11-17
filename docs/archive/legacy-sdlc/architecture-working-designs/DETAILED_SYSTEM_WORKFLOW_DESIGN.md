@@ -10,6 +10,11 @@
 
 > This is a workflow design proposal for continued Gate 2 work. It is not final architecture, policy approval, independent verification, Gate 2 exit, Gate 3 authorization, implementation authorization, or release approval.
 
+> **D-098 prospective process note (2026-11-10):** Gate 2 and Gates 3–7 status statements in this
+> draft are historical and do not govern future feature implementation. Routine future changes use
+> the SDD workflow in `docs/ENGINEERING_GOVERNANCE.md` §5. This notice does not approve this draft,
+> change its design decisions or open questions, or authorize implementation.
+
 ## 1. Purpose and scope
 
 This document describes end-to-end workflow behavior and decision boundaries for the independently installed commercial Appointment Management System. It refines the approved development-stage requirements into actor actions, logical responsibility, observable outcomes and safe exceptions. It uses the logical responsibilities and provisional directions in the provisionally accepted Component & Module Design v0.1; it does not define interfaces, schemas, data models, API contracts, algorithms or deployment technology.

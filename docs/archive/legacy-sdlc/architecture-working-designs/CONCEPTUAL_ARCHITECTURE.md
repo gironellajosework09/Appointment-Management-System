@@ -7,6 +7,11 @@
 | Authority | D-081 development-stage baseline; D-083/D-084 design constraints; D-085 provisional conceptual directions |
 | Owner | Product Owner |
 
+> **D-098 prospective process note (2026-11-10):** Gate 2 and Gates 3–7 status statements in this
+> draft are historical and do not govern future feature implementation. Routine future changes use
+> the SDD workflow in `docs/ENGINEERING_GOVERNANCE.md` §5. This notice does not approve this draft,
+> change its design decisions or open questions, or authorize implementation.
+
 ## 1. Status, authority, source baseline and non-approval boundaries
 
 Gate 1 is **COMPLETE (APPROVED)** under D-082. Gate 2 is **IN PROGRESS**, authorized for architecture/design documentation only; Gates 3–7 are **BLOCKED**. This draft grants **no additional approval**: it does not approve final architecture, a security mechanism, a deployment profile, implementation, a gate transition, or release.

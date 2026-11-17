@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="drawio" modified="2026-11-15T00:00:00.000Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="itakda-stack-flow" name="Technology stack and request flow">
+    <mxGraphModel dx="1600" dy="1050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1650" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="iTakda | Proposed technology stack and end-to-end request flow" style="text;html=1;fontSize=25;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1490" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Review illustration — preferred direction vs optional candidates. Not an approved dependency baseline or implementation authorization." style="text;html=1;fontSize=14;fontColor=#64748b;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="65" width="1520" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="browser_panel" value="BROWSER | Presentation and interaction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#94a3b8;strokeWidth=2;verticalAlign=top;spacingTop=15;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="40" y="125" width="385" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="server_panel" value="SERVER | PHP runtime + Laravel modular monolith" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#94a3b8;strokeWidth=2;verticalAlign=top;spacingTop=15;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="480" y="125" width="650" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="data_panel" value="DATA &amp;amp; INTEGRATION | Per-client boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#94a3b8;strokeWidth=2;verticalAlign=top;spacingTop=15;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="1185" y="125" width="405" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="user" value="Guest / account holder / authorized staff" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#60a5fa;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="75" y="195" width="315" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="html" value="HTML rendered by Blade (server-side template)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#60a5fa;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="75" y="285" width="315" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="style" value="Tailwind CSS | responsive styling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#60a5fa;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="75" y="375" width="315" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="alpine" value="Alpine.js (proposed) + focused vanilla JavaScript | UI behavior" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffedd5;strokeColor=#fb923c;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="75" y="455" width="315" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="browser_note" value="Browser sends HTTPS requests; displayed availability is advisory. Browser-side checks never replace server-side policy." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#94a3b8;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="75" y="575" width="315" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="routes" value="Laravel routes + middleware | CSRF, authentication, access boundaries" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e7ff;strokeColor=#818cf8;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="520" y="190" width="570" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="controllers" value="Controllers + request validation | parse request and validate input" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e7ff;strokeColor=#818cf8;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="520" y="290" width="570" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="domain" value="Application/domain services | authority, eligibility, scheduling, booking integrity, audit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e7ff;strokeColor=#818cf8;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="520" y="390" width="570" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="eloquent" value="Eloquent ORM + database transactions | authoritative checks and coherent writes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e7ff;strokeColor=#818cf8;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="520" y="505" width="570" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="blade" value="Blade view rendering | HTML response / established result" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#60a5fa;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="520" y="610" width="570" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="mariadb" value="MariaDB | independent database per client installation; physical schema unapproved" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#4ade80;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="315" width="310" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="email" value="Email delivery | provider/transport and recovery mechanism open" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#94a3b8;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="505" width="310" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="client_note" value="No shared cross-client appointment database. Hosting topology is not selected." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#94a3b8;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="195" width="310" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="1. HTTPS booking request" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#475569;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="user" target="routes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="2. Route / authorize" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#475569;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="routes" target="controllers">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="3. Validate / enforce rules" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#475569;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="controllers" target="domain">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="4. Final integrity boundary" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#475569;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="domain" target="eloquent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="5. SQL / transaction" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#475569;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="eloquent" target="mariadb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="6. Established outcome / errors" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#475569;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="domain" target="blade">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="7. HTML response" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#2563eb;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="blade" target="html">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="After committed success only" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=block;strokeColor=#64748b;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="domain" target="email">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tools_panel" value="DEVELOPMENT / BUILD TOOLS (not additional production application servers)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#94a3b8;strokeWidth=2;verticalAlign=top;spacingTop=15;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="40" y="725" width="1550" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="composer" value="Composer | PHP / Laravel dependency management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#94a3b8;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="75" y="785" width="435" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="vite" value="npm + Vite | build Tailwind CSS and browser JavaScript assets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#94a3b8;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="585" y="785" width="435" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="git" value="Git + GitHub + automated tests | collaboration and verification" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#94a3b8;strokeWidth=1.5;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1095" y="785" width="435" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="Key: Blue = presentation; Indigo = preferred Laravel backend direction; Green = preferred MariaDB persistence; Orange = proposed UI enhancement; Dashed = unresolved integration. Exact versions, Alpine.js adoption, email provider, hosting, Docker, Redis and queue choice remain open." style="rounded=1;whiteSpace=wrap;html=1;align=left;spacing=12;fillColor=#fff7ed;strokeColor=#fdba74;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="45" y="925" width="1540" height="85" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

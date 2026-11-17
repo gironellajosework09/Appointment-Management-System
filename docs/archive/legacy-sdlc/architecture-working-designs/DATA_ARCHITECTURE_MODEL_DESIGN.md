@@ -11,6 +11,11 @@
 
 > Logical design for review only. Every named entity below is a **logical candidate**, not an approved table, class, database schema, interface, enum, or implementation mechanism. This document does not accept Checkpoint 7 or approve Gate 2.
 
+> **D-098 prospective process note (2026-11-10):** Gate 2 and Gates 3–7 status statements in this
+> draft are historical and do not govern future feature implementation. Routine future changes use
+> the SDD workflow in `docs/ENGINEERING_GOVERNANCE.md` §5. This notice does not approve this draft,
+> change its design decisions or open questions, or authorize implementation.
+
 ## 1. Authority, scope, and reading convention
 
 The source baseline is Requirements Specification **v0.7** and Requirements Traceability **revision 1.0**, approved by D-081 for *development-stage design assumptions*, not representative stakeholder validation. The present traceability revision 1.1 is an administrative status reconciliation, not a second baseline. Gate 1 is complete under D-082; Gate 2 authorizes architecture/design documentation only. D-083/D-084 constrain both hosting-ownership models and one standardized supported deployment profile *in principle*; D-085's modular-monolith and other conceptual directions remain provisional. Component & Module Design v0.1 and Detailed System Workflow Design v0.1 are provisionally accepted for continued Gate 2 work under D-086 and D-087, respectively, not approved final architecture. References to their logical responsibilities and `WF-*` identifiers below inherit those limitations.

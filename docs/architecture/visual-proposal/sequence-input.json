@@ -1,0 +1,25 @@
+{
+  "title": "Booking transaction — proposed logical sequence",
+  "participants": [
+    {"id":"customer","label":"Guest / staff"},
+    {"id":"ui","label":"Application"},
+    {"id":"boundary","label":"Final integrity"},
+    {"id":"store","label":"Client database"},
+    {"id":"email","label":"Email delivery"}
+  ],
+  "messages": [
+    {"from":"customer","to":"ui","label":"Choose displayed availability; submit intent"},
+    {"note":"Displayed availability is advisory, not a reservation.","over":"ui"},
+    {"from":"ui","to":"boundary","label":"Check authority and current state / effective policy"},
+    {"from":"boundary","to":"store","label":"Evaluate capacity, resources and duplicate policy"},
+    {"from":"store","to":"boundary","label":"Current authoritative information","return":true},
+    {"note":"On success: appointment, capacity effects and required audit must agree atomically. Mechanism open.","over":"boundary"},
+    {"from":"boundary","to":"store","label":"Candidate: commit coherent accepted outcome"},
+    {"from":"store","to":"boundary","label":"Established committed result, or uncertainty","return":true},
+    {"from":"boundary","to":"ui","label":"Established result or unknown","return":true},
+    {"from":"ui","to":"customer","label":"Confirm only established success","return":true},
+    {"note":"Known rejection: no partial effects; rejected reschedule preserves original. Unknown: reconcile same intent before retry; no false confirmation.","over":"boundary"},
+    {"from":"ui","to":"email","label":"After established success: permitted notice","async":true},
+    {"note":"Delivery failure does not reverse or repeat the booking. Notice persistence and transport are open.","over":"email"}
+  ]
+}

@@ -2,13 +2,15 @@
 
 | Field | Value |
 |---|---|
-| Document status | APPROVED DEVELOPMENT-STAGE BASELINE — D-081, 2026-10-29; not representative validation |
+| Document status | HISTORICAL APPROVED DEVELOPMENT-STAGE BASELINE — D-081, 2026-10-29; superseded for current design by v0.8 under D-094/D-095 |
 | Gate | Gate 1 (Requirements Discovery) — COMPLETE (APPROVED); Gate 2 documentation authorized |
 | Document date | 2026-10-28 |
 | Revision | 0.7 (2026-10-29 — D-067–D-075 refinements; exact baseline approved under D-081) |
 | Owner | Product Owner |
 
-This exact revision incorporates the Product Owner's approved Gate 1 directions
+This exact revision is preserved as the D-081 historical baseline. Its current effective
+successor for development-stage design is Requirements Specification v0.8 in
+`REQUIREMENTS-SPECIFICATION-v0.8.md`, read with this unchanged v0.7 text. This exact revision incorporates the Product Owner's approved Gate 1 directions
 (D-041–D-053; D-056–D-075) and is approved as a bounded development-stage baseline
 under D-077/D-081. FR-009 and FR-011 remain `DEFERRED` by D-042. The active baseline
 is approved for design assumptions only; it is not `VALIDATED` stakeholder evidence,

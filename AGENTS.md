@@ -2,134 +2,109 @@
 
 | Field | Value |
 |---|---|
-| Document status | **Adopted** by Product Owner decision D-039 as the project's agent entry point. The effective date is recorded once, in `docs/decisions/DECISION_REGISTER.md` (D-039), and is deliberately not duplicated here. |
-| Revision | 1.0 |
+| Status | ADOPTED — revision 1.1 approved by the Product Owner as the current agent entry point in this chat; recorded 2026-11-11. Approval date was not separately supplied. |
+| Revision | 1.3 — effective requirements/traceability navigation correction; revisions 1.1–1.2 preserved |
 | Owner | Product Owner |
-| Supersedes | The previous `AGENTS.md` (18 sections, numbered 0–17), whose engineering content was already recorded in the approved governance documents. Its lineage note is preserved in `docs/evidence/GATE-0-EVIDENCE.md` §7. Nothing in the previous file is re-approved by this replacement, and nothing is withdrawn from the approved governance. |
+| Adoption record | `docs/SDD_TRANSITION.md` records the bounded adoption and organization authorization. No new Decision Register ID is assigned. |
+| Lineage | D-039 adopted the prior agent entry point. This revision preserves that approval and does not adopt earlier superseded content. The lineage record remains in `docs/evidence/GATE-0-EVIDENCE.md` §7. |
+| Status correction record | Product Owner authorized limited corrections in the Gate 2 Documentation Consolidation decision; recorded 2026-11-12. Approval date not separately supplied. Permissions and governance are unchanged. |
+| Baseline navigation record | Updated 2026-11-12 to identify approved Requirements v0.9 and Traceability revision 1.3 as effective, preserving prior versions and approval history. |
 
-## 1. Purpose and authority
+## 1. Purpose
 
-This file is the concise entry point for AI agents and other automated contributors working on
-the Appointment Management System.
+Guide OpenCode, Hermes, and other AI coding agents working on iTakda, the Appointment Management System.
 
-It directs contributors to the project's approved governance, decisions, requirements, and
-technical documents. It does not independently approve requirements, architecture,
-implementation, releases, or gate transitions.
+This file directs agents to applicable project records. Product Owner authority, approvals, and authorization remain governed by `docs/ENGINEERING_GOVERNANCE.md` and recorded decisions. This file grants no independent implementation or release authority.
 
-The Product Owner retains the approval authority defined in the approved project governance.
+Routine product changes follow SDD under D-098. Qualifying fictional prototype refinements follow the bounded D-101 exception in Engineering Governance §5.
 
-Engineering work follows the efficiency principle approved as D-054 and recorded in
-`docs/ENGINEERING_GOVERNANCE.md` §2. This file references that principle and does not
-restate or extend it.
+## 2. Before You Start
 
-## 2. Required reading
+Read in this order, using task relevance to keep the work efficient. This sequence does not waive mandatory reading established by approved governance.
 
-Before performing project work, consult the applicable authoritative documents:
+1. **Instructions and current context**
+   - Read this file and the current task; inspect the branch and working-tree status.
+   - Consult applicable Engineering Governance controls and Decision Register entries.
+   - During substantial work, consult `MEMORY.md` when present for context and handoff notes. Consult `TASKS.md` when present for task status and dependencies.
+   - Use `docs/SDD_TRANSITION.md` when present to navigate the documentation transition.
 
-- `docs/PROJECT_CHARTER.md` — product purpose, scope, roles, and project authority.
-- `docs/ENGINEERING_GOVERNANCE.md` — engineering controls, authorization, change management,
-  and stop conditions.
-- `docs/GATE_REGISTER.md` — current gate status, prerequisites, blockers, and transition
-  authorization.
-- `docs/decisions/DECISION_REGISTER.md` — recorded decisions, approvals, proposals, and
-  unresolved questions.
+2. **Requirements and task-specific references**
+   - Consult the applicable Project Charter content, distinguishing approved directions from unapproved revisions.
+   - Read the relevant feature specification in `docs/specs/`, its approval and scope, and its referenced requirements and decisions. Use `docs/specs/TEMPLATE.md` when drafting a specification.
+   - The effective requirements are `docs/requirements/REQUIREMENTS-SPECIFICATION-v0.9.md`, read with preserved v0.8 and unchanged v0.7 in `docs/requirements/REQUIREMENTS_SPECIFICATION.md`; v0.9 replaces only NFR-003 and adds AC-027–AC-029. Read traceability revision 1.3 with preserved revision 1.2 and carried-forward revision 1.0; revision 1.1 contains administrative commentary.
+   - Consult `docs/requirements/REQUIREMENTS_GOVERNANCE.md` when recording or changing requirements or traceability.
+   - Read the engineering references relevant to the task:
 
-Read additional approved requirements, architecture, security, testing, or delivery documents
-when relevant to the task.
+| Concern | Reference |
+|---|---|
+| Product scope | `docs/product/PRD.md` |
+| Technical requirements | `docs/technical/TRD.md` |
+| Visual design | `docs/design/DESIGN_SYSTEM.md` |
+| Journeys and interactions | `docs/design/APP_FLOW_UI_UX.md` |
+| Architecture | `docs/architecture/ARCHITECTURE.md` |
+| Data design | `docs/architecture/BACKEND_SCHEMA.md` |
+| Security and privacy | `docs/security/SECURITY.md` |
+| Coding conventions | `docs/engineering/CODE_STYLE.md` |
+| Testing | `docs/engineering/TESTING.md` |
+| Implementation planning | `docs/plans/IMPLEMENTATION_PLAN.md` |
 
-Where accessible and relevant, consult approved or adopted reusable engineering knowledge from
-the project's governed Obsidian Software Engineering Knowledge Base at gate entry or the start of
-substantial authorized work. It is guidance only and never overrides repository decisions,
-requirements, evidence, approvals, or gate status. During authorized OpenCode work, follow the
-conditional knowledge-capture workflow in `docs/ENGINEERING_GOVERNANCE.md` §5; report any draft
-created, or that none was warranted.
+These ten references have individually recorded acceptance scopes, including provisional development-stage guidance. Consult each reference's current status and limitations; reference acceptance does not adopt its candidate tools or mechanisms, override approved requirements/decisions, or approve P-009.
 
-`docs/evidence/GATE-0-EVIDENCE.md` is historical Gate 0 evidence and the home of the project's
-lineage note. It is not a current status source.
+3. **History and supporting evidence**
+   - Consult `docs/GATE_REGISTER.md`, checkpoint records, and evidence when needed to establish provenance, applicable approvals, limitations, or supersession.
+   - These records preserve history and applicable approvals. They do not reinstate sequential gate progression under D-098.
+   - Gate 0 evidence preserves historical evidence and lineage; it is not the current status source.
 
-A document's presence in the repository does not, by itself, establish that its contents are
-approved.
+Where accessible and relevant, consult approved or adopted knowledge from the governed Obsidian Software Engineering Knowledge Base at the start of substantial authorized work. Follow Engineering Governance §5's conditional knowledge-capture process during authorized OpenCode work; report any draft created or that none was warranted.
 
-## Learning-First Engineering Collaboration
+## 3. General Rules
 
-OpenCode supports the Product Owner's engineering growth while completing authorized work:
+When delegation is permitted by the active session, use architect-review for critical architecture, security-design, and high-risk SDD reviews; use the project Luna Low exploration agent for simple file location, repository exploration, and summaries. Terra coordinates and performs editing only when explicitly authorized. Delegation is optional and must respect project governance, available tools, and session-level restrictions. Do not claim automatic routing or model selection without observed evidence.
 
-- Explain significant engineering concepts in clear, beginner-friendly language.
-- Explain why an approach is chosen, including important alternatives and trade-offs.
-- Connect explanations to the actual Appointment Management System work.
-- Define unfamiliar terminology when first introduced.
-- Distinguish established facts, project decisions, assumptions, and recommendations.
-- Identify meaningful learning opportunities during requirements, architecture, implementation,
-  testing, security, and deployment.
-- When useful, provide a small practical example, a common mistake, and one optional self-check
-  question.
-- Encourage understanding and independent problem-solving rather than blind acceptance of
-  AI-generated work.
-- Keep explanations concise by default; expand when the Product Owner requests deeper teaching.
-- Do not interrupt every routine task with lessons or quizzes.
+- Work within the applicable task authorization and Engineering Governance §5. Ordinary and high-risk product changes require their recorded approvals. Use standing authorization only within the exact cosmetic or D-101 prototype boundaries.
+- D-098 does not complete Gate 2 or accept Checkpoint 11. D-101 permits qualifying routine fictional prototype refinements without a separate specification or approval cycle for each refinement; its other exclusions remain effective.
+- Do not infer permission for file edits, branch changes, dependency installation, configuration changes, database operations, external services, deployment, staging, commits, pushes, or merges merely because they would help.
+- Preserve unrelated changes and untracked work. Follow D-054's efficiency principle in Engineering Governance §2.
+- Report actual changes, verification results, failures, and material limitations. Implementation, verification, acceptance, and approval are distinct claims.
 
-Meaningful reusable learning is captured only through the conditional, guarded Obsidian workflow
-defined in `docs/ENGINEERING_GOVERNANCE.md` §5. Existing notes remain governed drafts unless
-separately approved; repository records remain authoritative for project-specific decisions.
+When present, update `MEMORY.md` within the authorized scope at meaningful milestones or handoffs. Record concise, verified progress, important context, blockers, and next steps with source links. Keep task lists and task statuses in `TASKS.md`; avoid duplicating them in memory. Neither file establishes approval or replaces authoritative records.
 
-## 3. Conflicts and uncertainty
+## 4. Code Guidelines
 
-Do not silently resolve contradictions between project documents, infer missing approvals, or
-treat a proposal as an approved decision.
+- Keep changes scoped to the authorized outcome. Inspect affected callers and related behavior before changing shared code.
+- Follow established conventions in the authorized stack and surrounding code. Keep responsibilities clear, names understandable, and changes maintainable and testable.
+- Prefer existing project patterns and the smallest sufficient solution. Avoid unnecessary abstractions, speculative features, and unrelated refactoring.
+- Do not invent business rules, permissions, policy values, database entities, constraints, or schema assumptions. Raise material unresolved choices before implementing affected behavior.
+- Treat preferred technology directions and provisional designs according to their recorded status. They do not select exact versions or authorize dependencies.
+- Consult `CODE_STYLE.md` and `TESTING.md` for relevant guidance without promoting their proposals to approved standards. Verify authorized changes against applicable specifications, acceptance criteria, requirements, and governance.
 
-When records conflict, an approval is missing, or authority is unclear:
+## 5. Security and Best Practices
 
-1. Stop the affected action.
-2. Identify the conflicting records and the practical impact.
-3. Report the issue to the Product Owner.
-4. Await the required decision or written authorization before proceeding.
+Protect credentials, secrets, personal data, and client information. Do not expose them in prompts, reports, logs, source control, or test fixtures. Use authorized environments and appropriate fictional or synthetic test data.
 
-Do not invent a precedence rule that the approved governance has not established.
+Keep iTakda independent of CEAP. CEAP production systems, databases, deployments, and live data are off-limits. Historical non-production CEAP material may be consulted only when explicitly authorized and relevant; its implementation and business rules are not automatically iTakda requirements.
 
-## 4. Authorization and change boundaries
+Follow applicable approved security, privacy, authorization, data-integrity, accessibility, and testing obligations. Consult Engineering Governance and the relevant requirements and decisions; `SECURITY.md` is a provisionally accepted design reference with unresolved mechanisms and qualified-review dependencies, not completed security verification.
 
-Perform only work within the scope of the applicable approval and written authorization.
+Pause the affected action if it would exceed authorization, weaken a control, introduce an unapproved dependency or service, or conflict with approved requirements. Applicable specialist reviews and separate release/deployment approvals remain required independently of gate numbering.
 
-Do not infer permission to edit files, create or change branches, commit, push, install
-dependencies, alter configuration, access or modify databases, deploy, or change external
-services merely because those actions would help complete a task.
+## 6. Useful Commands
 
-Preserve unrelated changes and uncommitted work. Report the exact scope of changes and
-verification results honestly. Never claim that an action or test succeeded unless it was
-actually performed and its result was observed.
+The following commands have been used in this repository. Use an available equivalent if a tool is absent.
 
-## 5. Product separation
+```powershell
+git status --short --branch
+git diff --stat
+rg --files
+rg -n "search term" docs
+```
 
-The Appointment Management System is a separate product.
+Inspect the actual project setup before choosing build or test commands. Do not assume Laravel, Composer, npm scripts, a test runner, or browser tools are installed or configured. Add application commands here only after the foundation and relevant scripts exist and the commands have been verified.
 
-Do not modify, merge, or treat the CEAP Appointment System as its foundation. Only optional,
-non-production historical CEAP reference material may be consulted, when explicitly authorized
-and relevant, for lessons learned and candidate workflows. Production CEAP systems, databases,
-deployments, and live data remain off-limits; CEAP implementation and business rules are not
-automatically requirements for this product.
+Run commands within the authorized scope and report observed verification results accurately.
 
-## 6. Security and stop conditions
+## 7. Need Help?
 
-Protect credentials, personal data, and client information. Do not expose secrets in reports,
-logs, prompts, or version control.
+When records conflict, approval is missing, or authority is unclear, stop the affected action. Identify the exact records, explain the practical impact, and seek the required Product Owner decision. Do not silently choose a precedence rule or convert a proposal into an approved instruction. Continue independent authorized work where possible.
 
-Pause and report before proceeding when an action would exceed authorization, weaken a security
-control, introduce an unapproved dependency or external service, or conflict with an approved
-requirement or governance rule.
-
-## 7. Source of truth
-
-Use the applicable approved project records for current decisions, requirements, and gate
-status. This file is an entry point, not a duplicate status register.
-
-If this file becomes inconsistent with approved governance or project records, report the
-discrepancy and follow the approved conflict-resolution process. Do not silently choose one
-interpretation.
-
----
-
-## 8. Approval
-
-| Approver | Role | Decision | Date |
-|---|---|---|---|
-| Product Owner | Product Owner | Adopted this file as the project's agent entry point (D-039) | Recorded in `DECISION_REGISTER.md` D-039; not restated here |
+Explain significant engineering choices in clear, beginner-friendly language, including their reasons and material trade-offs. Distinguish facts, approved decisions, assumptions, and recommendations. Use practical examples when useful; keep routine updates concise.
