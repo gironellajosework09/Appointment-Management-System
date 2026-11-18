@@ -1,5 +1,7 @@
 # CP12 Design-to-Requirements Integration Review
 
+> **Subsequent Product Owner disposition — D-121, recorded 2026-11-17:** The Product Owner accepted this alternative CP12 evidence solely for Gate 2 design traceability after personal review, acknowledging the unavailable F1–F17 report, fourteen unassessed findings and the documented evidence limitations. No missing finding is claimed resolved. Gate 2 was approved closed within those limits; the review outcome below is preserved as the earlier preparation status.
+
 **Review outcome: NOT READY FOR PRODUCT OWNER ACCEPTANCE. CP12 is not accepted.**
 
 This AI-assisted documentary review records a forward and reverse specification-level crosswalk for the 80 active identifiers and the two approved functional-requirement deferrals. AC-021 is covered by the approved v0.8 development-stage baseline; its retained DRAFT table label is historical preparation metadata superseded by the explicit approval disposition at v0.8 lines 25–36. The review does not establish implementation, verification, validation, specialist review, or acceptance. The source report for findings F1–F17 was unavailable; only the limited F5/F6/F11 facts independently supplied for this review are recorded below. Coverage counts are provisional documentary classifications and do not reconcile or supersede the unavailable source findings.

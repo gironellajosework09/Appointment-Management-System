@@ -5,6 +5,11 @@ chrome_chrome_url_fetcher_*/
 
 # Installed dependencies and generated output
 node_modules/
+/vendor/
+/storage/*
+!/storage/.gitignore
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
 .cache/
 dist/
 build/
