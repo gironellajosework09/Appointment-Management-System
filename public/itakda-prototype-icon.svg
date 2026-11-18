@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 491.86 478.76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 17px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+      }
+
+      .cls-4 {
+        fill: #4944a8;
+      }
+
+      .cls-5 {
+        fill: #252264;
+      }
+
+      .cls-6 {
+        fill: #e97932;
+      }
+
+      .cls-7 {
+        fill: #d7d4f1;
+      }
+
+      .cls-3 {
+        stroke: #e97932;
+        stroke-width: 23px;
+      }
+
+      .cls-8 {
+        fill: #e9e7f8;
+        stroke: #d6d2f0;
+        stroke-miterlimit: 4;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="calendar-icon">
+    <path id="calendar-body" class="cls-5" d="m81.36,108.5c1.33-26.67,17-42.67,47-48l186-23c45.33-5.33,72.33,13.67,81,57l27,234c5.33,42.67-14,69-58,79l-229,38c-40.67,6.67-64.33-11-71-53l-30-216c-4-34.67,11.67-57.33,47-68Z"/>
+    <path id="calendar-top-highlight" class="cls-4" d="m82.36,108.5c2-24,17.33-38.67,46-44l185-23c40.67-4.67,66.33,12.67,77,52l9,58L42.36,199.5l-7-25c-3.33-33.33,12.33-55.33,47-66Z"/>
+    <path id="calendar-face" class="cls-1" d="m82.36,183.5c-2.67-11.33,5.67-18.33,25-21l248-36c22-3.33,34.33,5.67,37,27l20,168c3.33,22.67-6.33,37.33-29,44l-245,43c-26,4-40.67-5-44-27l-12-198Z"/>
+    <rect class="cls-7" x="122.36" y="222.5" width="64" height="64" rx="15" ry="15" transform="translate(-33.92 23.96) rotate(-8)"/>
+    <rect class="cls-7" x="199.36" y="210.5" width="64" height="64" rx="15" ry="15" transform="translate(-31.5 34.56) rotate(-8)"/>
+    <rect class="cls-7" x="136.36" y="297.5" width="64" height="64" rx="15" ry="15" transform="translate(-44.22 26.64) rotate(-8)"/>
+    <rect class="cls-7" x="213.36" y="285.5" width="64" height="64" rx="15" ry="15" transform="translate(-41.8 37.24) rotate(-8)"/>
+    <rect id="selected-date" class="cls-6" x="279.36" y="190.5" width="112" height="110" rx="18" ry="18" transform="translate(-30.9 49.06) rotate(-8)"/>
+    <path id="checkmark" class="cls-2" d="m301.36,242.5l20,17,38-46"/>
+    <path class="cls-8" d="m155.14,41.68h0c12.42-2.64,24.64,5.29,27.28,17.72l13.1,61.62c2.64,12.42-5.29,24.64-17.72,27.28h0c-12.42,2.64-24.64-5.29-27.28-17.72l-13.1-61.62c-2.64-12.42,5.29-24.64,17.72-27.28Z"/>
+    <path class="cls-8" d="m296.14,21.68h0c12.42-2.64,24.64,5.29,27.28,17.72l13.1,61.62c2.64,12.42-5.29,24.64-17.72,27.28h0c-12.42,2.64-24.64-5.29-27.28-17.72l-13.1-61.62c-2.64-12.42,5.29-24.64,17.72-27.28Z"/>
+  </g>
+  <g id="orange-swoosh-and-sparks">
+    <g id="three-orange-calendar-rays">
+      <path id="orange-ray-1" class="cls-3" d="m398.36,52.5l13-41"/>
+      <path id="orange-ray-2" class="cls-3" d="m432.36,72.5l31-26"/>
+      <path id="orange-ray-3" class="cls-3" d="m448.36,110.5l32-9"/>
+    </g>
+    <path id="swoosh" class="cls-6" d="m41.36,289.5c-53,63-30,144,72,154,108,12,243-38,321-121-49,104-200,166-334,155C-.64,468.5-34.64,385.5,41.36,289.5Z"/>
+  </g>
+</svg>

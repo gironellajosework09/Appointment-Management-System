@@ -2,5 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', static fn () => response('iTakda local foundation is ready.', 200)
-    ->header('Content-Type', 'text/plain; charset=UTF-8'));
+Route::get('/', static fn () => response()->view('welcome', ['month' => now(config('app.timezone'))->startOfMonth()]));
