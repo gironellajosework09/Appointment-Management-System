@@ -2,11 +2,29 @@
 
 | Field | Value |
 |---|---|
-| Document status | Draft — pending product-owner approval |
+| Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
-| Document date | 2026-10-15 |
-| Revision | 0.2 (revised) |
+| Document date | 2026-10-22 |
+| Revision | 0.6 (Gate 0 closure recorded) |
 | Owner | Product Owner |
+
+> **Revision 0.6 (2026-10-22) — Gate 0 closure recorded.** §23 updated to record
+> that Gate 0 was closed on 2026-10-22. Neither the approval nor the closure
+> authorizes Gate 1 or any implementation.
+
+> **Revision 0.5 (2026-10-22) — P-001 approval recorded.** Document status updated
+> to record product-owner approval of this document as a Gate 0 baseline artifact
+> on 2026-10-22. Gate 0 remains `IN PROGRESS`; no gate transition was approved.
+
+> **Revision 0.4 (2026-10-22) — final Gate 0 correction pass.** Clarified §6,
+> §20, and §22: accepting `AGENTS.md` as a P-001 artifact is separate from
+> adopting its instructions, and adoption is not a P-001 prerequisite. No status,
+> approval, or gate state was changed in this document by this pass.
+
+> **Revision 0.3 (2026-10-22) — Gate 0 correction pass.** Corrected the Gate 0
+> evidence artifact reference (§6), the `AGENTS.md` status (§20, §22), the
+> security-exception record format (§13), and the approval-record requirement
+> (§18). No status, approval, or gate state was changed by this pass.
 
 This document defines how the product is engineered and how work is authorized,
 reviewed, and approved. It is written so a developer new to the project — working
@@ -94,7 +112,7 @@ entry/exit criteria, and evidence.
 | Gate 1 | Requirements Discovery | Analysis / documentation |
 | Gate 2 | Architecture & Design | Design |
 | Gate 3 | Security & Data Integrity Design Review | Review |
-| Gate 4 | Implementation | Build (authorized scope only) |
+| Gate 4 | Authorized Implementation | Build (authorized scope only) |
 | Gate 5 | Verification & Testing | Test |
 | Gate 6 | Release Readiness & Deployment Approval | Approval |
 | Gate 7 | Production Operations & Maintenance | Ongoing operations |
@@ -116,7 +134,7 @@ Rules:
 
 | Gate | Required artifacts / evidence |
 |---|---|
-| Gate 0 | Project Charter; Engineering Governance; Decision Register; Gate Register |
+| Gate 0 | Project Charter; Engineering Governance; Decision Register; Gate Register; `AGENTS.md` (present in this repository and part of the P-001 artifact set; its instructions are **not adopted** — see §20); and the separate Gate 0 evidence record at `docs/evidence/GATE-0-EVIDENCE.md`, which states what was inspected, the period covered, and what cannot be established. That evidence record is a Gate 0 exit requirement outside the five-artifact P-001 scope |
 | Gate 1 | Requirements specification; validated target customer; user journeys; business rules; confirmed user/authentication model; validated assumptions; risk register; measurable acceptance criteria |
 | Gate 2 | Architecture description; data model; interface/API design; configuration and per-installation strategy; traceability to requirements |
 | Gate 3 | Security review record; data-integrity design record; threat model; security exception register |
@@ -221,7 +239,9 @@ evidence. Overstating completion is a governance violation.
 - Any exception to a security control requires documented **justification,
   impact, scope, approving authority, and review or expiry conditions**.
 - Exceptions are approved only by the product owner and recorded in the Decision
-  Register and the Gate 3 exception register.
+  Register as `SE-###` entries carrying the authorization and rationale, with
+  detailed scope, controls, owner, expiry or review condition, and closure
+  recorded in the gate-specific evidence (Gate 3 exception register).
 - An exception must **never** bypass mandatory safety, legal, or data-protection
   requirements.
 - Exceptions expire or are reviewed by their stated condition; they do not become
@@ -289,7 +309,9 @@ evidence. Overstating completion is a governance violation.
 
 - Only the product owner approves scope, architecture, security exceptions,
   releases, and gate transitions.
-- Approval must be explicit and recorded (approver, artifact, date).
+- Approval must be explicit and recorded (approver, artifact, date). Where the
+  date of an owner confirmation was not captured, the record must say so; approval
+  dates are never inferred, backdated, or taken from file timestamps.
 - Silent or implied approval is not valid.
 - An AI tool's statement of completion is not approval.
 - Unresolved decisions stay visibly unresolved and are never marked approved.
@@ -317,16 +339,24 @@ Gate-specific criteria are in `docs/GATE_REGISTER.md`.
 
 ## 20. Status of CEAP-Specific Instructions
 
-- The repository's existing `AGENTS.md` (and any other existing production
-  instructions) governs a **separate, already-deployed CEAP system**. It must
-  **not** be modified by this product's work.
+- The separate, already-deployed CEAP system's own instructions are outside this
+  repository and outside this product's scope; they must **not** be modified by
+  this product's work. No such instructions are present here.
+- `AGENTS.md` exists in this repository and is part of the P-001 artifact set, but
+  its instructions are **not adopted**. Accepting it as an artifact is separate
+  from adopting its instructions, which this governance does not treat as in
+  force; adoption is a separate product-owner decision and is **not** a
+  prerequisite for P-001 approval.
 - CEAP-specific implementation rules do **not** automatically define this
-  product's architecture, database, or standards. CEAP is a behavior reference
-  only.
+  product's architecture, database, or standards. CEAP is a historical behavior
+  reference only; its behavior, schema, data, and constraints are **not**
+  automatically commercial requirements.
+- **Only explicitly approved commercial requirements and decisions establish this
+  product's requirements.** Copied CEAP source, if any, is a reference or
+  experimental copy and is **not** authoritative for commercial requirements.
 - The commercial product needs its **own clearly scoped instructions and
-  standards**. These must be created only when a separate task authorizes it;
+  standards**. These must be created only when a separate task authorizes them;
   this governance is the placeholder until then.
-- No CEAP source copied into this project is authoritative for the product.
 
 ---
 
@@ -351,15 +381,21 @@ Work must stop and be escalated to the product owner when:
 - `docs/PROJECT_CHARTER.md` — product purpose, scope, authority.
 - `docs/decisions/DECISION_REGISTER.md` — decisions and status.
 - `docs/GATE_REGISTER.md` — gate status, criteria, and evidence.
-- Existing `AGENTS.md` — governs the separate CEAP system; not modified here.
+- `AGENTS.md` — present in this repository and part of the P-001 artifact set. Its
+  instructions are **not adopted** and are not treated as governing this product;
+  accepting the artifact is separate from adopting its instructions, and adoption
+  is a separate decision that is **not** a P-001 or Gate 0 prerequisite. No
+  production CEAP instructions are modified here.
 
 ---
 
 ## 23. Approval
 
-This document is **DRAFT and NOT APPROVED**. It takes effect only on explicit
-product-owner approval.
+This document was approved by the product owner as a Gate 0 baseline artifact
+under P-001 on 2026-10-22. That approval did not itself close Gate 0; Gate 0 was
+closed on 2026-10-22 (see `docs/GATE_REGISTER.md` §3). Neither the approval nor the
+closure authorizes Gate 1 or any implementation.
 
 | Approver | Role | Decision | Date |
 |---|---|---|---|
-| — | Product Owner | Pending | — |
+| Product Owner | Product Owner | Approved as a Gate 0 baseline artifact (P-001) | 2026-10-22 |

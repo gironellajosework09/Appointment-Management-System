@@ -4,11 +4,29 @@
 
 | Field | Value |
 |---|---|
-| Document status | Draft — pending product-owner approval |
+| Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
-| Document date | 2026-10-15 |
-| Revision | 0.2 (revised) |
+| Document date | 2026-10-22 |
+| Revision | 0.6 (Gate 0 closure recorded) |
 | Owner | Product Owner |
+
+> **Revision 0.6 (2026-10-22) — Gate 0 closure recorded.** §17 updated to record
+> that Gate 0 was closed on 2026-10-22 once the remaining exit criteria were met. No
+> Gate 1 approval and no implementation authorization is recorded.
+
+> **Revision 0.5 (2026-10-22) — P-001 approval recorded.** Document status updated
+> to record product-owner approval of this charter as a Gate 0 baseline artifact on
+> 2026-10-22. Gate 0 remains `IN PROGRESS`; no gate transition was approved.
+
+> **Revision 0.4 (2026-10-22) — final Gate 0 correction pass.** Clarified §7.3:
+> accepting `AGENTS.md` as a P-001 artifact is separate from adopting its
+> instructions, and adoption is not a P-001 prerequisite. No status, approval, or
+> gate state was changed in this document by this pass.
+
+> **Revision 0.3 (2026-10-22) — Gate 0 correction pass.** Corrected the
+> planning-baseline reference (§0), the S-1/S-2 target column (§4), the Docker
+> statement (§9), the `AGENTS.md` wording (§7.3), and the security-exception
+> reference (§14). No status, approval, or gate state was changed by this pass.
 
 This charter describes the initiation baseline for a **new, independent
 commercial Appointment Management System**. It is a planning artifact only and
@@ -22,7 +40,7 @@ Every material statement is labelled with one of the following:
 
 | Label | Meaning |
 |---|---|
-| **Confirmed** | Explicitly provided in the approved planning baseline. In force. |
+| **Confirmed** | Explicitly provided in the product-owner-provided planning baseline. Treated as in force for planning purposes; approval of this charter as an artifact is tracked separately (P-001). |
 | **Proposal** | Suggested wording or direction; requires product-owner approval before it is in force. |
 | **Assumption** | Believed true but not yet validated; must be tested or falsified. |
 | **Unresolved** | Not decided; to be resolved at a named gate. Must not be treated as settled. |
@@ -97,8 +115,8 @@ measurable target agreed in Gate 1 before they can be verified.
 
 | ID | Criterion | Verification approach | Target |
 |---|---|---|---|
-| S-1 | A new client installation can be created and configured without editing core scheduling logic. | Installation/configuration walkthrough on a clean environment. | Verifiable now |
-| S-2 | Each installation uses its own database and cannot read or write another installation's or CEAP's data. | Architecture + configuration review; isolation tests. | Verifiable now |
+| S-1 | A new client installation can be created and configured without editing core scheduling logic. | Installation/configuration walkthrough on a clean environment, after implementation and testing in an isolated, authorized environment. | *[target TBD]* |
+| S-2 | Each installation uses its own database and cannot read or write another installation's or CEAP's data. | Architecture + configuration review; isolation tests, after implementation in an isolated, authorized environment. | *[target TBD]* |
 | S-3 | Under concurrent booking attempts, capacity and duplicate-booking rules are never violated. | Automated concurrency tests. | *[target TBD]* |
 | S-4 | All state-changing operations are authenticated, authorized, and server-side validated. | Security test suite; review. | *[target TBD]* |
 | S-5 | No known high-severity security findings remain at release. | Security review record; defect log. | *[target TBD]* |
@@ -107,8 +125,9 @@ measurable target agreed in Gate 1 before they can be verified.
 | S-8 | Architecture, decisions, and changes are documented. | Artifact review. | Verifiable now |
 | S-9 | The production CEAP application, database, and deployment are never affected. | Scope/isolation review across all gates. | Verifiable now |
 
-Criteria with *[target TBD]* are **provisional** until a target is agreed.
-Further criteria may be added in Gate 1.
+Criteria whose target reads *[target TBD]* are **provisional** until a target is
+agreed. S-1, S-2, S-6, and S-7 currently carry no measurable target; S-8 and S-9
+are verifiable without a numeric target. Further criteria may be added in Gate 1.
 
 ---
 
@@ -182,7 +201,12 @@ environment, established only when separately authorized.
 - Any CEAP source copied into this project is a **separate reference or
   experimental copy**, not the authoritative foundation of the commercial
   product.
-- Existing production instructions (including `AGENTS.md`) must not be modified.
+- Instructions belonging to the separate production CEAP system are outside this
+  repository and must not be modified.
+- This repository's `AGENTS.md` is **not** production CEAP instructions. Its
+  instructions are **not adopted**. It remains part of the P-001 artifact set:
+  accepting it as an artifact is separate from adopting its instructions, and
+  adoption is **not** a prerequisite for P-001 approval.
 
 ### 7.4 Stop rule
 
@@ -224,13 +248,20 @@ requirements discovery (see Q-002 – Q-004, Q-009, Q-018).
 - MariaDB
 - Git and GitHub
 - Automated testing
-- Docker **only if** its benefits justify the added complexity
 
 These are the **currently preferred** technologies, not permission to install
 dependencies or begin implementation. Additional frameworks, infrastructure,
-services, or technologies must have a **documented purpose and justification**.
-Exact versions and final technical decisions are resolved before implementation
-and release respectively (see Q-007, Q-008; decisions D-022, D-031, D-032).
+services, or technologies must have a **documented purpose and justification**
+and **appropriate product-owner approval**.
+Exact dependency and runtime versions are finalized at Gate 4 (D-031); gates
+before Gate 4 record provisional compatibility constraints only. Deployment and
+hosting decisions are resolved at Gate 2 and Gate 6 (Q-008).
+
+**Docker is not part of the confirmed technology direction.** It remains
+conditional: it may be adopted only if its benefits justify the added complexity,
+with a documented purpose and justification and appropriate product-owner
+approval. D-023 is the controlling approved decision; the adoption criteria in
+D-032 remain provisional and unconfirmed (P-006).
 
 Compatibility, version selection, dependency management, testing, and deployment
 decisions that must be settled before implementation are tracked in the Decision
@@ -325,8 +356,10 @@ charter.
 **Confirmed.** Any security exception must record: documented justification,
 impact, scope, approving authority, and review or expiry conditions. An exception
 must **never** be used to bypass mandatory safety, legal, or data-protection
-requirements. Exceptions are approved only by the product owner and are logged in
-the Decision Register and the Gate 3 exception register.
+requirements. Exceptions are approved only by the product owner and are recorded
+in the Decision Register as `SE-###` entries carrying the authorization and
+rationale, with detailed scope, controls, owner, expiry/review, and closure
+recorded in the gate-specific evidence (Gate 3 exception register).
 
 ---
 
@@ -363,10 +396,12 @@ Full identifiers and status are tracked in
 
 ## 17. Approval
 
-This charter is **DRAFT and NOT APPROVED**. Gate 0 cannot be considered complete
-until the product owner reviews and explicitly approves the Gate 0 deliverables
-(see `docs/GATE_REGISTER.md`).
+This charter was approved by the product owner as a Gate 0 baseline artifact under
+P-001 on 2026-10-22. That approval did not itself close Gate 0; Gate 0 was closed
+on 2026-10-22 once its remaining exit criteria were met (see
+`docs/GATE_REGISTER.md` §3). No Gate 1 approval and no implementation
+authorization is recorded.
 
 | Approver | Role | Decision | Date |
 |---|---|---|---|
-| — | Product Owner | Pending | — |
+| Product Owner | Product Owner | Approved as a Gate 0 baseline artifact (P-001) | 2026-10-22 |
