@@ -1,0 +1,37 @@
+/* Fictional record charts share the existing workspace surfaces and brand data hues. */
+.demo-metrics{margin:24px 0 0;padding:26px 30px;border-radius:14px;background:var(--white);box-shadow:var(--quiet-shadow)}
+.demo-metrics-head{display:flex;align-items:start;justify-content:space-between;gap:28px;margin-bottom:22px}
+.demo-metrics h2{margin:0;color:var(--navy);font-size:1.3rem;line-height:1.25}
+.demo-metrics-head p{max-width:42ch;margin:0;color:var(--muted);font-size:.875rem;line-height:1.5}
+.demo-metrics-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 26px;padding:16px 0;border-top:1px solid var(--quiet-line);border-bottom:1px solid var(--quiet-line)}
+.demo-metrics-summary>div{display:flex;flex-direction:column-reverse;gap:2px;min-width:0;padding:0 18px}
+.demo-metrics-summary>div:first-child{padding-left:0}
+.demo-metrics-summary>div+div{border-left:1px solid var(--quiet-line)}
+.demo-metrics-summary dt{color:var(--muted);font-size:.875rem;line-height:1.35}
+.demo-metrics-summary dd{margin:0;color:var(--navy);font-family:var(--heading);font-size:clamp(1.5rem,2.3vw,2rem);font-weight:800;font-variant-numeric:tabular-nums;line-height:1.1}
+.demo-metrics-body{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(250px,.85fr);gap:30px;align-items:start}
+.demo-metrics-body.single{display:block;max-width:640px}
+.demo-metrics figure{min-width:0;margin:0}
+.demo-metrics figcaption{margin:0 0 14px;color:var(--navy);font-weight:750}
+.demo-metrics-dates{padding-right:30px;border-right:1px solid var(--quiet-line)}
+.demo-metrics-date-bars{display:grid;grid-template-columns:repeat(var(--date-count),minmax(42px,1fr));gap:8px;align-items:end;min-height:174px;margin:0;padding:0 0 8px;list-style:none;overflow-x:auto;border-bottom:1px solid var(--quiet-line)}
+.demo-metrics-date-bars li{display:grid;grid-template-rows:24px 108px auto;justify-items:center;gap:6px;min-width:42px;color:var(--navy);font-variant-numeric:tabular-nums}
+.demo-metrics-date-bars li>strong{font-size:.875rem}
+.demo-metrics-date-bars li>span:last-child{font-size:.75rem;color:var(--muted);white-space:nowrap}
+.demo-metrics-date-track{display:flex;align-items:end;width:min(100%,32px);height:108px}
+.demo-metrics-date-bar{display:block;width:100%;min-height:12px;border-radius:5px 5px 0 0;background:var(--orange)}
+.demo-metrics-date-note{margin:10px 0 0;color:var(--muted);font-size:.8rem}
+.demo-metrics-bars{display:grid;gap:15px;margin:0;padding:0;list-style:none}
+.demo-metrics-bars li{display:grid;grid-template-columns:minmax(88px,130px) minmax(0,1fr) 3ch;align-items:center;gap:12px;font-variant-numeric:tabular-nums}
+.demo-metrics-bars li>span:first-child{font-size:.875rem;overflow-wrap:anywhere}
+.demo-metrics-track{display:block;height:13px;overflow:hidden;border-radius:4px;background:var(--soft)}
+.demo-metrics-bar{display:block;height:100%;border-radius:4px;background:var(--indigo)}
+.demo-metrics-bars strong{text-align:right;color:var(--navy);font-size:.875rem}
+.demo-metrics-total,.demo-metrics-empty{margin:20px 0 0;color:var(--muted);font-size:.8rem;line-height:1.5}
+.app .demo-metrics+.dashboard-lower{margin-top:32px}
+.app .demo-metrics+.role-columns{margin-top:20px}
+@media(max-width:1050px){.demo-metrics-head{display:block}.demo-metrics-head p{margin-top:7px}.demo-metrics-body{grid-template-columns:minmax(0,1fr);gap:24px}.demo-metrics-dates{padding:0 0 22px;border-right:0;border-bottom:1px solid var(--quiet-line)}}
+@media(max-width:650px){.demo-metrics{padding:20px}.demo-metrics-summary{gap:0}.demo-metrics-summary>div{padding:0 10px}.demo-metrics-summary dt{font-size:.75rem}.demo-metrics-date-bars{grid-template-columns:repeat(var(--date-count),minmax(48px,1fr))}.demo-metrics-bars li{grid-template-columns:minmax(80px,120px) minmax(0,1fr) 2ch;gap:9px}}
+@media(max-width:400px){.demo-metrics-summary{grid-template-columns:1fr;gap:12px}.demo-metrics-summary>div,.demo-metrics-summary>div:first-child{flex-direction:row;align-items:baseline;justify-content:space-between;gap:12px;padding:0}.demo-metrics-summary>div+div{border-left:0}.demo-metrics-summary dd{font-size:1.35rem}}
+@media(forced-colors:active){.demo-metrics-date-bar,.demo-metrics-bar{background:Highlight}.demo-metrics-track{border:1px solid CanvasText}}
+@media print{.demo-metrics{box-shadow:none;border:1px solid var(--ink)}.demo-metrics-date-bar,.demo-metrics-bar{print-color-adjust:exact}}

@@ -1,0 +1,26 @@
+/* The drawer on narrow screens stays hidden until its existing Menu control opens it. */
+.app .rail-toggle{display:inline-flex;align-items:center;justify-content:center;align-self:flex-end;flex:none;width:44px;height:44px;margin:0 12px 14px;padding:10px;border:1px solid rgba(255,255,255,.55);border-radius:9px;background:transparent;color:var(--white)}
+.app .rail-toggle:hover{background:var(--deep)}
+.app .rail-toggle:focus-visible{outline:3px solid var(--white);outline-offset:2px}
+.app .rail-toggle .ui-icon{width:19px;height:19px}
+.app .sidebar,.app .role-sidebar{position:sticky}
+.app.sidebar-collapsed .rail-toggle .ui-icon{transform:rotate(180deg)}
+@media(min-width:901px){
+  .app .sidebar:not(.is-open),.app .role-sidebar:not(.is-open){position:sticky}
+  .app .rail-toggle{position:absolute;top:25px;right:8px;margin:0}
+  .app .side-brand,.app .role-brand{padding-right:48px}
+  .app.sidebar-collapsed:not(.role-mode):not(.guest-app){grid-template-columns:76px minmax(0,1fr)}
+  .app.sidebar-collapsed.role-mode #role-workspace{grid-template-columns:76px minmax(0,1fr)}
+  .app.sidebar-collapsed .sidebar,.app.sidebar-collapsed .role-sidebar{padding-inline:8px;overflow-y:auto}
+  .app.sidebar-collapsed .side-brand,.app.sidebar-collapsed .role-brand{justify-content:center;padding-inline:0}
+  .app.sidebar-collapsed .side-brand>[data-org],.app.sidebar-collapsed .role-brand>[data-role-org],.app.sidebar-collapsed .side-caption,.app.sidebar-collapsed .role-context{display:none}
+  .app.sidebar-collapsed .rail-toggle{position:static;align-self:center;margin:10px 0 12px}
+  .app.sidebar-collapsed .sidebar nav a,.app.sidebar-collapsed .role-sidebar nav a,.app.sidebar-collapsed .side-bottom button,.app.sidebar-collapsed .role-sidebar-bottom button{justify-content:center;gap:0;padding-inline:0;font-size:0}
+  .app.sidebar-collapsed .sidebar nav .ui-icon,.app.sidebar-collapsed .role-sidebar nav .ui-icon,.app.sidebar-collapsed .side-bottom .ui-icon,.app.sidebar-collapsed .role-sidebar-bottom .ui-icon{width:20px;height:20px}
+  .app.sidebar-collapsed .side-bottom .role-person,.app.sidebar-collapsed .role-sidebar-bottom .role-person{justify-content:center;padding-inline:0}
+  .app.sidebar-collapsed .side-bottom .role-person>span:not(.role-avatar),.app.sidebar-collapsed .role-sidebar-bottom .role-person>span:not(.role-avatar){display:none}
+  .app.sidebar-collapsed .sidebar nav a:hover,.app.sidebar-collapsed .role-sidebar nav a:hover,.app.sidebar-collapsed .side-bottom button:hover,.app.sidebar-collapsed .role-sidebar-bottom button:hover{transform:none}
+}
+@media(max-width:900px){.app .rail-toggle{display:none}}
+@media(prefers-reduced-motion:reduce){.app .rail-toggle .ui-icon{transition:none}}
+@media print{.app .rail-toggle{display:none!important}}

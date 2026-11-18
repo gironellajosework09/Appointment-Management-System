@@ -5,8 +5,14 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.0 (2026-10-29 — lightweight governed SDLC knowledge checkpoint added; no gate status changed) |
+| Revision | 1.5 (D-119 SDD-001 local review and database-free testing amendments accepted by the Product Owner; recorded 2026-11-17, approval date not separately supplied) |
 | Owner | Product Owner |
+
+> **CP11 acceptance status note (2026-11-13).** D-112 records the Product Owner's
+> acceptance of Checkpoint 11 within its documented design and prototype scope.
+> This is a status recording under the existing approval; it does not amend the §5
+> lifecycle or create implementation, Gate 2 closure, CP12 or release authority.
+> Revision 1.4 was the policy revision at the time of this note; revision 1.5 is current.
 
 > **Revision 0.7 (2026-10-23) — AGENTS.md adopted; accessibility standard
 > proposed.** §6, §20, and §22 reconciled to record that `AGENTS.md` is adopted as
@@ -45,7 +51,17 @@ This document defines how the product is engineered and how work is authorized,
 reviewed, and approved. It is written so a developer new to the project — working
 with or without AI coding tools — can follow it consistently.
 
+**Revision 1.4 status:** The Product Owner accepted the exact D-110 execution
+operating contract amendment presented for review. The acceptance is limited to
+that wording; it does not alter earlier approvals or authorize implementation.
+The approval date was not separately supplied; acceptance was recorded 2026-11-13.
+
 It is a governance artifact. It does **not** authorize implementation.
+
+**Revision 1.5 status:** The Product Owner approved the exact SDD-001 local
+review and database-free testing amendments recorded in D-119. Recording date:
+2026-11-17; approval date not separately supplied. The amendments do not
+authorize compatibility execution, installation, implementation or deployment.
 
 ---
 
@@ -53,7 +69,7 @@ It is a governance artifact. It does **not** authorize implementation.
 
 Define:
 
-- the staged lifecycle (gates) and approval between stages,
+- the lightweight Spec-Driven Development (SDD) lifecycle and risk-based approvals,
 - required artifacts and evidence,
 - requirements/design review before implementation,
 - limited, explicit authorization per task,
@@ -73,9 +89,9 @@ Define:
 > **The existence of a planning document, design, prior approval, or an AI tool's
 > suggestion does not authorize implementation or any production change.**
 
-Implementation begins only when the product owner explicitly authorizes a
-specific, bounded task after the relevant gate prerequisites are met. Planning
-artifacts and AI suggestions are inputs to a decision, not the decision itself.
+Implementation begins only within the approval and authorization defined for the
+change class in §5. Planning artifacts and AI suggestions are inputs to a decision,
+not the decision itself; a feature specification does not self-authorize work.
 
 Within those controls, engineering work shall maximize efficiency without
 compromising correctness, security, data integrity, maintainability, testability,
@@ -101,6 +117,8 @@ required evidence, or approval controls.
 | Human reviewer(s) | Perform required requirements, design, security, and data-integrity reviews and record findings |
 | Developer | Performs only explicitly authorized work under this governance |
 | AI coding tools | Assistive only; perform only explicitly authorized work; no independent architecture, security, database, deployment, or scope decisions |
+
+AI agents may perform authorized implementation, testing, exploration and technical review as supporting engineering work. Their findings and test results are evidence, not human specialist qualifications, independent assessment or Product Owner approval. The Product Owner assigns applicable human responsibilities and records any permitted combination of roles under §5.
 
 **Access boundary (confirmed):** the product owner / system operator is **not**
 automatically an administrator of every client installation and must **not** have
@@ -129,75 +147,182 @@ rather than proceed.
 
 ---
 
-## 5. Staged Lifecycle
+## 5. Spec-Driven Development lifecycle
 
-The product proceeds through sequential gates. A gate may not start until its
-prerequisites are approved. See `docs/GATE_REGISTER.md` for per-gate status,
-entry/exit criteria, and evidence.
+Routine future product changes use **Specify → Plan → Implement → Verify → Accept**. This
+prospectively supersedes routine sequential gate progression under D-098; it does not erase
+historical gate records or product approvals. See `docs/GATE_REGISTER.md` for that history and
+the transition record.
 
-| Gate | Name | Nature |
+| Stage | Minimum expected output |
+|---|---|
+| Specify | A bounded feature spec in `docs/specs/` (or an update to the relevant existing spec) with purpose, scope/exclusions, approved requirement/decision references, expected behavior, acceptance criteria, relevant risks, and open questions. |
+| Plan | A small bounded implementation plan identifying affected areas, verification, risk class, and required approvals. |
+| Implement | Only the work explicitly authorized for the approved scope. |
+| Verify | Appropriate automated/manual checks and truthful recorded results, including failures and unverified areas. |
+| Accept | Reviewer confirms the verified change meets its spec; Product Owner records decisions or approvals reserved to that role. |
+
+A specification documents intended behavior; **it is not implementation authorization**. Unresolved
+scope, policy, security, privacy, architecture, or data-integrity questions that materially affect
+the proposed change or its associated risks are escalated before implementation. Unrelated open
+questions do not automatically block an otherwise authorized change. Questions are not filled in
+by the developer or an AI tool.
+
+### Change risk and approval
+
+| Class | Scope | Approval before implementation |
 |---|---|---|
-| Gate 0 | Project Initiation & Governance | Documentation only |
-| Gate 1 | Requirements Discovery | Analysis / documentation |
-| Gate 2 | Architecture & Design | Design |
-| Gate 3 | Security & Data Integrity Design Review | Review |
-| Gate 4 | Authorized Implementation | Build (authorized scope only) |
-| Gate 5 | Verification & Testing | Test |
-| Gate 6 | Release Readiness & Deployment Approval | Approval |
-| Gate 7 | Production Operations & Maintenance | Ongoing operations |
+| Low-risk cosmetic | Presentation-only changes (such as spacing, typography, alignment, or nonfunctional styling) within an already approved design scope. | Standing authorization is granted for this narrow class. Changes still require appropriate review and verification before acceptance. |
+| Ordinary | Bounded feature change within approved requirements and decisions, with no high-risk impact below. | Product Owner approves the feature specification and bounded implementation scope before coding; reviewer accepts after verification. |
+| High-risk | Security, privacy, authentication, authorization, identity verification, personal-data handling, integrity, concurrency, database/API/schema/migration, architecture, external integration, material product-scope, or deployment change. | Explicit Product Owner authorization before implementation and applicable specialist review. Security/data-integrity review and release/deployment approval remain mandatory where applicable. |
 
-Rules:
+The cosmetic standing authorization excludes new features/interactions, workflow or business-rule
+changes, authentication, authorization, permissions or identity-verification changes, personal-data
+collection/processing/disclosure, database or API changes, dependencies/external services,
+deployment/production configuration, requirement changes, and unresolved policy decisions. It does
+not broaden D-096/D-097, authorize production access, or grant general implementation access.
 
-- Gates are sequential unless the product owner explicitly authorizes an
-  exception.
-- A later gate is `NOT STARTED` or `BLOCKED` until its prerequisites are
-  approved.
-- Passing a gate requires explicit, recorded product-owner approval.
-- AI tooling cannot advance a gate on its own.
-- Gate 7 is an **ongoing responsibility**, not a one-time state that ends
-  maintenance.
+Each acceptance identifies the spec/change, reviewer, verification performed, outcome, and any
+remaining limitation. High-risk review findings must be resolved or explicitly dispositioned by
+the Product Owner before acceptance; release/deployment remains a separate approval.
+
+### Bounded SDD-001 local development arrangement (D-119)
+
+For the local SDD-001 foundation only, the Product Owner may authorize connection-free compatibility evaluation and implementation using AI-assisted technical review, automated checks, manual inspection and a recorded Product Owner decision. The scope is limited to fictional local/test configuration, framework initialization and a neutral non-business response. It excludes application identity, personal or client data, database operations, migrations, business mutations, external dispatch and deployment.
+
+Within this scope, additional human specialist review and independent feature acceptance may be deferred. The Product Owner may personally review and accept the local result, including work to which that person contributed, provided the record identifies the combined roles, evidence, limitations and residual risk and describes it as self-review. This is the sole exception to §5’s contributor self-approval restriction; AI agents retain no approval authority.
+
+Before execution, review the exact dependency footprint, scripts and plugins, configuration and failure contracts, environment controls, and permitted file and network effects. Stop the affected action if those controls cannot be established, a material unresolved security, privacy or integrity issue arises, or work expands beyond this scope. Any required security exception follows §13.
+
+Complete applicable human specialist review before expanding into an affected excluded capability or before release, whichever occurs first. The qualified independent privacy/security assessment and other release obligations in §19 remain mandatory. Local acceptance does not establish independent assurance, operational readiness or release authority.
+
+### Prototype Exploration Exception
+
+Isolated, fictional, non-production UI/UX prototypes may be refined iteratively to explore and
+correct their presentation and simulated interactions. This exception applies only to prototypes
+that are clearly identified as non-production and use fictional data and simulated behavior. It
+grants standing authorization for routine visual, animation, responsive-layout, interaction,
+navigation, and accessibility refinements within such prototypes, including the existing
+Checkpoint 11 prototype.
+
+Routine refinements under this exception do not require a separate feature specification,
+implementation plan, or Product Owner approval cycle for each change. Contributors shall preserve
+unrelated work, perform appropriate browser verification for the change, and provide a concise
+change summary stating what changed, what was checked, the results, and material failures or
+unverified behavior. Routine qualifying prototype refinements may be grouped into a concise change
+summary. They do not require individual decision-register entries, feature specifications, or
+Product Owner approval cycles.
+
+This exception does **not** authorize:
+
+- New dependencies, animation runtimes, external services, or integrations without explicit Product Owner authorization.
+- Major expansion of prototype scope, production application behavior, security-sensitive changes, real authentication or authorization, real personal-data handling, database or API changes, or deployment without explicit authorization and applicable review.
+- Access to CEAP or production systems or data.
+- A change to approved product requirements, architecture, security controls, or implementation-stage governance.
+
+Prototype interactions are illustrative and do not establish real identity, authority, persistence,
+booking outcomes, or approved business rules. Contributors must stop and seek a decision when a
+proposed change crosses these boundaries or its classification is unclear. Browser verification and
+AI-assisted review do not establish accessibility conformance or Product Owner acceptance.
+
+For Checkpoint 11, this exception prospectively supersedes D-098’s per-feature specification and
+approval requirement **only for qualifying prototype refinements**, and supersedes D-096/D-097’s
+landing/login-only visual restriction **only to permit restrained visual and animation refinements
+within the fictional prototype**. Text, controls, task-focused surfaces, visible focus, responsive
+behavior, reduced-motion support, and usability without decorative effects remain protected. The
+historical decisions and their other boundaries remain unchanged.
+
+D-100’s approved increment, file-preservation boundaries, verification evidence, and acceptance
+criteria remain recorded and are not retroactively accepted or rewritten. Routine prototype
+iteration does not itself accept D-100 or Checkpoint 11; Product Owner acceptance remains separate.
+CP11 acceptance was separately recorded on 2026-11-13 (D-112).
+Product implementation continues to follow the existing SDD and risk-based approval controls in this
+section.
+
+### Historical gate and retained controls
+
+Gate 0 and Gate 1 remain historically complete as recorded. Gate 2 remains historically
+**IN PROGRESS and unfinished**; its remaining routine gate/checkpoint obligations are
+prospectively superseded, not completed or accepted. Checkpoint 11 was accepted by the Product Owner
+on 2026-11-13 within its documented design/prototype scope (D-112); that acceptance is design evidence
+only and does not complete Gate 2. Former Gates 3–7 remain historical planned stages, not routine
+sequential prerequisites. Their mandatory security/data-integrity reviews, isolated verification,
+release/deployment approvals, and continuing operational controls remain enforceable independently
+of gate numbering. D-096/D-097 remain bounded fictional-prototype authorizations only.
+
+### Execution operating contract (D-110)
+
+For substantial authorized work, define a bounded work package with its objective,
+scope and exclusions, deliverables, owner, dependencies, acceptance criteria,
+verification approach, and actions requiring separate authorization. A package
+organizes execution; it grants no authority beyond §5 and §7. Reuse approved
+decisions unless new material evidence, a genuine contradiction, or an authorized
+change request calls for reconsideration.
+
+Independent tasks may run in parallel within their authorization. Assign exclusive
+write ownership for each file or other shared artifact, preserve existing work, and
+name an integrator to reconcile dependent contracts before final review. Agents
+and contributors may draft, evaluate, integrate, and verify within their assigned
+scope; they cannot approve their own work or expand another contributor's scope,
+except for the bounded SDD-001 Product Owner self-review arrangement above.
+
+Classify unresolved items in the package record as **blocking**, **deferred**, or
+**installation-specific**. Blocking items include missing authority, a material
+conflict with approved requirements, a necessary undefined contract, or an unsafe
+security, privacy, or data-integrity outcome; stop and escalate as §21 requires.
+Deferred and installation-specific items need a responsible owner, dependency,
+and resolution milestone, and remain mandatory before the work they affect.
+Independent authorized work may continue only where the unresolved item has no
+material effect and §21 does not require it to stop, consistent with §5.
+Classification never waives a required
+review, approval, or stop condition.
+
+Validate changed artifacts and their dependent contracts against package acceptance
+criteria, with depth proportional to risk. Include all applicable specialist,
+security, privacy, data-integrity, accessibility, testing, and release controls;
+repeat a broader review when a material change or new evidence gives a specific
+reason. Report actual results, exceptions, and unresolved items under §9. Group
+related results for a meaningful Product Owner checkpoint when the existing
+approval rules permit it; retain every separately required specification, change,
+specialist, acceptance, and release approval. Within an authorized package,
+complete dependent tasks without seeking repeated approval for unchanged decisions,
+then stop at its stated boundary.
 
 ### Lightweight knowledge checkpoint
 
-At gate entry or the start of substantial authorized work, consult relevant approved or adopted
-knowledge where accessible. During work, identify significant reusable lessons, recurring failures,
-and effective practices; routine changes do not warrant notes. At meaningful task completion or
-gate closure, evaluate whether genuinely new reusable knowledge emerged. When warranted and
-permitted, the agent creates a draft through the guarded Obsidian `create_note` tool only in
-`Engineering Workflow/Agent Drafts` or `Learning Journal/Agent Drafts`, with the required type,
-provenance, `review_status: draft`, and `author: agent`. Separate observations, inferences,
-recommendations, and unknowns; avoid duplicating existing notes or project-authoritative records.
-Report the created draft in the task summary, or state that none was warranted. At gate closure,
-record that determination in the gate evidence. Preserve approval boundaries and the one-chat-per-gate
-workflow: modifying existing notes or adopting drafts requires separate Product Owner approval.
-This checkpoint operates during authorized OpenCode tasks, not as unattended synchronization;
-it creates no extra approval gate. Vault knowledge is guidance, not authority over repository
-requirements, decisions, evidence, approvals, or gate status.
+At the start of substantial authorized work, consult relevant approved or adopted knowledge where
+accessible. At meaningful task completion, assess whether genuinely new reusable knowledge merits
+a guarded draft in the governed Obsidian locations. Routine changes do not warrant notes; existing
+notes or draft adoption require separate Product Owner approval. This is not an additional approval
+stage. Report any draft created or state that none was warranted.
 
 ---
 
 ## 6. Required Artifacts and Evidence
 
-| Gate | Required artifacts / evidence |
+| Historical gate | Recorded artifacts / evidence |
 |---|---|
 | Gate 0 | Project Charter; Engineering Governance; Decision Register; Gate Register; `AGENTS.md` (present in this repository and part of the P-001 artifact set; at Gate 0 closure its instructions were **not adopted** — see §20; this file was subsequently replaced and adopted as the agent entry point under D-039, effective 2026-10-23); and the separate Gate 0 evidence record at `docs/evidence/GATE-0-EVIDENCE.md`, which states what was inspected, the period covered, and what cannot be established. That evidence record is a Gate 0 exit requirement outside the five-artifact P-001 scope |
 | Gate 1 | Requirements specification; validated target customer or an explicitly labeled development-stage assumption; user journeys; business rules; confirmed user/authentication model; assumption ownership; risk register; measurable acceptance criteria. Under D-077, simulated material may inform the development-stage baseline but is not actual validation evidence. |
-| Gate 2 | Architecture description; data model; interface/API design; configuration and per-installation strategy; traceability to requirements |
+| Gate 2 | Architecture description; data model; interface/API design; configuration and per-installation strategy; Checkpoint 11 UI/UX design package (complete annotated MVP screen/state coverage, responsive/accessibility design, representative connected high-fidelity prototype and recorded Product Owner/usability/design-review findings) required for final Gate 2 architecture review under D-093; traceability to requirements |
 | Gate 3 | Security review record; data-integrity design record; threat model; security exception register |
 | Gate 4 | Authorized change set; reviewed migrations (if authorized); tests for each change; implementation notes |
 | Gate 5 | Automated test results; manual verification evidence; defect log with dispositions; regression results |
 | Gate 6 | Release checklist; deployment plan; rollback plan; configuration/secrets handling plan; sign-off record |
 | Gate 7 | Operational runbook; monitoring/logging plan; backup/restore procedure; maintenance/update policy |
 
-Artifact formats are not yet fixed; the minimum required content is. Evidence
-must be real and reproducible, not merely asserted.
+This table preserves the historical gate artifact mapping; it does not reimpose routine sequential
+gate prerequisites. Feature-level verification follows §5. Evidence must be real and reproducible,
+not merely asserted.
 
 ---
 
 ## 7. Limited, Explicit Authorization
 
-- Each implementation task must have a written, bounded authorization from the
-  product owner stating what may be changed.
+- Ordinary and high-risk implementation tasks require the approvals in §5 and a
+  bounded authorization stating what may be changed. Standing authorization applies
+  to the narrow low-risk cosmetic class and qualifying prototype refinements under
+  the Prototype Exploration Exception in §5.
 - Work outside the stated boundary requires a new authorization.
 - A prior approval does not carry forward to unrelated work.
 - When in doubt, ask; do not assume permission.
@@ -206,11 +331,11 @@ must be real and reproducible, not merely asserted.
 
 ## 8. Requirements and Design Review Before Implementation
 
-- Requirements and design are reviewed and approved **before** code is written.
-- No implementation task may begin against undocumented, unapproved
-  requirements.
-- Design changes discovered during implementation must be raised for approval,
-  not silently adopted.
+- A feature spec and its required approvals under §5 are in place before product
+  implementation code is written; the Prototype Exploration Exception in §5 applies
+  to qualifying fictional-prototype refinements. Approved requirements remain authoritative.
+- Design or policy changes discovered during implementation are raised for the
+  required approval, not silently adopted.
 
 ---
 
@@ -275,8 +400,8 @@ evidence. Overstating completion is a governance violation.
 - Secrets are supplied through environment configuration that is not committed;
   commit only safe templates/examples.
 - Environment configuration (development, test, production) must be separated.
-- Personal data is handled per the retention/privacy rules agreed in Gate 1 and
-  Gate 3.
+- Personal data is handled under approved privacy/retention requirements and
+  applicable security/privacy review.
 
 ---
 
@@ -287,7 +412,7 @@ evidence. Overstating completion is a governance violation.
 - Exceptions are approved only by the product owner and recorded in the Decision
   Register as `SE-###` entries carrying the authorization and rationale, with
   detailed scope, controls, owner, expiry or review condition, and closure
-  recorded in the gate-specific evidence (Gate 3 exception register).
+  recorded in the applicable security-review evidence.
 - An exception must **never** bypass mandatory safety, legal, or data-protection
   requirements.
 - Exceptions expire or are reviewed by their stated condition; they do not become
@@ -301,10 +426,10 @@ evidence. Overstating completion is a governance violation.
   error handling.
 - Data-integrity invariants (uniqueness, capacity, referential integrity, state
   transitions, concurrency) and security controls must be tested.
-- Tests run in an **isolated test environment** with its own database, never
-  against production or client data.
+- Tests run in an isolated test environment, never against production or client data. Tests that exercise persistence use their own separately authorized, isolated test database. Tests that do not create, connect to, query, modify, or otherwise use a database do not require a test database.
 - Test data must not include personal data copied from production systems.
-- Test evidence is required to close Gate 5.
+- Verification evidence is required for feature acceptance; release evidence
+  remains separately required before release approval.
 - No claim of "tested", "verified", or "approved" may be made without recorded
   evidence.
 
@@ -312,8 +437,8 @@ evidence. Overstating completion is a governance violation.
 
 ## 15. Change Control and Decision Documentation
 
-- Scope, architecture, database, security, and deployment changes require
-  product-owner approval before implementation.
+- High-risk changes listed in §5 require explicit product-owner approval before
+  implementation; other scope changes require the approval defined in §5.
 - Each change must be traceable to an approved requirement or decision.
 - Architectural decisions and significant changes are recorded in the Decision
   Register with status and rationale.
@@ -321,6 +446,27 @@ evidence. Overstating completion is a governance violation.
   retroactively; they are never quietly retained.
 - The Decision Register is updated when a decision is made, changed, or
   superseded.
+- Record an approved decision in the governed repository during the next
+  authorized documentation update, with source, status, approval date if supplied,
+  and recording date separately identified. This does not turn a draft artifact
+  or unverified result into an approved one (D-110).
+
+### Significant technology decision due diligence (D-102)
+
+Before implementation approval, every significant technology decision must document its
+benefits, trade-offs, credible failure scenarios, prevention/mitigation/recovery strategy,
+verification criteria and remaining risks. Significant choices include high-impact,
+security-sensitive, operationally important, expensive-to-reverse or difficult-to-recover
+decisions. Assessment depth is proportional to risk and complexity; record relevant
+alternatives and selection rationale without duplicating the decision record unnecessarily.
+
+Define verification criteria before implementation approval; produce actual verification
+evidence when the applicable testing is separately authorized and executed. Make residual
+risks explicit to the Product Owner; unresolved risks are not silently accepted and remain
+subject to §5 and applicable security-exception controls. Approval of this evaluation
+principle approves no technology, implementation or deployment. The Product Owner explicitly
+approved the principle in the current conversation; the approval date was not separately
+supplied. Recording date: 2026-11-12. See Decision Register D-102.
 
 ---
 
@@ -339,8 +485,8 @@ evidence. Overstating completion is a governance violation.
 
 ## 17. Release Readiness, Backups, Recovery, and Operations
 
-- Release requires a checklist, deployment plan, rollback plan, and a
-  configuration/secrets handling plan (Gate 6).
+- Release/deployment requires separate Product Owner approval and a checklist,
+  deployment plan, rollback plan, and configuration/secrets handling plan.
 - Verify that no secrets are present in documentation or client-side code before
   release.
 - Backups and a tested restore procedure must exist before relying on an
@@ -354,7 +500,7 @@ evidence. Overstating completion is a governance violation.
 ## 18. Human Approval Rules
 
 - Only the product owner approves scope, architecture, security exceptions,
-  releases, and gate transitions.
+  releases/deployments, and any remaining historical gate disposition.
 - Approval must be explicit and recorded (approver, artifact, date). Where the
   date of an owner confirmation was not captured, the record must say so; approval
   dates are never inferred, backdated, or taken from file timestamps.
@@ -364,24 +510,23 @@ evidence. Overstating completion is a governance violation.
 
 ---
 
-## 19. Gate Entry and Exit Criteria (General)
+## 19. Feature completion and retained approval controls
 
-Entry:
+A feature is ready for acceptance when its approved specification and bounded scope have been
+implemented, applicable verification is recorded, required reviews are complete, and a reviewer
+has confirmed the result against its acceptance criteria. Product Owner approval remains required
+as defined in §5; review or acceptance never changes approved requirements by implication.
 
-- Prerequisite gate approved.
-- Required artifacts from the prior gate available.
-- Product owner has authorized starting the gate.
+The bounded local SDD-001 provision in §5 governs only that scope’s permitted review and acceptance arrangement. All other feature-review requirements and the independent pre-release assessment remain applicable.
 
-Exit:
+Security and data-integrity review remains mandatory before accepting affected high-risk work.
+A qualified independent privacy/security assessment, genuine product-fit review, required testing,
+and release evidence remain mandatory before Product Owner release/deployment approval. These
+controls no longer depend on the former sequential gate structure. Gate Register records the
+historical gate status and transition; it does not grant implementation, database, deployment, or
+production authorization.
 
-- Required artifacts produced and reviewed.
-- Required reviews and tests completed with recorded evidence.
-- Open blocking issues resolved or explicitly accepted by the product owner.
-- Product owner has explicitly approved the gate transition.
-
-Gate-specific criteria are in `docs/GATE_REGISTER.md`.
-
-**Gate 1 development-stage route (D-077, approved 2026-10-29).** For this
+**Historical Gate 1 development-stage route (D-077, approved 2026-10-29).** For this
 project's requirements baseline, the Product Owner may approve explicitly labeled
 assumptions for design without treating them as `VALIDATED` stakeholder evidence.
 The exact baseline, traceability, assumption owners, risks, milestone obligations,
@@ -462,6 +607,7 @@ closure authorizes Gate 1 or any implementation.
 | Approver | Role | Decision | Date |
 |---|---|---|---|
 | Product Owner | Product Owner | Approved as a Gate 0 baseline artifact (P-001) | 2026-10-22 |
+| Product Owner | Product Owner | Accepted exact revision 1.4 D-110 execution operating contract amendment only | Not separately supplied; recorded 2026-11-13 |
 
 ---
 

@@ -1,0 +1,32 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const root = __dirname;
+const entries = JSON.parse(fs.readFileSync(path.join(root, 'manifest.json'), 'utf8'));
+const sha = b => crypto.createHash('sha256').update(b).digest('hex').toUpperCase();
+const candidates = path.join(root, 'candidates');
+fs.mkdirSync(candidates);
+const results = [];
+for (const entry of entries) {
+  const backup = fs.readFileSync(path.join(root, entry.name));
+  const source = fs.readFileSync(entry.source);
+  if (sha(backup) !== entry.sha256 || sha(source) !== entry.sha256) throw Error(`${entry.id}: source/backup hash changed`);
+  const original = backup.toString('utf8');
+  if (!Buffer.from(original, 'utf8').equals(backup)) throw Error(`${entry.id}: UTF-8 roundtrip failed`);
+  const notice = `> **CURRENT STATUS: APPROVED — SDD-${entry.id} v${entry.version}, within its documented specification scope.** Product Owner decision supplied in this conversation; approval date not separately supplied; recorded 2026-11-13. Earlier draft-status statements below describe the pre-approval review state. Prior approvals and open questions remain; implementation, specialist sign-off and release are not authorized.`;
+  const block = `\r\n\r\n${notice}\r\n`;
+  const noticeCount = original.split(notice).length - 1;
+  const blockCount = original.split(block).length - 1;
+  if (noticeCount !== entry.notices || blockCount !== entry.notices) throw Error(`${entry.id}: unexpected exact notice/block count ${noticeCount}/${blockCount}`);
+  const clean = original.split(block).join('\r\n');
+  if (clean.includes('**CURRENT STATUS: APPROVED')) throw Error(`${entry.id}: unmatched notice`);
+  const firstNewline = clean.indexOf('\r\n');
+  if (firstNewline < 0 || !clean.startsWith(`# SDD-${entry.id} `)) throw Error(`${entry.id}: missing expected heading`);
+  const candidate = clean.slice(0, firstNewline) + block + clean.slice(firstNewline + 2);
+  if (candidate.split(notice).length - 1 !== 1 || candidate.split(block).join('\r\n') !== clean) throw Error(`${entry.id}: non-banner comparison failed`);
+  const out = Buffer.from(candidate, 'utf8');
+  fs.writeFileSync(path.join(candidates, entry.name), out, { flag: 'wx' });
+  results.push({id:entry.id,version:entry.version,name:entry.name,originalSha256:entry.sha256,candidateSha256:sha(out),nonBannerSha256:sha(Buffer.from(clean,'utf8')),noticesBefore:noticeCount,noticesAfter:1,duplicatesRemoved:noticeCount-1,comparison:'identical'});
+}
+fs.writeFileSync(path.join(root, 'candidate-manifest.json'), JSON.stringify(results, null, 2)+'\n', {flag:'wx'});
+console.log(JSON.stringify({prepared:results.length,duplicatesRemoved:results.reduce((n,x)=>n+x.duplicatesRemoved,0),comparison:'all identical'},null,2));

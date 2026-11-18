@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1052 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Interactive booking appointment illustration</title>
+  <desc id="desc">A floating appointment interface with a calendar, service and time selection, connected profile and location cards, and a hand pointing to a time slot.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#282a6a"/><stop offset="1" stop-color="#171a48"/></linearGradient>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#e8edff"/></linearGradient>
+    <linearGradient id="indigo" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5d65b9"/><stop offset="1" stop-color="#303675"/></linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8a052"/><stop offset="1" stop-color="#e6752e"/></linearGradient>
+    <linearGradient id="hand" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d4e8e7"/><stop offset=".27" stop-color="#98b4bb"/><stop offset=".57" stop-color="#d5aaa0"/><stop offset="1" stop-color="#776f8f"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a9cce2" stop-opacity=".4"/><stop offset="1" stop-color="#8f89d9" stop-opacity=".07"/></linearGradient>
+    <filter id="shadow" x="-40%" y="-50%" width="180%" height="220%"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#11194c" flood-opacity=".35"/></filter>
+    <style><![CDATA[
+      :root{color-scheme:light} text{font-family:Arial,Helvetica,sans-serif} .float-a{animation:floatA 5.2s ease-in-out infinite}.float-b{animation:floatB 6.2s ease-in-out infinite}.float-c{animation:floatC 4.8s ease-in-out infinite}.pulse{animation:pulse 2.4s ease-in-out infinite}.trace{stroke-dasharray:8 10;animation:travel 18s linear infinite}.hand-move{transform-origin:810px 626px;animation:tap 4.2s ease-in-out infinite}.slot{cursor:pointer;transition:filter .25s,transform .25s;transform-box:fill-box;transform-origin:center}.slot:hover,.slot:focus{filter:brightness(1.15);transform:scale(1.08)}.confirm{cursor:pointer;transition:filter .25s,transform .25s;transform-box:fill-box;transform-origin:center}.confirm:hover{filter:brightness(1.15);transform:scale(1.05)}.spark{animation:twinkle 3s ease-in-out infinite}.spark:nth-of-type(2n){animation-delay:1.2s}@keyframes floatA{50%{transform:translate(0,-10px)}}@keyframes floatB{50%{transform:translate(0,8px)}}@keyframes floatC{50%{transform:translate(0,-6px)}}@keyframes pulse{50%{opacity:.4;transform:scale(1.35)}}@keyframes travel{to{stroke-dashoffset:-360}}@keyframes tap{0%,35%,100%{transform:translate(0,0) rotate(0deg)}50%,65%{transform:translate(-6px,-5px) rotate(-1deg)}}@keyframes twinkle{50%{opacity:.15}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+    ]]></style>
+  </defs>
+
+  <!-- The original JPEG's checkerboard is intentionally omitted: this SVG is transparent. -->
+  <g id="ambient" fill="none" stroke-linecap="round">
+    <ellipse cx="516" cy="505" rx="375" ry="270" fill="#6b77e6" opacity=".12" filter="url(#shadow)"/>
+    <path d="M26 360v370l26 30h196l18-18h425l24 22h275l51-53V617" stroke="#75d8fa" stroke-width="2" opacity=".42"/>
+    <path d="M27 360v370l26 30h196l18-18h425l24 22h275l51-53V617" stroke="#75d8fa" stroke-width="11" opacity=".12" filter="url(#glow)"/>
+    <path d="M386 176l244-31" stroke="#f19b6b" stroke-width="2" opacity=".8"/>
+    <path d="M437 200l267-35q30-3 32 28l11 388q1 37-35 39l-451-32" stroke="#8e90fb" stroke-width="2" opacity=".5"/>
+    <path class="trace" d="M387 176l243-31M736 194l10 388" stroke="#b4b4ff" stroke-width="2" opacity=".6"/>
+  </g>
+
+  <g id="connectors" fill="none" stroke="#b6c3ff" stroke-width="1.5" opacity=".7">
+    <path d="M223 275h13q8 0 8 9v43q0 8 9 8h27"/>
+    <path d="M255 420h28"/>
+    <path d="M269 541h-16q-10 0-10-10v-27q0-12-12-12h-22"/>
+    <path d="M204 493h-25q-10 0-10 10v9"/>
+  </g>
+
+  <g id="calendar-card" class="float-a" filter="url(#soft)">
+    <g transform="rotate(-5 171 271)">
+      <rect x="119" y="211" width="104" height="128" rx="10" fill="url(#orange)" stroke="#fff" stroke-width="2"/>
+      <rect x="149" y="247" width="51" height="48" rx="7" fill="none" stroke="#fff" stroke-width="5"/>
+      <path d="M148 258h53M156 235v15M190 235v15" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      <g fill="#fff"><rect x="157" y="268" width="6" height="6" rx="1"/><rect x="170" y="268" width="6" height="6" rx="1"/><rect x="183" y="268" width="6" height="6" rx="1"/><rect x="157" y="280" width="6" height="6" rx="1"/><rect x="170" y="280" width="6" height="6" rx="1"/></g>
+      <text x="171" y="321" text-anchor="middle" font-size="14" fill="#fff">Calendar</text>
+    </g>
+  </g>
+
+  <g id="profile-card" class="float-b" filter="url(#soft)">
+    <g transform="rotate(-3 212 416)">
+      <rect x="166" y="358" width="91" height="119" rx="9" fill="url(#indigo)" stroke="#d8e3ff" stroke-width="2"/>
+      <ellipse cx="211" cy="393" rx="12" ry="15" fill="#f2f5ff"/>
+      <path d="M190 432q2-27 21-27t21 27q0 5-6 5h-30q-6 0-6-5" fill="#f2f5ff"/>
+      <text x="211" y="462" text-anchor="middle" font-size="13" fill="#fff">User Profile</text>
+    </g>
+  </g>
+
+  <g id="location-card" class="float-c" filter="url(#soft)">
+    <g transform="rotate(5 206 582)">
+      <rect x="144" y="511" width="127" height="141" rx="9" fill="#f7d9b6" stroke="#fff" stroke-width="2"/>
+      <path d="M151 543l40-6 24 21 50-9M149 594l31 7 26-24 31 38 29-7M184 515l7 36M228 516l-13 65" stroke="#fff" stroke-width="5" fill="none" opacity=".85"/>
+      <path d="M208 533c-17 0-27 14-27 29 0 20 27 53 27 53s27-33 27-53c0-15-10-29-27-29z" fill="#454998"/>
+      <ellipse cx="208" cy="560" rx="9" ry="11" fill="#f8d9b6"/>
+      <path d="M145 624h126v28q0 7-7 7H152q-7 0-7-7z" fill="url(#orange)"/>
+      <text x="208" y="644" text-anchor="middle" font-size="13" fill="#fff">Location Map</text>
+    </g>
+  </g>
+
+  <g id="confirmation-label" class="float-b" filter="url(#soft)">
+    <rect x="77" y="417" width="89" height="29" rx="6" fill="#454a97" stroke="#ced6ff"/>
+    <text x="122" y="436" text-anchor="middle" font-size="13" fill="#fff">Confirmation</text>
+  </g>
+
+  <g id="booking-panel" class="float-a" filter="url(#soft)" transform="rotate(-2.4 501 394)">
+    <rect x="259" y="210" width="467" height="372" rx="17" fill="url(#panel)" stroke="#ebf0ff" stroke-width="2.5"/>
+    <path d="M276 210h433q17 0 17 17v62H259v-62q0-17 17-17z" fill="url(#header)"/>
+    <path d="M259 288h467" stroke="#fff" stroke-opacity=".6"/>
+    <g id="brand">
+      <rect x="278" y="233" width="44" height="42" rx="9" fill="#fff" stroke="#ef994e" stroke-width="2"/>
+      <path d="M288 249h24v17h-24zM294 239v10M307 239v10" fill="none" stroke="#41478a" stroke-width="3" stroke-linecap="round"/>
+      <path d="m298 256 4 4 8-9" fill="none" stroke="#ef873d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="332" y="262" font-size="24" font-weight="700" fill="#262a67">iTakda</text>
+    </g>
+    <text x="507" y="260" font-size="23" font-weight="600" fill="#24285d">Book Appointment</text>
+
+    <g id="calendar-widget">
+      <rect x="281" y="304" width="165" height="235" rx="9" fill="#f8faff"/>
+      <path d="M281 313q0-9 9-9h147q9 0 9 9v36H281z" fill="url(#indigo)"/>
+      <text x="363" y="332" text-anchor="middle" font-size="15" fill="#fff">Date</text>
+      <path d="m298 321-5 6 5 6m132-12 5 6-5 6" fill="none" stroke="#fff" stroke-width="1.5"/>
+      <g fill="#192045" font-size="11" text-anchor="middle">
+        <text x="299" y="369">M</text><text x="321" y="369">T</text><text x="343" y="369">W</text><text x="365" y="369">T</text><text x="387" y="369">F</text><text x="409" y="369">S</text><text x="431" y="369">S</text>
+      </g>
+      <g fill="#172044" font-size="11" text-anchor="middle">
+        <text x="343" y="395">1</text><text x="365" y="395">2</text><text x="387" y="395">3</text><text x="409" y="395" fill="#fff">4</text><text x="431" y="395">5</text>
+        <text x="299" y="418">6</text><text x="321" y="418">7</text><text x="343" y="418">8</text><text x="365" y="418">9</text><text x="387" y="418">10</text><text x="409" y="418">11</text><text x="431" y="418">12</text>
+        <text x="299" y="441">13</text><text x="321" y="441">14</text><text x="343" y="441">15</text><text x="365" y="441">16</text><text x="387" y="441">17</text><text x="409" y="441">18</text><text x="431" y="441">19</text>
+        <text x="299" y="464">20</text><text x="321" y="464">21</text><text x="343" y="464">22</text><text x="365" y="464">23</text><text x="387" y="464">24</text><text x="409" y="464">25</text><text x="431" y="464">26</text>
+        <text x="299" y="487">27</text><text x="321" y="487">28</text><text x="343" y="487">29</text><text x="365" y="487">30</text><text x="387" y="487">31</text>
+      </g>
+      <circle cx="409" cy="391" r="11" fill="url(#orange)"/>
+      <text x="409" y="395" text-anchor="middle" font-size="11" fill="#fff">4</text>
+    </g>
+
+    <g id="service-widget">
+      <text x="461" y="315" font-size="15" fill="#fff">Service:</text>
+      <rect x="460" y="324" width="236" height="35" rx="7" fill="#fafbff"/>
+      <text x="472" y="347" font-size="15" fill="#20244f">General Services</text>
+      <path d="m677 339 8 0-4 7z" fill="#343874"/>
+      <text x="460" y="396" font-size="15" fill="#fff">Available Slots</text>
+      <g id="time-slots" font-size="14" text-anchor="middle" fill="#222651">
+        <g class="slot" id="slot-0930"><rect x="464" y="412" width="72" height="37" rx="7" fill="#fff2e8"/><text x="500" y="436">9:30 AM</text></g>
+        <g class="slot" id="slot-1030"><rect x="544" y="412" width="72" height="37" rx="7" fill="#fff2e8"/><text x="580" y="436">10:30 AM</text></g>
+        <g class="slot" id="slot-1100"><rect x="624" y="412" width="72" height="37" rx="7" fill="#fff2e8"/><text x="660" y="436">11:00 AM</text></g>
+        <g class="slot" id="slot-1130"><rect x="464" y="460" width="72" height="37" rx="7" fill="url(#orange)"/><text x="500" y="484" fill="#fff">11:30 AM</text></g>
+        <g class="slot" id="slot-1230"><rect x="544" y="460" width="72" height="37" rx="7" fill="#fff2e8"/><text x="580" y="484">12:30 PM</text></g>
+      </g>
+      <g class="confirm" id="confirm-button"><rect x="563" y="526" width="120" height="38" rx="8" fill="url(#orange)"/><text x="623" y="552" text-anchor="middle" font-size="17" fill="#fff">Confirm</text></g>
+    </g>
+  </g>
+
+  <g id="security-chip" class="float-c">
+    <rect x="349" y="591" width="136" height="46" rx="8" fill="url(#glass)" stroke="#919bff" stroke-width="1.5"/>
+    <rect x="362" y="605" width="11" height="13" rx="2" fill="none" stroke="#b6c3ff" stroke-width="2"/>
+    <path d="M364 606v-4q0-5 4-5t4 5v4" fill="none" stroke="#b6c3ff" stroke-width="2"/>
+    <path d="M388 614h83" stroke="#b6c3ff" stroke-width="2" opacity=".5"/>
+  </g>
+
+  <g id="hand-group" class="hand-move">
+    <path d="M965 827q38-26 36-61-2-17-22-39-17-19-32-50l-39-107q-14-42-34-52-18-10-26 6-21-20-39-18-13 2-17 17-18-22-38-22-15 0-20 17l-55-75q-13-17-24-13-13 5-10 20 5 17 40 51l56 71q33 43 35 91-34-41-69-43-16-1-23 12-6 11 4 21l65 59q24 22 40 30 17 9 40 13l38 30q27 18 49 48z" fill="#263668" opacity=".4" filter="url(#shadow)"/>
+    <path d="M966 819q36-28 30-62-3-19-22-39-18-19-29-49l-38-104q-13-39-33-49-17-8-25 7-20-19-38-17-13 1-17 17-19-21-37-20-15 1-20 17l-58-76q-13-18-24-13-13 5-8 20 5 15 41 52l56 70q31 42 34 88-38-39-69-42-17-1-24 12-5 10 5 20l64 58q23 21 42 29 14 7 38 12l40 31q28 21 52 47z" fill="url(#hand)" stroke="#d9f7f5" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M680 445q15 4 23 16l71 93m23-33q27 29 35 53m19-47q21 23 28 44m-133 48q41 44 47 83m54-93q8 26 25 43" fill="none" stroke="#f6d7cc" stroke-width="2" opacity=".7" stroke-linecap="round"/>
+    <path d="M653 439q11-3 22 7l11 15q-13 3-24-5-10-6-9-17z" fill="#9bb9bd" stroke="#e2f5ee" stroke-width="1.3"/>
+    <path d="M913 796q26-37 59-43M902 782q26-36 60-43M888 765q28-33 62-41" fill="none" stroke="#e4f7f2" stroke-width="2" opacity=".75"/>
+    <path d="M946 816q41-25 49-60" fill="none" stroke="#7687a4" stroke-width="12" opacity=".3"/>
+    <g fill="#e3ffff"><circle cx="785" cy="697" r="3"/><circle cx="853" cy="676" r="2"/><circle cx="908" cy="737" r="2.5"/><circle cx="823" cy="541" r="2"/></g>
+  </g>
+
+  <g id="particles" fill="#aac1ff">
+    <circle class="spark" cx="418" cy="198" r="6" opacity=".65"/><circle class="spark" cx="654" cy="145" r="10" fill="#f89957" opacity=".85"/><circle class="spark" cx="739" cy="365" r="6"/><circle class="spark" cx="741" cy="390" r="5"/><circle class="spark" cx="620" cy="599" r="6"/><circle class="spark" cx="333" cy="595" r="5" fill="#f89957"/><circle class="spark" cx="756" cy="411" r="2"/><circle class="spark" cx="779" cy="692" r="3"/>
+  </g>
+</svg>

@@ -7,6 +7,13 @@
 | Source | `docs/research/product-owner-input/PRODUCT_OWNER_RESPONSES.md` and the Product Owner's 11 scope-triage choices |
 | Authority | Non-authoritative working draft; D-076 records the explicit deferral, but this document does not amend the requirements baseline |
 
+> **Current-status notice — historical working draft.** Statements indicating that
+> Gate 1 is in progress or Gate 2 is blocked reflect the document's earlier
+> assessment. The authoritative current status is Gate 1 `COMPLETE (APPROVED)` and
+> Gate 2 `IN PROGRESS` for architecture/design documentation only, under D-082 and
+> Gate Register revision 1.10. This notice does not reapprove or revise the
+> historical assessment.
+
 This record preserves the preliminary scope-triage choices and records the explicit
 deferral of three proposed MVP additions under D-076. It does not create validation
 evidence, approve the requirements baseline, or approve Gate 1 exit. The exact

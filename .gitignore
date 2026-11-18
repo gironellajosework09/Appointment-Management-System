@@ -1,0 +1,18 @@
+# Local browser and temporary output
+/.playwright-mcp/
+/tmp/
+chrome_chrome_url_fetcher_*/
+
+# Installed dependencies and generated output
+node_modules/
+.cache/
+dist/
+build/
+coverage/
+*.log
+
+# Local secrets; keep safe example templates
+.env
+.env.*
+!.env.example
+!.env.*.example

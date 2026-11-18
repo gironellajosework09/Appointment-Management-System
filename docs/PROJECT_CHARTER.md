@@ -4,11 +4,26 @@
 
 | Field | Value |
 |---|---|
-| Document status | Revision 1.3 DRAFT — Gate 1 decisions incorporated; exact revision pending Product Owner review. The effective approved baseline remains the P-001 Gate 0 artifact as recorded at Revision 0.5; P-002/P-003/P-004 and D-041–D-075 retain their separate recorded scope. |
+| Document status | Revision 1.5 DRAFT — records the approved D-094/D-095 requirements direction as an addendum; this Charter revision itself remains unapproved. The approved Gate 0 artifact remains as recorded at Revision 0.5; P-002/P-003/P-004 and D-041–D-075 retain their separate recorded scope. |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.3 DRAFT (2026-10-29 — D-067–D-075 Gate 1 directions incorporated) |
+| Revision | 1.5 DRAFT (2026-11-04 — proposed optional customer-account scope addendum; not effective) |
 | Owner | Product Owner |
+
+> **Revision 1.4 DRAFT (2026-10-29) — administrative status reconciliation.**
+> Current gate-status references reflect D-082 and Gate Register revision 1.10.
+> This revision remains a draft; D-082 does not approve its wording or change
+> historical approvals, goals, scope, or implementation authorization.
+
+> **Revision 1.5 DRAFT (2026-11-04) — proposed targeted Gate 1 amendment addendum.**
+> Records the Product Owner's direction for optional registered-customer booking alongside
+> mandatory account-free guest booking, common integrity/capacity/duplicate/eligibility
+> treatment, no automatic guest appointment association from matching personal information,
+> and the adopted public journey order. D-094/D-095 and Requirements Specification v0.8 /
+> Traceability revision 1.2 were subsequently approved for development-stage design (Decision
+> Register revision 1.19); this draft remains unapproved and does not change the approved
+> Charter artifact, D-082 gate history, or gate status. Unresolved account policies remain
+> open; see §16.1 and the approved requirements amendment.
 
 > **Revision 1.0 DRAFT (2026-10-28) — superseded by later drafts; never approved.**
 > Clarifies that A-1 remains an assumption to validate although independent
@@ -87,8 +102,9 @@ Every material statement is labelled with one of the following:
 
 Confirmed, approved, and conditionally approved statements are in force only to the extent
 their labels state. Proposals, assumptions, and unresolved items are not approved. Gate 1
-entry is authorized only as recorded in `docs/GATE_REGISTER.md` §4; nothing in
-this charter authorizes implementation.
+exit and Gate 2 documentation/design entry are authorized separately under D-082,
+as recorded in `docs/GATE_REGISTER.md` §§4–5; nothing in this charter authorizes
+implementation.
 
 ---
 
@@ -275,8 +291,10 @@ and S-9 remain verifiable without numeric targets.
 
 ## 5. Gate 1 MVP Direction
 
-**Approved product direction (D-042–D-075); exact requirement versions remain
-DRAFT.** The MVP direction covers configurable availability/capacity, guest and
+**Approved product direction (D-042–D-075).** Requirements Specification v0.7 and
+Requirements Traceability revision 1.0 were approved under D-081 as the development-stage
+assumption baseline, not representative stakeholder validation. The Project Charter
+remains a working draft. The MVP direction covers configurable availability/capacity, guest and
 staff-assisted/proxy/walk-in booking, alternative availability when a preferred
 date or slot is unavailable, cancellation/rescheduling, duplicate and capacity
 integrity, QR lookup rather than identity proof, attendance status, least-privilege
@@ -288,7 +306,8 @@ integrity violations, reconciliation failures, and other important operational
 failures requiring administrative attention.
 
 Exact client policy values are configuration decisions, not universal defaults.
-Architecture and implementation remain unauthorized.
+D-082 separately authorizes Gate 2 architecture/design documentation only;
+implementation remains unauthorized.
 
 ---
 
@@ -540,17 +559,69 @@ Full identifiers and status are tracked in
 
 ---
 
+## 16.1 Targeted Gate 1 requirements amendment (D-094 / v0.8)
+
+> **2026-11-04 status clarification — APPROVED requirements amendment.** The later Product Owner
+> preferences and D-095 narrow email amendment are detailed in Requirements v0.8 and
+> Traceability revision 1.2. Where this older draft addendum calls
+> account verification, registration enablement, original-booker linking, profile reuse,
+> deactivation, proxy policy, or transaction email scope wholly “open,” read that as the
+> earlier proposal state. The current proposal is: optional email-verified accounts with
+> registration toggle affecting new signups only; guest parity; individual verified
+> original-booker linking; service-restricted proxy authority and duplicate criteria;
+> separate profile edits; preserved appointments after deactivation; and narrow security/
+> transaction emails under proposed D-095. Exact proof, privacy and service-policy values
+> remain unresolved. D-094/D-095 and the exact v0.8/revision 1.2 versions are effective
+> for development-stage design; this Charter revision remains a draft and is not approved.
+
+> **2026-11-12 requirements status clarification:** The Product Owner subsequently approved
+> Requirements Specification v0.9 and Traceability revision 1.3 as the effective development-
+> stage baseline for their stated NFR-003/AC-027–AC-029 amendment. The v0.8/revision 1.2
+> approval and all other carried-forward content remain preserved. This Charter remains a
+> draft and does not replace the requirements or traceability records.
+
+> **PROPOSED — PENDING EXACT DECISION AND REQUIREMENTS-VERSION APPROVAL.** This addendum
+> records the Product Owner's scope direction for a controlled, targeted amendment. It does
+> not alter the approved Gate 0 charter artifact or reopen/reclose a gate. D-094/D-095 and
+> Requirements v0.8/revision 1.2 have since been approved as recorded in Decision Register
+> revision 1.19.
+
+The approved MVP includes account-free guest booking and optional
+registered-customer booking. Guest booking remains available without registration or sign-in.
+Registered customers may sign in, access a personal dashboard, view appointments authorized
+for that account, and request eligible changes. Guest and registered bookings use the same
+appointment integrity, capacity, duplicate, and eligibility policies. Account status alone
+grants no booking priority, override authority, status privilege, or access to unrelated
+appointments. Guest-created appointments are not automatically associated with accounts based
+solely on matching personal information.
+
+The approved shared journey is landing/service discovery → guest or account entry →
+service/date/time selection with a live summary → required details → final review → explicit
+submission → established outcome. D-046 remains preserved as history; D-094 supersedes only
+its public-account deferral, and D-042's public-account deferral is replaced. D-061 remains in
+force for guest booking and eligible guest changes. Requirements v0.8/revision 1.2 are
+effective for development-stage design. Verification/recovery procedures, installation
+enablement, account/appointment proof, data reuse, deactivation/retention, permissions and
+abuse controls remain open. No implementation or architecture mechanism is selected.
+
+**Targeted Gate 1 route:** preserve the historical D-082 Gate 1 approval. This amendment is
+versioned under Requirements Governance §§6/8. Those rules do not require automatic Gate 1
+reopening for every material amendment; this approved amendment used the targeted/versioned
+route and created no Gate 1 status transition. Gate 2 remains IN PROGRESS; Checkpoint 11 was accepted on 2026-11-13 within its
+documented design/prototype scope (D-112).
+
 ## 17. Approval
 
 This charter was approved by the product owner as a Gate 0 baseline artifact under
 P-001 on 2026-10-22. That approval did not itself close Gate 0; Gate 0 was closed
 on 2026-10-22 once its remaining exit criteria were met (see
 `docs/GATE_REGISTER.md` §3). Gate 1 entry was subsequently authorized on
-2026-10-28 for requirements analysis and documentation only; Gate 1 is not
-approved for exit, and no implementation authorization is recorded. Revision 1.3
-is a working draft pending Product Owner review; this historical P-001 approval
-and the separately scoped D-041–D-075 decisions do not approve the exact Revision
-1.3 wording.
+2026-10-28 for requirements analysis and documentation only. D-082 separately
+approved Gate 1 exit and authorized Gate 2 architecture/design documentation on
+2026-10-29; implementation remains unauthorized. Revision 1.4 remains an unapproved
+working draft; Revision 1.5 is a proposed addendum pending Product Owner approval. This
+historical P-001 approval, the separately scoped D-041–D-075 decisions, and D-082 do not
+approve the exact wording of Revision 1.4 or Revision 1.5.
 
 | Approver | Role | Decision | Date |
 |---|---|---|---|

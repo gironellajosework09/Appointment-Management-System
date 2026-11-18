@@ -1,0 +1,178 @@
+[
+  {
+    "id": "002",
+    "version": "0.5",
+    "name": "SDD-002-INTERNAL-IDENTITY-PROVISIONING-AND-PERMISSION-ENFORCEMENT.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-002-INTERNAL-IDENTITY-PROVISIONING-AND-PERMISSION-ENFORCEMENT.md",
+    "notices": 220,
+    "sha256": "56947089B0EA2A8B1DEE8E973C0C03BCD95128FB8FA0B41AAB69ED7AD22BC917"
+  },
+  {
+    "id": "003",
+    "version": "0.5",
+    "name": "SDD-003-REQUIRED-AUDIT-AND-OPERATIONAL-EVIDENCE.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-003-REQUIRED-AUDIT-AND-OPERATIONAL-EVIDENCE.md",
+    "notices": 199,
+    "sha256": "0FF5BBED3DC8DA8670F8E3035BE81284D90AEED24BC40451A6950248BA3CEFF4"
+  },
+  {
+    "id": "004",
+    "version": "0.3",
+    "name": "SDD-004-SERVICE-CATALOG-AND-MINIMUM-BOOKING-DATA-CONFIGURATION.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-004-SERVICE-CATALOG-AND-MINIMUM-BOOKING-DATA-CONFIGURATION.md",
+    "notices": 91,
+    "sha256": "2509D4AEACBFF1B501E5A9B7C842024579E8A26BE2C61530341BF16980206286"
+  },
+  {
+    "id": "005",
+    "version": "0.4",
+    "name": "SDD-005-AVAILABILITY-RESOURCE-CAPACITY-AND-SCHEDULING-POLICY.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-005-AVAILABILITY-RESOURCE-CAPACITY-AND-SCHEDULING-POLICY.md",
+    "notices": 167,
+    "sha256": "686E6BD33832C70B0C6648AB8A49CC0C820DEE9F7CE0CCD9DBD1942F890D8ED0"
+  },
+  {
+    "id": "006",
+    "version": "0.1",
+    "name": "SDD-006-SHARED-BOOKING-INTEGRITY-AND-AUTHORITATIVE-OUTCOMES.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-006-SHARED-BOOKING-INTEGRITY-AND-AUTHORITATIVE-OUTCOMES.md",
+    "notices": 98,
+    "sha256": "C983F0275AEB728330CA437D0D4AD1E79914CE926AEB6CC156E3E6DC79A807FA"
+  },
+  {
+    "id": "007",
+    "version": "0.3",
+    "name": "SDD-007-SIX-PURPOSE-EMAIL-BOUNDARY-AND-DELIVERY-RECOVERY.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-007-SIX-PURPOSE-EMAIL-BOUNDARY-AND-DELIVERY-RECOVERY.md",
+    "notices": 104,
+    "sha256": "6FCC5350A5D14FFD0F0B6E205C2DFCADC3B6F143526960BAA7D698938A59DBA8"
+  },
+  {
+    "id": "008",
+    "version": "0.2",
+    "name": "SDD-008-APPOINTMENT-SCOPED-GUEST-ACCESS-AND-ASSISTED-RECOVERY.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-008-APPOINTMENT-SCOPED-GUEST-ACCESS-AND-ASSISTED-RECOVERY.md",
+    "notices": 91,
+    "sha256": "2EFD57625B88C4B9E7A97BCEF535A51C2803DC351726FAD0D791F2000BCC40F2"
+  },
+  {
+    "id": "012",
+    "version": "0.1",
+    "name": "SDD-012-PROFILE-CORRECTION-AND-EXPLAINED-BOOKING-PREFILL.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-012-PROFILE-CORRECTION-AND-EXPLAINED-BOOKING-PREFILL.md",
+    "notices": 39,
+    "sha256": "169913232ABA94EB116AC863A9BB76ECBAAA1CABE118659B12D0523523A0C31E"
+  },
+  {
+    "id": "013",
+    "version": "0.3",
+    "name": "SDD-013-CONTESTED-ACTION-HOLDS-AND-ASSIGNED-CASE-REVIEW.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-013-CONTESTED-ACTION-HOLDS-AND-ASSIGNED-CASE-REVIEW.md",
+    "notices": 98,
+    "sha256": "854A46E513AF0AB4CA133F507659B21DC2514F7FBD5E3F652FA390FE49EED7FB"
+  },
+  {
+    "id": "014",
+    "version": "0.1",
+    "name": "SDD-014-AUTHORIZED-STAFF-APPOINTMENT-LOOKUP-AND-ROUTINE-EDITS.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-014-AUTHORIZED-STAFF-APPOINTMENT-LOOKUP-AND-ROUTINE-EDITS.md",
+    "notices": 48,
+    "sha256": "CA5EE1FEC595C4545C504EE888BBC8A7ED3EFE563CA1A15A63BB0E742F615F48"
+  },
+  {
+    "id": "015",
+    "version": "0.1",
+    "name": "SDD-015-STAFF-ASSISTED-PROXY-AND-STREAMLINED-WALK-IN-BOOKING.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-015-STAFF-ASSISTED-PROXY-AND-STREAMLINED-WALK-IN-BOOKING.md",
+    "notices": 41,
+    "sha256": "C27FD8BA07AE2FECBC19C8E8D0118ABAC28DDA9B2920655ED7A266BDB966FEF9"
+  },
+  {
+    "id": "016",
+    "version": "0.1",
+    "name": "SDD-016-ELIGIBLE-CANCELLATION-AND-CANCELLATION-CONFIRMATION.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-016-ELIGIBLE-CANCELLATION-AND-CANCELLATION-CONFIRMATION.md",
+    "notices": 40,
+    "sha256": "9225ECB2282688947D5C9F0783099DC99C62A568CAC119C2D9916CD1676647AD"
+  },
+  {
+    "id": "017",
+    "version": "0.1",
+    "name": "SDD-017-ELIGIBLE-RESCHEDULING-AND-PRESERVED-ORIGINAL-OUTCOMES.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-017-ELIGIBLE-RESCHEDULING-AND-PRESERVED-ORIGINAL-OUTCOMES.md",
+    "notices": 42,
+    "sha256": "4E52EFA170C757C76565E4ABD721DF153092DBA75B3D09A0508A29341C84DB12"
+  },
+  {
+    "id": "018",
+    "version": "0.1",
+    "name": "SDD-018-CONFIGURED-SUPERVISOR-EXCEPTIONS.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-018-CONFIGURED-SUPERVISOR-EXCEPTIONS.md",
+    "notices": 47,
+    "sha256": "36D5BF991234197F46E273A4A1FB678382B14E0980D441CA7C65272F9695C19D"
+  },
+  {
+    "id": "019",
+    "version": "0.1",
+    "name": "SDD-019-STAFF-QR-MANUAL-REFERENCE-LOOKUP-AND-ATTENDANCE.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-019-STAFF-QR-MANUAL-REFERENCE-LOOKUP-AND-ATTENDANCE.md",
+    "notices": 47,
+    "sha256": "42AACE0F0632CB3A5BB37E995DB26E72DB5CBF39C009ECE16BA54C6E607A19E1"
+  },
+  {
+    "id": "020",
+    "version": "0.1",
+    "name": "SDD-020-CONTROLLED-PRINTABLE-DAILY-ROSTER.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-020-CONTROLLED-PRINTABLE-DAILY-ROSTER.md",
+    "notices": 47,
+    "sha256": "B17D1A93E702C0C5D0FA4C74843F73F2D2B46DEB58A8DB3DE7A674CC154CF54B"
+  },
+  {
+    "id": "022",
+    "version": "0.2",
+    "name": "SDD-022-ACCEPTED-APPOINTMENT-CONFIGURATION-IMPACT.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-022-ACCEPTED-APPOINTMENT-CONFIGURATION-IMPACT.md",
+    "notices": 88,
+    "sha256": "7A3727F2187993C518EB9A6AD9676A73305D0E68991C3C77CF4C29934B160AB9"
+  },
+  {
+    "id": "023",
+    "version": "0.3",
+    "name": "SDD-023-REUSABLE-ACCESSIBLE-STATES-AND-ERROR-RECOVERY-PRESENTATION.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-023-REUSABLE-ACCESSIBLE-STATES-AND-ERROR-RECOVERY-PRESENTATION.md",
+    "notices": 177,
+    "sha256": "3E22B6C8CE208C45B45550526D1A7ED78205AB521A10BDE6DA58AFF2AB17E41E"
+  },
+  {
+    "id": "024",
+    "version": "0.2",
+    "name": "SDD-024-PRIVACY-DATA-LIFECYCLE-AND-INCIDENT-HANDLING-READINESS.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-024-PRIVACY-DATA-LIFECYCLE-AND-INCIDENT-HANDLING-READINESS.md",
+    "notices": 120,
+    "sha256": "030EEA256D5B931E79B445A84BAEE731DF413DFC600E0EB41596C1A9A885CC27"
+  },
+  {
+    "id": "025",
+    "version": "0.3",
+    "name": "SDD-025-BACKUP-RESTORATION-AND-RECOVERABILITY-EVIDENCE.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-025-BACKUP-RESTORATION-AND-RECOVERABILITY-EVIDENCE.md",
+    "notices": 100,
+    "sha256": "D1375368EC2F3CF1979EC4B110C670AB01F447B8D22BFD358069A5948C9A576D"
+  },
+  {
+    "id": "026",
+    "version": "0.3",
+    "name": "SDD-026-DEPLOYMENT-MAINTENANCE-AND-EXCEPTIONAL-SUPPORT-READINESS.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-026-DEPLOYMENT-MAINTENANCE-AND-EXCEPTIONAL-SUPPORT-READINESS.md",
+    "notices": 96,
+    "sha256": "0189B9FA4CA5D697FA4053A1CCD42D7CA0C53DD61C9B20BC8165F16E42FEF9E4"
+  },
+  {
+    "id": "027",
+    "version": "0.1",
+    "name": "SDD-027-INTEGRATED-QUALITY-PRODUCT-FIT-AND-RELEASE-EVIDENCE.md",
+    "source": "C:\\xampp\\htdocs\\Appointment-Management-System\\docs\\specs\\SDD-027-INTEGRATED-QUALITY-PRODUCT-FIT-AND-RELEASE-EVIDENCE.md",
+    "notices": 52,
+    "sha256": "26CAE8EF6E81ABECB0E163BB7E9F7863FDA2DC0E85C733A7289D0AED5C2AA933"
+  }
+]
