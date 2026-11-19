@@ -91,3 +91,18 @@ Specify how an authorized client administrator can maintain the installation-loc
 | Verification/acceptance | **NOT PERFORMED.** No runtime, privacy, security, usability or accessibility evidence is claimed. |
 | Gate / project status | Gate 2 remains historically IN PROGRESS; Checkpoint 11 was accepted on 2026-11-13 within its documented design/prototype scope (D-112). This draft creates no implementation or release/deployment authorization. |
 
+
+## D-122 timing overlay — Product Owner approved
+
+Approved service fields, validation rules, permissions, and applicable security/privacy safeguards remain prerequisites for implementation. For an explicitly authorized D-122 synthetic local scope, eligible human specialist review may be deferred for bounded local implementation and acceptance. This does not waive material Product Owner decisions, mandatory safeguards, or any earlier review required by an applicable external obligation. Qualified reviews remain mandatory before production release or operational reliance.
+
+This overlay applies to the timing of applicable human specialist review in the risk-class and implementation dependency references. SVC-Q01–Q04 and material field, policy and permission decisions remain unresolved; SDD-024 and other applicable obligations remain effective. The v0.3 approval and earlier records remain historical; this overlay alone does not authorize implementation.
+
+
+## Batch 04 decision dispositions and delivery record — 2026-11-19
+
+The Product Owner resolved this specification's open questions for the authorized synthetic-local Batch 04 scope under [D-124](../decisions/DECISION_REGISTER.md#d-124--batch-04-implementation-authorization-and-service-catalog-decision-dispositions): SVC-Q01 and SVC-Q04 option A (name-only catalog; no additional fields or retention change), SVC-Q02 option A (existing configured-administrator gate, with an operation-specific `service.update` ability), and SVC-Q03 option A (no lifecycle, activation or deletion).
+
+Delivered within that scope: an installation-scoped service detail view, name editing through `UpdateServiceRequest` and transactional `UpdateService`, and a `service.updated` evidence event written in the same transaction as the name change. Verification evidence and its limitations are recorded in [BATCH-04-VERIFICATION.md](../evidence/BATCH-04-VERIFICATION.md).
+
+These dispositions close the named questions only for the synthetic-local batch scope. They do not approve a production field catalog, permission matrix, lifecycle policy, schema change, privacy retention period or rendered accessibility conformance. The v0.3 approval and the D-122 timing overlay remain otherwise unchanged, and implementation, security/privacy review and acceptance are not claimed here.

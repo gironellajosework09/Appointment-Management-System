@@ -5,5 +5,16 @@
             <file>tests/Unit/FoundationContextTest.php</file>
             <file>tests/Feature/FoundationHttpTest.php</file>
         </testsuite>
+        <testsuite name="Batch04">
+            <file>tests/Unit/ServiceAuthorizationTest.php</file>
+            <file>tests/Unit/ServiceInstallationScopeTest.php</file>
+            <file>tests/Unit/CreateServiceGuardTest.php</file>
+            <file>tests/Unit/StoreServiceRequestTest.php</file>
+            <file>tests/Unit/UpdateServiceRequestTest.php</file>
+            <file>tests/Unit/UpdateServiceGuardTest.php</file>
+            <file>tests/Feature/Batch03ServiceDatabaseTest.php</file>
+            <file>tests/Feature/Batch04HttpTest.php</file>
+        </testsuite>
     </testsuites>
 </phpunit>
+

@@ -14,6 +14,8 @@ D-101 separately permits qualifying routine refinements of isolated fictional pr
 
 ## Proposed feature candidates, not a sequential commitment
 
+The numbered delivery order is maintained in the [Development Roadmap](DEVELOPMENT_ROADMAP.md) as a proposed planning baseline; it is not approved, not an implementation authorization, and detailed scope stays in each batch plan.
+
 Use the approved baseline and [traceability](../requirements/REQUIREMENTS-TRACEABILITY-v1.3.md) to select a first bounded feature. Candidate areas include client service configuration, shared booking and integrity, account-free management, optional customer accounts and limited-purpose email, staff QR/attendance, controlled roster/reconciliation, audit and operational recovery. Dependencies and risk reviews must be identified per feature; listing an area does not approve its policy, design, implementation order or scope. [PRD](../product/PRD.md) identifies approved and deferred product scope.
 
 Before an affected feature is implemented, resolve material identity, permission, capacity, duplicate, cutoff, privacy or architecture choices as applicable. Security/data-integrity review, isolated verification, genuine product-fit review, qualified independent privacy/security assessment, and release/deployment approval remain applicable independent controls. Backups and a tested restore are required before relying on installation data.

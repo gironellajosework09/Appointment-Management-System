@@ -5,7 +5,7 @@
 | Document status | APPROVED DEVELOPMENT-STAGE GOVERNANCE — D-077, 2026-10-29 |
 | Process context | D-077 requirements baseline; current change workflow is SDD under D-098 |
 | Document date | 2026-10-28 |
-| Revision | 0.8 (2026-11-12 — records approved v0.9 / Traceability 1.3 amendment under D-105) |
+| Revision | 0.9 (2026-11-19 — aligned to Engineering Governance v2.0 under D-123; §§2–7 requirement controls preserved) |
 | Owner | Product Owner |
 
 This document defines the requirements-recording and traceability method for the
@@ -31,7 +31,7 @@ These namespaces are distinct:
 
 When records conflict or authority is missing, the affected record does not
 advance. The conflict and its practical impact are referred to the Product Owner
-under Engineering Governance §21.
+under Engineering Governance v2.0 §17 (Stop and Escalation Conditions).
 
 ## 2. Identifier taxonomy
 
@@ -156,6 +156,20 @@ the corresponding traceability while preserving revision 1.2 and carried-forward
 1.0. The earlier v0.8/revision 1.2 approval remains historical and intact. This approval is
 not validation, implementation, release or Gate 2 authorization.
 
+**2026-11-19 governance alignment (D-123):** Engineering Governance v2.0 is authoritative.
+Its consolidated decision model replaces repeated exact-version approval cycles for the
+dependent documentation of one authorized work package. This does not relax §§2–7:
+identifiers, approved text, evidence status, traceability and versioned material-change
+control still govern requirement *text*. A change to approved wording remains a new
+version requiring the applicable Product Owner disposition.
+
+A verification-timing disposition that leaves approved wording and status intact may be
+recorded as an appended note on the requirements and traceability artifacts. It may defer
+named verification to a stated milestone, but it must identify what is deferred, the
+owner, the milestone and the risk, and it must not mark deferred verification as passed.
+Batch 03's accessible-MFA and rendered-accessibility verification is recorded this way,
+with a 2026-12-19 review deadline and all earlier triggering milestones controlling first.
+
 ## 7. Baseline, candidate scope, and criteria
 
 - **Mandatory baseline priority:** a draft requirement constrained by an approved
@@ -178,7 +192,7 @@ are explicitly labeled unverified hypotheses.
 
 **Historical scope after D-098:** This section records the requirements baseline and Gate 1
 process that produced the approved requirements history. The gate/checkpoint workflow is not a
-routine prerequisite for future changes; use the SDD lifecycle in Engineering Governance §5.
+routine prerequisite for future changes; use the lifecycle and risk-based authorization in Engineering Governance v2.0 §§4–5.
 Requirements Governance §§2–7 remain applicable: identifiers, approved text, evidence status,
 traceability, and versioned material-change control are unchanged. A feature spec does not amend
 an approved requirement; changes to approved behavior must follow §6 and receive the applicable

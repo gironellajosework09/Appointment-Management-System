@@ -31,3 +31,12 @@ These rows supplement the full D-081 matrix and approved v0.8 / revision 1.2 sup
 ## 3. Status and evidence boundary
 
 D-105 is the recorded policy decision, not evidence that an authentication control exists or has been tested. NFR-003 v0.9 and AC-027–AC-029 are approved development-stage requirements and are traced by this approved revision 1.3. The v0.8/revision 1.2 predecessors remain preserved; the amendment does not change their other content. No test, accessibility review, security assessment, implementation or release evidence is asserted.
+
+## 4. Bounded verification timing — Product Owner approved (D-123)
+
+| Record | Disposition | Owner | Milestone | Evidence status |
+|---|---|---|---|---|
+| AC-028 accessible MFA alternative | Deferred — synthetic-local Batch 03 | Product Owner | 2026-12-19 review; earlier triggering milestones control | Not passed; no rendered keyboard, assistive-technology or device evidence recorded |
+| Rendered accessibility checks for the Batch 03 internal slice | Deferred — synthetic-local Batch 03 | Product Owner | 2026-12-19 review; earlier triggering milestones control | Not passed; automated checks are not a substitute |
+
+The requirement text and approved status of NFR-003 and AC-028 are unchanged. These dispositions record timing only and grant no production, release or real-client authority.

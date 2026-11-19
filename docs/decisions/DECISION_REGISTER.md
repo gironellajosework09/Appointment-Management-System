@@ -5,7 +5,7 @@
 | Document status | Approved as a Gate 0 baseline artifact (P-001) — 2026-10-22 |
 | Gate | Gate 0 (Project Initiation & Governance) |
 | Document date | 2026-10-22 |
-| Revision | 1.38 (D-121 Gate 2 closure and CP11 baseline clarification recorded 2026-11-17; approval date not separately supplied) |
+| Revision | 1.39 (D-123 Governance v2.0 adoption and Batch 03 closure recorded 2026-11-19; D-122 recorded 2026-11-18 without a header bump) |
 | Owner | Product Owner |
 
 This register records decisions with unique IDs, status, date (where known),
@@ -372,6 +372,7 @@ Rules:
 | 2026-11-13 | Revision 1.31. Recorded D-112, the Product Owner's acceptance of Checkpoint 11 within its documented design and prototype scope as D-093 representative design evidence, including the administrator appointment-review, permission-denial and unchanged-appointment journey. The prototype remains illustrative; all applicable approved SDD requirements remain mandatory for implementation, verification and release. Acceptance does not establish real authentication, MFA, authorization enforcement, persistence, full accessibility conformance, specialist approval or production readiness. Historical Gate 2 remains IN PROGRESS and unfinished; CP12 and final review are not recorded complete. No implementation, SDD modification, Git write, Gate 2 closure or CP12 initiation is authorized. Approval date not separately supplied; recorded 2026-11-13. | Product Owner CP11 acceptance instruction in the current conversation |
 | 2026-11-15 | Revision 1.34. Recorded D-115 as **PROPOSED (PO CONFIRMATION)** only. The entry captures the Product Owner's requested bounded authorization to verify approval evidence, correct demonstrably editorial status/provenance and trace-reference contradictions, repair verified broken links without changing meaning, initiate and execute CP12 as a review activity, and prepare the final architecture review and closure package. It confirms that the exact SDD revisions in Registry §13/§14 and the CURRENT STATUS banners are the approved text. It is not in force, authorizes nothing, and changes no gate, requirement, design or implementation status. Approval date not supplied; recorded 2026-11-15. Revision-history rows 1.32–1.33 were not added when D-113/D-114 were recorded. | Product Owner "Gate 2 Closure Remediation" instruction in the current conversation, recorded as a proposal |
 | 2026-11-15 | Revision 1.35. Recorded the Product Owner's exact approval of D-115 and the Gate 2 dispositions D-116 (Q-007), D-117 (Q-008) and D-118 (Q-016/Q-022). D-115 authorizes the bounded remediation only. D-116 adopts D-092 as the Q-007 Gate 2 disposition and does not adopt external scratch lockfile evidence. D-117 adopts the minimum hosting-responsibility allocation. D-118 accepts the D-109 evaluation approach as the D-079 Gate 2 disposition milestone without setting numeric targets. No CP12 acceptance, final architecture approval, Gate 2 closure, implementation, installation or release is recorded. | Product Owner approval in the current instruction; approval date 2026-11-15 |
+| 2026-11-19 | Revision 1.39. Recorded D-123: adoption of Engineering Governance v2.0 as authoritative, alignment of AGENTS.md and Requirements Governance, bounded reconciliation of NFR-003/AC-028 and traceability with the approved verification-timing deferral, and acceptance of Batch 03 as ACCEPTED WITH LIMITATIONS — SYNTHETIC-LOCAL DEVELOPMENT ONLY. Preserved the unresolved CSS-delivery and partial expired-TOTP endpoint findings, deferred accessibility checks and the accessible MFA alternative (due by 2026-12-19), and authorized Batch 04 planning only. Header revision was 1.38 when D-119–D-122 were recorded without revision-history rows. | Product Owner instruction "Governance v2.0 Adoption and Batch 03 Closure" in the current conversation, 2026-11-19 |
 
 > **Change-log note (superseding clarification).** The initial 2026-10-15 entry
 > was later supplemented: the D-001–D-018 provenance label was revised to the
@@ -869,3 +870,72 @@ unrecorded.
 | Approver | Role | Decision | Date |
 |---|---|---|---|
 | Product Owner | Product Owner | Approved as a Gate 0 baseline artifact (P-001) | 2026-10-22 |
+
+## D-122 — Synthetic local high-risk development arrangement
+
+| Decision | Direction | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-122 | Adopt Engineering Governance revision 1.7's bounded synthetic local high-risk development and local acceptance arrangement, including authorized isolated application/browser testing, threat analysis, negative/failure tests, non-independent AI review disclosure, critical-finding prohibition and high-severity remediation or valid explicitly approved risk disposition. Preserve applicable legal, privacy, contractual and safety requirements; approved SDDs require satisfaction or separately approved change control. Qualified human specialist reviews and independent privacy/security assessment remain required before production release or operational reliance. | APPROVED — governance amendment only | Not separately supplied; recorded 2026-11-18 | Product Owner |
+
+Provenance: explicit Product Owner instruction “iTakda — Product Owner Decision: Governance Amendment,” approving the proposed direction with stated refinements and authorizing bounded governance-document updates. D-119, D-120 and D-110 remain historical approvals; their review/self-acceptance timing is modified only within the expressly stated D-122 scope. No SDD amendment, Batch 03 implementation, dependency installation, database operation, deployment, CEAP access or release is authorized.
+
+### D-122 SDD timing alignment — approved
+
+The Product Owner approved the exact D-122 timing overlays for SDD-002, SDD-003 and SDD-004 and authorized directly affected C12, dependency and review-timing consistency updates. Provenance: explicit “iTakda — Product Owner Decision: D-122 SDD Alignment” instruction in this conversation. Approval date was not separately supplied; recorded 2026-11-18. The approved overlays preserve the specifications' prior exact-version approvals, functional requirements, material decisions, mandatory safeguards and applicable earlier external obligations. They grant no Batch 03 implementation, dependency installation, database, deployment, real-client data or CEAP authorization.
+
+### SDD-002 synthetic-local recovery timing correction — approved
+
+The Product Owner approved the bounded synthetic-local SDD-002 recovery timing correction in the instruction “iTakda — Batch 03: Autonomous Implementation Continuation.” Approval date was not separately supplied; recorded 2026-11-18. Mandatory MFA, fail-closed factor loss, no reset/reprovisioning bypass and the D-105 independent recovery requirement before production or operational reliance remain. Disposable installation reinitialization requires separate authorization and is not account recovery. No independent recovery authority or completed review is recorded.
+
+## D-123 — Governance v2.0 Adoption and Batch 03 Closure
+
+| Decision | Direction | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-123 | Adopt Engineering Governance v2.0 (Highly Autonomous model) as authoritative, superseding v1.7; align AGENTS.md and Requirements Governance; reconcile the bounded NFR-003/AC-028 verification timing; accept Batch 03 as ACCEPTED WITH LIMITATIONS — SYNTHETIC-LOCAL DEVELOPMENT ONLY; and authorize Batch 04 planning only. Preserve substantive security, privacy, data-integrity and accessibility requirements, the 2026-12-19 review deadline, all earlier triggering milestones, and every independently binding obligation. | APPROVED — governance adoption, bounded reconciliation and development acceptance | 2026-11-19 (instruction date; recorded the same day) | Product Owner |
+
+### Governance adoption
+
+The Product Owner explicitly approved replacing Engineering Governance v1.7 with v2.0 and authorized this recording. The [v2.0 document](../ENGINEERING_GOVERNANCE.md) becomes authoritative on 2026-11-19. Its §22.1 records the material changes; §22.2 records preservation.
+
+Preservation limitation: full revision 1.7 text was not present in the working tree, any branch, or Git history at adoption. Revision 1.6 remains recoverable at `38659f9`, and v1.7's bounded synthetic-local arrangement is preserved in substance by D-122. No v1.7 text was reconstructed.
+
+### Requirements and process reconciliation
+
+- [Requirements Governance](../requirements/REQUIREMENTS_GOVERNANCE.md) revision 0.9 records alignment to v2.0: the consolidated decision model applies, while §§2–7 exact-version text, evidence status and versioned material-change controls remain in force for requirement *text*.
+- [Requirements Specification v0.9](../requirements/REQUIREMENTS-SPECIFICATION-v0.9.md) and [Traceability 1.3](../requirements/REQUIREMENTS-TRACEABILITY-v1.3.md) retain their approved NFR-003 and AC-028 wording unchanged. Appended timing notes defer only the named Batch 03 verification to 2026-12-19; they do not mark it passed and do not downgrade the requirement.
+- [SDD-002](../specs/SDD-002-INTERNAL-IDENTITY-PROVISIONING-AND-PERMISSION-ENFORCEMENT.md) and [SDD-023](../specs/SDD-023-REUSABLE-ACCESSIBLE-STATES-AND-ERROR-RECOVERY-PRESENTATION.md) record the same bounded timing for accessible MFA alternatives and rendered accessibility checks.
+- [AGENTS.md](../../AGENTS.md) revision 1.4 removes redundant per-change approval language now covered by standing authority and risk-based authorization.
+
+### Batch 03 acceptance
+
+Batch 03 (internal access service and service catalog, `feature/batch-03-internal-access-service`) is **ACCEPTED WITH LIMITATIONS — SYNTHETIC-LOCAL DEVELOPMENT ONLY** under §4.4 and §8.1. The [acceptance record](../evidence/BATCH-03-ACCEPTANCE.md) lists reused evidence, limitations, owners and milestones.
+
+Preserved findings: CSS delivery for the internal views remains unresolved; expired-TOTP endpoint verification remains partial. Deferred, not passed: rendered accessibility checks and the accessible MFA alternative for users without a personal device. The review deadline is 2026-12-19, with every earlier triggering milestone in §22.3 of the acceptance record controlling first.
+
+No critical security or data-integrity finding was identified in the inspected synthetic-local slice that makes this acceptance unsafe. No legal, contractual, privacy or safety obligation was waived.
+
+### Boundaries
+
+This decision does not authorize Batch 04 implementation, application or database changes, dependency installation, deployment, merge, push, commit, CEAP access or release. Qualified human specialist review and independent privacy/security assessment remain required before production release or operational reliance. Batch 04 may be planned only; the [proposed plan](../plans/BATCH-04-PLAN.md) records scope and acceptance criteria subject to separate authorization.
+
+Provenance: explicit Product Owner instruction "iTakda — Governance v2.0 Adoption and Batch 03 Closure" in the current conversation, 2026-11-19, reaffirming the bounded Batch 03 accessibility/MFA verification timing deferral and acceptance of demonstrated Batch 03 functionality subject to safeguards and valid acceptance criteria.
+
+
+## D-124 — Batch 04 Implementation Authorization and Service-Catalog Decision Dispositions
+
+| Decision | Direction | Status | Approval date | Approver |
+|---|---|---|---|---|
+| D-124 | Authorize Batch 04 service-catalog management (detail view, service-name editing, `service.update` authorization, transactional `service.updated` evidence, accessory admin UI and automated verification) in the isolated synthetic-local environment only; and record the Product Owner's dispositions for SVC-Q01–Q04 as option A in each case: name-only catalog; existing configured-administrator gate with operation-specific checks; no lifecycle, activation or deletion; no field additions beyond name. | APPROVED — bounded Batch 04 implementation authorization and policy dispositions | 2026-11-19 (instruction date; recorded the same day) | Product Owner |
+
+### Scope and dispositions
+
+- **SVC-Q01 — option A.** The catalog field set remains the service name only. No description, customer-visible name, price, duration or other service-specific field is added in this batch.
+- **SVC-Q02 — option A.** All catalog actions reuse the existing configured-administrator gate from [`Batch03AuthorizationProvider`](../../app/Providers/Batch03AuthorizationProvider.php). `service.update` is added as a distinct ability with the same conditions; no role matrix or privileged bypass is introduced.
+- **SVC-Q03 — option A.** No service lifecycle, status, activation, deactivation, archive or deletion behavior is implemented. SDD-022 remains unexercised.
+- **SVC-Q04 — option A.** No service-specific fields are added, so the validation rule stays `name`: required, string, trimmed, maximum 120 characters; no visibility or retention change is required.
+
+Authorized environment: the isolated synthetic-local database only, per D-122 and Engineering Governance v2.0. Verification required an additive database privilege (`UPDATE` on `services` for the synthetic application account) because the provisioned role had only `SELECT`/`INSERT`; no schema, data or policy change was made.
+
+Boundaries: no CEAP access, no production or client data, no deployment, merge, push or commit, no destructive Git or database operations, and no dependency installation. Qualified human specialist review and independent privacy/security assessment remain required before production release or operational reliance. Batch 04 acceptance is not self-approved and remains subject to Product Owner acceptance with the recorded limitations.
+
+Provenance: explicit Product Owner instruction "Batch 04 Implementation Authorization" in the current conversation, 2026-11-19, adopting option A for SVC-Q01–Q04 and authorizing the bounded synthetic-local implementation and verification. Verification results are recorded in [BATCH-04-VERIFICATION.md](../evidence/BATCH-04-VERIFICATION.md).

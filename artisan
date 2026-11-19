@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use App\Foundation\Context;
+use Symfony\Component\Console\Input\ArgvInput;
+
+require __DIR__.'/app/Foundation/Context.php';
+$value = static fn (string $key): ?string => ($result = getenv($key)) === false ? null : $result;
+
+// This local entry point deliberately exposes only the guarded bootstrap command.
+if (PHP_SAPI !== 'cli' || $argc !== 2 || ($argv[1] ?? '') !== 'itakda:provision-first-administrator'
+    || ! Context::isSafe($value('ITAKDA_CONTEXT'), $value('APP_ENV'), $value('APP_DEBUG'))) {
+    fwrite(STDERR, "Local command unavailable.\n");
+    exit(1);
+}
+
+require __DIR__.'/vendor/autoload.php';
+$app = require_once __DIR__.'/bootstrap/app.php';
+exit($app->handleCommand(new ArgvInput()));

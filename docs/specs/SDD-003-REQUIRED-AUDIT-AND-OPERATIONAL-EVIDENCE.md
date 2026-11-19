@@ -199,3 +199,9 @@ Draft 0.5 incorporates separately approved direction that audit viewing and expo
 | History/boundaries | Approved requirements, reference histories, P-009, independent client isolation, CEAP prohibition and historical Gate 2 status remain unchanged; Checkpoint 11 was accepted on 2026-11-13 within its documented design/prototype scope (D-112). |
 
 Implementation, evidence mechanisms, export capability and deployment remain **NOT AUTHORIZED**. Current v0.5 review is separate from the preserved v0.4 approval; no automatic implementation follows.
+
+## D-122 timing overlay — Product Owner approved
+
+For an explicitly authorized D-122 synthetic local consumer integration, applicable human specialist review may be deferred for bounded local implementation and acceptance. Required outcome/evidence consistency, authorization, denial behavior, privacy protections, integrity controls, and failure-path verification remain mandatory within the approved scope. Record deferred reviews and evidence limitations. Applicable qualified reviews remain mandatory before production release or operational reliance, or earlier where another binding obligation requires them.
+
+This overlay applies to the timing of applicable human specialist review in SDD-003-C12, implementation dependencies, EVD-Q01 and the plan and verification references. Their other requirements remain effective. EVD-Q01–Q04 and material evidence-policy decisions remain unresolved; required engineering assessment and reviews required by another binding obligation are not waived. The v0.5 approval and earlier records remain historical; this overlay alone does not authorize implementation.

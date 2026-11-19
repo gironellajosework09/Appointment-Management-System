@@ -204,6 +204,8 @@ The map covers **20 active FR, 11 NFR, 13 BR, 7 UJ and 29 AC**, plus S-1–S-9 a
 
 ## 6. Dependencies, waves and delivery alternatives
 
+> **Delivery sequencing is recorded separately.** The numbered batch order is maintained in the [Development Roadmap](../plans/DEVELOPMENT_ROADMAP.md) as a proposed planning baseline. The W1–W6 waves and H prerequisites below are architectural guidance, not the numbered batch sequence; where the two differ, the dependency analysis controls and the roadmap records the difference.
+
 **Dependency types:** H = capability prerequisite for the applicable implementation/integration boundary, not a universal drafting blocker; S = authority/security prerequisite; P = unresolved business/design-policy prerequisite; V = required review/verification/operational evidence; X = optional/exploratory item. Stage determines when a prerequisite must be satisfied. §7 letters group remaining decisions; they are local planning labels, not official Q IDs.
 
 | Stage | Meaning of a prerequisite |

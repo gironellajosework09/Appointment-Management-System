@@ -7,6 +7,6 @@ return [
     'timezone' => 'UTC',
     'locale' => 'en',
     'fallback_locale' => 'en',
-    'key' => null,
+    'key' => getenv('APP_KEY') ?: null,
     'cipher' => 'AES-256-CBC',
 ];

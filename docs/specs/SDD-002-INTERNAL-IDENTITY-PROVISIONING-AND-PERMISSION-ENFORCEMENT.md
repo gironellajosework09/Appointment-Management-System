@@ -220,3 +220,24 @@ Draft 0.5 incorporates the current-turn approved authority policy: action/servic
 | Historical/project boundaries | Prior approvals, P-009's unapproved status, independent client databases, CEAP separation and historical Gate 2 status are unchanged; Checkpoint 11 was accepted on 2026-11-13 within its documented design/prototype scope (D-112). |
 
 Implementation, technical choices and deployment remain **NOT AUTHORIZED**. Current v0.5 review is separate from the preserved v0.4 approval; no automatic implementation follows.
+
+## D-122 timing overlay — Product Owner approved
+
+For an explicitly authorized D-122 synthetic local scope, applicable human specialist review may be deferred for bounded local implementation and acceptance. This deferral requires separate Product Owner authorization of the implementation batch and does not waive identity, MFA, provisioning, recovery, authorization, or security requirements. Material policy decisions remain prerequisites. Record deferred reviews, limitations, and residual risks. Applicable qualified reviews remain mandatory before production release or operational reliance, or earlier where another binding obligation requires them.
+
+This overlay applies to the timing of applicable human specialist review in the Implementation dependency, SDD-002-C12 and the provisioning review reference. Their other requirements remain effective. IDN-Q01–Q04 remain unresolved; their material decisions and applicable reviews required by another binding obligation are not waived. The v0.5 approval and earlier records remain historical; this overlay alone does not authorize implementation.
+
+## Synthetic-local recovery timing correction — Product Owner approved
+
+For an explicitly authorized D-122 synthetic-local implementation, the sole-super-administrator recovery authority and procedure may remain unresolved within the bounded local slice. No MFA reset, replacement, privileged recovery or administrator reprovisioning path is provided; factor loss or uncertainty fails closed. Disposal or reinitialization of a disposable test installation requires separate authorization and is not account recovery. Record this limitation and resolve the independent recovery contract before production, real-client use or operational reliance, or earlier where a binding obligation requires it. All other MFA, provisioning, attribution and security requirements remain effective.
+
+This limited timing correction affects IDN-Q01–Q03 only for the stated synthetic-local scope. D-105's independent recovery requirement remains mandatory before production or operational reliance; mandatory MFA, controlled individual enrollment and accessible-factor evaluation remain in force. The lack of a recovery path creates a synthetic-local lockout risk. No unrestricted bypass, recovery authority or production policy is approved. Prior exact-version approvals remain historical.
+
+## Batch 03 synthetic-local verification timing — Product Owner approved (D-123)
+
+For the accepted synthetic-local Batch 03 slice, verification of the accessible MFA alternative for a user without a usable personal device (AC-028) and the related expired-TOTP endpoint coverage is deferred to the 2026-12-19 review. The deferral does not change this specification's MFA, provisioning, attribution, fail-closed or recovery requirements.
+
+- The accessible MFA alternative is **deferred, not passed**; no factor or device package is selected.
+- Expired-TOTP endpoint verification is **partial**, not complete.
+- Mandatory MFA, fail-closed factor loss, no reset/reprovisioning bypass and the D-105 independent recovery requirement before production or operational reliance remain in force.
+- Earlier triggering milestones control before 2026-12-19. No real-client data, production access or operational reliance is authorized.

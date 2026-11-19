@@ -75,3 +75,13 @@ These criteria are approved normative requirements. Their approval is not a test
 - Accessible pathways do not presume personal smartphone ownership or authorize shared devices/factors, shared credentials or undocumented bypasses.
 - v0.8 and v0.7 remain preserved predecessors; v0.9 is effective only for its stated amendment. The requirements are not `VALIDATED` and have no execution evidence.
 - SDD-002, SDD-003 and SDD-023 remain drafts pending their own review. This amendment does not approve them or authorize implementation, deployment or Gate 2 closure.
+
+## 7. Bounded verification timing — Product Owner approved (D-123)
+
+This note records a timing disposition. It does not amend NFR-003 or AC-028, change their approved status, or select a factor, package or mechanism.
+
+- The Batch 03 synthetic-local verification of the accessible MFA alternative for users without a usable personal device (AC-028) and the related rendered keyboard, assistive-technology and zoom checks is deferred to the review deadline of 2026-12-19.
+- The deferred checks are **not passed**. They remain required, enforceable and attributable to the Product Owner as accountable owner.
+- Any earlier triggering milestone — real personal or client data, additional users in affected workflows, operational reliance, public access or release — controls before the review deadline.
+- The deferral is limited to the synthetic-local development environment. It does not waive MFA, accessible alternatives, attribution, fail-closed behavior or any security/accessibility obligation.
+- The §6 sentence describing SDD-002, SDD-003 and SDD-023 as drafts is pre-approval history. Later exact-version approvals are recorded in the SDD Registry §13/§14 and remain unaffected by this note.

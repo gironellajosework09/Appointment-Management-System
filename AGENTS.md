@@ -3,12 +3,13 @@
 | Field | Value |
 |---|---|
 | Status | ADOPTED — revision 1.1 approved by the Product Owner as the current agent entry point in this chat; recorded 2026-11-11. Approval date was not separately supplied. |
-| Revision | 1.3 — effective requirements/traceability navigation correction; revisions 1.1–1.2 preserved |
+| Revision | 1.4 — aligned to Engineering Governance v2.0 under D-123 (2026-11-19); revisions 1.1–1.3 preserved |
 | Owner | Product Owner |
-| Adoption record | `docs/SDD_TRANSITION.md` records the bounded adoption and organization authorization. No new Decision Register ID is assigned. |
+| Adoption record | `docs/SDD_TRANSITION.md` records the bounded adoption and organization authorization. D-123 records the governance alignment. |
 | Lineage | D-039 adopted the prior agent entry point. This revision preserves that approval and does not adopt earlier superseded content. The lineage record remains in `docs/evidence/GATE-0-EVIDENCE.md` §7. |
 | Status correction record | Product Owner authorized limited corrections in the Gate 2 Documentation Consolidation decision; recorded 2026-11-12. Approval date not separately supplied. Permissions and governance are unchanged. |
 | Baseline navigation record | Updated 2026-11-12 to identify approved Requirements v0.9 and Traceability revision 1.3 as effective, preserving prior versions and approval history. |
+| Governance record | Updated 2026-11-19 under D-123: Engineering Governance v2.0 is authoritative. D-098 and D-101 remain historical process records; P-009 remains unapproved. |
 
 ## 1. Purpose
 
@@ -16,7 +17,7 @@ Guide OpenCode, Hermes, and other AI coding agents working on iTakda, the Appoin
 
 This file directs agents to applicable project records. Product Owner authority, approvals, and authorization remain governed by `docs/ENGINEERING_GOVERNANCE.md` and recorded decisions. This file grants no independent implementation or release authority.
 
-Routine product changes follow SDD under D-098. Qualifying fictional prototype refinements follow the bounded D-101 exception in Engineering Governance §5.
+Routine product changes follow the Define → Build → Verify → Accept lifecycle in Engineering Governance v2.0 §4 and the risk-based authorization in §5. D-098's SDD distinction and D-101's prototype exception remain historical process records and are consistent with the v2.0 autonomy model.
 
 ## 2. Before You Start
 
@@ -50,19 +51,22 @@ Read in this order, using task relevance to keep the work efficient. This sequen
 
 These ten references have individually recorded acceptance scopes, including provisional development-stage guidance. Consult each reference's current status and limitations; reference acceptance does not adopt its candidate tools or mechanisms, override approved requirements/decisions, or approve P-009.
 
+The numbered delivery order and current batch status are recorded in `docs/plans/DEVELOPMENT_ROADMAP.md` as a proposed Product Owner-directed planning baseline. It is not an accepted engineering reference, not an approval of any batch and not an implementation authorization; detailed scope is established in each batch plan under `docs/plans/`.
+
 3. **History and supporting evidence**
    - Consult `docs/GATE_REGISTER.md`, checkpoint records, and evidence when needed to establish provenance, applicable approvals, limitations, or supersession.
    - These records preserve history and applicable approvals. They do not reinstate sequential gate progression under D-098.
    - Gate 0 evidence preserves historical evidence and lineage; it is not the current status source.
 
-Where accessible and relevant, consult approved or adopted knowledge from the governed Obsidian Software Engineering Knowledge Base at the start of substantial authorized work. Follow Engineering Governance §5's conditional knowledge-capture process during authorized OpenCode work; report any draft created or that none was warranted.
+Where accessible and relevant, consult approved or adopted knowledge from the governed Obsidian Software Engineering Knowledge Base at the start of substantial authorized work. Report any draft created or that none was warranted.
 
 ## 3. General Rules
 
 When delegation is permitted by the active session, use architect-review for critical architecture, security-design, and high-risk SDD reviews; use the project Luna Low exploration agent for simple file location, repository exploration, and summaries. Terra coordinates and performs editing only when explicitly authorized. Delegation is optional and must respect project governance, available tools, and session-level restrictions. Do not claim automatic routing or model selection without observed evidence.
 
-- Work within the applicable task authorization and Engineering Governance §5. Ordinary and high-risk product changes require their recorded approvals. Use standing authorization only within the exact cosmetic or D-101 prototype boundaries.
-- D-098 does not complete Gate 2 or accept Checkpoint 11. D-101 permits qualifying routine fictional prototype refinements without a separate specification or approval cycle for each refinement; its other exclusions remain effective.
+- Work within the applicable task authorization and the risk classes in Engineering Governance v2.0 §5. Low- and moderate-risk work within approved scope proceeds under standing authority; high-risk work requires explicit Product Owner authorization of the bounded scope, environment, safeguards and boundaries.
+- One Product Owner instruction may cover a bounded work package, its documentation, acceptance recording, batch closure and next-batch preparation. Do not request repeated approval for an unchanged decision (v2.0 §2.3, §6.3).
+- Historical gate transitions are not a routine prerequisite. D-098 and D-101 remain historical process records; P-009 remains unapproved.
 - Do not infer permission for file edits, branch changes, dependency installation, configuration changes, database operations, external services, deployment, staging, commits, pushes, or merges merely because they would help.
 - Preserve unrelated changes and untracked work. Follow D-054's efficiency principle in Engineering Governance §2.
 - Report actual changes, verification results, failures, and material limitations. Implementation, verification, acceptance, and approval are distinct claims.
